@@ -389,8 +389,8 @@
       "version": "1.0.0",
       "id": "DL-kZwstl",
       "position": {
-        "x": 714.8362962247785,
-        "y": 92.78390071327524
+        "x": 721.7001160469645,
+        "y": -20.4631418799259
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -557,6 +557,33 @@
       "inputsDB": {
         "outputDirectory": "/remuxing/processed"
       }
+    },
+    {
+      "name": "Check for .tdarr_ignore File",
+      "sourceRepo": "Community",
+      "pluginName": "checkFileExists",
+      "version": "1.0.0",
+      "id": "BoW-FQxbG",
+      "position": {
+        "x": 721.0156419385663,
+        "y": 99.77594966686627
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToCheck": ".tdarr_ignore"
+      }
+    },
+    {
+      "name": "🚨 .tdarr_ignore file found! Not processing.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "4kgU3zJ7C",
+      "position": {
+        "x": 493.5872135940423,
+        "y": 117.40842315621035
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -841,13 +868,6 @@
       "id": "BI4z417aB"
     },
     {
-      "source": "DL-kZwstl",
-      "sourceHandle": "1",
-      "target": "9dk_w0FfB",
-      "targetHandle": null,
-      "id": "lLeCogj1s"
-    },
-    {
       "source": "9dk_w0FfB",
       "sourceHandle": "1",
       "target": "kgrnNlrq-",
@@ -909,6 +929,27 @@
       "target": "FpvsFPLjd",
       "targetHandle": null,
       "id": "vLTQsGYkz"
+    },
+    {
+      "source": "DL-kZwstl",
+      "sourceHandle": "1",
+      "target": "BoW-FQxbG",
+      "targetHandle": null,
+      "id": "M85OUrHL_"
+    },
+    {
+      "source": "BoW-FQxbG",
+      "sourceHandle": "2",
+      "target": "9dk_w0FfB",
+      "targetHandle": null,
+      "id": "0b1askXQ8"
+    },
+    {
+      "source": "BoW-FQxbG",
+      "sourceHandle": "1",
+      "target": "4kgU3zJ7C",
+      "targetHandle": null,
+      "id": "LET_64K5-"
     }
   ]
 }
