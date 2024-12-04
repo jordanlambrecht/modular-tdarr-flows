@@ -1,0 +1,946 @@
+{
+  "_id": "dl3elIKQP",
+  "name": "Handle Subtitle Cleaning",
+  "description": "Handle Subtitle Cleaning",
+  "tags": "",
+  "flowPlugins": [
+    {
+      "name": "Remove \"mov_text\" stream (rare, but it happens)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "oRVuh6Mph",
+      "position": {
+        "x": 426.10474051508936,
+        "y": 470.91618765325876
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
+        "valuesToRemove": "mov_text",
+        "propertyToCheck": "subtitle"
+      }
+    },
+    {
+      "name": "We sure did.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "3bczEwhkY",
+      "position": {
+        "x": 1038.810794524185,
+        "y": 418.4252923440529
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 Let's get rid of any subtitles that aren't English or Undetermined. We'll also keep Japanese because Kevin is learning Japanese.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "6b337NID_",
+      "position": {
+        "x": 214.1285843767423,
+        "y": 640.0095024420846
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "English subtitles should always come first.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "krw2Ezrcf",
+      "position": {
+        "x": 736.941843032923,
+        "y": 689.6508807364052
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👍 We sure did.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "-G6abB52E",
+      "position": {
+        "x": 280.55971574850093,
+        "y": 1131.2098730428827
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👍 All systems are go. We can start cleaning the subtitles.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "30Ws_s_77",
+      "position": {
+        "x": 425.71126443678463,
+        "y": 386.23886538911296
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🚀🚀🚀 Beginning work on subtitles 🚀🚀🚀",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "8RGQofisa",
+      "position": {
+        "x": 643.9043489535235,
+        "y": 159.4997220051323
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Set subs_have_been_cleaned = true",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "OT6kJBOX0",
+      "position": {
+        "x": 281.359925411109,
+        "y": 1255.2740747169194
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "subs_have_been_cleaned",
+        "value": "true"
+      }
+    },
+    {
+      "name": "Did we come here from the controller flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "EfBK8ZU7C",
+      "position": {
+        "x": 758.1165150829237,
+        "y": 526.9203522016319
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "✅✅✅ SUBTITLES HAVE BEEN CLEANED ✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "cYFlPlQrZ",
+      "position": {
+        "x": 281.06488805914285,
+        "y": 1176.228078576463
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️‼️‼️ SUBTITLE FILE SIZE CHECK FAILED  ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "8baYQjNQw",
+      "position": {
+        "x": 657.8203071351769,
+        "y": 950.0119843890536
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Did we come here from the controller flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "3xMZOp3fE",
+      "position": {
+        "x": 419.5562223454617,
+        "y": 1033.546602519391
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "🏁 SUBTITLE CLEANING CHECKPOINT: File Size Check",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "ER4WdJtk7",
+      "position": {
+        "x": 420.3305308086813,
+        "y": 932.4686884516841
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_a9he_New_file_size_check",
+        "upperBound": "110",
+        "lowerBound": "90"
+      }
+    },
+    {
+      "name": "‼️‼️‼️ SUBTITLES HAVE ALREADY BEEN CLEANED  ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "A3u3d9Gnp",
+      "position": {
+        "x": 634.7813437568254,
+        "y": 426.1905678853501
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️‼️‼️ SUBTITLE CLEANING DISABLED  ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "VE6vaHlms",
+      "position": {
+        "x": 756.8218089884105,
+        "y": 301.74040942530564
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Set subs_have_been_cleaned = false",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "vf1vFX4FS",
+      "position": {
+        "x": 1064.2418470831053,
+        "y": 163.95815280682933
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "subs_have_been_cleaned",
+        "value": "false"
+      }
+    },
+    {
+      "name": "Check if subs have already been cleaned",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "KBs6h6Unj",
+      "position": {
+        "x": 530.3143646846598,
+        "y": 301.3633128428962
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "subs_have_been_cleaned",
+        "value": "true",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "✅✅✅ SUBTITLES HAVE BEEN CLEANED ✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "efbc31Bfw",
+      "position": {
+        "x": 658.7159505107713,
+        "y": 1337.6700675129025
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️‼️‼️ SUBTITLE DURATION CHECK FAILED  ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "AGLzSPLLB",
+      "position": {
+        "x": 766.7189348699201,
+        "y": 875.5611054888706
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Input File",
+      "sourceRepo": "Community",
+      "pluginName": "inputFile",
+      "version": "1.0.0",
+      "id": "PH-owVC7K",
+      "position": {
+        "x": 539.3399170752691,
+        "y": 10.73728732108492
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileAccessChecks": "true"
+      }
+    },
+    {
+      "name": "Enter from the controller flow.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "HV73FJ9OC",
+      "position": {
+        "x": 785.4326931055195,
+        "y": 59.904270566609455
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Copy to Working Directory",
+      "sourceRepo": "Community",
+      "pluginName": "copyToWorkDirectory",
+      "version": "1.0.0",
+      "id": "rO68NTLBg",
+      "position": {
+        "x": 540.3915338074017,
+        "y": 70.25154149213381
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Migz Clean Subtitles",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "1V-A4F8Qg",
+      "position": {
+        "x": 422.1127872280572,
+        "y": 710.1949960427661
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_Migz4CleanSubs",
+        "tag_language": "",
+        "language": "eng,jpn,und,en,jp"
+      }
+    },
+    {
+      "name": "Remove Closed Captions",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "_MBPZQUBj",
+      "position": {
+        "x": 429.46287229545396,
+        "y": 545.7079120905246
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_x7ac_Remove_Closed_Captions"
+      }
+    },
+    {
+      "name": "Remove subs with 'CC' in their title (rare, but sometimes it happens)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "r5l1WgyuP",
+      "position": {
+        "x": 427.62557237697376,
+        "y": 598.0631652667707
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
+        "propertyToCheck": "Title",
+        "valuesToRemove": "English CC"
+      }
+    },
+    {
+      "name": "Re-order subtitle streams",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "e95328ErK",
+      "position": {
+        "x": 737.7067739484872,
+        "y": 752.4154867625736
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_076b_re_order_subtitle_streams"
+      }
+    },
+    {
+      "name": "Set subs_have_been_cleaned = true",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "By1xWQv62",
+      "position": {
+        "x": 658.490981485468,
+        "y": 1246.4635955809442
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "subs_have_been_cleaned",
+        "value": "true"
+      }
+    },
+    {
+      "name": "On Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "onFlowError",
+      "version": "1.0.0",
+      "id": "solVKi_jv",
+      "position": {
+        "x": 1063.9874903649093,
+        "y": 93.43906187990325
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Fail Flow",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "aEiXGFlxg",
+      "position": {
+        "x": 765.7200840303434,
+        "y": 1050.330943748069
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🏁 SUBTITLE CLEANING CHECKPOINT: Duration Check",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "d7VdU6y0e",
+      "position": {
+        "x": 422.10657751172823,
+        "y": 826.0002412358654
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_a9hf_New_file_duration_check"
+      }
+    },
+    {
+      "name": "Check if sub cleaning is enabled",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "XwSoQBMTl",
+      "position": {
+        "x": 643.9544602570755,
+        "y": 218.36068687300192
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_subs_cleaning}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "Did we come here from the controller flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "QXu2TbHcb",
+      "position": {
+        "x": 1064.927557779162,
+        "y": 256.5125985547713
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "Delete working file",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "BrN7zhTEV",
+      "position": {
+        "x": 1168.7172168750465,
+        "y": 342.4594053925185
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "⏎ Returning back to the controller flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "HfwmBha1M",
+      "position": {
+        "x": 1039.1822623018418,
+        "y": 494.34857726978186
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginId": "gCJToxGbl",
+        "flowId": "F4KO4luxb"
+      }
+    },
+    {
+      "name": "Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "V15od2GxG",
+      "position": {
+        "x": 565.3114017291931,
+        "y": 1104.6803207467083
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Delete Working File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "zzaqWbGpr",
+      "position": {
+        "x": 656.9814753856865,
+        "y": 1168.1937822433188
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "⏎ Returning back to the controller flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "l-yHwpMZE",
+      "position": {
+        "x": 282.54018154701293,
+        "y": 1341.7558092460458
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginId": "gCJToxGbl",
+        "flowId": "F4KO4luxb"
+      }
+    },
+    {
+      "name": "Failed to replace original file, let's try to copy and delete instead.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yBDcscF6k",
+      "position": {
+        "x": 874.6918472440356,
+        "y": 1124.8855790236896
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Move To Original Directory",
+      "sourceRepo": "Community",
+      "pluginName": "moveToOriginalDirectory",
+      "version": "1.0.0",
+      "id": "aSznvw0VB",
+      "position": {
+        "x": 874.6918472440354,
+        "y": 1206.2058056544504
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Delete Original File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "aTgChc8XH",
+      "position": {
+        "x": 876.9096716066925,
+        "y": 1274.9583608968212
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToDelete": "originalFile"
+      }
+    },
+    {
+      "name": "Add Local Subtitles",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "tSforWSWr",
+      "position": {
+        "x": 216.84532070262475,
+        "y": 442.6210564827295
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_e5c3_CnT_Add_Subtitles",
+        "install_packages": "yes"
+      }
+    }
+  ],
+  "flowEdges": [
+    {
+      "source": "PH-owVC7K",
+      "sourceHandle": "1",
+      "target": "rO68NTLBg",
+      "targetHandle": null,
+      "id": "CGEwOW9gE"
+    },
+    {
+      "source": "AGLzSPLLB",
+      "sourceHandle": "1",
+      "target": "aEiXGFlxg",
+      "targetHandle": null,
+      "id": "sBbLMIfSF"
+    },
+    {
+      "source": "solVKi_jv",
+      "sourceHandle": "1",
+      "target": "vf1vFX4FS",
+      "targetHandle": null,
+      "id": "bTFLhReTJ"
+    },
+    {
+      "source": "vf1vFX4FS",
+      "sourceHandle": "1",
+      "target": "QXu2TbHcb",
+      "targetHandle": null,
+      "id": "eGxYpKy3h"
+    },
+    {
+      "source": "QXu2TbHcb",
+      "sourceHandle": "2",
+      "target": "BrN7zhTEV",
+      "targetHandle": null,
+      "id": "nFSGZUPvz"
+    },
+    {
+      "source": "XwSoQBMTl",
+      "sourceHandle": "2",
+      "target": "VE6vaHlms",
+      "targetHandle": null,
+      "id": "mC5EGmZ2C"
+    },
+    {
+      "source": "XwSoQBMTl",
+      "sourceHandle": "1",
+      "target": "KBs6h6Unj",
+      "targetHandle": null,
+      "id": "_yRS20MYr"
+    },
+    {
+      "source": "KBs6h6Unj",
+      "sourceHandle": "2",
+      "target": "A3u3d9Gnp",
+      "targetHandle": null,
+      "id": "_dvMlxrVt"
+    },
+    {
+      "source": "_MBPZQUBj",
+      "sourceHandle": "1",
+      "target": "r5l1WgyuP",
+      "targetHandle": null,
+      "id": "LM5k4_3G2"
+    },
+    {
+      "source": "_MBPZQUBj",
+      "sourceHandle": "2",
+      "target": "r5l1WgyuP",
+      "targetHandle": null,
+      "id": "VIp8Sr_7Q"
+    },
+    {
+      "source": "e95328ErK",
+      "sourceHandle": "1",
+      "target": "d7VdU6y0e",
+      "targetHandle": null,
+      "id": "bgg2IUwN7"
+    },
+    {
+      "source": "e95328ErK",
+      "sourceHandle": "2",
+      "target": "d7VdU6y0e",
+      "targetHandle": null,
+      "id": "3fCRfqQTJ"
+    },
+    {
+      "source": "d7VdU6y0e",
+      "sourceHandle": "err1",
+      "target": "AGLzSPLLB",
+      "targetHandle": null,
+      "id": "b_R52s5Ag"
+    },
+    {
+      "source": "By1xWQv62",
+      "sourceHandle": "1",
+      "target": "efbc31Bfw",
+      "targetHandle": null,
+      "id": "EkZwPYikv"
+    },
+    {
+      "source": "d7VdU6y0e",
+      "sourceHandle": "1",
+      "target": "ER4WdJtk7",
+      "targetHandle": null,
+      "id": "2pDf-uRvY"
+    },
+    {
+      "source": "d7VdU6y0e",
+      "sourceHandle": "2",
+      "target": "ER4WdJtk7",
+      "targetHandle": null,
+      "id": "7RXyr5Rku"
+    },
+    {
+      "source": "ER4WdJtk7",
+      "sourceHandle": "1",
+      "target": "3xMZOp3fE",
+      "targetHandle": null,
+      "id": "bRVk8rHxZ"
+    },
+    {
+      "source": "ER4WdJtk7",
+      "sourceHandle": "2",
+      "target": "3xMZOp3fE",
+      "targetHandle": null,
+      "id": "4OOeWgzuE"
+    },
+    {
+      "source": "3xMZOp3fE",
+      "sourceHandle": "2",
+      "target": "V15od2GxG",
+      "targetHandle": null,
+      "id": "OebMdhUdB"
+    },
+    {
+      "source": "V15od2GxG",
+      "sourceHandle": "1",
+      "target": "zzaqWbGpr",
+      "targetHandle": null,
+      "id": "ei15n55_T"
+    },
+    {
+      "source": "zzaqWbGpr",
+      "sourceHandle": "1",
+      "target": "By1xWQv62",
+      "targetHandle": null,
+      "id": "L2JHjZpvW"
+    },
+    {
+      "source": "ER4WdJtk7",
+      "sourceHandle": "err1",
+      "target": "8baYQjNQw",
+      "targetHandle": null,
+      "id": "VVA6KkGKw"
+    },
+    {
+      "source": "8baYQjNQw",
+      "sourceHandle": "1",
+      "target": "aEiXGFlxg",
+      "targetHandle": null,
+      "id": "henlFmuFL"
+    },
+    {
+      "source": "V15od2GxG",
+      "sourceHandle": "err1",
+      "target": "yBDcscF6k",
+      "targetHandle": null,
+      "id": "Ycl-MsZ3T"
+    },
+    {
+      "source": "yBDcscF6k",
+      "sourceHandle": "1",
+      "target": "aSznvw0VB",
+      "targetHandle": null,
+      "id": "rUR34k99s"
+    },
+    {
+      "source": "aSznvw0VB",
+      "sourceHandle": "1",
+      "target": "aTgChc8XH",
+      "targetHandle": null,
+      "id": "NoCklLcAb"
+    },
+    {
+      "source": "aTgChc8XH",
+      "sourceHandle": "1",
+      "target": "By1xWQv62",
+      "targetHandle": null,
+      "id": "Z-Rx_M5Cs"
+    },
+    {
+      "source": "A3u3d9Gnp",
+      "sourceHandle": "1",
+      "target": "EfBK8ZU7C",
+      "targetHandle": null,
+      "id": "Aa5a0iaAy"
+    },
+    {
+      "source": "VE6vaHlms",
+      "sourceHandle": "1",
+      "target": "EfBK8ZU7C",
+      "targetHandle": null,
+      "id": "Ul_8Y-HUz"
+    },
+    {
+      "source": "cYFlPlQrZ",
+      "sourceHandle": "1",
+      "target": "OT6kJBOX0",
+      "targetHandle": null,
+      "id": "dT6mMXn98"
+    },
+    {
+      "source": "OT6kJBOX0",
+      "sourceHandle": "1",
+      "target": "l-yHwpMZE",
+      "targetHandle": null,
+      "id": "zSRFV40DZ"
+    },
+    {
+      "source": "rO68NTLBg",
+      "sourceHandle": "1",
+      "target": "8RGQofisa",
+      "targetHandle": null,
+      "id": "UgFSYlQRo"
+    },
+    {
+      "source": "HV73FJ9OC",
+      "sourceHandle": "1",
+      "target": "8RGQofisa",
+      "targetHandle": null,
+      "id": "NjdfJ1W_W"
+    },
+    {
+      "source": "8RGQofisa",
+      "sourceHandle": "1",
+      "target": "XwSoQBMTl",
+      "targetHandle": null,
+      "id": "xiLstx41k"
+    },
+    {
+      "source": "KBs6h6Unj",
+      "sourceHandle": "1",
+      "target": "30Ws_s_77",
+      "targetHandle": null,
+      "id": "01b3dNQQg"
+    },
+    {
+      "source": "3xMZOp3fE",
+      "sourceHandle": "1",
+      "target": "-G6abB52E",
+      "targetHandle": null,
+      "id": "rEkObkcn4"
+    },
+    {
+      "source": "-G6abB52E",
+      "sourceHandle": "1",
+      "target": "cYFlPlQrZ",
+      "targetHandle": null,
+      "id": "EGIHeAR98"
+    },
+    {
+      "source": "1V-A4F8Qg",
+      "sourceHandle": "2",
+      "target": "krw2Ezrcf",
+      "targetHandle": null,
+      "id": "jm5QIWhhn"
+    },
+    {
+      "source": "1V-A4F8Qg",
+      "sourceHandle": "1",
+      "target": "krw2Ezrcf",
+      "targetHandle": null,
+      "id": "Iyit8XV6Y"
+    },
+    {
+      "source": "krw2Ezrcf",
+      "sourceHandle": "1",
+      "target": "e95328ErK",
+      "targetHandle": null,
+      "id": "Yuxan0tLi"
+    },
+    {
+      "source": "r5l1WgyuP",
+      "sourceHandle": "1",
+      "target": "6b337NID_",
+      "targetHandle": null,
+      "id": "g9lMGWV85"
+    },
+    {
+      "source": "r5l1WgyuP",
+      "sourceHandle": "2",
+      "target": "6b337NID_",
+      "targetHandle": null,
+      "id": "1yzZ8DU_H"
+    },
+    {
+      "source": "6b337NID_",
+      "sourceHandle": "1",
+      "target": "1V-A4F8Qg",
+      "targetHandle": null,
+      "id": "EYFWEvU8_"
+    },
+    {
+      "source": "EfBK8ZU7C",
+      "sourceHandle": "1",
+      "target": "3bczEwhkY",
+      "targetHandle": null,
+      "id": "K_7HYnx8v"
+    },
+    {
+      "source": "QXu2TbHcb",
+      "sourceHandle": "1",
+      "target": "3bczEwhkY",
+      "targetHandle": null,
+      "id": "Uh2VD93oj"
+    },
+    {
+      "source": "3bczEwhkY",
+      "sourceHandle": "1",
+      "target": "HfwmBha1M",
+      "targetHandle": null,
+      "id": "JCe54iJPx"
+    },
+    {
+      "source": "oRVuh6Mph",
+      "sourceHandle": "2",
+      "target": "_MBPZQUBj",
+      "targetHandle": null,
+      "id": "GocZkZdrM"
+    },
+    {
+      "source": "oRVuh6Mph",
+      "sourceHandle": "1",
+      "target": "_MBPZQUBj",
+      "targetHandle": null,
+      "id": "VJQF86dTl"
+    },
+    {
+      "source": "30Ws_s_77",
+      "sourceHandle": "1",
+      "target": "tSforWSWr",
+      "targetHandle": null,
+      "id": "ZAcyVywar"
+    },
+    {
+      "source": "tSforWSWr",
+      "sourceHandle": "2",
+      "target": "oRVuh6Mph",
+      "targetHandle": null,
+      "id": "ISdilM3WZ"
+    },
+    {
+      "source": "tSforWSWr",
+      "sourceHandle": "1",
+      "target": "oRVuh6Mph",
+      "targetHandle": null,
+      "id": "45EExLX3J"
+    },
+    {
+      "source": "tSforWSWr",
+      "sourceHandle": "err1",
+      "target": "oRVuh6Mph",
+      "targetHandle": null,
+      "id": "li37CfdD2"
+    }
+  ]
+}

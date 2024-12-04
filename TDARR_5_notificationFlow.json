@@ -1,0 +1,1366 @@
+{
+  "_id": "ePzi19b_S",
+  "name": "Notify the Powers That Be",
+  "description": "Notify the Powers That Be",
+  "tags": "",
+  "flowPlugins": [
+    {
+      "name": "Apply Radarr naming policy",
+      "sourceRepo": "Community",
+      "pluginName": "applyRadarrOrSonarrNamingPolicy",
+      "version": "1.0.0",
+      "id": "itzJV7meq",
+      "position": {
+        "x": 882.0728366966503,
+        "y": 1470.9349172668835
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "arr": "radarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+      }
+    },
+    {
+      "name": "Apply Radarr naming policy",
+      "sourceRepo": "Community",
+      "pluginName": "applyRadarrOrSonarrNamingPolicy",
+      "version": "1.0.0",
+      "id": "c2pylq0A8",
+      "position": {
+        "x": 695.9660509419101,
+        "y": 1470.5400003712093
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "arr": "radarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+      }
+    },
+    {
+      "name": "Apply Sonar (Anime) naming policy",
+      "sourceRepo": "Community",
+      "pluginName": "applyRadarrOrSonarrNamingPolicy",
+      "version": "1.0.0",
+      "id": "A12J5JA-y",
+      "position": {
+        "x": 506.69859699928156,
+        "y": 1472.0777490510281
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarrAnime}}}"
+      }
+    },
+    {
+      "name": "Apply Sonarr naming policy",
+      "sourceRepo": "Community",
+      "pluginName": "applyRadarrOrSonarrNamingPolicy",
+      "version": "1.0.0",
+      "id": "akYibb39d",
+      "position": {
+        "x": 316.4793411392636,
+        "y": 1470.4164698342045
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      }
+    },
+    {
+      "name": "Apply Sonarr naming policy",
+      "sourceRepo": "Community",
+      "pluginName": "applyRadarrOrSonarrNamingPolicy",
+      "version": "1.0.0",
+      "id": "006CtlmtR",
+      "position": {
+        "x": 125.58958228998685,
+        "y": 1469.3552496841864
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      }
+    },
+    {
+      "name": "Notify Radarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "radarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+      },
+      "id": "Cd9siscwy",
+      "position": {
+        "x": 878.9880741298466,
+        "y": 1544.1433030746748
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Radarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "radarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+      },
+      "id": "TfsqmkjgX",
+      "position": {
+        "x": 689.8093028505169,
+        "y": 1544.0667442185252
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Sonarr - Anime",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarrAnime}}}"
+      },
+      "id": "QL4ViyhiB",
+      "position": {
+        "x": 505.4672331839687,
+        "y": 1545.0495270778322
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Sonarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      },
+      "id": "rIgobWkjd",
+      "position": {
+        "x": 317.0815630021098,
+        "y": 1545.0408734880377
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Sonarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      },
+      "id": "DXeeSt7vL",
+      "position": {
+        "x": 125.73673911382821,
+        "y": 1543.379053451712
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Sonarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      },
+      "id": "uAdUBeSKZ",
+      "position": {
+        "x": -77.84370325304985,
+        "y": 1542.7299830743023
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh Masterclass",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_masterclass}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_path_masterclass}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_path_masterclass}}}"
+      },
+      "id": "Cug-dVPXF",
+      "position": {
+        "x": -78.43824927784489,
+        "y": 1629.427894746149
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Library is Masterclass",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "szQrKkuqQ",
+      "position": {
+        "x": -77.9035348413519,
+        "y": 1337.6558416640623
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Sonarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      },
+      "id": "d4jY0Jtuh",
+      "position": {
+        "x": -78.19546531008523,
+        "y": 1398.8203937085118
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is Library MASTERCLASS?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MASTERCLASS"
+      },
+      "id": "5fbBY5_tU",
+      "position": {
+        "x": -76.25772371995753,
+        "y": 1266.5945498889466
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Library is Sports",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "dLKLBgSsc",
+      "position": {
+        "x": 1073.977897658415,
+        "y": 1335.759696821386
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh Sports",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_sports}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_path_sports}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_path_sports}}}"
+      },
+      "id": "64pj68K5V",
+      "position": {
+        "x": 1074.0345881012786,
+        "y": 1628.109950070038
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Is Library SPORTS?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "SPORTS"
+      },
+      "id": "fMQafnmiv",
+      "position": {
+        "x": 1205.551822216421,
+        "y": 1249.0190301545495
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh Kids Movies",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_movies_kids}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_movies_kids_path}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_movies_kids_path}}}"
+      },
+      "id": "FL_lFIvpH",
+      "position": {
+        "x": 877.0643858708187,
+        "y": 1629.2606070146292
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Notify Radarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "radarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+      },
+      "id": "mNrtXLcCl",
+      "position": {
+        "x": 878.6954594715656,
+        "y": 1398.4306487345852
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Library is Movies - Kids",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "eMzF0LN6r",
+      "position": {
+        "x": 875.9852739168581,
+        "y": 1336.9571450346805
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is Library MOVIES_KIDS?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MOVIES_KIDS"
+      },
+      "id": "QcoblwoqT",
+      "position": {
+        "x": 880.4629889347067,
+        "y": 1265.4466707941265
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is Library TV_KIDS?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "TV_KIDS"
+      },
+      "id": "FfD4GH_on",
+      "position": {
+        "x": 321.1290887799452,
+        "y": 1265.88156463842
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh Kids TV",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_tv_kids}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_tv_kids_path}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_tv_kids_path}}}"
+      },
+      "id": "q49J9g5Zr",
+      "position": {
+        "x": 317.5637073455237,
+        "y": 1628.9729520485
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Notify Sonarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      },
+      "id": "s25aWgPIA",
+      "position": {
+        "x": 319.03361776922236,
+        "y": 1395.5059557767552
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Library is TV - Kids",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "kH_E0SA6H",
+      "position": {
+        "x": 319.94574908340985,
+        "y": 1335.7744361519328
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh Anime",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_anime}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_path_anime}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_path_anime}}}"
+      },
+      "id": "hBW8RvOSm",
+      "position": {
+        "x": 511.5993665930084,
+        "y": 1628.849151367712
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Is Library MOVIES?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MOVIES"
+      },
+      "id": "hJUNcApP2",
+      "position": {
+        "x": 690.4699664764767,
+        "y": 1265.8441588790888
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Library is Anime",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "eMymoVWbU",
+      "position": {
+        "x": 508.0302108463836,
+        "y": 1335.1842637439718
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Sonarr - Anime",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarrAnime}}}"
+      },
+      "id": "QfrKx2KnA",
+      "position": {
+        "x": 507.22344855822314,
+        "y": 1397.0951127730107
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is Library ANIME?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "ANIME"
+      },
+      "id": "kX07Ekr4Q",
+      "position": {
+        "x": 512.0847033729176,
+        "y": 1265.801805545101
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Notify Radarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "radarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+      },
+      "id": "rbH09YTa2",
+      "position": {
+        "x": 690.3023572700015,
+        "y": 1398.8281368195483
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh TV",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_tv}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_path_tv}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_path_tv}}}"
+      },
+      "id": "9eWUUqoXQ",
+      "position": {
+        "x": 125.42113651838307,
+        "y": 1628.7072341986354
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Input File",
+      "sourceRepo": "Community",
+      "pluginName": "inputFile",
+      "version": "1.0.0",
+      "inputsDB": {
+        "pauseNodeIfAccessChecksFail": "false",
+        "fileAccessChecks": "true"
+      },
+      "id": "pE6rU7gkW",
+      "position": {
+        "x": -76.8166692863909,
+        "y": 1041.8120848358426
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Plex Refresh Movies",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_goof1_URL_Plex_Refresh",
+        "Plex_Token": "{{{args.userVariables.global.plex_token}}}",
+        "Plex_Url": "{{{args.userVariables.global.url_plex}}}",
+        "Library_Key": "{{{args.userVariables.global.plex_libraryKey_movies}}}",
+        "Plex_Path": "{{{args.userVariables.global.plex_movies_path}}}",
+        "Tdarr_Path": "{{{args.userVariables.global.tdarr_movies_path}}}"
+      },
+      "id": "-U41pKKY-",
+      "position": {
+        "x": 694.9073432229238,
+        "y": 1628.4231490276936
+      },
+      "fpEnabled": false
+    },
+    {
+      "name": "Notify Sonarr",
+      "sourceRepo": "Community",
+      "pluginName": "notifyRadarrOrSonarr",
+      "version": "2.0.0",
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "http://192.168.1.43:8989"
+      },
+      "id": "unh6KDXcW",
+      "position": {
+        "x": 127.50770814023213,
+        "y": 1396.6120185430436
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is Library TV?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "TV"
+      },
+      "id": "_0G6q4qt0",
+      "position": {
+        "x": 132.82179477742073,
+        "y": 1262.3666520136649
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Library is TV",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "qzXpa4Wza",
+      "position": {
+        "x": 127.09587673204658,
+        "y": 1336.9370715113073
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Library is Movies",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "LKqq4wMj4",
+      "position": {
+        "x": 689.1920919719596,
+        "y": 1336.5546729913103
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Reset Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "woKzLVsUQ",
+      "position": {
+        "x": 1309.356986199076,
+        "y": 1775.0560985929214
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Apply Sonarr naming policy",
+      "sourceRepo": "Community",
+      "pluginName": "applyRadarrOrSonarrNamingPolicy",
+      "version": "1.0.0",
+      "id": "ixIwN8BAd",
+      "position": {
+        "x": -78.5370263328613,
+        "y": 1470.059474498495
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "arr": "sonarr",
+        "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
+        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+      }
+    }
+  ],
+  "flowEdges": [
+    {
+      "source": "_0G6q4qt0",
+      "sourceHandle": "1",
+      "target": "qzXpa4Wza",
+      "targetHandle": null,
+      "id": "TQMWPtgUw"
+    },
+    {
+      "source": "qzXpa4Wza",
+      "sourceHandle": "1",
+      "target": "unh6KDXcW",
+      "targetHandle": null,
+      "id": "QOZ5v8zkZ"
+    },
+    {
+      "source": "9eWUUqoXQ",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "GSZGc81eS"
+    },
+    {
+      "source": "LKqq4wMj4",
+      "sourceHandle": "1",
+      "target": "rbH09YTa2",
+      "targetHandle": null,
+      "id": "JukQPniI5"
+    },
+    {
+      "source": "kX07Ekr4Q",
+      "sourceHandle": "1",
+      "target": "eMymoVWbU",
+      "targetHandle": null,
+      "id": "mPY7_5Fgw"
+    },
+    {
+      "source": "kX07Ekr4Q",
+      "sourceHandle": "2",
+      "target": "hJUNcApP2",
+      "targetHandle": null,
+      "id": "w0r5pbRGZ"
+    },
+    {
+      "source": "hJUNcApP2",
+      "sourceHandle": "1",
+      "target": "LKqq4wMj4",
+      "targetHandle": null,
+      "id": "XNas_wqjF"
+    },
+    {
+      "source": "eMymoVWbU",
+      "sourceHandle": "1",
+      "target": "QfrKx2KnA",
+      "targetHandle": null,
+      "id": "KS18kSYZs"
+    },
+    {
+      "source": "kH_E0SA6H",
+      "sourceHandle": "1",
+      "target": "s25aWgPIA",
+      "targetHandle": null,
+      "id": "hDQDYIp1g"
+    },
+    {
+      "source": "_0G6q4qt0",
+      "sourceHandle": "2",
+      "target": "FfD4GH_on",
+      "targetHandle": null,
+      "id": "gJfCxHzol"
+    },
+    {
+      "source": "FfD4GH_on",
+      "sourceHandle": "1",
+      "target": "kH_E0SA6H",
+      "targetHandle": null,
+      "id": "TEx4oTK8e"
+    },
+    {
+      "source": "FfD4GH_on",
+      "sourceHandle": "2",
+      "target": "kX07Ekr4Q",
+      "targetHandle": null,
+      "id": "PaW2-bqUH"
+    },
+    {
+      "source": "eMzF0LN6r",
+      "sourceHandle": "1",
+      "target": "mNrtXLcCl",
+      "targetHandle": null,
+      "id": "wOm3LmIS0"
+    },
+    {
+      "source": "QcoblwoqT",
+      "sourceHandle": "1",
+      "target": "eMzF0LN6r",
+      "targetHandle": null,
+      "id": "Yi3tNEGi2"
+    },
+    {
+      "source": "hJUNcApP2",
+      "sourceHandle": "2",
+      "target": "QcoblwoqT",
+      "targetHandle": null,
+      "id": "hUckRhw0T"
+    },
+    {
+      "source": "q49J9g5Zr",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "7PRnnLCjv"
+    },
+    {
+      "source": "q49J9g5Zr",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "D6Zknx8OD"
+    },
+    {
+      "source": "hBW8RvOSm",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "Ja18XTrVb"
+    },
+    {
+      "source": "hBW8RvOSm",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "d2pASwP12"
+    },
+    {
+      "source": "-U41pKKY-",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "ehgt0KIBk"
+    },
+    {
+      "source": "-U41pKKY-",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "SsHP3TCAc"
+    },
+    {
+      "source": "FL_lFIvpH",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "KVVpO3ZAJ"
+    },
+    {
+      "source": "FL_lFIvpH",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "qDjCdmq6X"
+    },
+    {
+      "source": "fMQafnmiv",
+      "sourceHandle": "1",
+      "target": "dLKLBgSsc",
+      "targetHandle": null,
+      "id": "OfV-fW71g"
+    },
+    {
+      "source": "dLKLBgSsc",
+      "sourceHandle": "1",
+      "target": "64pj68K5V",
+      "targetHandle": null,
+      "id": "VQqJ6q4fr"
+    },
+    {
+      "source": "64pj68K5V",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "UhU8YbgdW"
+    },
+    {
+      "source": "64pj68K5V",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "b3n8HEirw"
+    },
+    {
+      "source": "fMQafnmiv",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "PE9GrAkTG"
+    },
+    {
+      "source": "QcoblwoqT",
+      "sourceHandle": "2",
+      "target": "fMQafnmiv",
+      "targetHandle": null,
+      "id": "z-ibfACp_"
+    },
+    {
+      "source": "9eWUUqoXQ",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "Q6hFUaHAL"
+    },
+    {
+      "source": "q49J9g5Zr",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "uw8yJfo0q"
+    },
+    {
+      "source": "hBW8RvOSm",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "_eJqcUVJN"
+    },
+    {
+      "source": "-U41pKKY-",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "cgPXJJUr5"
+    },
+    {
+      "source": "FL_lFIvpH",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "xwMuEGj8M"
+    },
+    {
+      "source": "64pj68K5V",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "zvEbPAVcZ"
+    },
+    {
+      "source": "fMQafnmiv",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "aysZH0_VI"
+    },
+    {
+      "source": "5fbBY5_tU",
+      "sourceHandle": "1",
+      "target": "szQrKkuqQ",
+      "targetHandle": null,
+      "id": "qhCYMILj8"
+    },
+    {
+      "source": "pE6rU7gkW",
+      "sourceHandle": "1",
+      "target": "5fbBY5_tU",
+      "targetHandle": null,
+      "id": "40slx_ibg"
+    },
+    {
+      "source": "5fbBY5_tU",
+      "sourceHandle": "2",
+      "target": "_0G6q4qt0",
+      "targetHandle": null,
+      "id": "H-hiaYgWU"
+    },
+    {
+      "source": "szQrKkuqQ",
+      "sourceHandle": "1",
+      "target": "d4jY0Jtuh",
+      "targetHandle": null,
+      "id": "4CVnpYiEJ"
+    },
+    {
+      "source": "Cug-dVPXF",
+      "sourceHandle": "err1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "B2aQfIxsX"
+    },
+    {
+      "source": "Cug-dVPXF",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "jSipEC8XD"
+    },
+    {
+      "source": "Cug-dVPXF",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "Z6SwWiHCw"
+    },
+    {
+      "source": "d4jY0Jtuh",
+      "sourceHandle": "err1",
+      "target": "ixIwN8BAd",
+      "targetHandle": null,
+      "id": "7WUd42krt"
+    },
+    {
+      "source": "d4jY0Jtuh",
+      "sourceHandle": "1",
+      "target": "ixIwN8BAd",
+      "targetHandle": null,
+      "id": "eeTpWPPkG"
+    },
+    {
+      "source": "d4jY0Jtuh",
+      "sourceHandle": "2",
+      "target": "ixIwN8BAd",
+      "targetHandle": null,
+      "id": "LYDb-ohRk"
+    },
+    {
+      "source": "ixIwN8BAd",
+      "sourceHandle": "1",
+      "target": "uAdUBeSKZ",
+      "targetHandle": null,
+      "id": "0aEmt_TtV"
+    },
+    {
+      "source": "ixIwN8BAd",
+      "sourceHandle": "2",
+      "target": "uAdUBeSKZ",
+      "targetHandle": null,
+      "id": "LIr4ALWDP"
+    },
+    {
+      "source": "ixIwN8BAd",
+      "sourceHandle": "err1",
+      "target": "uAdUBeSKZ",
+      "targetHandle": null,
+      "id": "qp1hkG2Ag"
+    },
+    {
+      "source": "uAdUBeSKZ",
+      "sourceHandle": "1",
+      "target": "Cug-dVPXF",
+      "targetHandle": null,
+      "id": "XgRGW_iX3"
+    },
+    {
+      "source": "uAdUBeSKZ",
+      "sourceHandle": "2",
+      "target": "Cug-dVPXF",
+      "targetHandle": null,
+      "id": "dEwACND2u"
+    },
+    {
+      "source": "uAdUBeSKZ",
+      "sourceHandle": "err1",
+      "target": "Cug-dVPXF",
+      "targetHandle": null,
+      "id": "pJYVcR0Qi"
+    },
+    {
+      "source": "unh6KDXcW",
+      "sourceHandle": "1",
+      "target": "006CtlmtR",
+      "targetHandle": null,
+      "id": "dOdE4Wy2J"
+    },
+    {
+      "source": "006CtlmtR",
+      "sourceHandle": "1",
+      "target": "DXeeSt7vL",
+      "targetHandle": null,
+      "id": "qXDPa76vB"
+    },
+    {
+      "source": "DXeeSt7vL",
+      "sourceHandle": "1",
+      "target": "9eWUUqoXQ",
+      "targetHandle": null,
+      "id": "6qE_zLBAX"
+    },
+    {
+      "source": "DXeeSt7vL",
+      "sourceHandle": "2",
+      "target": "9eWUUqoXQ",
+      "targetHandle": null,
+      "id": "4-aJeLwZs"
+    },
+    {
+      "source": "006CtlmtR",
+      "sourceHandle": "2",
+      "target": "DXeeSt7vL",
+      "targetHandle": null,
+      "id": "hYRzAyst6"
+    },
+    {
+      "source": "unh6KDXcW",
+      "sourceHandle": "2",
+      "target": "006CtlmtR",
+      "targetHandle": null,
+      "id": "gjCa9DPcp"
+    },
+    {
+      "source": "unh6KDXcW",
+      "sourceHandle": "err1",
+      "target": "006CtlmtR",
+      "targetHandle": null,
+      "id": "hCxnOoQdu"
+    },
+    {
+      "source": "006CtlmtR",
+      "sourceHandle": "err1",
+      "target": "DXeeSt7vL",
+      "targetHandle": null,
+      "id": "dcsQrM-s9"
+    },
+    {
+      "source": "DXeeSt7vL",
+      "sourceHandle": "err1",
+      "target": "9eWUUqoXQ",
+      "targetHandle": null,
+      "id": "QN76Tdruc"
+    },
+    {
+      "source": "rIgobWkjd",
+      "sourceHandle": "1",
+      "target": "q49J9g5Zr",
+      "targetHandle": null,
+      "id": "SDuK-ZsuH"
+    },
+    {
+      "source": "rIgobWkjd",
+      "sourceHandle": "2",
+      "target": "q49J9g5Zr",
+      "targetHandle": null,
+      "id": "Omlh6Z9OS"
+    },
+    {
+      "source": "rIgobWkjd",
+      "sourceHandle": "err1",
+      "target": "q49J9g5Zr",
+      "targetHandle": null,
+      "id": "GcAVn2EqV"
+    },
+    {
+      "source": "akYibb39d",
+      "sourceHandle": "1",
+      "target": "rIgobWkjd",
+      "targetHandle": null,
+      "id": "FQjYDAWYa"
+    },
+    {
+      "source": "akYibb39d",
+      "sourceHandle": "err1",
+      "target": "rIgobWkjd",
+      "targetHandle": null,
+      "id": "aoe5qP7aW"
+    },
+    {
+      "source": "s25aWgPIA",
+      "sourceHandle": "1",
+      "target": "akYibb39d",
+      "targetHandle": null,
+      "id": "wM3GocH9O"
+    },
+    {
+      "source": "s25aWgPIA",
+      "sourceHandle": "2",
+      "target": "akYibb39d",
+      "targetHandle": null,
+      "id": "oFw2AjpWe"
+    },
+    {
+      "source": "s25aWgPIA",
+      "sourceHandle": "err1",
+      "target": "akYibb39d",
+      "targetHandle": null,
+      "id": "LKNlbHvkI"
+    },
+    {
+      "source": "akYibb39d",
+      "sourceHandle": "2",
+      "target": "rIgobWkjd",
+      "targetHandle": null,
+      "id": "iKVjVX9Hl"
+    },
+    {
+      "source": "QL4ViyhiB",
+      "sourceHandle": "1",
+      "target": "hBW8RvOSm",
+      "targetHandle": null,
+      "id": "GZoX0tn-x"
+    },
+    {
+      "source": "QL4ViyhiB",
+      "sourceHandle": "2",
+      "target": "hBW8RvOSm",
+      "targetHandle": null,
+      "id": "1TU3l_InA"
+    },
+    {
+      "source": "QL4ViyhiB",
+      "sourceHandle": "err1",
+      "target": "hBW8RvOSm",
+      "targetHandle": null,
+      "id": "HhK579gcf"
+    },
+    {
+      "source": "A12J5JA-y",
+      "sourceHandle": "1",
+      "target": "QL4ViyhiB",
+      "targetHandle": null,
+      "id": "lFKoEDT0N"
+    },
+    {
+      "source": "A12J5JA-y",
+      "sourceHandle": "2",
+      "target": "QL4ViyhiB",
+      "targetHandle": null,
+      "id": "OV8LgtTqs"
+    },
+    {
+      "source": "A12J5JA-y",
+      "sourceHandle": "err1",
+      "target": "QL4ViyhiB",
+      "targetHandle": null,
+      "id": "3GMl2gP1X"
+    },
+    {
+      "source": "QfrKx2KnA",
+      "sourceHandle": "1",
+      "target": "A12J5JA-y",
+      "targetHandle": null,
+      "id": "d7TgQWksh"
+    },
+    {
+      "source": "QfrKx2KnA",
+      "sourceHandle": "2",
+      "target": "A12J5JA-y",
+      "targetHandle": null,
+      "id": "fmWge1qRS"
+    },
+    {
+      "source": "QfrKx2KnA",
+      "sourceHandle": "err1",
+      "target": "A12J5JA-y",
+      "targetHandle": null,
+      "id": "aYWyRxujr"
+    },
+    {
+      "source": "TfsqmkjgX",
+      "sourceHandle": "1",
+      "target": "-U41pKKY-",
+      "targetHandle": null,
+      "id": "-Cy_7WGfo"
+    },
+    {
+      "source": "TfsqmkjgX",
+      "sourceHandle": "2",
+      "target": "-U41pKKY-",
+      "targetHandle": null,
+      "id": "lIQf65pvQ"
+    },
+    {
+      "source": "TfsqmkjgX",
+      "sourceHandle": "err1",
+      "target": "-U41pKKY-",
+      "targetHandle": null,
+      "id": "c-TDkYKcw"
+    },
+    {
+      "source": "c2pylq0A8",
+      "sourceHandle": "1",
+      "target": "TfsqmkjgX",
+      "targetHandle": null,
+      "id": "rHeV74IfX"
+    },
+    {
+      "source": "c2pylq0A8",
+      "sourceHandle": "2",
+      "target": "TfsqmkjgX",
+      "targetHandle": null,
+      "id": "5UXBtjtTC"
+    },
+    {
+      "source": "c2pylq0A8",
+      "sourceHandle": "err1",
+      "target": "TfsqmkjgX",
+      "targetHandle": null,
+      "id": "SJWQ2dgao"
+    },
+    {
+      "source": "rbH09YTa2",
+      "sourceHandle": "1",
+      "target": "c2pylq0A8",
+      "targetHandle": null,
+      "id": "QTfLORZDG"
+    },
+    {
+      "source": "rbH09YTa2",
+      "sourceHandle": "2",
+      "target": "c2pylq0A8",
+      "targetHandle": null,
+      "id": "fg0IbteoE"
+    },
+    {
+      "source": "rbH09YTa2",
+      "sourceHandle": "err1",
+      "target": "c2pylq0A8",
+      "targetHandle": null,
+      "id": "HvUAqnM-z"
+    },
+    {
+      "source": "Cd9siscwy",
+      "sourceHandle": "1",
+      "target": "FL_lFIvpH",
+      "targetHandle": null,
+      "id": "q4tjL1HmT"
+    },
+    {
+      "source": "Cd9siscwy",
+      "sourceHandle": "2",
+      "target": "FL_lFIvpH",
+      "targetHandle": null,
+      "id": "Sx_SP-poS"
+    },
+    {
+      "source": "Cd9siscwy",
+      "sourceHandle": "err1",
+      "target": "FL_lFIvpH",
+      "targetHandle": null,
+      "id": "OI9Kj_hua"
+    },
+    {
+      "source": "itzJV7meq",
+      "sourceHandle": "1",
+      "target": "Cd9siscwy",
+      "targetHandle": null,
+      "id": "LZBUs6vEW"
+    },
+    {
+      "source": "itzJV7meq",
+      "sourceHandle": "2",
+      "target": "Cd9siscwy",
+      "targetHandle": null,
+      "id": "G3IWDwwVq"
+    },
+    {
+      "source": "itzJV7meq",
+      "sourceHandle": "err1",
+      "target": "Cd9siscwy",
+      "targetHandle": null,
+      "id": "xgZ1KBXB6"
+    },
+    {
+      "source": "mNrtXLcCl",
+      "sourceHandle": "1",
+      "target": "itzJV7meq",
+      "targetHandle": null,
+      "id": "s8gBxV9HI"
+    },
+    {
+      "source": "mNrtXLcCl",
+      "sourceHandle": "2",
+      "target": "itzJV7meq",
+      "targetHandle": null,
+      "id": "4GoFwxI4v"
+    },
+    {
+      "source": "mNrtXLcCl",
+      "sourceHandle": "err1",
+      "target": "itzJV7meq",
+      "targetHandle": null,
+      "id": "dHBNCof2r"
+    },
+    {
+      "source": "9eWUUqoXQ",
+      "sourceHandle": "2",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "hjCGB6_k9"
+    }
+  ]
+}

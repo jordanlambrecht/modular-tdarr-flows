@@ -1,0 +1,2132 @@
+{
+  "_id": "77FeaEd6w",
+  "name": "Handle Audio Transcoding",
+  "description": "Handle Audio Transcoding",
+  "tags": "",
+  "flowPlugins": [
+    {
+      "name": "🚀🚀🚀 BEGINNING WORK ON AUDIO TRANSCODING 🚀🚀🚀",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "31d8yO2Vm",
+      "position": {
+        "x": 1184.5224068967225,
+        "y": -79.3336656940811
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🤷‍♀️ We didn't find any unwanted audio codecs. Moving on...",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "aECFay6MZ",
+      "position": {
+        "x": 1855.7756233448624,
+        "y": 1335.5259726447068
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Nope. There's nothing left to do here. Flow run is complete.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ujg0vS9ka",
+      "position": {
+        "x": 1770.4926967044921,
+        "y": 263.2471651582676
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 Audio has not been transcoded yet. Let's start off by downmixing everything so we have all our channels covered.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "UkaM2tC3h",
+      "position": {
+        "x": 1136.2336478382979,
+        "y": 208.7366730387921
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👍 Yes, it already has AAC. We gucci.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "1rLRXLAFX",
+      "position": {
+        "x": 1949.393296982198,
+        "y": 879.1259349875278
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👀 We found two channels. We require AAC for two channels to ensure compatibility.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "_kNJxds4c",
+      "position": {
+        "x": 2006.6681802115422,
+        "y": 650.5744514917069
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✨ We want to make sure it has something nicer than AAC for six channels.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "8Jhizxz4Z",
+      "position": {
+        "x": 1461.0288953507047,
+        "y": 556.222847050122
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👀 We found six channels.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "2N2PMxxho",
+      "position": {
+        "x": 1460.8263466502517,
+        "y": 517.8941246984532
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Create 2-channel aac (jp)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "j7auLPPNl",
+      "position": {
+        "x": 2051.0387918211313,
+        "y": 952.3336932965118
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_add_audio_stream_codec",
+        "channels": "2",
+        "language": "jp",
+        "audioCodec": "aac"
+      }
+    },
+    {
+      "name": "Is it anime?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "6rJn4Kl-6",
+      "position": {
+        "x": 2135.3720797903393,
+        "y": 818.541887504164
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "ANIME",
+        "variable": "{{{args.userVariables.library.name}}}"
+      }
+    },
+    {
+      "name": "Create 6-channel ac3 (jp)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "oYduHgNXj",
+      "position": {
+        "x": 1577.149751472956,
+        "y": 735.9578384594973
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_add_audio_stream_codec",
+        "channels": "6",
+        "language": "jp",
+        "audioCodec": "ac3"
+      }
+    },
+    {
+      "name": "Is it anime?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "jUKNCi0AU",
+      "position": {
+        "x": 1686.5883151925366,
+        "y": 664.077284540061
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "ANIME",
+        "variable": "{{{args.userVariables.library.name}}}"
+      }
+    },
+    {
+      "name": "Create 6-channel aac (jp)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "T-RPDrlwa",
+      "position": {
+        "x": 1552.1237431342465,
+        "y": 894.3898794687731
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_add_audio_stream_codec",
+        "channels": "6",
+        "language": "jp",
+        "audioCodec": "aac"
+      }
+    },
+    {
+      "name": "‼️ An error occurred while transcoding 2-channel codecs.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "BOVqt10V4",
+      "position": {
+        "x": 2193.1523768969787,
+        "y": 1056.4231999066767
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Create 6-channel ac3 (en)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "372sZQr5d",
+      "position": {
+        "x": 1765.0222932426461,
+        "y": 736.7035447244034
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_add_audio_stream_codec",
+        "channels": "6",
+        "language": "en",
+        "audioCodec": "ac3"
+      }
+    },
+    {
+      "name": "Create 2-channel aac (en)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "MpqMlA8xU",
+      "position": {
+        "x": 2198.356701501766,
+        "y": 913.7289281120818
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_add_audio_stream_codec",
+        "channels": "2",
+        "language": "en",
+        "audioCodec": "aac"
+      }
+    },
+    {
+      "name": "✅ Completed 2-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "3-9GKRL_B",
+      "position": {
+        "x": 1987.5490852674852,
+        "y": 1086.4321376730572
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🤷‍♀️ 2.1 Not Detected. We deff need 2-channel regardless.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "UeYG7pXsz",
+      "position": {
+        "x": 2189.9370538109215,
+        "y": 698.4897811507055
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅ 5.1 Not Detected. Completed 6-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "it2cZkRFM",
+      "position": {
+        "x": 1730.3929266190826,
+        "y": 578.9617137726904
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Does it have aac?",
+      "sourceRepo": "Community",
+      "pluginName": "checkAudioCodec",
+      "version": "1.0.0",
+      "id": "tfh458pge",
+      "position": {
+        "x": 1945.2912595828006,
+        "y": 777.3491639017956
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Does it have 2 channels?",
+      "sourceRepo": "Community",
+      "pluginName": "checkChannelCount",
+      "version": "1.0.0",
+      "id": "Ba_Zi5yBz",
+      "position": {
+        "x": 2119.1167743690776,
+        "y": 588.2068950382899
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "channelCount": "2"
+      }
+    },
+    {
+      "name": "🚀 Beginning 2-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "Docpj3q8y",
+      "position": {
+        "x": 2139.0832799518225,
+        "y": 510.8761435691812
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️ An error occurred while running migz convert audio.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "YG5beJEDT",
+      "position": {
+        "x": 1282.1177073556828,
+        "y": 420.2418924945008
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️ An error occurred while transcoding 8-channel codecs.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yJVyepZmr",
+      "position": {
+        "x": 1074.5551696420575,
+        "y": 715.2839054623132
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️ An error occurred while transcoding 6-channel codecs.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "mOlECzDsN",
+      "position": {
+        "x": 1741.7491058726546,
+        "y": 1027.4643486384805
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️ An error occurred while reordering audio streams.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "Do7Oe_uiF",
+      "position": {
+        "x": 2464.352936061008,
+        "y": 1593.3807786906175
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅ audio stream re-ordering logic complete.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "O0DyltkUI",
+      "position": {
+        "x": 2199.246968859397,
+        "y": 1604.1323576335008
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Re-Order Audio Streams (jpn)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "DzujbXHH8",
+      "position": {
+        "x": 2336.907830517303,
+        "y": 1476.7405323094515
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_076a_re_order_audio_streams",
+        "preferred_language": "jpn"
+      }
+    },
+    {
+      "name": "😬 If it's foreign, don't even mess with reordering because we're scared. One day we'll add more logic here.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "5VuOQhwEi",
+      "position": {
+        "x": 2199.017110866526,
+        "y": 1392.1715489089452
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is it anime?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "yRQ26e9JA",
+      "position": {
+        "x": 2460.2517401064,
+        "y": 1393.306192986248
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "ANIME"
+      }
+    },
+    {
+      "name": "🚀 Let's reorder the audio streams",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "k6toH0oxu",
+      "position": {
+        "x": 2314.665578213333,
+        "y": 1235.880586173197
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🚀 We're ready for our final checks.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "LSeLIvmgj",
+      "position": {
+        "x": 1087.878092273571,
+        "y": 1157.097833299689
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅ unwanted audio codec removal logic done.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "53mI-wB1V",
+      "position": {
+        "x": 1773.9487149674535,
+        "y": 1533.7242051527446
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️ An error occurred while removing unwanted audio codecs.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "xkH32RolO",
+      "position": {
+        "x": 1941.7410814941527,
+        "y": 1434.738403611535
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Remove Unwanted Audio Codecs",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "1AHQELQM2",
+      "position": {
+        "x": 1801.1569357418532,
+        "y": 1247.5756729547738
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
+        "propertyToCheck": "codec_name",
+        "valuesToRemove": "dca,dts,flac,mp2,mp3,truehd,vorbis,wav,wma,eac3"
+      }
+    },
+    {
+      "name": "🚀 Let's clean up any unwanted audio codecs.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "aHVhRtiPW",
+      "position": {
+        "x": 1800.8149942075006,
+        "y": 1196.499663621636
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️ An error occurred while removing ac3/eac3.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "I2IIIaeUv",
+      "position": {
+        "x": 2815.3439364250166,
+        "y": 979.02122472729
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅ Completed 8-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yZTx0Mtuc",
+      "position": {
+        "x": 1131.8743201319653,
+        "y": 833.3135540092029
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🚀 Beginning 8-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yvNSLf3b4",
+      "position": {
+        "x": 1132.8062020027514,
+        "y": 566.775243326951
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅ Completed 6-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ooafl0ihT",
+      "position": {
+        "x": 1526.7106348621824,
+        "y": 1054.4891089301352
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🤷‍♀️ Neither 6 or 8 channels was detected. Removed eac3/ac3.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "bOyl5wACp",
+      "position": {
+        "x": 2668.036622713278,
+        "y": 910.0148487859785
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Does it have 6 channels?",
+      "sourceRepo": "Community",
+      "pluginName": "checkChannelCount",
+      "version": "1.0.0",
+      "id": "p6vAk4nxL",
+      "position": {
+        "x": 2654.7534118254084,
+        "y": 753.9658689350032
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "channelCount": "6"
+      }
+    },
+    {
+      "name": "Remove ac3 and eac3",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "fG17RfZiK",
+      "position": {
+        "x": 2717.2185615407934,
+        "y": 835.756339623149
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
+        "propertyToCheck": "codec_name",
+        "valuesToRemove": "ac3,eac3"
+      }
+    },
+    {
+      "name": "Does it have 8 channels?",
+      "sourceRepo": "Community",
+      "pluginName": "checkChannelCount",
+      "version": "1.0.0",
+      "id": "St9RzSxuu",
+      "position": {
+        "x": 2588.8334041228304,
+        "y": 682.4442941382988
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "channelCount": "8"
+      }
+    },
+    {
+      "name": "Create 6-channel aac (en)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "yVdbwyShZ",
+      "position": {
+        "x": 1724.8879718736391,
+        "y": 908.540381403171
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_add_audio_stream_codec",
+        "channels": "6",
+        "language": "en",
+        "audioCodec": "aac"
+      }
+    },
+    {
+      "name": "Does it have ac3?",
+      "sourceRepo": "Community",
+      "pluginName": "checkAudioCodec",
+      "version": "1.0.0",
+      "id": "4vkV8oJYd",
+      "position": {
+        "x": 1460.7744489935599,
+        "y": 622.4446799923293
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "codec": "ac3"
+      }
+    },
+    {
+      "name": "Does it have 6 channels?",
+      "sourceRepo": "Community",
+      "pluginName": "checkChannelCount",
+      "version": "1.0.0",
+      "id": "19V_spdU5",
+      "position": {
+        "x": 1627.269507599558,
+        "y": 507.32952426220004
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "channelCount": "6"
+      }
+    },
+    {
+      "name": "Make sure 8-Channel Surround has ac3 and transcode if not",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "_FPnjivHO",
+      "position": {
+        "x": 886.5760696671207,
+        "y": 710.4424761502858
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_b39x_the1poet_surround_sound_to_ac3"
+      }
+    },
+    {
+      "name": "Fail Flow",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "EuecZCFiv",
+      "position": {
+        "x": 1622.785888561959,
+        "y": 1680.6118722386777
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "set audio_has_been_transcoded = true",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "FFll-kYBC",
+      "position": {
+        "x": 1216.5174512148712,
+        "y": 1726.0964640453374
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "audio_has_been_transcoded",
+        "value": "true"
+      }
+    },
+    {
+      "name": "set audio_has_been_transcoded = true",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "toqWXjkJT",
+      "position": {
+        "x": 980.8091545681486,
+        "y": 1654.248429145723
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "audio_has_been_transcoded",
+        "value": "true"
+      }
+    },
+    {
+      "name": "Failed to replace original file, let's try to copy and delete instead.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ocVciVFsa",
+      "position": {
+        "x": 1423.9164271164716,
+        "y": 1583.5612792903808
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅✅✅ AUDIO TRANSCODING COMPLETE ✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "PwEhibX1Z",
+      "position": {
+        "x": 1217.0078128374223,
+        "y": 1811.6271780127463
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "⏎ Returning back to the controller flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "0c62eVDls",
+      "position": {
+        "x": 978.6332757465441,
+        "y": 1740.246071323254
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "F4KO4luxb",
+        "pluginId": "Rfx4VE1Nn"
+      }
+    },
+    {
+      "name": "Did we come here from another flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "-G67OyKM7",
+      "position": {
+        "x": 1081.8582382823463,
+        "y": 1480.7158245067722
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "‼️‼️ AUDIO STREAM TRANSCODING FILE SIZE CHECK FAILED ‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "Tv4RkmGJt",
+      "position": {
+        "x": 1296.509462474798,
+        "y": 1424.1310709355748
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🏁 AUDIO TRANSCODING CLEANING CHECKPOINT: File Size Check",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "kwVAOnYRB",
+      "position": {
+        "x": 1082.807799468844,
+        "y": 1357.7410206984546
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_a9he_New_file_size_check",
+        "upperBound": "125",
+        "lowerBound": "75"
+      }
+    },
+    {
+      "name": "Did we come here from another flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "5h3aU2wWR",
+      "position": {
+        "x": 1567.8278024124543,
+        "y": 281.0867885533556
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "‼️‼️‼️ AUDIO HAS ALREADY BEEN TRANSCODED  ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yx0wwA1rj",
+      "position": {
+        "x": 1380.4796088607554,
+        "y": 215.72918089651458
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Fail Flow",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "gUXAUSLbT",
+      "position": {
+        "x": 1493.6541623071982,
+        "y": 1417.3766964621093
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️‼️ AUDIO STREAM TRANSCODING DURATION CHECK FAILED ‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "5ynOIH5pQ",
+      "position": {
+        "x": 1319.847277595309,
+        "y": 1304.5048800634163
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🏁 AUDIO TRANSCODING CLEANING CHECKPOINT: Duration Check",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "bDvGHgzR2",
+      "position": {
+        "x": 1086.4347942224429,
+        "y": 1256.1002109357296
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_a9hf_New_file_duration_check"
+      }
+    },
+    {
+      "name": "set audio_has_been_transcoded = false",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "rmmzJ9UVr",
+      "position": {
+        "x": 1841.9131366601741,
+        "y": 148.74904187314735
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "audio_has_been_transcoded",
+        "value": "false"
+      }
+    },
+    {
+      "name": "Did we come here from another flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "LDfgoIQyV",
+      "position": {
+        "x": 2022.5573429100361,
+        "y": 214.74636291007317
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "⏎ Returning back to the controller flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "a1Bb1G9pN",
+      "position": {
+        "x": 1899.6248390329804,
+        "y": 433.6007506869767
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "F4KO4luxb",
+        "pluginId": "Rfx4VE1Nn"
+      }
+    },
+    {
+      "name": "Has audio already been transcoded?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "GudmPNgxO",
+      "position": {
+        "x": 1160.5347253230818,
+        "y": 131.92515608735664
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "audio_has_been_transcoded",
+        "value": "false",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "Check if audio transcoding is enabled",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "x_65k3lxU",
+      "position": {
+        "x": 1184.9650935724756,
+        "y": 13.456391821451708
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_audio_transcoding}}}",
+        "value": "true",
+        "condition": "=="
+      }
+    },
+    {
+      "name": "Input File",
+      "sourceRepo": "Community",
+      "pluginName": "inputFile",
+      "version": "1.0.0",
+      "id": "xR8gCEb7_",
+      "position": {
+        "x": 1044.8519815262307,
+        "y": -206.28486467101789
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileAccessChecks": "true"
+      }
+    },
+    {
+      "name": "Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "3ljdCJLGm",
+      "position": {
+        "x": 1215.5202636433917,
+        "y": 1581.72039289654
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "‼️‼️‼️ AUDIO TRANSCODING DISABLED  ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "Oi_aXaz7O",
+      "position": {
+        "x": 1474.5472090790415,
+        "y": 98.24494035811593
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅✅✅ AUDIO TRANSCODING COMPLETE ✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "xWdoGKRHw",
+      "position": {
+        "x": 981.2995161906997,
+        "y": 1570.9534188888388
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Entry point from another flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "-O_1ZjPQ3",
+      "position": {
+        "x": 1318.6986916049943,
+        "y": -167.43910390958564
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "On Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "onFlowError",
+      "version": "1.0.0",
+      "id": "XnTBk97W9",
+      "position": {
+        "x": 1841.498789090928,
+        "y": 80.44581725891616
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Copy to Working Directory",
+      "sourceRepo": "Community",
+      "pluginName": "copyToWorkDirectory",
+      "version": "1.0.0",
+      "id": "XSNXsXj2m",
+      "position": {
+        "x": 1043.3744631147677,
+        "y": -154.0969567369268
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Delete Working File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "8evuaIuBN",
+      "position": {
+        "x": 1215.2229733181323,
+        "y": 1663.3874227571757
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Move To Original Directory",
+      "sourceRepo": "Community",
+      "pluginName": "moveToOriginalDirectory",
+      "version": "1.0.0",
+      "id": "vr5aLl2cF",
+      "position": {
+        "x": 1425.6220901719614,
+        "y": 1671.6068055248977
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Delete Original File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "JUgXchjWT",
+      "position": {
+        "x": 1425.2528149881855,
+        "y": 1749.8760604608876
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToDelete": "originalFile"
+      }
+    },
+    {
+      "name": "Run Migz Convert Audio",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "wZt47plVB",
+      "position": {
+        "x": 1134.9904820798004,
+        "y": 337.88025436833345
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_Migz5ConvertAudio",
+        "aac_stereo": "true",
+        "downmix": "true",
+        "downmix_single_track": "false"
+      }
+    },
+    {
+      "name": "Does it have 8 channels?",
+      "sourceRepo": "Community",
+      "pluginName": "checkChannelCount",
+      "version": "1.0.0",
+      "id": "nbbkUKbtl",
+      "position": {
+        "x": 1132.6381163631536,
+        "y": 624.1119709353892
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "channelCount": "8"
+      }
+    },
+    {
+      "name": "Does it have aac?",
+      "sourceRepo": "Community",
+      "pluginName": "checkAudioCodec",
+      "version": "1.0.0",
+      "id": "28JOviF9s",
+      "position": {
+        "x": 1479.9953091036305,
+        "y": 816.8547641569667
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🚀 If we don't have 6 or 8 channels, we only want aac.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "8ChMLAZr5",
+      "position": {
+        "x": 2587.926160045139,
+        "y": 602.5744161626159
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "😈 File has either 6 or 8 channels. Not removing eac3/ac3.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "m16bRPqb2",
+      "position": {
+        "x": 2467.535710643205,
+        "y": 901.1741685159716
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "✅ eac3 and ac3 removal logic done.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "5omEXKqVg",
+      "position": {
+        "x": 2595.621121670501,
+        "y": 1076.5018933950805
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🚀 Beginning 6-channel logic.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "DGvnAZE9p",
+      "position": {
+        "x": 1627.9121109092137,
+        "y": 439.1049731659027
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Is it foreign (but not anime)?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "KModNYdVM",
+      "position": {
+        "x": 2314.1571330749925,
+        "y": 1308.1946114476027
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.is_foreign}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "Re-Order Audio Streams (eng)",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "ayVWipI95",
+      "position": {
+        "x": 2564.803496067146,
+        "y": 1478.8499193779608
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_076a_re_order_audio_streams"
+      }
+    },
+    {
+      "name": "Is it anime?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "IhYJBRt-G",
+      "position": {
+        "x": 1686.5904291977802,
+        "y": 826.2377237478241
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "ANIME",
+        "variable": "{{{args.userVariables.library.name}}}"
+      }
+    },
+    {
+      "name": "We sure did.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "j7_AITGTQ",
+      "position": {
+        "x": 1899.4887893546354,
+        "y": 380.78750787880136
+      },
+      "fpEnabled": true
+    }
+  ],
+  "flowEdges": [
+    {
+      "source": "x_65k3lxU",
+      "sourceHandle": "2",
+      "target": "Oi_aXaz7O",
+      "targetHandle": null,
+      "id": "92y3UNRVV"
+    },
+    {
+      "source": "x_65k3lxU",
+      "sourceHandle": "1",
+      "target": "GudmPNgxO",
+      "targetHandle": null,
+      "id": "EjOxWqqaX"
+    },
+    {
+      "source": "XnTBk97W9",
+      "sourceHandle": "1",
+      "target": "rmmzJ9UVr",
+      "targetHandle": null,
+      "id": "ty6LMZeUM"
+    },
+    {
+      "source": "bDvGHgzR2",
+      "sourceHandle": "err1",
+      "target": "5ynOIH5pQ",
+      "targetHandle": null,
+      "id": "ZX2l8XLPi"
+    },
+    {
+      "source": "5ynOIH5pQ",
+      "sourceHandle": "1",
+      "target": "gUXAUSLbT",
+      "targetHandle": null,
+      "id": "a1gk5lQGe"
+    },
+    {
+      "source": "xR8gCEb7_",
+      "sourceHandle": "1",
+      "target": "XSNXsXj2m",
+      "targetHandle": null,
+      "id": "LiXT4hYtO"
+    },
+    {
+      "source": "rmmzJ9UVr",
+      "sourceHandle": "1",
+      "target": "LDfgoIQyV",
+      "targetHandle": null,
+      "id": "Jj1fml0oi"
+    },
+    {
+      "source": "GudmPNgxO",
+      "sourceHandle": "2",
+      "target": "yx0wwA1rj",
+      "targetHandle": null,
+      "id": "VD-kn_BI5"
+    },
+    {
+      "source": "yx0wwA1rj",
+      "sourceHandle": "1",
+      "target": "5h3aU2wWR",
+      "targetHandle": null,
+      "id": "xnLmT8kvu"
+    },
+    {
+      "source": "Oi_aXaz7O",
+      "sourceHandle": "1",
+      "target": "5h3aU2wWR",
+      "targetHandle": null,
+      "id": "ypnMd7Egp"
+    },
+    {
+      "source": "Tv4RkmGJt",
+      "sourceHandle": "1",
+      "target": "gUXAUSLbT",
+      "targetHandle": null,
+      "id": "A7kAulqqy"
+    },
+    {
+      "source": "kwVAOnYRB",
+      "sourceHandle": "err1",
+      "target": "Tv4RkmGJt",
+      "targetHandle": null,
+      "id": "mRQBqtmtN"
+    },
+    {
+      "source": "bDvGHgzR2",
+      "sourceHandle": "1",
+      "target": "kwVAOnYRB",
+      "targetHandle": null,
+      "id": "n32LQfn1_"
+    },
+    {
+      "source": "bDvGHgzR2",
+      "sourceHandle": "2",
+      "target": "kwVAOnYRB",
+      "targetHandle": null,
+      "id": "YDNRfn2R5"
+    },
+    {
+      "source": "kwVAOnYRB",
+      "sourceHandle": "1",
+      "target": "-G67OyKM7",
+      "targetHandle": null,
+      "id": "WR_dWY7ZE"
+    },
+    {
+      "source": "kwVAOnYRB",
+      "sourceHandle": "2",
+      "target": "-G67OyKM7",
+      "targetHandle": null,
+      "id": "7t-ZIXPWP"
+    },
+    {
+      "source": "-G67OyKM7",
+      "sourceHandle": "1",
+      "target": "xWdoGKRHw",
+      "targetHandle": null,
+      "id": "Ayh8KWd3w"
+    },
+    {
+      "source": "-G67OyKM7",
+      "sourceHandle": "2",
+      "target": "3ljdCJLGm",
+      "targetHandle": null,
+      "id": "eoGEQoiUb"
+    },
+    {
+      "source": "3ljdCJLGm",
+      "sourceHandle": "1",
+      "target": "8evuaIuBN",
+      "targetHandle": null,
+      "id": "a7w-NFcEs"
+    },
+    {
+      "source": "3ljdCJLGm",
+      "sourceHandle": "err1",
+      "target": "ocVciVFsa",
+      "targetHandle": null,
+      "id": "01eOC6pyR"
+    },
+    {
+      "source": "xWdoGKRHw",
+      "sourceHandle": "1",
+      "target": "toqWXjkJT",
+      "targetHandle": null,
+      "id": "BjtAW21o2"
+    },
+    {
+      "source": "toqWXjkJT",
+      "sourceHandle": "1",
+      "target": "0c62eVDls",
+      "targetHandle": null,
+      "id": "MOdL80qMh"
+    },
+    {
+      "source": "8evuaIuBN",
+      "sourceHandle": "1",
+      "target": "FFll-kYBC",
+      "targetHandle": null,
+      "id": "Whq9p3nNP"
+    },
+    {
+      "source": "FFll-kYBC",
+      "sourceHandle": "1",
+      "target": "PwEhibX1Z",
+      "targetHandle": null,
+      "id": "Q4rYUGJVS"
+    },
+    {
+      "source": "ocVciVFsa",
+      "sourceHandle": "1",
+      "target": "vr5aLl2cF",
+      "targetHandle": null,
+      "id": "rGAGzvD2L"
+    },
+    {
+      "source": "vr5aLl2cF",
+      "sourceHandle": "1",
+      "target": "JUgXchjWT",
+      "targetHandle": null,
+      "id": "pn1A6FSk8"
+    },
+    {
+      "source": "JUgXchjWT",
+      "sourceHandle": "1",
+      "target": "FFll-kYBC",
+      "targetHandle": null,
+      "id": "8FAJ_Gb-2"
+    },
+    {
+      "source": "vr5aLl2cF",
+      "sourceHandle": "err1",
+      "target": "EuecZCFiv",
+      "targetHandle": null,
+      "id": "cytz_jCAC"
+    },
+    {
+      "source": "nbbkUKbtl",
+      "sourceHandle": "1",
+      "target": "_FPnjivHO",
+      "targetHandle": null,
+      "id": "ntD4ETDAO"
+    },
+    {
+      "source": "8ChMLAZr5",
+      "sourceHandle": "1",
+      "target": "St9RzSxuu",
+      "targetHandle": null,
+      "id": "HG1SP-xH-"
+    },
+    {
+      "source": "St9RzSxuu",
+      "sourceHandle": "2",
+      "target": "p6vAk4nxL",
+      "targetHandle": null,
+      "id": "c87EGUhLn"
+    },
+    {
+      "source": "p6vAk4nxL",
+      "sourceHandle": "2",
+      "target": "fG17RfZiK",
+      "targetHandle": null,
+      "id": "VkeUTU-Mr"
+    },
+    {
+      "source": "p6vAk4nxL",
+      "sourceHandle": "1",
+      "target": "m16bRPqb2",
+      "targetHandle": null,
+      "id": "R6kLyGSaw"
+    },
+    {
+      "source": "St9RzSxuu",
+      "sourceHandle": "1",
+      "target": "m16bRPqb2",
+      "targetHandle": null,
+      "id": "lww82cmmx"
+    },
+    {
+      "source": "fG17RfZiK",
+      "sourceHandle": "1",
+      "target": "bOyl5wACp",
+      "targetHandle": null,
+      "id": "TxnCaW7SU"
+    },
+    {
+      "source": "fG17RfZiK",
+      "sourceHandle": "2",
+      "target": "bOyl5wACp",
+      "targetHandle": null,
+      "id": "G-4moFoqg"
+    },
+    {
+      "source": "m16bRPqb2",
+      "sourceHandle": "1",
+      "target": "5omEXKqVg",
+      "targetHandle": null,
+      "id": "Q5dFRkcLB"
+    },
+    {
+      "source": "bOyl5wACp",
+      "sourceHandle": "1",
+      "target": "5omEXKqVg",
+      "targetHandle": null,
+      "id": "pgLkzg7Pw"
+    },
+    {
+      "source": "4vkV8oJYd",
+      "sourceHandle": "1",
+      "target": "28JOviF9s",
+      "targetHandle": null,
+      "id": "nXRcBer3I"
+    },
+    {
+      "source": "yvNSLf3b4",
+      "sourceHandle": "1",
+      "target": "nbbkUKbtl",
+      "targetHandle": null,
+      "id": "EDqaT7F-K"
+    },
+    {
+      "source": "nbbkUKbtl",
+      "sourceHandle": "2",
+      "target": "yZTx0Mtuc",
+      "targetHandle": null,
+      "id": "6KPujLhOe"
+    },
+    {
+      "source": "_FPnjivHO",
+      "sourceHandle": "2",
+      "target": "yZTx0Mtuc",
+      "targetHandle": null,
+      "id": "354YclGYO"
+    },
+    {
+      "source": "_FPnjivHO",
+      "sourceHandle": "1",
+      "target": "yZTx0Mtuc",
+      "targetHandle": null,
+      "id": "X2AaCQdWK"
+    },
+    {
+      "source": "wZt47plVB",
+      "sourceHandle": "2",
+      "target": "yvNSLf3b4",
+      "targetHandle": null,
+      "id": "n6645lLQq"
+    },
+    {
+      "source": "wZt47plVB",
+      "sourceHandle": "1",
+      "target": "yvNSLf3b4",
+      "targetHandle": null,
+      "id": "aMRxJ_53k"
+    },
+    {
+      "source": "DGvnAZE9p",
+      "sourceHandle": "1",
+      "target": "19V_spdU5",
+      "targetHandle": null,
+      "id": "MzXmU95PC"
+    },
+    {
+      "source": "yZTx0Mtuc",
+      "sourceHandle": "1",
+      "target": "DGvnAZE9p",
+      "targetHandle": null,
+      "id": "_TG3jHfXo"
+    },
+    {
+      "source": "yVdbwyShZ",
+      "sourceHandle": "2",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "l-M4SxiNA"
+    },
+    {
+      "source": "yVdbwyShZ",
+      "sourceHandle": "1",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "YtbK0H0yg"
+    },
+    {
+      "source": "28JOviF9s",
+      "sourceHandle": "1",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "wwsEZF3Qi"
+    },
+    {
+      "source": "fG17RfZiK",
+      "sourceHandle": "err1",
+      "target": "I2IIIaeUv",
+      "targetHandle": null,
+      "id": "1yt7O26BP"
+    },
+    {
+      "source": "I2IIIaeUv",
+      "sourceHandle": "1",
+      "target": "5omEXKqVg",
+      "targetHandle": null,
+      "id": "8wKkj_Yy_"
+    },
+    {
+      "source": "5omEXKqVg",
+      "sourceHandle": "1",
+      "target": "aHVhRtiPW",
+      "targetHandle": null,
+      "id": "55vSzfsux"
+    },
+    {
+      "source": "aHVhRtiPW",
+      "sourceHandle": "1",
+      "target": "1AHQELQM2",
+      "targetHandle": null,
+      "id": "lyPkkezzW"
+    },
+    {
+      "source": "1AHQELQM2",
+      "sourceHandle": "err1",
+      "target": "xkH32RolO",
+      "targetHandle": null,
+      "id": "1scWEZsO0"
+    },
+    {
+      "source": "1AHQELQM2",
+      "sourceHandle": "1",
+      "target": "53mI-wB1V",
+      "targetHandle": null,
+      "id": "UZ3ainm09"
+    },
+    {
+      "source": "xkH32RolO",
+      "sourceHandle": "1",
+      "target": "53mI-wB1V",
+      "targetHandle": null,
+      "id": "eh9DtqEYe"
+    },
+    {
+      "source": "LSeLIvmgj",
+      "sourceHandle": "1",
+      "target": "bDvGHgzR2",
+      "targetHandle": null,
+      "id": "BfvRRY4kg"
+    },
+    {
+      "source": "k6toH0oxu",
+      "sourceHandle": "1",
+      "target": "KModNYdVM",
+      "targetHandle": null,
+      "id": "up3GeUb8G"
+    },
+    {
+      "source": "KModNYdVM",
+      "sourceHandle": "1",
+      "target": "5VuOQhwEi",
+      "targetHandle": null,
+      "id": "wEihXZFll"
+    },
+    {
+      "source": "KModNYdVM",
+      "sourceHandle": "2",
+      "target": "yRQ26e9JA",
+      "targetHandle": null,
+      "id": "JqkrW63Ub"
+    },
+    {
+      "source": "yRQ26e9JA",
+      "sourceHandle": "2",
+      "target": "ayVWipI95",
+      "targetHandle": null,
+      "id": "XP3o3TbUy"
+    },
+    {
+      "source": "yRQ26e9JA",
+      "sourceHandle": "1",
+      "target": "DzujbXHH8",
+      "targetHandle": null,
+      "id": "pO3reQmpe"
+    },
+    {
+      "source": "5VuOQhwEi",
+      "sourceHandle": "1",
+      "target": "O0DyltkUI",
+      "targetHandle": null,
+      "id": "4zr8SfS8w"
+    },
+    {
+      "source": "ayVWipI95",
+      "sourceHandle": "err1",
+      "target": "Do7Oe_uiF",
+      "targetHandle": null,
+      "id": "tr1ualh6p"
+    },
+    {
+      "source": "DzujbXHH8",
+      "sourceHandle": "1",
+      "target": "O0DyltkUI",
+      "targetHandle": null,
+      "id": "v6_LGlPgb"
+    },
+    {
+      "source": "DzujbXHH8",
+      "sourceHandle": "2",
+      "target": "O0DyltkUI",
+      "targetHandle": null,
+      "id": "Ai0NQ65nl"
+    },
+    {
+      "source": "ayVWipI95",
+      "sourceHandle": "1",
+      "target": "O0DyltkUI",
+      "targetHandle": null,
+      "id": "_Qy3zgdmn"
+    },
+    {
+      "source": "ayVWipI95",
+      "sourceHandle": "2",
+      "target": "O0DyltkUI",
+      "targetHandle": null,
+      "id": "KK1AxpO5h"
+    },
+    {
+      "source": "Do7Oe_uiF",
+      "sourceHandle": "1",
+      "target": "O0DyltkUI",
+      "targetHandle": null,
+      "id": "3Hl-s1k1T"
+    },
+    {
+      "source": "53mI-wB1V",
+      "sourceHandle": "1",
+      "target": "k6toH0oxu",
+      "targetHandle": null,
+      "id": "ftmXtCBlv"
+    },
+    {
+      "source": "O0DyltkUI",
+      "sourceHandle": "1",
+      "target": "LSeLIvmgj",
+      "targetHandle": null,
+      "id": "8N9zORr5i"
+    },
+    {
+      "source": "yVdbwyShZ",
+      "sourceHandle": "err1",
+      "target": "mOlECzDsN",
+      "targetHandle": null,
+      "id": "-khm41r1j"
+    },
+    {
+      "source": "mOlECzDsN",
+      "sourceHandle": "1",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "3NnqrAJlj"
+    },
+    {
+      "source": "_FPnjivHO",
+      "sourceHandle": "err1",
+      "target": "yJVyepZmr",
+      "targetHandle": null,
+      "id": "Rtv5bYXL9"
+    },
+    {
+      "source": "yJVyepZmr",
+      "sourceHandle": "1",
+      "target": "yZTx0Mtuc",
+      "targetHandle": null,
+      "id": "e-9LM7-d5"
+    },
+    {
+      "source": "wZt47plVB",
+      "sourceHandle": "err1",
+      "target": "YG5beJEDT",
+      "targetHandle": null,
+      "id": "fqtb2wqT7"
+    },
+    {
+      "source": "YG5beJEDT",
+      "sourceHandle": "1",
+      "target": "yvNSLf3b4",
+      "targetHandle": null,
+      "id": "mQyICnti1"
+    },
+    {
+      "source": "19V_spdU5",
+      "sourceHandle": "2",
+      "target": "it2cZkRFM",
+      "targetHandle": null,
+      "id": "5ObevPc0a"
+    },
+    {
+      "source": "Ba_Zi5yBz",
+      "sourceHandle": "2",
+      "target": "UeYG7pXsz",
+      "targetHandle": null,
+      "id": "7sM9AshkD"
+    },
+    {
+      "source": "372sZQr5d",
+      "sourceHandle": "1",
+      "target": "28JOviF9s",
+      "targetHandle": null,
+      "id": "ArBWGL2oy"
+    },
+    {
+      "source": "372sZQr5d",
+      "sourceHandle": "2",
+      "target": "28JOviF9s",
+      "targetHandle": null,
+      "id": "05Gg3Jv2p"
+    },
+    {
+      "source": "372sZQr5d",
+      "sourceHandle": "err1",
+      "target": "mOlECzDsN",
+      "targetHandle": null,
+      "id": "5b1kRf5cQ"
+    },
+    {
+      "source": "MpqMlA8xU",
+      "sourceHandle": "1",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "lnLkSjhRm"
+    },
+    {
+      "source": "MpqMlA8xU",
+      "sourceHandle": "2",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "MCJ_D8YL8"
+    },
+    {
+      "source": "MpqMlA8xU",
+      "sourceHandle": "err1",
+      "target": "BOVqt10V4",
+      "targetHandle": null,
+      "id": "mEmL_jKIm"
+    },
+    {
+      "source": "BOVqt10V4",
+      "sourceHandle": "1",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "1ccbQ5GAB"
+    },
+    {
+      "source": "it2cZkRFM",
+      "sourceHandle": "1",
+      "target": "Docpj3q8y",
+      "targetHandle": null,
+      "id": "o7HXBO9Uo"
+    },
+    {
+      "source": "ooafl0ihT",
+      "sourceHandle": "1",
+      "target": "Docpj3q8y",
+      "targetHandle": null,
+      "id": "7X-Waq6kP"
+    },
+    {
+      "source": "3-9GKRL_B",
+      "sourceHandle": "1",
+      "target": "8ChMLAZr5",
+      "targetHandle": null,
+      "id": "YoF8tqmZo"
+    },
+    {
+      "source": "Docpj3q8y",
+      "sourceHandle": "1",
+      "target": "Ba_Zi5yBz",
+      "targetHandle": null,
+      "id": "rq31vQf0M"
+    },
+    {
+      "source": "28JOviF9s",
+      "sourceHandle": "2",
+      "target": "IhYJBRt-G",
+      "targetHandle": null,
+      "id": "4Nwq0HXvN"
+    },
+    {
+      "source": "IhYJBRt-G",
+      "sourceHandle": "2",
+      "target": "yVdbwyShZ",
+      "targetHandle": null,
+      "id": "kU6XL0fXw"
+    },
+    {
+      "source": "IhYJBRt-G",
+      "sourceHandle": "1",
+      "target": "T-RPDrlwa",
+      "targetHandle": null,
+      "id": "NTP2yf4j1"
+    },
+    {
+      "source": "T-RPDrlwa",
+      "sourceHandle": "2",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "2tnquaPAq"
+    },
+    {
+      "source": "T-RPDrlwa",
+      "sourceHandle": "1",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "7pKNXbBEk"
+    },
+    {
+      "source": "4vkV8oJYd",
+      "sourceHandle": "2",
+      "target": "jUKNCi0AU",
+      "targetHandle": null,
+      "id": "k2lp4xXYE"
+    },
+    {
+      "source": "jUKNCi0AU",
+      "sourceHandle": "2",
+      "target": "372sZQr5d",
+      "targetHandle": null,
+      "id": "5QfIEoLqm"
+    },
+    {
+      "source": "jUKNCi0AU",
+      "sourceHandle": "1",
+      "target": "oYduHgNXj",
+      "targetHandle": null,
+      "id": "dysMTOzag"
+    },
+    {
+      "source": "oYduHgNXj",
+      "sourceHandle": "1",
+      "target": "28JOviF9s",
+      "targetHandle": null,
+      "id": "iF3ET9gXI"
+    },
+    {
+      "source": "oYduHgNXj",
+      "sourceHandle": "2",
+      "target": "28JOviF9s",
+      "targetHandle": null,
+      "id": "b1UL5k5AJ"
+    },
+    {
+      "source": "tfh458pge",
+      "sourceHandle": "2",
+      "target": "6rJn4Kl-6",
+      "targetHandle": null,
+      "id": "KSSLVr3xG"
+    },
+    {
+      "source": "UeYG7pXsz",
+      "sourceHandle": "1",
+      "target": "6rJn4Kl-6",
+      "targetHandle": null,
+      "id": "qKv-8xWSD"
+    },
+    {
+      "source": "6rJn4Kl-6",
+      "sourceHandle": "2",
+      "target": "MpqMlA8xU",
+      "targetHandle": null,
+      "id": "y8svZI9ad"
+    },
+    {
+      "source": "6rJn4Kl-6",
+      "sourceHandle": "1",
+      "target": "j7auLPPNl",
+      "targetHandle": null,
+      "id": "u-BYv98K8"
+    },
+    {
+      "source": "j7auLPPNl",
+      "sourceHandle": "1",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "QT1Fi6VwS"
+    },
+    {
+      "source": "j7auLPPNl",
+      "sourceHandle": "2",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "3wMddNkd1"
+    },
+    {
+      "source": "j7auLPPNl",
+      "sourceHandle": "err1",
+      "target": "MpqMlA8xU",
+      "targetHandle": null,
+      "id": "vfGDUFpmc"
+    },
+    {
+      "source": "T-RPDrlwa",
+      "sourceHandle": "err1",
+      "target": "yVdbwyShZ",
+      "targetHandle": null,
+      "id": "QbMxMY8BA"
+    },
+    {
+      "source": "oYduHgNXj",
+      "sourceHandle": "err1",
+      "target": "372sZQr5d",
+      "targetHandle": null,
+      "id": "8esUIVP_3"
+    },
+    {
+      "source": "19V_spdU5",
+      "sourceHandle": "1",
+      "target": "2N2PMxxho",
+      "targetHandle": null,
+      "id": "Z1n_psEeE"
+    },
+    {
+      "source": "2N2PMxxho",
+      "sourceHandle": "1",
+      "target": "8Jhizxz4Z",
+      "targetHandle": null,
+      "id": "IBgdp9dlo"
+    },
+    {
+      "source": "8Jhizxz4Z",
+      "sourceHandle": "1",
+      "target": "4vkV8oJYd",
+      "targetHandle": null,
+      "id": "_tqdTntAn"
+    },
+    {
+      "source": "Ba_Zi5yBz",
+      "sourceHandle": "1",
+      "target": "_kNJxds4c",
+      "targetHandle": null,
+      "id": "Ph_d1tcdQ"
+    },
+    {
+      "source": "_kNJxds4c",
+      "sourceHandle": "1",
+      "target": "tfh458pge",
+      "targetHandle": null,
+      "id": "HmfFhFdbb"
+    },
+    {
+      "source": "tfh458pge",
+      "sourceHandle": "1",
+      "target": "1rLRXLAFX",
+      "targetHandle": null,
+      "id": "UKDr7CGZo"
+    },
+    {
+      "source": "1rLRXLAFX",
+      "sourceHandle": "1",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "VY2ll7YLM"
+    },
+    {
+      "source": "GudmPNgxO",
+      "sourceHandle": "1",
+      "target": "UkaM2tC3h",
+      "targetHandle": null,
+      "id": "eFHzSF6ui"
+    },
+    {
+      "source": "UkaM2tC3h",
+      "sourceHandle": "1",
+      "target": "wZt47plVB",
+      "targetHandle": null,
+      "id": "eROMSzzwK"
+    },
+    {
+      "source": "LDfgoIQyV",
+      "sourceHandle": "1",
+      "target": "j7_AITGTQ",
+      "targetHandle": null,
+      "id": "989v5HAOL"
+    },
+    {
+      "source": "5h3aU2wWR",
+      "sourceHandle": "1",
+      "target": "j7_AITGTQ",
+      "targetHandle": null,
+      "id": "3q7FpTniy"
+    },
+    {
+      "source": "j7_AITGTQ",
+      "sourceHandle": "1",
+      "target": "a1Bb1G9pN",
+      "targetHandle": null,
+      "id": "CzOHyjIm2"
+    },
+    {
+      "source": "5h3aU2wWR",
+      "sourceHandle": "2",
+      "target": "ujg0vS9ka",
+      "targetHandle": null,
+      "id": "p6tagsDLs"
+    },
+    {
+      "source": "LDfgoIQyV",
+      "sourceHandle": "2",
+      "target": "ujg0vS9ka",
+      "targetHandle": null,
+      "id": "OV88HlZBX"
+    },
+    {
+      "source": "1AHQELQM2",
+      "sourceHandle": "2",
+      "target": "aECFay6MZ",
+      "targetHandle": null,
+      "id": "QberorIzt"
+    },
+    {
+      "source": "aECFay6MZ",
+      "sourceHandle": "1",
+      "target": "53mI-wB1V",
+      "targetHandle": null,
+      "id": "Szou4Kohv"
+    },
+    {
+      "source": "DzujbXHH8",
+      "sourceHandle": "err1",
+      "target": "ayVWipI95",
+      "targetHandle": null,
+      "id": "X_6a6V45R"
+    },
+    {
+      "source": "-O_1ZjPQ3",
+      "sourceHandle": "1",
+      "target": "31d8yO2Vm",
+      "targetHandle": null,
+      "id": "rLAd6r7k6"
+    },
+    {
+      "source": "XSNXsXj2m",
+      "sourceHandle": "1",
+      "target": "31d8yO2Vm",
+      "targetHandle": null,
+      "id": "gRpq5OWl2"
+    },
+    {
+      "source": "31d8yO2Vm",
+      "sourceHandle": "1",
+      "target": "x_65k3lxU",
+      "targetHandle": null,
+      "id": "i4leXCqHZ"
+    }
+  ]
+}
