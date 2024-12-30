@@ -5,16 +5,231 @@
   "tags": "",
   "flowPlugins": [
     {
-      "name": "  NOT  FULLY  IMPLEMENTED\n  ------------>",
+      "name": "Quality level is now determined.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
-      "id": "4ZySz4QOU",
+      "id": "jV3nVwvZa",
       "position": {
-        "x": -253.54973330560406,
-        "y": 1487.1465303509817
+        "x": -371.18934004920857,
+        "y": 1741.3075287243755
       },
       "fpEnabled": true
+    },
+    {
+      "name": "Set Video Encoder to HEVC (cpu SLOWER)",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandSetVideoEncoder",
+      "version": "1.0.0",
+      "inputsDB": {
+        "outputCodec": "hevc",
+        "ffmpegPreset": "slower",
+        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
+        "hardwareEncoding": "true",
+        "hardwareType": "nvenc"
+      },
+      "id": "iWbAwbNH-",
+      "position": {
+        "x": -7.809824973747737,
+        "y": 1705.9293790576799
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Set Video Encoder to HEVC (cpu SLOW)",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandSetVideoEncoder",
+      "version": "1.0.0",
+      "inputsDB": {
+        "outputCodec": "hevc",
+        "ffmpegPreset": "slow",
+        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
+        "hardwareEncoding": "true",
+        "hardwareType": "nvenc"
+      },
+      "id": "bfxO9efwr",
+      "position": {
+        "x": -157.4131582871508,
+        "y": 1641.7259604860274
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Set Video Encoder to HEVC (gpu MEDIUM)",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandSetVideoEncoder",
+      "version": "1.0.0",
+      "inputsDB": {
+        "outputCodec": "hevc",
+        "ffmpegPreset": "medium",
+        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
+        "hardwareEncoding": "true",
+        "hardwareType": "nvenc"
+      },
+      "id": "RSBUeAycC",
+      "position": {
+        "x": -278.1498495197487,
+        "y": 1559.725209992371
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Set Video Encoder to HEVC (gpu FAST)",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandSetVideoEncoder",
+      "version": "1.0.0",
+      "inputsDB": {
+        "outputCodec": "hevc",
+        "ffmpegPreset": "fast",
+        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
+        "hardwareEncoding": "true",
+        "hardwareType": "nvenc"
+      },
+      "id": "zUTrGaFHB",
+      "position": {
+        "x": -370.03527379192855,
+        "y": 1475.5914544932568
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "If quality_level is not set, fallback to medium",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "IsTLVFTwl",
+      "position": {
+        "x": 203.46453089547498,
+        "y": 1460.7458955823288
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "is ffmpeg_preset = slower?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "eMjxTGUMF",
+      "position": {
+        "x": 16.403523848548986,
+        "y": 1638.057127675117
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "slower",
+        "variable": "{{{args.userVariables.library.ffmpeg_preset}}}"
+      }
+    },
+    {
+      "name": "is ffmpeg_preset = slow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "vDbAelujj",
+      "position": {
+        "x": -107.63363978553936,
+        "y": 1559.0693684681858
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "slow",
+        "variable": "{{{args.userVariables.library.ffmpeg_preset}}}"
+      }
+    },
+    {
+      "name": "is ffmpeg_preset = medium?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "ixZp_ki7j",
+      "position": {
+        "x": -175.7981834907999,
+        "y": 1474.4196813253852
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "medium",
+        "variable": "{{{args.userVariables.library.ffmpeg_preset}}}"
+      }
+    },
+    {
+      "name": "is ffmpeg_preset = fast?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "BvmWcuRmu",
+      "position": {
+        "x": -313.5848202033776,
+        "y": 1400.6908638600603
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "fast",
+        "variable": "{{{args.userVariables.library.ffmpeg_preset}}}"
+      }
+    },
+    {
+      "name": "Set Video Encoder to HEVC (gpu FASTER)",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandSetVideoEncoder",
+      "version": "1.0.0",
+      "inputsDB": {
+        "outputCodec": "hevc",
+        "ffmpegPreset": "faster",
+        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
+        "hardwareEncoding": "true",
+        "hardwareType": "nvenc"
+      },
+      "id": "mqT3eshxv",
+      "position": {
+        "x": -528.7616417759564,
+        "y": 1400.9367423972444
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Decide which quality level to use based off library variable 'quality_level'",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "O75tHAMme",
+      "position": {
+        "x": -208.4248456476979,
+        "y": 1262.284475277672
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "is ffmpeg_preset = faster?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "UIrqIm9JW",
+      "position": {
+        "x": -439.85832779556506,
+        "y": 1326.8979027559355
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "faster",
+        "variable": "{{{{args.userVariables.library.ffmpeg_preset}}}"
+      }
+    },
+    {
+      "name": "Is it Animated?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "dXWjz82SS",
+      "position": {
+        "x": 403.73720348808524,
+        "y": 1896.9357799380941
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "true",
+        "variable": "{{{args.userVariables.library.is_animated}}}"
+      }
     },
     {
       "name": "Apply standard tuning",
@@ -23,12 +238,12 @@
       "version": "1.0.0",
       "id": "ssm3z_AhC",
       "position": {
-        "x": 654.8088258177421,
-        "y": 1957.8732156983033
+        "x": 428.6988166950706,
+        "y": 1967.2862857613075
       },
       "fpEnabled": true,
       "inputsDB": {
-        "outputArguments": "-x265-params \"frame-threads=6:deblock=-2:-2:psy-rd=1.1:psy-rdoq=1:aq-mode=1:aq-strength=0.80:ipratio=1.4:pbratio=1.3:qpmax=69:qpmin=10:no-cu-lossless=1:no-amp=1:no-rect=1:rskip=1:ctu-info=0:limit-refs=1:no-aq-motion=1:no-dynamic-refine=1:scenecut=40:scenecut-bias=0.1\""
+        "outputArguments": "-x265-params \"deblock=-1:-1:psy-rd=1.1:psy-rdoq=1:aq-mode=1:aq-strength=0.80:ipratio=1.4:pbratio=1.3:qpmax=69:qpmin=10:no-cu-lossless=1:no-amp=1:no-rect=1:rskip=1:ctu-info=0:limit-refs=1:no-aq-motion=1:no-dynamic-refine=1:scenecut=40:scenecut-bias=0.1\""
       }
     },
     {
@@ -38,7 +253,7 @@
       "version": "1.0.0",
       "id": "_1iEFECiV",
       "position": {
-        "x": 569.3865222431622,
+        "x": 269.4702754762581,
         "y": 1826.3027198505674
       },
       "fpEnabled": true,
@@ -54,8 +269,8 @@
       "version": "1.0.0",
       "id": "RVX-hRdj2",
       "position": {
-        "x": 525.3196911613195,
-        "y": 1912.695597443754
+        "x": 245.59497084626838,
+        "y": 1967.8423468040037
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -69,8 +284,8 @@
       "version": "2.0.0",
       "id": "__aruWpNb",
       "position": {
-        "x": -63.87963660040623,
-        "y": 1782.816041095073
+        "x": 155.7054523535007,
+        "y": 2282.540028674606
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -86,8 +301,8 @@
       "version": "1.0.0",
       "id": "JKM2ouHpl",
       "position": {
-        "x": 231.9444203981547,
-        "y": 1809.0863256040302
+        "x": 515.2853658360661,
+        "y": 2302.093908972681
       },
       "fpEnabled": true
     },
@@ -98,8 +313,8 @@
       "version": "2.0.0",
       "id": "nQt_qdr3T",
       "position": {
-        "x": -371.4212733218966,
-        "y": 2143.1904505784028
+        "x": -255.77601657320974,
+        "y": 2622.5062485889657
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -114,8 +329,8 @@
       "version": "1.0.0",
       "id": "3gO0_tlfh",
       "position": {
-        "x": -348.99376109634534,
-        "y": 1949.4869495243865
+        "x": -230.6352956927634,
+        "y": 2441.0121864819776
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -130,8 +345,8 @@
       "version": "1.0.0",
       "id": "2ZBz_8xH-",
       "position": {
-        "x": -346.6580792753373,
-        "y": 2035.4572106479427
+        "x": -231.01282252665044,
+        "y": 2539.1918865525618
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -146,8 +361,8 @@
       "version": "1.0.0",
       "id": "ssQy4kowR",
       "position": {
-        "x": 88.96240024371838,
-        "y": 2237.615809922217
+        "x": 271.56503175037545,
+        "y": 2699.318920726752
       },
       "fpEnabled": true
     },
@@ -158,8 +373,8 @@
       "version": "2.0.0",
       "id": "yXgH5tH67",
       "position": {
-        "x": -40.60537806596861,
-        "y": 2289.514287182184
+        "x": 46.83928184537706,
+        "y": 2700.8021321177043
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -174,8 +389,8 @@
       "version": "1.0.0",
       "id": "S08-ELDeH",
       "position": {
-        "x": 396.2466179570753,
-        "y": 1275.2101846042463
+        "x": 381.4882340878587,
+        "y": 1270.0013432386404
       },
       "fpEnabled": true
     },
@@ -204,8 +419,8 @@
       "version": "1.0.0",
       "id": "9JFl9MsWX",
       "position": {
-        "x": 577.6008876017587,
-        "y": 1319.84742523263
+        "x": 575.8646071465568,
+        "y": 1317.2430045498272
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -226,8 +441,8 @@
       },
       "id": "CHJ-VJqQh",
       "position": {
-        "x": 912.3123160659628,
-        "y": 1730.107674702363
+        "x": 948.5219566386107,
+        "y": 1717.0855712883483
       },
       "fpEnabled": true
     },
@@ -254,8 +469,8 @@
       "version": "1.0.0",
       "id": "hxCvrSFf5",
       "position": {
-        "x": 893.7288412435399,
-        "y": 1573.6160582506589
+        "x": 891.992560788338,
+        "y": 1563.1983755194472
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -277,7 +492,7 @@
       "id": "ISUYkwfV_",
       "position": {
         "x": 570.6025443504697,
-        "y": 1468.8796254988868
+        "y": 1464.5389243608818
       },
       "fpEnabled": true
     },
@@ -294,8 +509,8 @@
       },
       "id": "3NiSlQ4y1",
       "position": {
-        "x": 671.9134420793904,
-        "y": 1551.816787907895
+        "x": 698.8027832200498,
+        "y": 1561.7888975678209
       },
       "fpEnabled": true
     },
@@ -343,8 +558,8 @@
       },
       "id": "hgAJYApF4",
       "position": {
-        "x": 325.45952390685534,
-        "y": 539.3964199386425
+        "x": 248.1694370308187,
+        "y": 517.2042167762162
       },
       "fpEnabled": true
     },
@@ -361,32 +576,14 @@
       "fpEnabled": true
     },
     {
-      "name": "Set Video Encoder to HEVC (nvenc)",
-      "sourceRepo": "Community",
-      "pluginName": "ffmpegCommandSetVideoEncoder",
-      "version": "1.0.0",
-      "inputsDB": {
-        "outputCodec": "hevc",
-        "ffmpegPreset": "slow",
-        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
-        "hardwareType": "nvenc"
-      },
-      "id": "X2YgIP9uN",
-      "position": {
-        "x": -84.82850730253631,
-        "y": 1478.1792116499323
-      },
-      "fpEnabled": true
-    },
-    {
       "name": "Tags: Worker Type GPU",
       "sourceRepo": "Community",
       "pluginName": "tagsWorkerType",
       "version": "1.0.0",
       "id": "leytkdC_H",
       "position": {
-        "x": -83.88482044697646,
-        "y": 1284.2833954991477
+        "x": 14.21502527193394,
+        "y": 1273.865712767936
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -416,8 +613,8 @@
       "version": "1.0.0",
       "id": "65npF4ts2",
       "position": {
-        "x": 189.99249494703335,
-        "y": 917.0904726327983
+        "x": 135.29966060817176,
+        "y": 884.1011439839613
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -431,8 +628,8 @@
       "version": "1.0.0",
       "id": "UY1UG0CFU",
       "position": {
-        "x": -384.4325075731372,
-        "y": 229.6648801786513
+        "x": -385.62312157340574,
+        "y": 215.33750231957413
       },
       "fpEnabled": true
     },
@@ -443,8 +640,8 @@
       "version": "1.0.0",
       "id": "lGUsElYYE",
       "position": {
-        "x": 506.05558069497533,
-        "y": 106.114228169939
+        "x": 545.7229987710832,
+        "y": 127.47051510611297
       },
       "fpEnabled": true
     },
@@ -455,8 +652,8 @@
       "version": "1.0.0",
       "id": "2-C-9C9Zh",
       "position": {
-        "x": 178.66679452509607,
-        "y": 99.76288425068867
+        "x": 221.943256124536,
+        "y": 104.48085295251246
       },
       "fpEnabled": true
     },
@@ -467,8 +664,8 @@
       "version": "1.0.0",
       "id": "P09I9yz6b",
       "position": {
-        "x": -214.33850908982603,
-        "y": 100.14412375457175
+        "x": -87.28397606691256,
+        "y": 104.93474547401433
       },
       "fpEnabled": true
     },
@@ -479,7 +676,7 @@
       "version": "1.0.0",
       "id": "oaVWnEQbj",
       "position": {
-        "x": 324.0696041310573,
+        "x": 312.7994158053665,
         "y": 219.033475661436
       },
       "fpEnabled": true
@@ -491,8 +688,8 @@
       "version": "1.0.0",
       "id": "dZLEJjeUc",
       "position": {
-        "x": -11.333151614771083,
-        "y": 287.5055531601157
+        "x": 81.60580523109422,
+        "y": 219.63766589411313
       },
       "fpEnabled": true
     },
@@ -503,8 +700,8 @@
       "version": "1.0.0",
       "id": "eUGp18dpF",
       "position": {
-        "x": 507.59986575409806,
-        "y": 188.00675766177318
+        "x": 546.6120561122582,
+        "y": 209.78591413353755
       },
       "fpEnabled": true
     },
@@ -515,8 +712,8 @@
       "version": "1.0.0",
       "id": "PTIBH-PVM",
       "position": {
-        "x": -384.7978524776819,
-        "y": 75.89556033877314
+        "x": -387.10642746060034,
+        "y": 134.25485718350936
       },
       "fpEnabled": true
     },
@@ -531,8 +728,8 @@
       },
       "id": "RUNIuJjhL",
       "position": {
-        "x": 153.83396276380046,
-        "y": -7.653693863303829
+        "x": 158.62458448324304,
+        "y": -4.707563302698796
       },
       "fpEnabled": true
     },
@@ -547,8 +744,8 @@
       },
       "id": "uoOb9Spjs",
       "position": {
-        "x": 13.01695660915675,
-        "y": -43.609141654538746
+        "x": 2.3177521876217497,
+        "y": -41.66383175971421
       },
       "fpEnabled": true
     },
@@ -563,8 +760,8 @@
       },
       "id": "2RHDj5Vt_",
       "position": {
-        "x": 480.6079826435636,
-        "y": -13.714710888090167
+        "x": 520.4871105652386,
+        "y": -15.448586015119506
       },
       "fpEnabled": true
     },
@@ -579,8 +776,8 @@
       },
       "id": "WvG9JzojF",
       "position": {
-        "x": -238.9219976243594,
-        "y": -19.717922696369897
+        "x": -245.05301682270454,
+        "y": 46.41076959017857
       },
       "fpEnabled": true
     },
@@ -595,8 +792,8 @@
       },
       "id": "tt2FUdd6d",
       "position": {
-        "x": -373.8844701354232,
-        "y": -59.05466047174914
+        "x": -361.7203612240269,
+        "y": -58.05383980596865
       },
       "fpEnabled": true
     },
@@ -607,7 +804,7 @@
       "version": "1.0.0",
       "id": "aMVT-L3KX",
       "position": {
-        "x": 667.0647885785712,
+        "x": 640.4609603487521,
         "y": -120.18917659020514
       },
       "fpEnabled": true
@@ -643,8 +840,8 @@
       "version": "1.0.0",
       "id": "hO88vFCFT",
       "position": {
-        "x": -294.0411456061006,
-        "y": -119.0577645416455
+        "x": -361.15433697754725,
+        "y": -120.03041948905776
       },
       "fpEnabled": true
     },
@@ -659,8 +856,8 @@
       },
       "id": "dlc7r689v",
       "position": {
-        "x": 348.619208937821,
-        "y": -54.53687217974499
+        "x": 338.21595817564497,
+        "y": -30.262620401334217
       },
       "fpEnabled": true
     },
@@ -679,39 +876,6 @@
         "y": 516.5822822728353
       },
       "fpEnabled": true
-    },
-    {
-      "name": "Set 4kUHD Bitrate",
-      "sourceRepo": "Community",
-      "pluginName": "ffmpegCommandSetVideoBitrate",
-      "version": "1.0.0",
-      "inputsDB": {
-        "useInputBitrate": "true",
-        "fallbackBitrate": "18000"
-      },
-      "id": "Cv5zKBu8K",
-      "position": {
-        "x": 406.30530174454685,
-        "y": 780.5977146537349
-      },
-      "fpEnabled": false
-    },
-    {
-      "name": "Set 1080p Bitrate",
-      "sourceRepo": "Community",
-      "pluginName": "ffmpegCommandSetVideoBitrate",
-      "version": "1.0.0",
-      "inputsDB": {
-        "useInputBitrate": "true",
-        "fallbackBitrate": "3500",
-        "bitrate": "4000"
-      },
-      "id": "mjUhEe_yV",
-      "position": {
-        "x": 106.18101058550047,
-        "y": 833.9128231120542
-      },
-      "fpEnabled": false
     },
     {
       "name": "Set 720p Bitrate",
@@ -768,8 +932,8 @@
       "version": "1.0.0",
       "id": "lxznnqDwh",
       "position": {
-        "x": 471.2946692709391,
-        "y": -268.12819081343673
+        "x": 641.4890307604426,
+        "y": -226.0922340600051
       },
       "fpEnabled": true
     },
@@ -780,8 +944,8 @@
       "version": "1.0.0",
       "id": "kAd1CKd4_",
       "position": {
-        "x": 884.6325269107108,
-        "y": -109.3036288699671
+        "x": 800.9290937398376,
+        "y": 290.80414904885305
       },
       "fpEnabled": true
     },
@@ -792,8 +956,8 @@
       "version": "1.0.0",
       "id": "-aQvlEEdp",
       "position": {
-        "x": 54.38714311543228,
-        "y": 1838.1006373196328
+        "x": 321.8728179449239,
+        "y": 2318.7983001690623
       },
       "fpEnabled": true
     },
@@ -804,8 +968,8 @@
       "version": "1.0.0",
       "id": "YoxT3ep_H",
       "position": {
-        "x": -384.69501040173157,
-        "y": 319.3760415451627
+        "x": -384.86689363359784,
+        "y": 279.2298676108034
       },
       "fpEnabled": true
     },
@@ -816,8 +980,8 @@
       "version": "1.0.0",
       "id": "bLBk_0TqO",
       "position": {
-        "x": 670.3271812897707,
-        "y": 280.44881422758317
+        "x": 640.2532885082361,
+        "y": 289.6216895485725
       },
       "fpEnabled": true
     },
@@ -828,8 +992,8 @@
       "version": "1.0.0",
       "id": "pjsP2l_so",
       "position": {
-        "x": 772.0853643189619,
-        "y": 376.6101278290816
+        "x": 184.48776689513164,
+        "y": 374.29675146127124
       },
       "fpEnabled": true
     },
@@ -855,8 +1019,8 @@
       "version": "1.0.0",
       "id": "7yFPvyjDw",
       "position": {
-        "x": 131.12010849918545,
-        "y": 1577.8632374201975
+        "x": 351.73586754886105,
+        "y": 2052.553566076584
       },
       "fpEnabled": true
     },
@@ -891,8 +1055,8 @@
       "version": "1.0.0",
       "id": "vCkfUVzog",
       "position": {
-        "x": 411.46002514345037,
-        "y": 880.1649193261412
+        "x": 406.2511837778445,
+        "y": 815.9225424836691
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -918,8 +1082,8 @@
       "version": "1.0.0",
       "id": "QEY-1emKy",
       "position": {
-        "x": -3.3840971748129505,
-        "y": 1121.9561929388565
+        "x": -2.5159569472119756,
+        "y": 1116.7473515732504
       },
       "fpEnabled": true
     },
@@ -930,8 +1094,8 @@
       "version": "1.0.0",
       "id": "GZfACY91B",
       "position": {
-        "x": 431.8841962280809,
-        "y": 1135.8282098188754
+        "x": 431.0160560004799,
+        "y": 1104.5751616252403
       },
       "fpEnabled": true
     },
@@ -955,7 +1119,7 @@
       "id": "yMmOfVyTU",
       "position": {
         "x": 128.0845076332256,
-        "y": 1208.6690638322307
+        "y": 1199.987661556221
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -970,8 +1134,8 @@
       "version": "1.0.0",
       "id": "cYIbqVNto",
       "position": {
-        "x": 152.44989672932456,
-        "y": 1281.2972504431318
+        "x": 190.64806674376752,
+        "y": 1272.615848167122
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -986,8 +1150,8 @@
       "version": "1.0.0",
       "id": "4ICjqTwRl",
       "position": {
-        "x": 129.36912873021174,
-        "y": 1633.0951202389333
+        "x": 352.09892386100984,
+        "y": 2134.624717794056
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1001,8 +1165,8 @@
       "version": "1.0.0",
       "id": "Ro8TnPxFO",
       "position": {
-        "x": -65.60382925362977,
-        "y": 1896.396233932177
+        "x": 154.32920772299892,
+        "y": 2364.291114543303
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1017,8 +1181,8 @@
       "version": "1.0.0",
       "id": "HFDNqDoa2",
       "position": {
-        "x": -65.45580070467403,
-        "y": 2070.3593772193817
+        "x": 153.78134022651128,
+        "y": 2541.07736392947
       },
       "fpEnabled": true
     },
@@ -1029,8 +1193,8 @@
       "version": "2.0.0",
       "id": "9XAIaK9xJ",
       "position": {
-        "x": -64.52843080848868,
-        "y": 1991.0716188355036
+        "x": 155.05665814541825,
+        "y": 2461.8027795179883
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1044,8 +1208,8 @@
       "version": "1.0.0",
       "id": "zEUftmE3V",
       "position": {
-        "x": 772.0929934329739,
-        "y": 443.72314546092167
+        "x": 184.4953960091438,
+        "y": 444.8798336448268
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1060,8 +1224,8 @@
       "version": "1.0.0",
       "id": "QEYKEgMPy",
       "position": {
-        "x": 154.49249981712967,
-        "y": 1960.4116960708295
+        "x": 423.73108873262595,
+        "y": 2407.218911760315
       },
       "fpEnabled": true
     },
@@ -1073,7 +1237,7 @@
       "id": "M8_tUEor7",
       "position": {
         "x": -384.71028209493034,
-        "y": 394.46317651164884
+        "y": 361.43645276731075
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1088,8 +1252,8 @@
       "version": "2.0.0",
       "id": "eib7fKpbW",
       "position": {
-        "x": 204.63562648316622,
-        "y": 1710.1369895632229
+        "x": 352.66508875683235,
+        "y": 2209.204603014502
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1119,8 +1283,8 @@
       "version": "1.0.0",
       "id": "XSA9YRQZG",
       "position": {
-        "x": 432.106569457898,
-        "y": 1063.736076861181
+        "x": 430.37028900269604,
+        "y": 1037.6918700331516
       },
       "fpEnabled": true
     },
@@ -1131,8 +1295,8 @@
       "version": "1.0.0",
       "id": "mG8Oqr5Bx",
       "position": {
-        "x": 1122.9687025089468,
-        "y": 1513.5319993880667
+        "x": 1132.5182450125576,
+        "y": 1461.443585732008
       },
       "fpEnabled": true
     },
@@ -1143,8 +1307,8 @@
       "version": "1.0.0",
       "id": "QUDwLN0ie",
       "position": {
-        "x": 569.6041731875013,
-        "y": 1752.6859456358654
+        "x": 268.3369523360616,
+        "y": 1718.9115935224754
       },
       "fpEnabled": true
     },
@@ -1168,7 +1332,7 @@
       "id": "UqBE23FMd",
       "position": {
         "x": -384.4605098061112,
-        "y": 490.7594148384409
+        "y": 460.6045801153496
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1183,8 +1347,8 @@
       "version": "2.0.0",
       "id": "iIpAC5gW1",
       "position": {
-        "x": -475.9704266189029,
-        "y": 577.693835810593
+        "x": -486.74001044857835,
+        "y": 545.3850843215666
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1199,8 +1363,8 @@
       "version": "1.0.0",
       "id": "2Y5WnsoKa",
       "position": {
-        "x": -16.307114195803848,
-        "y": 2153.511586919609
+        "x": 153.61130082411742,
+        "y": 2614.5188016786997
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1215,25 +1379,10 @@
       "version": "1.0.0",
       "id": "cr_B0ijxx",
       "position": {
-        "x": -340.63913531411526,
-        "y": 1887.1087784258443
+        "x": -230.42029587521864,
+        "y": 2371.850993746197
       },
       "fpEnabled": true
-    },
-    {
-      "name": "tune for animation",
-      "sourceRepo": "Community",
-      "pluginName": "ffmpegCommandCustomArguments",
-      "version": "1.0.0",
-      "id": "_TFRChhjG",
-      "position": {
-        "x": 35.864021112478895,
-        "y": 577.0194071682589
-      },
-      "fpEnabled": false,
-      "inputsDB": {
-        "outputArguments": "-tune animation"
-      }
     }
   ],
   "flowEdges": [
@@ -1250,41 +1399,6 @@
       "target": "_rEBBWfL3",
       "targetHandle": null,
       "id": "cpBPyTgab"
-    },
-    {
-      "source": "wPoLwMcyZ",
-      "sourceHandle": "4",
-      "target": "mjUhEe_yV",
-      "targetHandle": null,
-      "id": "hlPHkRhs0"
-    },
-    {
-      "source": "wPoLwMcyZ",
-      "sourceHandle": "5",
-      "target": "mjUhEe_yV",
-      "targetHandle": null,
-      "id": "DOixrflvg"
-    },
-    {
-      "source": "wPoLwMcyZ",
-      "sourceHandle": "6",
-      "target": "Cv5zKBu8K",
-      "targetHandle": null,
-      "id": "1TNCOsmiu"
-    },
-    {
-      "source": "wPoLwMcyZ",
-      "sourceHandle": "7",
-      "target": "Cv5zKBu8K",
-      "targetHandle": null,
-      "id": "DvU-1gIld"
-    },
-    {
-      "source": "wPoLwMcyZ",
-      "sourceHandle": "8",
-      "target": "Cv5zKBu8K",
-      "targetHandle": null,
-      "id": "4Q9aODbmH"
     },
     {
       "source": "broG1J9Nb",
@@ -1565,20 +1679,6 @@
       "target": "UY1UG0CFU",
       "targetHandle": null,
       "id": "dK_1X7CE1"
-    },
-    {
-      "source": "Cv5zKBu8K",
-      "sourceHandle": "1",
-      "target": "vCkfUVzog",
-      "targetHandle": null,
-      "id": "j45svEjcl"
-    },
-    {
-      "source": "mjUhEe_yV",
-      "sourceHandle": "1",
-      "target": "65npF4ts2",
-      "targetHandle": null,
-      "id": "ZZySl1BbI"
     },
     {
       "source": "_rEBBWfL3",
@@ -2050,34 +2150,6 @@
       "id": "rvjqA0ZHy"
     },
     {
-      "source": "wPoLwMcyZ",
-      "sourceHandle": "9",
-      "target": "mjUhEe_yV",
-      "targetHandle": null,
-      "id": "hY6NbjgeF"
-    },
-    {
-      "source": "leytkdC_H",
-      "sourceHandle": "1",
-      "target": "X2YgIP9uN",
-      "targetHandle": null,
-      "id": "LnmiGoaDo"
-    },
-    {
-      "source": "0bmlQPqIK",
-      "sourceHandle": "1",
-      "target": "_TFRChhjG",
-      "targetHandle": null,
-      "id": "TPLeZ_8pc"
-    },
-    {
-      "source": "_TFRChhjG",
-      "sourceHandle": "1",
-      "target": "uY7ElPQva",
-      "targetHandle": null,
-      "id": "B40JGxMz9"
-    },
-    {
       "source": "QUDwLN0ie",
       "sourceHandle": "1",
       "target": "_1iEFECiV",
@@ -2092,13 +2164,6 @@
       "id": "R4S8sheR-"
     },
     {
-      "source": "_1iEFECiV",
-      "sourceHandle": "2",
-      "target": "ssm3z_AhC",
-      "targetHandle": null,
-      "id": "mT_JXWNQB"
-    },
-    {
       "source": "ssm3z_AhC",
       "sourceHandle": "1",
       "target": "7yFPvyjDw",
@@ -2106,18 +2171,214 @@
       "id": "_tvZixDhI"
     },
     {
-      "source": "X2YgIP9uN",
-      "sourceHandle": "1",
-      "target": "7yFPvyjDw",
-      "targetHandle": null,
-      "id": "tPDajnm9Z"
-    },
-    {
       "source": "RVX-hRdj2",
       "sourceHandle": "1",
       "target": "7yFPvyjDw",
       "targetHandle": null,
       "id": "nrY3d_kfC"
+    },
+    {
+      "source": "_1iEFECiV",
+      "sourceHandle": "2",
+      "target": "dXWjz82SS",
+      "targetHandle": null,
+      "id": "jrU1MoIsh"
+    },
+    {
+      "source": "dXWjz82SS",
+      "sourceHandle": "1",
+      "target": "RVX-hRdj2",
+      "targetHandle": null,
+      "id": "Z4_KV4tP6"
+    },
+    {
+      "source": "dXWjz82SS",
+      "sourceHandle": "2",
+      "target": "ssm3z_AhC",
+      "targetHandle": null,
+      "id": "HQJlJGk2l"
+    },
+    {
+      "source": "leytkdC_H",
+      "sourceHandle": "1",
+      "target": "O75tHAMme",
+      "targetHandle": null,
+      "id": "luEqYqBEZ"
+    },
+    {
+      "source": "O75tHAMme",
+      "sourceHandle": "1",
+      "target": "UIrqIm9JW",
+      "targetHandle": null,
+      "id": "mPLoX3SZX"
+    },
+    {
+      "source": "UIrqIm9JW",
+      "sourceHandle": "1",
+      "target": "mqT3eshxv",
+      "targetHandle": null,
+      "id": "m6588o_yh"
+    },
+    {
+      "source": "UIrqIm9JW",
+      "sourceHandle": "2",
+      "target": "BvmWcuRmu",
+      "targetHandle": null,
+      "id": "Nv85un6Od"
+    },
+    {
+      "source": "BvmWcuRmu",
+      "sourceHandle": "2",
+      "target": "ixZp_ki7j",
+      "targetHandle": null,
+      "id": "T69as6cCK"
+    },
+    {
+      "source": "ixZp_ki7j",
+      "sourceHandle": "2",
+      "target": "vDbAelujj",
+      "targetHandle": null,
+      "id": "c9Q-YzpDE"
+    },
+    {
+      "source": "vDbAelujj",
+      "sourceHandle": "2",
+      "target": "eMjxTGUMF",
+      "targetHandle": null,
+      "id": "0igu76btW"
+    },
+    {
+      "source": "eMjxTGUMF",
+      "sourceHandle": "2",
+      "target": "IsTLVFTwl",
+      "targetHandle": null,
+      "id": "pqTRBr1PX"
+    },
+    {
+      "source": "BvmWcuRmu",
+      "sourceHandle": "1",
+      "target": "zUTrGaFHB",
+      "targetHandle": null,
+      "id": "yi3LYxVhs"
+    },
+    {
+      "source": "ixZp_ki7j",
+      "sourceHandle": "1",
+      "target": "RSBUeAycC",
+      "targetHandle": null,
+      "id": "DIVaPcmZN"
+    },
+    {
+      "source": "vDbAelujj",
+      "sourceHandle": "1",
+      "target": "bfxO9efwr",
+      "targetHandle": null,
+      "id": "zWTbBMZn8"
+    },
+    {
+      "source": "IsTLVFTwl",
+      "sourceHandle": "1",
+      "target": "RSBUeAycC",
+      "targetHandle": null,
+      "id": "chefUtTsX"
+    },
+    {
+      "source": "eMjxTGUMF",
+      "sourceHandle": "1",
+      "target": "iWbAwbNH-",
+      "targetHandle": null,
+      "id": "EvI2n5T9A"
+    },
+    {
+      "source": "mqT3eshxv",
+      "sourceHandle": "1",
+      "target": "jV3nVwvZa",
+      "targetHandle": null,
+      "id": "2D2CBaDA6"
+    },
+    {
+      "source": "zUTrGaFHB",
+      "sourceHandle": "1",
+      "target": "jV3nVwvZa",
+      "targetHandle": null,
+      "id": "K_wE8FOzF"
+    },
+    {
+      "source": "RSBUeAycC",
+      "sourceHandle": "1",
+      "target": "jV3nVwvZa",
+      "targetHandle": null,
+      "id": "acLVvhaao"
+    },
+    {
+      "source": "bfxO9efwr",
+      "sourceHandle": "1",
+      "target": "jV3nVwvZa",
+      "targetHandle": null,
+      "id": "V5mSRYz9C"
+    },
+    {
+      "source": "iWbAwbNH-",
+      "sourceHandle": "1",
+      "target": "jV3nVwvZa",
+      "targetHandle": null,
+      "id": "sXUWQ7qSY"
+    },
+    {
+      "source": "jV3nVwvZa",
+      "sourceHandle": "1",
+      "target": "_1iEFECiV",
+      "targetHandle": null,
+      "id": "LzNdrJ2cJ"
+    },
+    {
+      "source": "wPoLwMcyZ",
+      "sourceHandle": "9",
+      "target": "65npF4ts2",
+      "targetHandle": null,
+      "id": "xQ2sH-y4G"
+    },
+    {
+      "source": "wPoLwMcyZ",
+      "sourceHandle": "5",
+      "target": "65npF4ts2",
+      "targetHandle": null,
+      "id": "kFV0XqzLz"
+    },
+    {
+      "source": "wPoLwMcyZ",
+      "sourceHandle": "4",
+      "target": "65npF4ts2",
+      "targetHandle": null,
+      "id": "PGRMy5fl4"
+    },
+    {
+      "source": "wPoLwMcyZ",
+      "sourceHandle": "8",
+      "target": "vCkfUVzog",
+      "targetHandle": null,
+      "id": "6mbaYkT-V"
+    },
+    {
+      "source": "wPoLwMcyZ",
+      "sourceHandle": "7",
+      "target": "vCkfUVzog",
+      "targetHandle": null,
+      "id": "v9cVc7-QW"
+    },
+    {
+      "source": "wPoLwMcyZ",
+      "sourceHandle": "6",
+      "target": "vCkfUVzog",
+      "targetHandle": null,
+      "id": "4VHa6h7Tp"
+    },
+    {
+      "source": "0bmlQPqIK",
+      "sourceHandle": "1",
+      "target": "uY7ElPQva",
+      "targetHandle": null,
+      "id": "abwO63SuY"
     }
   ]
 }
