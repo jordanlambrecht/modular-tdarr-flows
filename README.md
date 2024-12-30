@@ -1,3 +1,5 @@
+# Modular Tdarr Flows
+
 The idea is that the entire system is 'modular.' That meaning that I can tweak a
 handful of library variables to best suit the media I want to transcode. For
 example, some pieces of media I might only want to clean the subtitles on and
@@ -82,3 +84,22 @@ You can find instructions on how to get your Plex library IDs
 | use_nvenc                | false       | Video Transcoding              | `{{{args.userVariables.library.use_nvenc}}}`                | lowercase, true/false                                  |
 | ffmpeg_preset            | slower      | Video Transcoding              | `{{{args.userVariables.library.ffmpeg_preset}}}`            | lowercase. Options: slower, slow, medium, fast, faster |
 | use_foreign              | false       | Subtitle                       | `{{{args.userVariables.library.use_foreign}}}`              | Optional                                               |
+
+## Audio
+
+I have several plex users that have older TVs, so each video should have a base
+aac 2ch regardless of quality. Additional qualities might be added, depending on
+the source audio. A few example scenarios:
+
+- Source: 8ch FLAC | Outcome: 8ch AC3, no 6ch, 2ch AAC
+- Source: 6ch AAC | Outcome: 6ch AAC, 2ch AAC
+- Source: 2ch AC3 | Outcome: 2ch AAC
+- Source: 2ch AAC | Outcome: 2ch AAC
+
+The only allowed audio formats are AAC and AC3, all other formats will be
+discarded. The following are discarded:
+dca,dts,flac,mp2,mp3,truehd,vorbis,wav,wma,eac3. Commentary is not removed.
+
+If {{{args.userVariables.library.is_remux}}} is set to `true`, we will only
+transcode a single AAC audio channel at the highest channel count. Commentary is
+not removed.
