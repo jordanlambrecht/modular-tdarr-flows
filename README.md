@@ -82,7 +82,7 @@ You can find instructions on how to get your Plex library IDs
 | enable_control_flow      | true        | All                            | `{{{args.userVariables.library.enable_control_flow}}}`      | Prevents returning to the controller                   |
 | quality_level            | 21          | Video Transcoding              | `{{{args.userVariables.library.quality_level}}}`            | 18 to 25 recommended. lower = higher quality           |
 | use_nvenc                | false       | Video Transcoding              | `{{{args.userVariables.library.use_nvenc}}}`                | lowercase, true/false                                  |
-| kee_HDR                  | true        | Video Transcoding              | `{{{args.userVariables.library.keep_HDR}}}`                 | lowercase, true/false                                  |
+| keep_HDR                 | true        | Video Transcoding              | `{{{args.userVariables.library.keep_HDR}}}`                 | lowercase, true/false                                  |
 | ffmpeg_preset            | slower      | Video Transcoding              | `{{{args.userVariables.library.ffmpeg_preset}}}`            | lowercase. Options: slower, slow, medium, fast, faster |
 | use_foreign              | false       | Subtitle                       | `{{{args.userVariables.library.use_foreign}}}`              | Optional                                               |
 
