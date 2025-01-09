@@ -17,25 +17,6 @@
       "fpEnabled": true
     },
     {
-      "name": "Set Video Encoder to HEVC (cpu SLOWER)",
-      "sourceRepo": "Community",
-      "pluginName": "ffmpegCommandSetVideoEncoder",
-      "version": "1.0.0",
-      "inputsDB": {
-        "outputCodec": "hevc",
-        "ffmpegPreset": "slower",
-        "ffmpegQuality": "{{{args.userVariables.library.quality_level}}}",
-        "hardwareEncoding": "true",
-        "hardwareType": "nvenc"
-      },
-      "id": "iWbAwbNH-",
-      "position": {
-        "x": -7.809824973747737,
-        "y": 1705.9293790576799
-      },
-      "fpEnabled": true
-    },
-    {
       "name": "Set Video Encoder to HEVC (cpu SLOW)",
       "sourceRepo": "Community",
       "pluginName": "ffmpegCommandSetVideoEncoder",
@@ -111,8 +92,8 @@
       "version": "1.0.0",
       "id": "eMjxTGUMF",
       "position": {
-        "x": 16.403523848548986,
-        "y": 1638.057127675117
+        "x": 9.887802072840998,
+        "y": 1624.3017150375115
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -222,13 +203,14 @@
       "version": "1.0.0",
       "id": "dXWjz82SS",
       "position": {
-        "x": 403.73720348808524,
-        "y": 1896.9357799380941
+        "x": 185.02904361432422,
+        "y": 1877.0532199495701
       },
       "fpEnabled": true,
       "inputsDB": {
         "value": "true",
-        "variable": "{{{args.userVariables.library.is_animated}}}"
+        "variable": "{{{args.userVariables.library.is_animated}}}",
+        "condition": "!="
       }
     },
     {
@@ -238,8 +220,8 @@
       "version": "1.0.0",
       "id": "ssm3z_AhC",
       "position": {
-        "x": 428.6988166950706,
-        "y": 1967.2862857613075
+        "x": 53.3984213090192,
+        "y": 1956.198239255941
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -253,13 +235,14 @@
       "version": "1.0.0",
       "id": "_1iEFECiV",
       "position": {
-        "x": 269.4702754762581,
-        "y": 1826.3027198505674
+        "x": 268.56652274950704,
+        "y": 1805.5164071352926
       },
       "fpEnabled": true,
       "inputsDB": {
         "value": "ANIME",
-        "variable": "{{{args.userVariables.library.name}}}"
+        "variable": "{{{args.userVariables.library.name}}}",
+        "condition": "!="
       }
     },
     {
@@ -269,8 +252,8 @@
       "version": "1.0.0",
       "id": "RVX-hRdj2",
       "position": {
-        "x": 245.59497084626838,
-        "y": 1967.8423468040037
+        "x": 414.59673074872006,
+        "y": 1960.6123249899954
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -290,8 +273,8 @@
       "fpEnabled": true,
       "inputsDB": {
         "pluginSourceId": "Community:Tdarr_Plugin_a9he_New_file_size_check",
-        "lowerBound": "10",
-        "upperBound": "350"
+        "lowerBound": "8",
+        "upperBound": "200"
       }
     },
     {
@@ -1383,6 +1366,18 @@
         "y": 2371.850993746197
       },
       "fpEnabled": true
+    },
+    {
+      "name": "🚨 WARNING 🚨 The preset 'slower' does not exist for hevc_nvenc. Defaulting to 'slow'",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "x1oqYsqnk",
+      "position": {
+        "x": 10.910535663636367,
+        "y": 1719.8154310866676
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -2157,13 +2152,6 @@
       "id": "HkW110V6-"
     },
     {
-      "source": "_1iEFECiV",
-      "sourceHandle": "1",
-      "target": "RVX-hRdj2",
-      "targetHandle": null,
-      "id": "R4S8sheR-"
-    },
-    {
       "source": "ssm3z_AhC",
       "sourceHandle": "1",
       "target": "7yFPvyjDw",
@@ -2176,27 +2164,6 @@
       "target": "7yFPvyjDw",
       "targetHandle": null,
       "id": "nrY3d_kfC"
-    },
-    {
-      "source": "_1iEFECiV",
-      "sourceHandle": "2",
-      "target": "dXWjz82SS",
-      "targetHandle": null,
-      "id": "jrU1MoIsh"
-    },
-    {
-      "source": "dXWjz82SS",
-      "sourceHandle": "1",
-      "target": "RVX-hRdj2",
-      "targetHandle": null,
-      "id": "Z4_KV4tP6"
-    },
-    {
-      "source": "dXWjz82SS",
-      "sourceHandle": "2",
-      "target": "ssm3z_AhC",
-      "targetHandle": null,
-      "id": "HQJlJGk2l"
     },
     {
       "source": "leytkdC_H",
@@ -2283,13 +2250,6 @@
       "id": "chefUtTsX"
     },
     {
-      "source": "eMjxTGUMF",
-      "sourceHandle": "1",
-      "target": "iWbAwbNH-",
-      "targetHandle": null,
-      "id": "EvI2n5T9A"
-    },
-    {
       "source": "mqT3eshxv",
       "sourceHandle": "1",
       "target": "jV3nVwvZa",
@@ -2316,20 +2276,6 @@
       "target": "jV3nVwvZa",
       "targetHandle": null,
       "id": "V5mSRYz9C"
-    },
-    {
-      "source": "iWbAwbNH-",
-      "sourceHandle": "1",
-      "target": "jV3nVwvZa",
-      "targetHandle": null,
-      "id": "sXUWQ7qSY"
-    },
-    {
-      "source": "jV3nVwvZa",
-      "sourceHandle": "1",
-      "target": "_1iEFECiV",
-      "targetHandle": null,
-      "id": "LzNdrJ2cJ"
     },
     {
       "source": "wPoLwMcyZ",
@@ -2379,6 +2325,55 @@
       "target": "uY7ElPQva",
       "targetHandle": null,
       "id": "abwO63SuY"
+    },
+    {
+      "source": "jV3nVwvZa",
+      "sourceHandle": "1",
+      "target": "ssm3z_AhC",
+      "targetHandle": null,
+      "id": "hi55vzuKX"
+    },
+    {
+      "source": "_1iEFECiV",
+      "sourceHandle": "1",
+      "target": "dXWjz82SS",
+      "targetHandle": null,
+      "id": "RfYsPGYDQ"
+    },
+    {
+      "source": "_1iEFECiV",
+      "sourceHandle": "2",
+      "target": "RVX-hRdj2",
+      "targetHandle": null,
+      "id": "FLJtsvNiu"
+    },
+    {
+      "source": "dXWjz82SS",
+      "sourceHandle": "2",
+      "target": "RVX-hRdj2",
+      "targetHandle": null,
+      "id": "Hp7vp3bWY"
+    },
+    {
+      "source": "dXWjz82SS",
+      "sourceHandle": "1",
+      "target": "ssm3z_AhC",
+      "targetHandle": null,
+      "id": "Slq40zkTK"
+    },
+    {
+      "source": "eMjxTGUMF",
+      "sourceHandle": "1",
+      "target": "x1oqYsqnk",
+      "targetHandle": null,
+      "id": "t0GxbMOuA"
+    },
+    {
+      "source": "x1oqYsqnk",
+      "sourceHandle": "1",
+      "target": "bfxO9efwr",
+      "targetHandle": null,
+      "id": "CfNx6vSUO"
     }
   ]
 }
