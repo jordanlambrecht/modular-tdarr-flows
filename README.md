@@ -103,3 +103,14 @@ dca,dts,flac,mp2,mp3,truehd,vorbis,wav,wma,eac3. Commentary is not removed.
 If {{{args.userVariables.library.is_remux}}} is set to `true`, we will only
 transcode a single AAC audio channel at the highest channel count. Commentary is
 not removed.
+
+## ToDo
+
+- Add support for commentary filtering (low priority)
+- Add optional library variables for FileSizeLowerBoundsCheck and
+  FileSizeUpperBoundsCheck (high priority)
+- Add additional emoji indicators unique to each flow state (high priority)
+- Add a way to specify the target audio format (e.g., AC3, AAC) (low priority)
+  or something like KeepAc3
+- Add variable to set the maximum number of audio channels to keep (low
+  priority)
