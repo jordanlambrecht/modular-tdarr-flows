@@ -5,7 +5,39 @@
   "tags": "",
   "flowPlugins": [
     {
-      "name": "Is this a remux?",
+      "name": "Are Notifications Disabled?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "P8olNdWOs",
+      "position": {
+        "x": 1058.3091804667006,
+        "y": 1311.361855130325
+      },
+      "fpEnabled": false,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_notifications}}}",
+        "value": "false"
+      }
+    },
+    {
+      "name": "Is this meant to be a personal release? (FUTURE WORK)",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "UzXrbJfuH",
+      "position": {
+        "x": 734.5580005371207,
+        "y": -21.05535969221296
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.is_remux}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "Is this a personal release?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -16,8 +48,8 @@
       },
       "fpEnabled": true,
       "inputsDB": {
-        "variable": "{{{args.userVariables.library.quality_level}}}",
-        "value": "remux"
+        "variable": "{{{args.userVariables.library.is_remux}}}",
+        "value": "true"
       }
     },
     {
@@ -27,7 +59,7 @@
       "version": "1.0.0",
       "id": "JqxAaZQvt",
       "position": {
-        "x": 1298.3368166168743,
+        "x": 990.2120483460512,
         "y": 112.98194873889776
       },
       "fpEnabled": true,
@@ -210,8 +242,8 @@
       "version": "1.0.0",
       "id": "pt8ZIEsST",
       "position": {
-        "x": 1740.4269961796592,
-        "y": 974.5912144828843
+        "x": 1741.4750396091517,
+        "y": 988.2157790662881
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -249,8 +281,8 @@
       "version": "1.0.0",
       "id": "3sjCQZoVh",
       "position": {
-        "x": 1017.1002156575289,
-        "y": 1342.5679463295148
+        "x": 1338.295635895429,
+        "y": 1292.5856278210138
       },
       "fpEnabled": true
     },
@@ -289,8 +321,8 @@
       "version": "2.0.0",
       "id": "ZG5XtNtvj",
       "position": {
-        "x": 1051.3633344668183,
-        "y": 1427.0014429048115
+        "x": 1520.1125580328971,
+        "y": 1295.4641461437357
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -389,8 +421,8 @@
       "version": "1.0.0",
       "id": "DL-kZwstl",
       "position": {
-        "x": 721.7001160469645,
-        "y": -20.4631418799259
+        "x": 708.6752011808509,
+        "y": -228.2123322999717
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -448,8 +480,8 @@
       "version": "1.0.0",
       "id": "kgrnNlrq-",
       "position": {
-        "x": 1116.6827938477707,
-        "y": 111.76289374664822
+        "x": 988.8214954496739,
+        "y": 27.919419387240538
       },
       "fpEnabled": true
     },
@@ -523,8 +555,8 @@
       "version": "1.0.0",
       "id": "9dk_w0FfB",
       "position": {
-        "x": 937.4086762300872,
-        "y": 110.87949516923833
+        "x": 734.9468367706826,
+        "y": -97.22869041054801
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -538,8 +570,8 @@
       "version": "1.0.0",
       "id": "MoyDWZW8i",
       "position": {
-        "x": 979.7087588547722,
-        "y": 1270.6041284326984
+        "x": 1135.1613074863799,
+        "y": 1194.0736429525223
       },
       "fpEnabled": true
     },
@@ -550,12 +582,13 @@
       "version": "2.0.0",
       "id": "XEt7oC1e6",
       "position": {
-        "x": 707.3440603701285,
-        "y": 1102.6847527200946
+        "x": 682.5260153770072,
+        "y": 1101.3764480904836
       },
       "fpEnabled": true,
       "inputsDB": {
-        "outputDirectory": "/remuxing/processed"
+        "outputDirectory": "/mnt/syno_a/media/remuxing/output",
+        "keepRelativePath": "true"
       }
     },
     {
@@ -565,8 +598,8 @@
       "version": "1.0.0",
       "id": "BoW-FQxbG",
       "position": {
-        "x": 721.0156419385663,
-        "y": 99.77594966686627
+        "x": 709.798822429564,
+        "y": -170.03231280245708
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -580,10 +613,22 @@
       "version": "1.0.0",
       "id": "4kgU3zJ7C",
       "position": {
-        "x": 493.5872135940423,
-        "y": 117.40842315621035
+        "x": 533.4630209204873,
+        "y": -98.80341232954291
       },
       "fpEnabled": true
+    },
+    {
+      "name": "Reset Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "PJJ0EtQMC",
+      "position": {
+        "x": 1115.538272115955,
+        "y": 1398.7201063795012
+      },
+      "fpEnabled": false
     }
   ],
   "flowEdges": [
@@ -868,13 +913,6 @@
       "id": "BI4z417aB"
     },
     {
-      "source": "9dk_w0FfB",
-      "sourceHandle": "1",
-      "target": "kgrnNlrq-",
-      "targetHandle": null,
-      "id": "-ONWKKmgc"
-    },
-    {
       "source": "kgrnNlrq-",
       "sourceHandle": "1",
       "target": "JqxAaZQvt",
@@ -894,13 +932,6 @@
       "target": "MoyDWZW8i",
       "targetHandle": null,
       "id": "LL3f3fl0x"
-    },
-    {
-      "source": "MoyDWZW8i",
-      "sourceHandle": "1",
-      "target": "3sjCQZoVh",
-      "targetHandle": null,
-      "id": "eaFkoV7pl"
     },
     {
       "source": "zzQ7_Li0X",
@@ -935,21 +966,84 @@
       "sourceHandle": "1",
       "target": "BoW-FQxbG",
       "targetHandle": null,
-      "id": "M85OUrHL_"
-    },
-    {
-      "source": "BoW-FQxbG",
-      "sourceHandle": "2",
-      "target": "9dk_w0FfB",
-      "targetHandle": null,
-      "id": "0b1askXQ8"
+      "id": "0507jUc01"
     },
     {
       "source": "BoW-FQxbG",
       "sourceHandle": "1",
       "target": "4kgU3zJ7C",
       "targetHandle": null,
-      "id": "LET_64K5-"
+      "id": "f1AG7RSiS"
+    },
+    {
+      "source": "BoW-FQxbG",
+      "sourceHandle": "2",
+      "target": "9dk_w0FfB",
+      "targetHandle": null,
+      "id": "s3y-1pkjc"
+    },
+    {
+      "source": "9dk_w0FfB",
+      "sourceHandle": "1",
+      "target": "UzXrbJfuH",
+      "targetHandle": null,
+      "id": "iwEUlVm69"
+    },
+    {
+      "source": "UzXrbJfuH",
+      "sourceHandle": "2",
+      "target": "kgrnNlrq-",
+      "targetHandle": null,
+      "id": "ZOKa9NytB"
+    },
+    {
+      "source": "UzXrbJfuH",
+      "sourceHandle": "1",
+      "target": "kgrnNlrq-",
+      "targetHandle": null,
+      "id": "J4tarhEam"
+    },
+    {
+      "source": "UzXrbJfuH",
+      "sourceHandle": "err1",
+      "target": "kgrnNlrq-",
+      "targetHandle": null,
+      "id": "PlU5PPxqo"
+    },
+    {
+      "source": "P8olNdWOs",
+      "sourceHandle": "2",
+      "target": "3sjCQZoVh",
+      "targetHandle": null,
+      "id": "X6G3H_UwJ"
+    },
+    {
+      "source": "P8olNdWOs",
+      "sourceHandle": "1",
+      "target": "PJJ0EtQMC",
+      "targetHandle": null,
+      "id": "0ZzqOoU1-"
+    },
+    {
+      "source": "P8olNdWOs",
+      "sourceHandle": "err1",
+      "target": "PJJ0EtQMC",
+      "targetHandle": null,
+      "id": "_UEqfouRj"
+    },
+    {
+      "source": "MoyDWZW8i",
+      "sourceHandle": "err1",
+      "target": "3sjCQZoVh",
+      "targetHandle": null,
+      "id": "JpEyE80H1"
+    },
+    {
+      "source": "MoyDWZW8i",
+      "sourceHandle": "1",
+      "target": "3sjCQZoVh",
+      "targetHandle": null,
+      "id": "g65bpx_Yp"
     }
   ]
 }
