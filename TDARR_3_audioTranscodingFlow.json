@@ -939,8 +939,8 @@
       "version": "1.0.0",
       "id": "Tv4RkmGJt",
       "position": {
-        "x": 1733.4619782992602,
-        "y": 2348.4023921134913
+        "x": 1730.1129985324562,
+        "y": 2344.383616393327
       },
       "fpEnabled": true
     },
@@ -951,7 +951,7 @@
       "version": "2.0.0",
       "id": "kwVAOnYRB",
       "position": {
-        "x": 1549.0595333438296,
+        "x": 1545.040757623665,
         "y": 2272.777739858891
       },
       "fpEnabled": true,
@@ -1020,12 +1020,14 @@
       "version": "2.0.0",
       "id": "bDvGHgzR2",
       "position": {
-        "x": 1568.352495495794,
-        "y": 2172.4991881308065
+        "x": 1567.6826995424333,
+        "y": 2173.1689840841673
       },
       "fpEnabled": true,
       "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_a9hf_New_file_duration_check"
+        "pluginSourceId": "Community:Tdarr_Plugin_a9hf_New_file_duration_check",
+        "upperBound": "101",
+        "lowerBound": "99"
       }
     },
     {
@@ -1439,8 +1441,8 @@
       "version": "1.0.0",
       "id": "vrTPgWj9Y",
       "position": {
-        "x": 1732.4934479065016,
-        "y": 2428.7731062447247
+        "x": 1731.121714617911,
+        "y": 2432.2024394662008
       },
       "fpEnabled": true
     }
@@ -2490,13 +2492,6 @@
       "id": "br9f9DIg5"
     },
     {
-      "source": "bDvGHgzR2",
-      "sourceHandle": "2",
-      "target": "5ynOIH5pQ",
-      "targetHandle": null,
-      "id": "12TNvYmdZ"
-    },
-    {
       "source": "Tv4RkmGJt",
       "sourceHandle": "1",
       "target": "vrTPgWj9Y",
@@ -2511,13 +2506,6 @@
       "id": "u6fT6eNuI"
     },
     {
-      "source": "kwVAOnYRB",
-      "sourceHandle": "2",
-      "target": "Tv4RkmGJt",
-      "targetHandle": null,
-      "id": "4uXPQc63r"
-    },
-    {
       "source": "vrTPgWj9Y",
       "sourceHandle": "1",
       "target": "-G67OyKM7",
@@ -2525,11 +2513,25 @@
       "id": "wGw6rWicq"
     },
     {
+      "source": "bDvGHgzR2",
+      "sourceHandle": "2",
+      "target": "kwVAOnYRB",
+      "targetHandle": null,
+      "id": "mP8VvlcMt"
+    },
+    {
+      "source": "kwVAOnYRB",
+      "sourceHandle": "2",
+      "target": "-G67OyKM7",
+      "targetHandle": null,
+      "id": "ZBGrjt3RN"
+    },
+    {
       "source": "kwVAOnYRB",
       "sourceHandle": "err1",
-      "target": "gUXAUSLbT",
+      "target": "Tv4RkmGJt",
       "targetHandle": null,
-      "id": "x8_KeBdTM"
+      "id": "SawbLmLTw"
     }
   ]
 }
