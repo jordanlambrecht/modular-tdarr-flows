@@ -114,3 +114,4 @@ not removed.
   or something like KeepAc3
 - Add variable to set the maximum number of audio channels to keep (low
   priority)
+- Add optional variable to enable Loudnorm processing (medium priority)
