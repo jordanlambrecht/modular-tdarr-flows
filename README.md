@@ -71,19 +71,21 @@ You can find instructions on how to get your Plex library IDs
 
 ### Library Variables
 
-| Variable                 | Key Example | Used By Flow                   | Arg                                                         | Note                                                   |
-| ------------------------ | ----------- | ------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------ |
-| name                     | MOVIES      | All                            | `{{{args.userVariables.library.name}}}`                     | Must be all uppercase                                  |
-| enable_audio_cleaning    | true        | Controller & Audio Cleaning    | `{{{args.userVariables.library.enable_audio_cleaning}}}`    | lowercase, true/false                                  |
-| enable_subs_cleaning     | true        | Controller & Subs Cleaning     | `{{{args.userVariables.library.enable_subs_cleaning}}}`     | lowercase, true/false                                  |
-| enable_audio_transcoding | true        | Controller & Audio Transcoding | `{{{args.userVariables.library.enable_audio_transcoding}}}` | lowercase, true/false                                  |
-| enable_video_transcoding | true        | Controller & Video Transcoding | `{{{args.userVariables.library.enable_video_transcoding}}}` | lowercase, true/false                                  |
-| enable_notifications     | true        | Controller & Notification      | `{{{args.userVariables.library.enable_notifications}}}`     | **Not yet implemented**                                |
-| enable_control_flow      | true        | All                            | `{{{args.userVariables.library.enable_control_flow}}}`      | Prevents returning to the controller                   |
-| quality_level            | 21          | Video Transcoding              | `{{{args.userVariables.library.quality_level}}}`            | 18 to 25 recommended. lower = higher quality           |
-| use_nvenc                | false       | Video Transcoding              | `{{{args.userVariables.library.use_nvenc}}}`                | lowercase, true/false                                  |
-| ffmpeg_preset            | slower      | Video Transcoding              | `{{{args.userVariables.library.ffmpeg_preset}}}`            | lowercase. Options: slower, slow, medium, fast, faster |
-| use_foreign              | false       | Subtitle                       | `{{{args.userVariables.library.use_foreign}}}`              | Optional                                               |
+| Variable                 | Key Example | Used By Flow                   | Arg                                                         | Note                                                                              |
+| ------------------------ | ----------- | ------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| name                     | MOVIES      | All                            | `{{{args.userVariables.library.name}}}`                     | Must be all uppercase                                                             |
+| enable_audio_cleaning    | true        | Controller & Audio Cleaning    | `{{{args.userVariables.library.enable_audio_cleaning}}}`    | lowercase, true/false                                                             |
+| enable_subs_cleaning     | true        | Controller & Subs Cleaning     | `{{{args.userVariables.library.enable_subs_cleaning}}}`     | lowercase, true/false                                                             |
+| enable_audio_transcoding | true        | Controller & Audio Transcoding | `{{{args.userVariables.library.enable_audio_transcoding}}}` | lowercase, true/false                                                             |
+| enable_video_transcoding | true        | Controller & Video Transcoding | `{{{args.userVariables.library.enable_video_transcoding}}}` | lowercase, true/false                                                             |
+| enable_notifications     | true        | Controller & Notification      | `{{{args.userVariables.library.enable_notifications}}}`     | **Not yet implemented**                                                           |
+| enable_control_flow      | true        | All                            | `{{{args.userVariables.library.enable_control_flow}}}`      | Prevents returning to the controller                                              |
+| quality_level            | 21          | Video Transcoding              | `{{{args.userVariables.library.quality_level}}}`            | 18 to 25 recommended. lower = higher quality                                      |
+| use_nvenc                | false       | Video Transcoding              | `{{{args.userVariables.library.use_nvenc}}}`                | lowercase, true/false                                                             |
+| ffmpeg_preset            | slower      | Video Transcoding              | `{{{args.userVariables.library.ffmpeg_preset}}}`            | lowercase. Options: slower, slow, medium, fast, faster. NVENC cannot use 'slower' |
+| use_foreign              | false       | Subtitle                       | `{{{args.userVariables.library.use_foreign}}}`              | Optional                                                                          |
+| useCheckpoints           | false       | Controller                     | `{{{args.userVariables.library.useCheckpoints}}}`           | Optional. Should we overrwrite the source file after each flow?                   |
+| check_hardlinks          | true        | Controller                     | `{{{args.userVariables.library.check_hardlinks}}}`          | Filter check to see if video is hard linked anywhere.                             |
 
 ## Audio
 
@@ -115,3 +117,10 @@ not removed.
 - Add variable to set the maximum number of audio channels to keep (low
   priority)
 - Add optional variable to enable Loudnorm processing (medium priority)
+- Add 'checkpoint' file overwrites. If enabled, the controller flow will
+  overwrite the original file after each module. For example, if audio
+  transcoding is successful but video transcoding fails, the audio transcoding
+  will have already overwritten the original file. When we retry the flow, it
+  will bypass all the work needed for audio transcoding and go directly to video
+  transcoding, saving time/resources.
+- Change variable names to camelCase (low priority)
