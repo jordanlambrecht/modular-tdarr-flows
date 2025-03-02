@@ -1,0 +1,338 @@
+{
+  "_id": "zPnlvqrSS",
+  "name": "🧼 Handle Cleanup",
+  "description": "🧼 Handle Cleanup",
+  "tags": "",
+  "flowPlugins": [
+    {
+      "name": "🧼 | ❓ Is this a personal release?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "QYllWNCXv",
+      "position": {
+        "x": 897.0058797711969,
+        "y": 770.5354490683002
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.is_remux}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "🧼 | ✅✅✅ CLEANUP IS COMPLETE ✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "FpvsFPLjd",
+      "position": {
+        "x": 905.5546934696704,
+        "y": 1270.6204317749975
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 🗑️ Delete Original File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "pt8ZIEsST",
+      "position": {
+        "x": 2111.408463124051,
+        "y": 937.4595384707142
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToDelete": "originalFile"
+      }
+    },
+    {
+      "name": "🧼 | ‼️ Still not working. Hail Mary with a copy/delete.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "WCqMWtIOa",
+      "position": {
+        "x": 1672.9918771371313,
+        "y": 923.8524081886383
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | ‼️Something went wrong replacing the original file, attempting to move/delete instead.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "hoZu1mKCw",
+      "position": {
+        "x": 1230.502054996176,
+        "y": 922.8780423694071
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 👍 It is not a personal release. Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "Q7BWUuKSW",
+      "position": {
+        "x": 1019.3287151544989,
+        "y": 909.6769889393075
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 🚚 Move To Original Directory",
+      "sourceRepo": "Community",
+      "pluginName": "moveToOriginalDirectory",
+      "version": "1.0.0",
+      "id": "LzEDjfk7G",
+      "position": {
+        "x": 1462.1140405147053,
+        "y": 925.413435501236
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 💾 Copy to Working Directory",
+      "sourceRepo": "Community",
+      "pluginName": "copyToWorkDirectory",
+      "version": "1.0.0",
+      "id": "wFtg6QqUt",
+      "position": {
+        "x": 1896.431269776127,
+        "y": 923.8307921157233
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | ‼️‼️‼️ CLEANUP HAS FAILED ‼️‼️‼️",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "1bHT-hXJS",
+      "position": {
+        "x": 2272.0000358745574,
+        "y": 1009.2018868945227
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 🤖 Tags: Worker Type (ANY)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "MoyDWZW8i",
+      "position": {
+        "x": 905.559013574989,
+        "y": 1360.290980343432
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 🚚 Move to remuxing output directory",
+      "sourceRepo": "Community",
+      "pluginName": "moveToDirectory",
+      "version": "2.0.0",
+      "id": "XEt7oC1e6",
+      "position": {
+        "x": 797.208119978272,
+        "y": 923.1721812004338
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "outputDirectory": "/mnt/syno_a/media/remuxing/output",
+        "keepRelativePath": "true"
+      }
+    },
+    {
+      "name": "🧼 | 🛬 Entry point from Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "wnjcuNsKU",
+      "position": {
+        "x": 896.2677303794019,
+        "y": 679.2975198702727
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 🛫 Depart to Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "LWRm3X4a1",
+      "position": {
+        "x": 905.1913295669704,
+        "y": 1447.3929039665097
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginId": "SWsE5bHd5",
+        "flowId": "F4KO4luxb"
+      }
+    },
+    {
+      "name": "🧼 | 🧹 Clear the job cache",
+      "sourceRepo": "Community",
+      "pluginName": "clearCache",
+      "version": "1.0.0",
+      "id": "M4pk158Vd",
+      "position": {
+        "x": 905.584830743459,
+        "y": 1124.2210285545582
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | ‼️ Couldn't clean the job cache. Moving on anyways.",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "Rborxe5tX",
+      "position": {
+        "x": 1128.4209968118917,
+        "y": 1169.5186594535858
+      },
+      "fpEnabled": true
+    }
+  ],
+  "flowEdges": [
+    {
+      "source": "Q7BWUuKSW",
+      "sourceHandle": "err1",
+      "target": "hoZu1mKCw",
+      "targetHandle": null,
+      "id": "ejOjU22bi"
+    },
+    {
+      "source": "hoZu1mKCw",
+      "sourceHandle": "1",
+      "target": "LzEDjfk7G",
+      "targetHandle": null,
+      "id": "ynNGeSlcK"
+    },
+    {
+      "source": "LzEDjfk7G",
+      "sourceHandle": "err1",
+      "target": "WCqMWtIOa",
+      "targetHandle": null,
+      "id": "PaYRtf8ft"
+    },
+    {
+      "source": "WCqMWtIOa",
+      "sourceHandle": "1",
+      "target": "wFtg6QqUt",
+      "targetHandle": null,
+      "id": "0clGUz-W0"
+    },
+    {
+      "source": "wFtg6QqUt",
+      "sourceHandle": "1",
+      "target": "pt8ZIEsST",
+      "targetHandle": null,
+      "id": "97Y-hJE4A"
+    },
+    {
+      "source": "FpvsFPLjd",
+      "sourceHandle": "1",
+      "target": "MoyDWZW8i",
+      "targetHandle": null,
+      "id": "LL3f3fl0x"
+    },
+    {
+      "source": "QYllWNCXv",
+      "sourceHandle": "2",
+      "target": "Q7BWUuKSW",
+      "targetHandle": null,
+      "id": "kMc31ZmIY"
+    },
+    {
+      "source": "QYllWNCXv",
+      "sourceHandle": "1",
+      "target": "XEt7oC1e6",
+      "targetHandle": null,
+      "id": "gjCu-kgXO"
+    },
+    {
+      "source": "pt8ZIEsST",
+      "sourceHandle": "err1",
+      "target": "1bHT-hXJS",
+      "targetHandle": null,
+      "id": "r5xuCO7wa"
+    },
+    {
+      "source": "wnjcuNsKU",
+      "sourceHandle": "1",
+      "target": "QYllWNCXv",
+      "targetHandle": null,
+      "id": "3k63aeYbl"
+    },
+    {
+      "source": "MoyDWZW8i",
+      "sourceHandle": "1",
+      "target": "LWRm3X4a1",
+      "targetHandle": null,
+      "id": "_KDstyfre"
+    },
+    {
+      "source": "M4pk158Vd",
+      "sourceHandle": "1",
+      "target": "FpvsFPLjd",
+      "targetHandle": null,
+      "id": "_iXEbXwKA"
+    },
+    {
+      "source": "XEt7oC1e6",
+      "sourceHandle": "1",
+      "target": "M4pk158Vd",
+      "targetHandle": null,
+      "id": "YaWs0oLCB"
+    },
+    {
+      "source": "Q7BWUuKSW",
+      "sourceHandle": "1",
+      "target": "M4pk158Vd",
+      "targetHandle": null,
+      "id": "xSxASmh0k"
+    },
+    {
+      "source": "pt8ZIEsST",
+      "sourceHandle": "1",
+      "target": "M4pk158Vd",
+      "targetHandle": null,
+      "id": "PV9UI-J6y"
+    },
+    {
+      "source": "LzEDjfk7G",
+      "sourceHandle": "1",
+      "target": "M4pk158Vd",
+      "targetHandle": null,
+      "id": "FHxq5YyJA"
+    },
+    {
+      "source": "M4pk158Vd",
+      "sourceHandle": "err1",
+      "target": "Rborxe5tX",
+      "targetHandle": null,
+      "id": "8mQ2-SrUS"
+    },
+    {
+      "source": "Rborxe5tX",
+      "sourceHandle": "1",
+      "target": "FpvsFPLjd",
+      "targetHandle": null,
+      "id": "0VGhXsK8o"
+    },
+    {
+      "source": "MoyDWZW8i",
+      "sourceHandle": "err1",
+      "target": "LWRm3X4a1",
+      "targetHandle": null,
+      "id": "Xxfz2ChYd"
+    }
+  ]
+}
