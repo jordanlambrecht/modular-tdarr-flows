@@ -83,8 +83,8 @@ You can find instructions on how to get your Plex library IDs
 | use_nvenc                | false       | Video Transcoding              | `{{{args.userVariables.library.use_nvenc}}}`                | lowercase, true/false                                                             |
 | ffmpeg_preset            | slower      | Video Transcoding              | `{{{args.userVariables.library.ffmpeg_preset}}}`            | lowercase. Options: slower, slow, medium, fast, faster. NVENC cannot use 'slower' |
 | use_foreign              | false       | Subtitle                       | `{{{args.userVariables.library.use_foreign}}}`              | Optional                                                                          |
-| useCheckpoints           | false       | Controller                     | `{{{args.userVariables.library.useCheckpoints}}}`           | Optional. Should we overrwrite the source file after each flow?                   |
-| check_hardlinks          | true        | Controller                     | `{{{args.userVariables.library.check_hardlinks}}}`          | Filter check to see if video is hard linked anywhere.                             |
+| use_checkpoints          | false       | Controller                     | `{{{args.userVariables.library.useCheckpoints}}}`           | Optional. Should we overrwrite the source file after each flow?                   |
+| check_hardlinks          | true        | Controller                     | `{{{args.userVariables.library.check_hardlinks}}}`          | Optional. Filter check to see if video is hard linked anywhere.                   |
 
 ## Audio
 
