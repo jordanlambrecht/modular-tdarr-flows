@@ -31,8 +31,7 @@ notes:
 
 - Tuning for non-anime content is:
 
-`-x265-params "frame-threads=6:deblock=-2:-2:psy-rd=1.1:psy-rdoq=1:aq-mode=1:aq-strength=0.80:ipratio=1.4:pbratio=1.3:qpmax=69:qpmin=10:no-cu-lossless=1:no-amp=1:no-rect=1:rskip=1:ctu-info=0:limit-refs=1:no-aq-motion=1:no-dynamic-refine=1:scenecut=40:scenecut-bias=0.1"`#
-modular-tdarr-flows
+`-x265-params "frame-threads=6:deblock=-2:-2:psy-rd=1.1:psy-rdoq=1:aq-mode=1:aq-strength=0.80:ipratio=1.4:pbratio=1.3:qpmax=69:qpmin=10:no-cu-lossless=1:no-amp=1:no-rect=1:rskip=1:ctu-info=0:limit-refs=1:no-aq-motion=1:no-dynamic-refine=1:scenecut=40:scenecut-bias=0.1"`
 
 ## Variables
 
