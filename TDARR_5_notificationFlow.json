@@ -5,14 +5,14 @@
   "tags": "",
   "flowPlugins": [
     {
-      "name": "Apply Radarr naming policy",
+      "name": "🛎️ | ✍️ Apply Radarr naming policy",
       "sourceRepo": "Community",
       "pluginName": "applyRadarrOrSonarrNamingPolicy",
       "version": "1.0.0",
       "id": "itzJV7meq",
       "position": {
-        "x": 882.0728366966503,
-        "y": 1470.9349172668835
+        "x": 886.843717200099,
+        "y": 1486.732456865367
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -22,14 +22,14 @@
       }
     },
     {
-      "name": "Apply Radarr naming policy",
+      "name": "🛎️ | ✍️ Apply Radarr naming policy",
       "sourceRepo": "Community",
       "pluginName": "applyRadarrOrSonarrNamingPolicy",
       "version": "1.0.0",
       "id": "c2pylq0A8",
       "position": {
-        "x": 695.9660509419101,
-        "y": 1470.5400003712093
+        "x": 693.4200601796982,
+        "y": 1487.1297001407604
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -39,14 +39,14 @@
       }
     },
     {
-      "name": "Apply Sonar (Anime) naming policy",
+      "name": "🛎️ | ✍️ Apply Sonar (Anime) naming policy",
       "sourceRepo": "Community",
       "pluginName": "applyRadarrOrSonarrNamingPolicy",
       "version": "1.0.0",
       "id": "A12J5JA-y",
       "position": {
-        "x": 506.69859699928156,
-        "y": 1472.0777490510281
+        "x": 503.69859699928156,
+        "y": 1487.6991448297185
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -56,14 +56,14 @@
       }
     },
     {
-      "name": "Apply Sonarr naming policy",
+      "name": "🛎️ | ✍️ Apply Sonarr naming policy",
       "sourceRepo": "Community",
       "pluginName": "applyRadarrOrSonarrNamingPolicy",
       "version": "1.0.0",
       "id": "akYibb39d",
       "position": {
-        "x": 316.4793411392636,
-        "y": 1470.4164698342045
+        "x": 311.8888342109226,
+        "y": 1488.3045865897461
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -73,14 +73,14 @@
       }
     },
     {
-      "name": "Apply Sonarr naming policy",
+      "name": "🛎️ | ✍️ Apply Sonarr naming policy",
       "sourceRepo": "Community",
       "pluginName": "applyRadarrOrSonarrNamingPolicy",
       "version": "1.0.0",
       "id": "006CtlmtR",
       "position": {
-        "x": 125.58958228998685,
-        "y": 1469.3552496841864
+        "x": 120.36257767109277,
+        "y": 1488.3189383334222
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -90,7 +90,7 @@
       }
     },
     {
-      "name": "Notify Radarr",
+      "name": "🛎️ | 📣 Notify Radarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -101,13 +101,13 @@
       },
       "id": "Cd9siscwy",
       "position": {
-        "x": 878.9880741298466,
-        "y": 1544.1433030746748
+        "x": 888.4880741298466,
+        "y": 1571.6433030746748
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Radarr",
+      "name": "🛎️ | 📣 Notify Radarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -118,13 +118,13 @@
       },
       "id": "TfsqmkjgX",
       "position": {
-        "x": 689.8093028505169,
-        "y": 1544.0667442185252
+        "x": 695.8093028505169,
+        "y": 1571.5667442185252
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Sonarr - Anime",
+      "name": "🛎️ | 📣 Notify Sonarr - Anime",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -135,13 +135,13 @@
       },
       "id": "QL4ViyhiB",
       "position": {
-        "x": 505.4672331839687,
-        "y": 1545.0495270778322
+        "x": 503.4672331839687,
+        "y": 1572.0495270778322
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Sonarr",
+      "name": "🛎️ | 📣 Notify Sonarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -152,13 +152,13 @@
       },
       "id": "rIgobWkjd",
       "position": {
-        "x": 317.0815630021098,
-        "y": 1545.0408734880377
+        "x": 311.37970694650136,
+        "y": 1571.7782432308015
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Sonarr",
+      "name": "🛎️ | 📣 Notify Sonarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -169,13 +169,13 @@
       },
       "id": "DXeeSt7vL",
       "position": {
-        "x": 125.73673911382821,
-        "y": 1543.379053451712
+        "x": 120.03488305821975,
+        "y": 1570.8516326287347
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Sonarr",
+      "name": "🛎️ | 📣 Notify Sonarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -186,8 +186,8 @@
       },
       "id": "uAdUBeSKZ",
       "position": {
-        "x": -77.84370325304985,
-        "y": 1542.7299830743023
+        "x": -83.54555930865831,
+        "y": 1570.202562251325
       },
       "fpEnabled": true
     },
@@ -206,25 +206,25 @@
       },
       "id": "Cug-dVPXF",
       "position": {
-        "x": -78.43824927784489,
-        "y": 1629.427894746149
+        "x": -84.43824927784487,
+        "y": 1657.062120449135
       },
       "fpEnabled": false
     },
     {
-      "name": "Library is Masterclass",
+      "name": "🛎️ | 📚 Library is Masterclass",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "szQrKkuqQ",
       "position": {
-        "x": -77.9035348413519,
-        "y": 1337.6558416640623
+        "x": -84.32950388280676,
+        "y": 1331.401046871731
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Sonarr",
+      "name": "🛎️ | 📣 Notify Sonarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -235,13 +235,13 @@
       },
       "id": "d4jY0Jtuh",
       "position": {
-        "x": -78.19546531008523,
-        "y": 1398.8203937085118
+        "x": -84.19383051789133,
+        "y": 1404.1310852096806
       },
       "fpEnabled": true
     },
     {
-      "name": "Is Library MASTERCLASS?",
+      "name": "🛎️ | ❓ Is Library MASTERCLASS?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -251,20 +251,20 @@
       },
       "id": "5fbBY5_tU",
       "position": {
-        "x": -76.25772371995753,
-        "y": 1266.5945498889466
+        "x": -84.82544758758037,
+        "y": 1247.3106586024853
       },
       "fpEnabled": true
     },
     {
-      "name": "Library is Sports",
+      "name": "🛎️ | 📚 Library is Sports",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "dLKLBgSsc",
       "position": {
-        "x": 1073.977897658415,
-        "y": 1335.759696821386
+        "x": 1066.8075008489704,
+        "y": 1332.6363339292993
       },
       "fpEnabled": true
     },
@@ -283,13 +283,13 @@
       },
       "id": "64pj68K5V",
       "position": {
-        "x": 1074.0345881012786,
-        "y": 1628.109950070038
+        "x": 1066.8494099016643,
+        "y": 1655.744175773024
       },
       "fpEnabled": false
     },
     {
-      "name": "Is Library SPORTS?",
+      "name": "🛎️ | ❓Is Library SPORTS?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -299,8 +299,8 @@
       },
       "id": "fMQafnmiv",
       "position": {
-        "x": 1205.551822216421,
-        "y": 1249.0190301545495
+        "x": 1069.2374308382748,
+        "y": 1247.4248000537505
       },
       "fpEnabled": true
     },
@@ -319,13 +319,13 @@
       },
       "id": "FL_lFIvpH",
       "position": {
-        "x": 877.0643858708187,
-        "y": 1629.2606070146292
+        "x": 887.4196086014223,
+        "y": 1656.8948327176151
       },
       "fpEnabled": false
     },
     {
-      "name": "Notify Radarr",
+      "name": "🛎️ | 📣 Notify Radarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -336,25 +336,25 @@
       },
       "id": "mNrtXLcCl",
       "position": {
-        "x": 878.6954594715656,
-        "y": 1398.4306487345852
+        "x": 876.7859663999068,
+        "y": 1402.2496348779032
       },
       "fpEnabled": true
     },
     {
-      "name": "Library is Movies - Kids",
+      "name": "🛎️ | 📚 Library is Movies - Kids",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "eMzF0LN6r",
       "position": {
         "x": 875.9852739168581,
-        "y": 1336.9571450346805
+        "y": 1332.5016612008096
       },
       "fpEnabled": true
     },
     {
-      "name": "Is Library MOVIES_KIDS?",
+      "name": "🛎️ | ❓Is Library MOVIES_KIDS?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -364,13 +364,13 @@
       },
       "id": "QcoblwoqT",
       "position": {
-        "x": 880.4629889347067,
-        "y": 1265.4466707941265
+        "x": 876.7427145350949,
+        "y": 1236.6408211730763
       },
       "fpEnabled": true
     },
     {
-      "name": "Is Library TV_KIDS?",
+      "name": "🛎️ | ❓Is Library TV_KIDS?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -380,8 +380,8 @@
       },
       "id": "FfD4GH_on",
       "position": {
-        "x": 321.1290887799452,
-        "y": 1265.88156463842
+        "x": 321.86429821420415,
+        "y": 1247.368647096995
       },
       "fpEnabled": true
     },
@@ -400,13 +400,13 @@
       },
       "id": "q49J9g5Zr",
       "position": {
-        "x": 317.5637073455237,
-        "y": 1628.9729520485
+        "x": 311.5637073455237,
+        "y": 1656.607177751486
       },
       "fpEnabled": false
     },
     {
-      "name": "Notify Sonarr",
+      "name": "🛎️ | 📣 Notify Sonarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -417,20 +417,20 @@
       },
       "id": "s25aWgPIA",
       "position": {
-        "x": 319.03361776922236,
-        "y": 1395.5059557767552
+        "x": 310.9316445016494,
+        "y": 1404.3067413312988
       },
       "fpEnabled": true
     },
     {
-      "name": "Library is TV - Kids",
+      "name": "🛎️ | 📚 Library is TV - Kids",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "kH_E0SA6H",
       "position": {
-        "x": 319.94574908340985,
-        "y": 1335.7744361519328
+        "x": 310.4720686910249,
+        "y": 1331.4291344312605
       },
       "fpEnabled": true
     },
@@ -449,13 +449,13 @@
       },
       "id": "hBW8RvOSm",
       "position": {
-        "x": 511.5993665930084,
-        "y": 1628.849151367712
+        "x": 502.5993665930084,
+        "y": 1655.983377070698
       },
       "fpEnabled": false
     },
     {
-      "name": "Is Library MOVIES?",
+      "name": "🛎️ | ❓Is Library MOVIES?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -465,25 +465,25 @@
       },
       "id": "hJUNcApP2",
       "position": {
-        "x": 690.4699664764767,
-        "y": 1265.8441588790888
+        "x": 693.9043629320422,
+        "y": 1247.7260883124873
       },
       "fpEnabled": true
     },
     {
-      "name": "Library is Anime",
+      "name": "🛎️ | 📚 Library is Anime",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "eMymoVWbU",
       "position": {
-        "x": 508.0302108463836,
-        "y": 1335.1842637439718
+        "x": 503.29337065019115,
+        "y": 1331.365277600654
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Sonarr - Anime",
+      "name": "🛎️ | 📣 Notify Sonarr - Anime",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -494,13 +494,13 @@
       },
       "id": "QfrKx2KnA",
       "position": {
-        "x": 507.22344855822314,
-        "y": 1397.0951127730107
+        "x": 503.85994624877605,
+        "y": 1403.3674678725424
       },
       "fpEnabled": true
     },
     {
-      "name": "Is Library ANIME?",
+      "name": "🛎️ | ❓Is Library ANIME?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -510,13 +510,13 @@
       },
       "id": "kX07Ekr4Q",
       "position": {
-        "x": 512.0847033729176,
-        "y": 1265.801805545101
+        "x": 511.1520704512469,
+        "y": 1247.2888880036758
       },
       "fpEnabled": true
     },
     {
-      "name": "Notify Radarr",
+      "name": "🛎️ | 📣 Notify Radarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -527,8 +527,8 @@
       },
       "id": "rbH09YTa2",
       "position": {
-        "x": 690.3023572700015,
-        "y": 1398.8281368195483
+        "x": 692.8483480322134,
+        "y": 1402.745834706572
       },
       "fpEnabled": true
     },
@@ -547,8 +547,8 @@
       },
       "id": "9eWUUqoXQ",
       "position": {
-        "x": 125.42113651838307,
-        "y": 1628.7072341986354
+        "x": 119.42113651838304,
+        "y": 1656.3414599016214
       },
       "fpEnabled": false
     },
@@ -563,8 +563,8 @@
       },
       "id": "pE6rU7gkW",
       "position": {
-        "x": -76.8166692863909,
-        "y": 1041.8120848358426
+        "x": -189.9276068411119,
+        "y": 1044.7620403406784
       },
       "fpEnabled": true
     },
@@ -583,13 +583,13 @@
       },
       "id": "-U41pKKY-",
       "position": {
-        "x": 694.9073432229238,
-        "y": 1628.4231490276936
+        "x": 695.9073432229238,
+        "y": 1656.5573747306796
       },
       "fpEnabled": false
     },
     {
-      "name": "Notify Sonarr",
+      "name": "🛎️ | 📣 Notify Sonarr",
       "sourceRepo": "Community",
       "pluginName": "notifyRadarrOrSonarr",
       "version": "2.0.0",
@@ -600,13 +600,13 @@
       },
       "id": "unh6KDXcW",
       "position": {
-        "x": 127.50770814023213,
-        "y": 1396.6120185430436
+        "x": 121.08173909877726,
+        "y": 1403.6134931391266
       },
       "fpEnabled": true
     },
     {
-      "name": "Is Library TV?",
+      "name": "🛎️ | ❓Is Library TV?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -616,56 +616,56 @@
       },
       "id": "_0G6q4qt0",
       "position": {
-        "x": 132.82179477742073,
-        "y": 1262.3666520136649
+        "x": 119.85967458131273,
+        "y": 1247.7272051309462
       },
       "fpEnabled": true
     },
     {
-      "name": "Library is TV",
+      "name": "🛎️ | 📚 Library is TV",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "qzXpa4Wza",
       "position": {
-        "x": 127.09587673204658,
-        "y": 1336.9370715113073
+        "x": 119.09096095852755,
+        "y": 1332.4815876774364
       },
       "fpEnabled": true
     },
     {
-      "name": "Library is Movies",
+      "name": "🛎️ | 📚 Library is Movies",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "LKqq4wMj4",
       "position": {
-        "x": 689.1920919719596,
-        "y": 1336.5546729913103
+        "x": 693.0110781152774,
+        "y": 1330.8261937763334
       },
       "fpEnabled": true
     },
     {
-      "name": "Reset Flow Error",
+      "name": "🛎️ | ↩️ Reset Flow Error",
       "sourceRepo": "Community",
       "pluginName": "resetFlowError",
       "version": "1.0.0",
       "id": "woKzLVsUQ",
       "position": {
         "x": 1309.356986199076,
-        "y": 1775.0560985929214
+        "y": 1787.1903242959074
       },
       "fpEnabled": true
     },
     {
-      "name": "Apply Sonarr naming policy",
+      "name": "🛎️ | ✍️ Apply Sonarr naming policy",
       "sourceRepo": "Community",
       "pluginName": "applyRadarrOrSonarrNamingPolicy",
       "version": "1.0.0",
       "id": "ixIwN8BAd",
       "position": {
-        "x": -78.5370263328613,
-        "y": 1470.059474498495
+        "x": -84.4005286423083,
+        "y": 1487.6514560229189
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -673,6 +673,46 @@
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
         "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
       }
+    },
+    {
+      "name": "🛎️ | 🛬 Arrived from Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "8Qq-cLrb1",
+      "position": {
+        "x": 42.26178509470455,
+        "y": 1033.7563735565245
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🛎️ | 🛫 Depart back to Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "rZIDY_Us-",
+      "position": {
+        "x": 1308.9935806442459,
+        "y": 1879.3354261289323
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "F4KO4luxb",
+        "pluginId": "eUFrmVIZc"
+      }
+    },
+    {
+      "name": "🛎️ | ‼️ Could not determine the library type!!",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "6_7xcK3uu",
+      "position": {
+        "x": 1307.62241217504,
+        "y": 1320.767826361398
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -866,13 +906,6 @@
       "id": "b3n8HEirw"
     },
     {
-      "source": "fMQafnmiv",
-      "sourceHandle": "err1",
-      "target": "woKzLVsUQ",
-      "targetHandle": null,
-      "id": "PE9GrAkTG"
-    },
-    {
       "source": "QcoblwoqT",
       "sourceHandle": "2",
       "target": "fMQafnmiv",
@@ -920,13 +953,6 @@
       "target": "woKzLVsUQ",
       "targetHandle": null,
       "id": "zvEbPAVcZ"
-    },
-    {
-      "source": "fMQafnmiv",
-      "sourceHandle": "2",
-      "target": "woKzLVsUQ",
-      "targetHandle": null,
-      "id": "aysZH0_VI"
     },
     {
       "source": "5fbBY5_tU",
@@ -1361,6 +1387,41 @@
       "target": "woKzLVsUQ",
       "targetHandle": null,
       "id": "hjCGB6_k9"
+    },
+    {
+      "source": "8Qq-cLrb1",
+      "sourceHandle": "1",
+      "target": "5fbBY5_tU",
+      "targetHandle": null,
+      "id": "50k7QV89C"
+    },
+    {
+      "source": "woKzLVsUQ",
+      "sourceHandle": "1",
+      "target": "rZIDY_Us-",
+      "targetHandle": null,
+      "id": "OA7avAATx"
+    },
+    {
+      "source": "fMQafnmiv",
+      "sourceHandle": "err1",
+      "target": "6_7xcK3uu",
+      "targetHandle": null,
+      "id": "Bq9sGDw5k"
+    },
+    {
+      "source": "fMQafnmiv",
+      "sourceHandle": "2",
+      "target": "6_7xcK3uu",
+      "targetHandle": null,
+      "id": "HZBpZcIqK"
+    },
+    {
+      "source": "6_7xcK3uu",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "bqQeSnS-F"
     }
   ]
 }
