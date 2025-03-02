@@ -117,10 +117,12 @@ not removed.
 - Add variable to set the maximum number of audio channels to keep (low
   priority)
 - Add optional variable to enable Loudnorm processing (medium priority)
-- Add 'checkpoint' file overwrites. If enabled, the controller flow will
+- ~~Add 'checkpoint' file overwrites. If enabled, the controller flow will
   overwrite the original file after each module. For example, if audio
   transcoding is successful but video transcoding fails, the audio transcoding
   will have already overwritten the original file. When we retry the flow, it
   will bypass all the work needed for audio transcoding and go directly to video
-  transcoding, saving time/resources.
+  transcoding, saving time/resources.~~ ✅ Done!
 - Change variable names to camelCase (low priority)
+- Replace images in /docs with updated screenshots (high priority)
+- Add additional documentation for checkpoint and hardlink variables/logic
