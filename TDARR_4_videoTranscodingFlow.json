@@ -1,7 +1,7 @@
 {
   "_id": "4mjsih5ie",
-  "name": "Handle Video Transcoding",
-  "description": "Handle Video Transcoding",
+  "name": "📼 Handle Video Transcoding",
+  "description": "📼 Handle Video Transcoding",
   "tags": "",
   "flowPlugins": [
     {
@@ -284,8 +284,8 @@
       "version": "1.0.0",
       "id": "JKM2ouHpl",
       "position": {
-        "x": 515.2853658360661,
-        "y": 2302.093908972681
+        "x": 691.4175210038044,
+        "y": 2170.352784782178
       },
       "fpEnabled": true
     },
@@ -1207,8 +1207,8 @@
       "version": "1.0.0",
       "id": "QEYKEgMPy",
       "position": {
-        "x": 515.1751620192606,
-        "y": 2448.71454165509
+        "x": 631.8806144271521,
+        "y": 2353.4886203652154
       },
       "fpEnabled": true
     },
@@ -1388,6 +1388,50 @@
       "position": {
         "x": 340.0204910638431,
         "y": 2406.531444207829
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Check Flow Variable",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "8-44irbYY",
+      "position": {
+        "x": 57.16001050354967,
+        "y": 2098.248939824106
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.fileSizeLowerBounds}}}",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "Set Flow Variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "ZeyU49OIs",
+      "position": {
+        "x": 37.21465414052365,
+        "y": 2195.912408912027
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.test}}} ",
+        "value": "8"
+      }
+    },
+    {
+      "name": "Require Review",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "qkN5u6c5u",
+      "position": {
+        "x": 690.9166504689474,
+        "y": 2252.4682930935464
       },
       "fpEnabled": true
     }
@@ -2094,13 +2138,6 @@
       "id": "3vu2Al_pT"
     },
     {
-      "source": "JKM2ouHpl",
-      "sourceHandle": "1",
-      "target": "QEYKEgMPy",
-      "targetHandle": null,
-      "id": "lsCld6M_2"
-    },
-    {
       "source": "__aruWpNb",
       "sourceHandle": "err1",
       "target": "-aQvlEEdp",
@@ -2400,6 +2437,27 @@
       "target": "Ro8TnPxFO",
       "targetHandle": null,
       "id": "ISUNpbGOR"
+    },
+    {
+      "source": "JKM2ouHpl",
+      "sourceHandle": "1",
+      "target": "qkN5u6c5u",
+      "targetHandle": null,
+      "id": "BJjSqO_GH"
+    },
+    {
+      "source": "qkN5u6c5u",
+      "sourceHandle": "1",
+      "target": "__aruWpNb",
+      "targetHandle": null,
+      "id": "oACA1LEnR"
+    },
+    {
+      "source": "qkN5u6c5u",
+      "sourceHandle": "err1",
+      "target": "QEYKEgMPy",
+      "targetHandle": null,
+      "id": "6UNbf0m_v"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "_id": "dl3elIKQP",
-  "name": "Handle Subtitle Cleaning",
-  "description": "Handle Subtitle Cleaning",
+  "name": "💬 Handle Subtitle Cleaning",
+  "description": "💬 Handle Subtitle Cleaning",
   "tags": "",
   "flowPlugins": [
     {
@@ -144,8 +144,8 @@
       "version": "1.0.0",
       "id": "8baYQjNQw",
       "position": {
-        "x": 657.8203071351769,
-        "y": 950.0119843890536
+        "x": 646.6329841748232,
+        "y": 929.6713971884103
       },
       "fpEnabled": true
     },
@@ -401,8 +401,8 @@
       "version": "1.0.0",
       "id": "aEiXGFlxg",
       "position": {
-        "x": 765.7200840303434,
-        "y": 1050.330943748069
+        "x": 1004.7219836379016,
+        "y": 1054.3990611881977
       },
       "fpEnabled": true
     },
@@ -575,6 +575,18 @@
         "pluginSourceId": "Community:Tdarr_Plugin_e5c3_CnT_Add_Subtitles",
         "install_packages": "yes"
       }
+    },
+    {
+      "name": "Require Review",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "bruIklukX",
+      "position": {
+        "x": 764.087171970989,
+        "y": 1030.5589279209191
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -584,13 +596,6 @@
       "target": "rO68NTLBg",
       "targetHandle": null,
       "id": "CGEwOW9gE"
-    },
-    {
-      "source": "AGLzSPLLB",
-      "sourceHandle": "1",
-      "target": "aEiXGFlxg",
-      "targetHandle": null,
-      "id": "sBbLMIfSF"
     },
     {
       "source": "solVKi_jv",
@@ -731,13 +736,6 @@
       "target": "8baYQjNQw",
       "targetHandle": null,
       "id": "VVA6KkGKw"
-    },
-    {
-      "source": "8baYQjNQw",
-      "sourceHandle": "1",
-      "target": "aEiXGFlxg",
-      "targetHandle": null,
-      "id": "henlFmuFL"
     },
     {
       "source": "V15od2GxG",
@@ -941,6 +939,34 @@
       "target": "oRVuh6Mph",
       "targetHandle": null,
       "id": "li37CfdD2"
+    },
+    {
+      "source": "AGLzSPLLB",
+      "sourceHandle": "1",
+      "target": "bruIklukX",
+      "targetHandle": null,
+      "id": "X29pHJO-I"
+    },
+    {
+      "source": "8baYQjNQw",
+      "sourceHandle": "1",
+      "target": "bruIklukX",
+      "targetHandle": null,
+      "id": "3vd4uYL75"
+    },
+    {
+      "source": "bruIklukX",
+      "sourceHandle": "err1",
+      "target": "aEiXGFlxg",
+      "targetHandle": null,
+      "id": "5HcrP2Rur"
+    },
+    {
+      "source": "bruIklukX",
+      "sourceHandle": "1",
+      "target": "3xMZOp3fE",
+      "targetHandle": null,
+      "id": "4QakOXlX7"
     }
   ]
 }
