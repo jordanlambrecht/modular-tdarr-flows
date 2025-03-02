@@ -1,27 +1,150 @@
 {
   "_id": "F4KO4luxb",
-  "name": "CONTROLLER FLOW",
-  "description": "CONTROLLER FLOW",
+  "name": "🧠 CONTROLLER FLOW",
+  "description": "🧠 CONTROLLER FLOW",
   "tags": "",
   "flowPlugins": [
     {
-      "name": "Are Notifications Disabled?",
+      "name": "🧠 | 🛬 Returned from Notification Flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "eUFrmVIZc",
+      "position": {
+        "x": 1375.026443172807,
+        "y": 1068.1672266784963
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 🛬 Returned from Cleanup Flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "SWsE5bHd5",
+      "position": {
+        "x": 1187.4961565980418,
+        "y": 919.2287942039638
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 🛫 Go to Cleanup Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "JniegPe-V",
+      "position": {
+        "x": 946.0019689420558,
+        "y": 919.6482805011455
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "zPnlvqrSS",
+        "pluginId": "wnjcuNsKU"
+      }
+    },
+    {
+      "name": "🧠 | ☠️ Couldn't replace original file.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "I6JkMZGWR",
+      "position": {
+        "x": 2216.3759815308304,
+        "y": 628.471241185578
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ☠️ Couldn't replace original file.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "6_xmWDE2r",
+      "position": {
+        "x": 2215.012633904004,
+        "y": 469.34869713177034
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 🔄 Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "ttGf1VcT3",
+      "position": {
+        "x": 2017.0583354746032,
+        "y": 577.1117863435873
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 🔄 Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "35KKNL1u0",
+      "position": {
+        "x": 2013.1186946869834,
+        "y": 416.0518063451278
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ❓ Are we using checkpoints?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "boPCWUo1B",
+      "position": {
+        "x": 1814.5929695172445,
+        "y": 577.052028898579
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "condition": "!=",
+        "value": "true",
+        "variable": "{{{args.userVariables.library.useCheckpoints}}}"
+      }
+    },
+    {
+      "name": "🧠 | ❓ Are we using checkpoints?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "VZP19ytDk",
+      "position": {
+        "x": 1809.9393405747808,
+        "y": 416.4311707876495
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "condition": "!=",
+        "value": "true",
+        "variable": "{{{args.userVariables.library.useCheckpoints}}}"
+      }
+    },
+    {
+      "name": "🧠 | ❓ Are Notifications Disabled?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "P8olNdWOs",
       "position": {
-        "x": 1058.3091804667006,
-        "y": 1311.361855130325
+        "x": 948.8148889133299,
+        "y": 1067.2056220444647
       },
-      "fpEnabled": false,
+      "fpEnabled": true,
       "inputsDB": {
         "variable": "{{{args.userVariables.library.enable_notifications}}}",
-        "value": "false"
+        "value": "true",
+        "condition": "!="
       }
     },
     {
-      "name": "Is this meant to be a personal release? (FUTURE WORK)",
+      "name": "🧠 | ❓ Is this meant to be a personal release? (FUTURE WORK)",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -37,23 +160,7 @@
       }
     },
     {
-      "name": "Is this a personal release?",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "QYllWNCXv",
-      "position": {
-        "x": 707.5728060731776,
-        "y": 1031.8836058957907
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "{{{args.userVariables.library.is_remux}}}",
-        "value": "true"
-      }
-    },
-    {
-      "name": "Tags: Worker Type (PC)",
+      "name": "🧠 | 🤖 Tags: Worker Type (PC)",
       "sourceRepo": "Community",
       "pluginName": "tagsWorkerType",
       "version": "1.0.0",
@@ -68,14 +175,14 @@
       }
     },
     {
-      "name": "Go To Video Transcoding Flow",
+      "name": "🧠 | 🛫 Go to Video Transcoding Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "YBDyp4kWN",
       "position": {
-        "x": 1398.0572916050278,
-        "y": 729.1976058588483
+        "x": 1391.1125159262026,
+        "y": 743.0871572164988
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -84,14 +191,14 @@
       }
     },
     {
-      "name": "Has Video Already Been Transcoded?",
+      "name": "🧠 | ❓ Has Video Already Been Transcoded?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "sfIAie-WY",
       "position": {
-        "x": 1181.2611075734571,
-        "y": 729.2735873203183
+        "x": 1182.6500627092223,
+        "y": 745.9410489494988
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -100,7 +207,7 @@
       }
     },
     {
-      "name": "Is Video Transcoding Flow Disabled?",
+      "name": "🧠 | ❓ Is Video Transcoding Flow Disabled?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -116,50 +223,38 @@
       }
     },
     {
-      "name": "Return from Video Transcoding flow",
+      "name": "🧠 | 🛬 Returned from Video Transcoding Flow",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "L6p4K-XA_",
       "position": {
-        "x": 1606.8113176754005,
-        "y": 729.707640181042
+        "x": 1597.0886317250452,
+        "y": 744.9861466744575
       },
       "fpEnabled": true
     },
     {
-      "name": "‼️‼️‼️ CLEANUP IS FAILED ‼️‼️‼️",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "YOh6MjFUC",
-      "position": {
-        "x": 1947.3265575999292,
-        "y": 952.4686671869565
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "4) VIDEO TRANSCODING",
+      "name": "🧠 4) VIDEO TRANSCODING",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "U0uFOidd0",
       "position": {
         "x": 708.5897774679111,
-        "y": 736.8385034818352
+        "y": 736.14113164866
       },
       "fpEnabled": true
     },
     {
-      "name": "Go To Audio Transcoding Flow",
+      "name": "🧠 | 🛫 Go to Audio Transcoding Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "cYpxicTtH",
       "position": {
-        "x": 1391.6956216723502,
-        "y": 569.6375431366348
+        "x": 1387.5317428179476,
+        "y": 576.299749303679
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -168,26 +263,26 @@
       }
     },
     {
-      "name": "Return from Audio Transcoding flow",
+      "name": "🧠 | 🛬 Returned from Audio Transcoding Flow",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "Rfx4VE1Nn",
       "position": {
-        "x": 1600.4496477427228,
-        "y": 561.79130148849
+        "x": 1597.9513204300813,
+        "y": 574.2829380516979
       },
       "fpEnabled": true
     },
     {
-      "name": "Has Audio Already Been Transcoded?",
+      "name": "🧠 | ❓ Has Audio Already Been Transcoded?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "ePgdD_jzt",
       "position": {
-        "x": 1176.7563878564104,
-        "y": 560.4287735199509
+        "x": 1172.0138557244002,
+        "y": 577.0015132768228
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -196,14 +291,14 @@
       }
     },
     {
-      "name": "Is Audio Transcoding Flow Disabled?",
+      "name": "🧠 | ❓ Is Audio Transcoding Flow Disabled?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "nOWQkagip",
       "position": {
-        "x": 933.5317187981512,
-        "y": 560.8724694656345
+        "x": 947.4290751596299,
+        "y": 561.870451514631
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -212,7 +307,7 @@
       }
     },
     {
-      "name": "3) AUDIO TRANSCODING",
+      "name": "🧠 3) AUDIO TRANSCODING",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -224,70 +319,19 @@
       "fpEnabled": true
     },
     {
-      "name": "✅✅✅ CLEANUP IS COMPLETE ✅✅✅",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "FpvsFPLjd",
-      "position": {
-        "x": 939.2684563201947,
-        "y": 1187.1600105952957
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Delete Original File",
-      "sourceRepo": "Community",
-      "pluginName": "deleteFile",
-      "version": "1.0.0",
-      "id": "pt8ZIEsST",
-      "position": {
-        "x": 1741.4750396091517,
-        "y": 988.2157790662881
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "fileToDelete": "originalFile"
-      }
-    },
-    {
-      "name": "Still not working? Hail Mary with a copy/delete.",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "WCqMWtIOa",
-      "position": {
-        "x": 1554.9212869822156,
-        "y": 911.3375094121271
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "If something goes wrong replacing the original file, attempt to move/delete instead.",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "hoZu1mKCw",
-      "position": {
-        "x": 1157.3039089453905,
-        "y": 897.0506296464907
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "6) NOTIFY THE POWERS THAT BE",
+      "name": "🧠 6) NOTIFY THE POWERS THAT BE",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "3sjCQZoVh",
       "position": {
-        "x": 1338.295635895429,
-        "y": 1292.5856278210138
+        "x": 709.1570931551876,
+        "y": 1056.9612597675343
       },
       "fpEnabled": true
     },
     {
-      "name": "Return from Audio Cleaning flow",
+      "name": "🧠 | 🛬 Returned from Audio Cleaning Flow",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -299,7 +343,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Go To Audio Cleaning Flow",
+      "name": "🧠 | 🛫 Go To Audio Cleaning Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
@@ -315,23 +359,23 @@
       }
     },
     {
-      "name": "Go To Notification Flow",
+      "name": "🧠 | 🛫 Go To Notification Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "ZG5XtNtvj",
       "position": {
-        "x": 1520.1125580328971,
-        "y": 1295.4641461437357
+        "x": 1187.1465280445655,
+        "y": 1069.100319806554
       },
       "fpEnabled": true,
       "inputsDB": {
         "flowId": "ePzi19b_S",
-        "pluginId": "start"
+        "pluginId": "8Qq-cLrb1"
       }
     },
     {
-      "name": "5) CLEANUP",
+      "name": "🧠 5) CLEANUP",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -343,7 +387,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Has Audio Already Been Cleaned?",
+      "name": "🧠 | ❓ Has Audio Already Been Cleaned?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -359,14 +403,14 @@
       }
     },
     {
-      "name": "Is Audio Cleaning Flow Disabled?",
+      "name": "🧠 | ❓ Is Audio Cleaning Flow Disabled?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "ilXiy1SXG",
       "position": {
-        "x": 949.4534514530422,
-        "y": 415.2395333606514
+        "x": 948.6206756821617,
+        "y": 416.90508490241245
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -375,7 +419,7 @@
       }
     },
     {
-      "name": "2) AUDIO CLEANING",
+      "name": "🧠 2) AUDIO CLEANING",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -387,19 +431,19 @@
       "fpEnabled": true
     },
     {
-      "name": "1) SUBTITLE CLEANING",
+      "name": "🧠 1) SUBTITLE CLEANING",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "r2AHO6udX",
       "position": {
-        "x": 713.8181936285675,
-        "y": 254.2563379405285
+        "x": 709.654314774165,
+        "y": 226.77473750147124
       },
       "fpEnabled": true
     },
     {
-      "name": "Have Subtitles Already Been Cleaned?",
+      "name": "🧠 | ❓ Have Subtitles Already Been Cleaned?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -415,14 +459,14 @@
       }
     },
     {
-      "name": "Input File",
+      "name": "🧠 | 👋 Hi there. Let's begin. Input File received.",
       "sourceRepo": "Community",
       "pluginName": "inputFile",
       "version": "1.0.0",
       "id": "DL-kZwstl",
       "position": {
-        "x": 708.6752011808509,
-        "y": -228.2123322999717
+        "x": 711.3074205539046,
+        "y": -862.9974347621527
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -430,14 +474,14 @@
       }
     },
     {
-      "name": "Is Subtitle Cleaning Flow Disabled?",
+      "name": "🧠 | ❓ Is Subtitle Cleaning Flow Disabled?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "-pZcKaUxk",
       "position": {
-        "x": 952.2735107153177,
-        "y": 252.99210994455512
+        "x": 947.2768560900344,
+        "y": 252.1593341736746
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -446,7 +490,7 @@
       }
     },
     {
-      "name": "Go To Subtitle Flow",
+      "name": "🧠 | 🛫 Go To Subtitle Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
@@ -462,7 +506,7 @@
       }
     },
     {
-      "name": "Return from Subtitle Cleaning flow",
+      "name": "🧠 | 🛬 Returned from Subtitle Cleaning Flow",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -474,7 +518,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Copy to Working Directory",
+      "name": "🧠 | 💾 Copy to Working Directory",
       "sourceRepo": "Community",
       "pluginName": "copyToWorkDirectory",
       "version": "1.0.0",
@@ -486,77 +530,14 @@
       "fpEnabled": true
     },
     {
-      "name": "Replace Original File",
-      "sourceRepo": "Community",
-      "pluginName": "replaceOriginalFile",
-      "version": "1.0.0",
-      "id": "Q7BWUuKSW",
-      "position": {
-        "x": 940.6500917052283,
-        "y": 916.0890015856606
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Move To Original Directory",
-      "sourceRepo": "Community",
-      "pluginName": "moveToOriginalDirectory",
-      "version": "1.0.0",
-      "id": "LzEDjfk7G",
-      "position": {
-        "x": 1367.8627687927913,
-        "y": 910.966902788132
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Copy to Working Directory",
-      "sourceRepo": "Community",
-      "pluginName": "copyToWorkDirectory",
-      "version": "1.0.0",
-      "id": "wFtg6QqUt",
-      "position": {
-        "x": 1740.7903293409247,
-        "y": 917.3985568508109
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Fail Flow",
-      "sourceRepo": "Community",
-      "pluginName": "failFlow",
-      "version": "1.0.0",
-      "id": "1bHT-hXJS",
-      "position": {
-        "x": 1948.1864626499278,
-        "y": 1024.6132925492284
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Tags: Worker Type (MEDIA SERVER)",
-      "sourceRepo": "Community",
-      "pluginName": "tagsWorkerType",
-      "version": "1.0.0",
-      "id": "zzQ7_Li0X",
-      "position": {
-        "x": 707.1688359323822,
-        "y": 969.8001670964902
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "requiredNodeTags": "media-server-only"
-      }
-    },
-    {
-      "name": "Tags: Worker Type (MEDIA SERVER)",
+      "name": "🧠 | 🤖 Tags: Worker Type (MEDIA SERVER)",
       "sourceRepo": "Community",
       "pluginName": "tagsWorkerType",
       "version": "1.0.0",
       "id": "9dk_w0FfB",
       "position": {
-        "x": 734.9468367706826,
-        "y": -97.22869041054801
+        "x": 736.1204846082276,
+        "y": -673.7197956495734
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -564,42 +545,14 @@
       }
     },
     {
-      "name": "Tags: Worker Type (ANY)",
-      "sourceRepo": "Community",
-      "pluginName": "tagsWorkerType",
-      "version": "1.0.0",
-      "id": "MoyDWZW8i",
-      "position": {
-        "x": 1135.1613074863799,
-        "y": 1194.0736429525223
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Move to remuxing output directory",
-      "sourceRepo": "Community",
-      "pluginName": "moveToDirectory",
-      "version": "2.0.0",
-      "id": "XEt7oC1e6",
-      "position": {
-        "x": 682.5260153770072,
-        "y": 1101.3764480904836
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "outputDirectory": "/mnt/syno_a/media/remuxing/output",
-        "keepRelativePath": "true"
-      }
-    },
-    {
-      "name": "Check for .tdarr_ignore File",
+      "name": "🧠 | 🔍 Checking for .tdarr_ignore File",
       "sourceRepo": "Community",
       "pluginName": "checkFileExists",
       "version": "1.0.0",
       "id": "BoW-FQxbG",
       "position": {
-        "x": 709.798822429564,
-        "y": -170.03231280245708
+        "x": 711.736625939533,
+        "y": -768.6898970023877
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -607,28 +560,178 @@
       }
     },
     {
-      "name": "🚨 .tdarr_ignore file found! Not processing.",
+      "name": "🧠 | 🚨 .tdarr_ignore file found! Not processing.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "4kgU3zJ7C",
       "position": {
-        "x": 533.4630209204873,
-        "y": -98.80341232954291
+        "x": 556.8669230676676,
+        "y": -677.7962040138572
       },
       "fpEnabled": true
     },
     {
-      "name": "Reset Flow Error",
+      "name": "🧠 | ❓ Yes, we should check for hard links. Is this something other than a movie/kids movie?",
       "sourceRepo": "Community",
-      "pluginName": "resetFlowError",
+      "pluginName": "checkFlowVariable",
       "version": "1.0.0",
-      "id": "PJJ0EtQMC",
+      "id": "7IBdVnNvZ",
       "position": {
-        "x": 1115.538272115955,
-        "y": 1398.7201063795012
+        "x": 818.1537366820526,
+        "y": -500.6908695128043
       },
-      "fpEnabled": false
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MOVIES,MOVIES_KIDS",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "🧠 | ❓Does this file have any hard links associated with it?",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "xI4LW1wZL",
+      "position": {
+        "x": 1104.075508866098,
+        "y": -383.27792627564315
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const fs = require('fs');\n  const path = require('path');\n  \n  // Get file path from input file object\n  const filePath = args.inputFileObj.file;\n  \n  // Check if file path exists\n  if (!filePath) {\n    console.error('Error: File path is undefined or empty');\n    args.variables.error = 'File path is undefined or empty';\n    args.variables.isHardLinked = false;\n    args.variables.hardLinkCount = 0;\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2, // Default to output 2 on error\n      variables: args.variables,\n    };\n  }\n  \n  try {\n    // Check if file exists\n    if (!fs.existsSync(filePath)) {\n      console.error(`Error: File does not exist at path: ${filePath}`);\n      args.variables.error = `File does not exist at path: ${filePath}`;\n      args.variables.isHardLinked = false;\n      args.variables.hardLinkCount = 0;\n      return {\n        outputFileObj: args.inputFileObj,\n        outputNumber: 2, // Default to output 2 on error\n        variables: args.variables,\n      };\n    }\n    \n    // Get file stats to check hard links\n    const stats = fs.statSync(filePath);\n    \n    // If nlink > 1, the file has multiple hard links\n    const isHardLinked = stats.nlink > 1;\n    \n    // Log the result\n    console.log(`File: ${path.basename(filePath)}`);\n    console.log(`Hard links: ${stats.nlink}`);\n    console.log(`Is hard linked: ${isHardLinked}`);\n    \n    // Store the result in a variable for later use\n    args.variables.isHardLinked = isHardLinked;\n    args.variables.hardLinkCount = stats.nlink;\n    args.variables.error = null; // No error\n    \n    // Route to output 1 if hard linked, output 2 if not\n    const outputNumber = isHardLinked ? 1 : 2;\n    \n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: outputNumber,\n      variables: args.variables,\n    };\n  } catch (error) {\n    // More detailed error handling\n    const errorMessage = `Error checking hard links for ${filePath}: ${error.message}`;\n    console.error(errorMessage);\n    \n    // Set error information in variables\n    args.variables.error = errorMessage;\n    args.variables.isHardLinked = false;\n    args.variables.hardLinkCount = 0;\n    \n    // Default to output 2 (not hard linked) in case of error\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2,\n      variables: args.variables,\n    };\n  }\n};"
+      }
+    },
+    {
+      "name": "🧠 | ‼️🔗 HARDLINKS FOUND. Not moving forward unless the boss says so. Holding for review.",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "KmttU-xLN",
+      "position": {
+        "x": 910.4871886299347,
+        "y": -284.9140461912652
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 👍 Review completed. Boss has decided to move forward regardless of hard link status.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ZEeWFgBWC",
+      "position": {
+        "x": 910.8287747036809,
+        "y": -139.32507146883302
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 👍 No hard links for this movie/kids movie were found. Moving forward.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "MofL30Gqj",
+      "position": {
+        "x": 1088.8781948908186,
+        "y": -124.73637388343774
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ☠️ Error stating file for hard link status. Failing flow.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "DK5f70U2u",
+      "position": {
+        "x": 1271.0291863953962,
+        "y": -288.31936792765606
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ❓ Should we check for hardlinks?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "A_I5epkJ_",
+      "position": {
+        "x": 736.0546066318851,
+        "y": -587.1314055406729
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "true",
+        "condition": "!=",
+        "variable": "{{{args.userVariables.library.check_hardlinks}}}"
+      }
+    },
+    {
+      "name": "🧠 | 👎 We're not supposed to check for hard links. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "gJuPucJHX",
+      "position": {
+        "x": 635.9871488203298,
+        "y": -485.32379030908737
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ❓ Are we using checkpoints?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "8Mjm7I-8f",
+      "position": {
+        "x": 1811.1797085668422,
+        "y": 251.13807030182198
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "condition": "!=",
+        "value": "true",
+        "variable": "{{{args.userVariables.library.use_checkpoints}}}"
+      }
+    },
+    {
+      "name": "🧠 | 🔄 Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "AQ8R5kct8",
+      "position": {
+        "x": 2021.5588631546157,
+        "y": 250.78022987105527
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ☠️ Couldn't replace original file.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "_moufHO96",
+      "position": {
+        "x": 2213.571805330719,
+        "y": 317.3216253911698
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ✌️THAT'S ALL FOLKS. Process complete ✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "F6gsCTRpN",
+      "position": {
+        "x": 719.0064336864099,
+        "y": 1246.1790444226126
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -659,13 +762,6 @@
       "target": "-pZcKaUxk",
       "targetHandle": null,
       "id": "h8Qa_L0Au"
-    },
-    {
-      "source": "gCJToxGbl",
-      "sourceHandle": "1",
-      "target": "Qx-16js51",
-      "targetHandle": null,
-      "id": "YFsxebxk0"
     },
     {
       "source": "CD5WOlva6",
@@ -710,55 +806,6 @@
       "id": "Ypz7txWFN"
     },
     {
-      "source": "3sjCQZoVh",
-      "sourceHandle": "1",
-      "target": "ZG5XtNtvj",
-      "targetHandle": null,
-      "id": "R_TLT7mJ6"
-    },
-    {
-      "source": "Q7BWUuKSW",
-      "sourceHandle": "err1",
-      "target": "hoZu1mKCw",
-      "targetHandle": null,
-      "id": "ejOjU22bi"
-    },
-    {
-      "source": "hoZu1mKCw",
-      "sourceHandle": "1",
-      "target": "LzEDjfk7G",
-      "targetHandle": null,
-      "id": "ynNGeSlcK"
-    },
-    {
-      "source": "LzEDjfk7G",
-      "sourceHandle": "err1",
-      "target": "WCqMWtIOa",
-      "targetHandle": null,
-      "id": "PaYRtf8ft"
-    },
-    {
-      "source": "WCqMWtIOa",
-      "sourceHandle": "1",
-      "target": "wFtg6QqUt",
-      "targetHandle": null,
-      "id": "0clGUz-W0"
-    },
-    {
-      "source": "wFtg6QqUt",
-      "sourceHandle": "1",
-      "target": "pt8ZIEsST",
-      "targetHandle": null,
-      "id": "97Y-hJE4A"
-    },
-    {
-      "source": "pt8ZIEsST",
-      "sourceHandle": "1",
-      "target": "FpvsFPLjd",
-      "targetHandle": null,
-      "id": "EPvAaLscE"
-    },
-    {
       "source": "nOWQkagip",
       "sourceHandle": "2",
       "target": "ePgdD_jzt",
@@ -778,20 +825,6 @@
       "target": "Rfx4VE1Nn",
       "targetHandle": null,
       "id": "FXipKrJwX"
-    },
-    {
-      "source": "wFtg6QqUt",
-      "sourceHandle": "err1",
-      "target": "YOh6MjFUC",
-      "targetHandle": null,
-      "id": "XBnzSZOIJ"
-    },
-    {
-      "source": "YOh6MjFUC",
-      "sourceHandle": "1",
-      "target": "1bHT-hXJS",
-      "targetHandle": null,
-      "id": "MR6WQYVuG"
     },
     {
       "source": "9w1Li8GZJ",
@@ -815,13 +848,6 @@
       "id": "lhdEs7q8x"
     },
     {
-      "source": "Rfx4VE1Nn",
-      "sourceHandle": "1",
-      "target": "U0uFOidd0",
-      "targetHandle": null,
-      "id": "qYek1otXP"
-    },
-    {
       "source": "ePgdD_jzt",
       "sourceHandle": "1",
       "target": "U0uFOidd0",
@@ -834,13 +860,6 @@
       "target": "U0uFOidd0",
       "targetHandle": null,
       "id": "1n08ODemw"
-    },
-    {
-      "source": "pqhKCm7pB",
-      "sourceHandle": "1",
-      "target": "lI8uQokq_",
-      "targetHandle": null,
-      "id": "SEb15yvc-"
     },
     {
       "source": "81SgF2EdR",
@@ -892,27 +911,6 @@
       "id": "vVp_Uyf3q"
     },
     {
-      "source": "Q7BWUuKSW",
-      "sourceHandle": "1",
-      "target": "FpvsFPLjd",
-      "targetHandle": null,
-      "id": "YeZVyGzFQ"
-    },
-    {
-      "source": "LzEDjfk7G",
-      "sourceHandle": "1",
-      "target": "FpvsFPLjd",
-      "targetHandle": null,
-      "id": "oDw40nIHK"
-    },
-    {
-      "source": "ZkTWMCpdx",
-      "sourceHandle": "1",
-      "target": "zzQ7_Li0X",
-      "targetHandle": null,
-      "id": "BI4z417aB"
-    },
-    {
       "source": "kgrnNlrq-",
       "sourceHandle": "1",
       "target": "JqxAaZQvt",
@@ -925,69 +923,6 @@
       "target": "r2AHO6udX",
       "targetHandle": null,
       "id": "OQLrevFVK"
-    },
-    {
-      "source": "FpvsFPLjd",
-      "sourceHandle": "1",
-      "target": "MoyDWZW8i",
-      "targetHandle": null,
-      "id": "LL3f3fl0x"
-    },
-    {
-      "source": "zzQ7_Li0X",
-      "sourceHandle": "1",
-      "target": "QYllWNCXv",
-      "targetHandle": null,
-      "id": "rlPVpn2LH"
-    },
-    {
-      "source": "QYllWNCXv",
-      "sourceHandle": "2",
-      "target": "Q7BWUuKSW",
-      "targetHandle": null,
-      "id": "kMc31ZmIY"
-    },
-    {
-      "source": "QYllWNCXv",
-      "sourceHandle": "1",
-      "target": "XEt7oC1e6",
-      "targetHandle": null,
-      "id": "gjCu-kgXO"
-    },
-    {
-      "source": "XEt7oC1e6",
-      "sourceHandle": "1",
-      "target": "FpvsFPLjd",
-      "targetHandle": null,
-      "id": "vLTQsGYkz"
-    },
-    {
-      "source": "DL-kZwstl",
-      "sourceHandle": "1",
-      "target": "BoW-FQxbG",
-      "targetHandle": null,
-      "id": "0507jUc01"
-    },
-    {
-      "source": "BoW-FQxbG",
-      "sourceHandle": "1",
-      "target": "4kgU3zJ7C",
-      "targetHandle": null,
-      "id": "f1AG7RSiS"
-    },
-    {
-      "source": "BoW-FQxbG",
-      "sourceHandle": "2",
-      "target": "9dk_w0FfB",
-      "targetHandle": null,
-      "id": "s3y-1pkjc"
-    },
-    {
-      "source": "9dk_w0FfB",
-      "sourceHandle": "1",
-      "target": "UzXrbJfuH",
-      "targetHandle": null,
-      "id": "iwEUlVm69"
     },
     {
       "source": "UzXrbJfuH",
@@ -1011,39 +946,270 @@
       "id": "PlU5PPxqo"
     },
     {
+      "source": "DL-kZwstl",
+      "sourceHandle": "1",
+      "target": "BoW-FQxbG",
+      "targetHandle": null,
+      "id": "aXNGQrO3O"
+    },
+    {
+      "source": "BoW-FQxbG",
+      "sourceHandle": "1",
+      "target": "4kgU3zJ7C",
+      "targetHandle": null,
+      "id": "AHF50zzwY"
+    },
+    {
+      "source": "BoW-FQxbG",
+      "sourceHandle": "2",
+      "target": "9dk_w0FfB",
+      "targetHandle": null,
+      "id": "6CDuGXL4n"
+    },
+    {
+      "source": "7IBdVnNvZ",
+      "sourceHandle": "1",
+      "target": "UzXrbJfuH",
+      "targetHandle": null,
+      "id": "LsOVNYFNo"
+    },
+    {
+      "source": "7IBdVnNvZ",
+      "sourceHandle": "2",
+      "target": "xI4LW1wZL",
+      "targetHandle": null,
+      "id": "H9GTcHZMO"
+    },
+    {
+      "source": "xI4LW1wZL",
+      "sourceHandle": "1",
+      "target": "KmttU-xLN",
+      "targetHandle": null,
+      "id": "Ce0FnCwL8"
+    },
+    {
+      "source": "KmttU-xLN",
+      "sourceHandle": "1",
+      "target": "ZEeWFgBWC",
+      "targetHandle": null,
+      "id": "TY-E7Rqnz"
+    },
+    {
+      "source": "ZEeWFgBWC",
+      "sourceHandle": "1",
+      "target": "UzXrbJfuH",
+      "targetHandle": null,
+      "id": "0OStCCUq1"
+    },
+    {
+      "source": "xI4LW1wZL",
+      "sourceHandle": "2",
+      "target": "MofL30Gqj",
+      "targetHandle": null,
+      "id": "H4qb_RfHF"
+    },
+    {
+      "source": "MofL30Gqj",
+      "sourceHandle": "1",
+      "target": "UzXrbJfuH",
+      "targetHandle": null,
+      "id": "13xVhgMed"
+    },
+    {
+      "source": "xI4LW1wZL",
+      "sourceHandle": "err1",
+      "target": "DK5f70U2u",
+      "targetHandle": null,
+      "id": "obMImmrOm"
+    },
+    {
+      "source": "9dk_w0FfB",
+      "sourceHandle": "1",
+      "target": "A_I5epkJ_",
+      "targetHandle": null,
+      "id": "MIRU3qD3I"
+    },
+    {
+      "source": "A_I5epkJ_",
+      "sourceHandle": "2",
+      "target": "7IBdVnNvZ",
+      "targetHandle": null,
+      "id": "p3t-1HkbA"
+    },
+    {
+      "source": "A_I5epkJ_",
+      "sourceHandle": "1",
+      "target": "gJuPucJHX",
+      "targetHandle": null,
+      "id": "UrIel1Krl"
+    },
+    {
+      "source": "gJuPucJHX",
+      "sourceHandle": "1",
+      "target": "UzXrbJfuH",
+      "targetHandle": null,
+      "id": "CLGjWXkdp"
+    },
+    {
+      "source": "gCJToxGbl",
+      "sourceHandle": "1",
+      "target": "8Mjm7I-8f",
+      "targetHandle": null,
+      "id": "vJ50Q9JXx"
+    },
+    {
+      "source": "8Mjm7I-8f",
+      "sourceHandle": "1",
+      "target": "Qx-16js51",
+      "targetHandle": null,
+      "id": "XPSfbODXV"
+    },
+    {
+      "source": "AQ8R5kct8",
+      "sourceHandle": "1",
+      "target": "Qx-16js51",
+      "targetHandle": null,
+      "id": "rjcfV1MHc"
+    },
+    {
+      "source": "AQ8R5kct8",
+      "sourceHandle": "err1",
+      "target": "_moufHO96",
+      "targetHandle": null,
+      "id": "Y_47AxM3g"
+    },
+    {
+      "source": "8Mjm7I-8f",
+      "sourceHandle": "2",
+      "target": "AQ8R5kct8",
+      "targetHandle": null,
+      "id": "g68vXVMUO"
+    },
+    {
+      "source": "pqhKCm7pB",
+      "sourceHandle": "1",
+      "target": "VZP19ytDk",
+      "targetHandle": null,
+      "id": "mFad5zBeL"
+    },
+    {
+      "source": "Rfx4VE1Nn",
+      "sourceHandle": "1",
+      "target": "boPCWUo1B",
+      "targetHandle": null,
+      "id": "8BdR0TwLT"
+    },
+    {
+      "source": "VZP19ytDk",
+      "sourceHandle": "1",
+      "target": "lI8uQokq_",
+      "targetHandle": null,
+      "id": "YvthXsig1"
+    },
+    {
+      "source": "boPCWUo1B",
+      "sourceHandle": "1",
+      "target": "U0uFOidd0",
+      "targetHandle": null,
+      "id": "6OHAMRfqs"
+    },
+    {
+      "source": "boPCWUo1B",
+      "sourceHandle": "2",
+      "target": "ttGf1VcT3",
+      "targetHandle": null,
+      "id": "6B19qdODo"
+    },
+    {
+      "source": "ttGf1VcT3",
+      "sourceHandle": "err1",
+      "target": "I6JkMZGWR",
+      "targetHandle": null,
+      "id": "qOlVl2Ddz"
+    },
+    {
+      "source": "35KKNL1u0",
+      "sourceHandle": "err1",
+      "target": "6_xmWDE2r",
+      "targetHandle": null,
+      "id": "I-wpmo0ij"
+    },
+    {
+      "source": "VZP19ytDk",
+      "sourceHandle": "2",
+      "target": "35KKNL1u0",
+      "targetHandle": null,
+      "id": "lJp5D5ab1"
+    },
+    {
+      "source": "35KKNL1u0",
+      "sourceHandle": "1",
+      "target": "lI8uQokq_",
+      "targetHandle": null,
+      "id": "8QQPDI7Xd"
+    },
+    {
+      "source": "ttGf1VcT3",
+      "sourceHandle": "1",
+      "target": "U0uFOidd0",
+      "targetHandle": null,
+      "id": "wwmGRkPvn"
+    },
+    {
+      "source": "ZkTWMCpdx",
+      "sourceHandle": "1",
+      "target": "JniegPe-V",
+      "targetHandle": null,
+      "id": "h1RxCVygD"
+    },
+    {
+      "source": "JniegPe-V",
+      "sourceHandle": "err1",
+      "target": "SWsE5bHd5",
+      "targetHandle": null,
+      "id": "FDAO6FoMs"
+    },
+    {
+      "source": "3sjCQZoVh",
+      "sourceHandle": "1",
+      "target": "P8olNdWOs",
+      "targetHandle": null,
+      "id": "iuPrpwlP6"
+    },
+    {
       "source": "P8olNdWOs",
       "sourceHandle": "2",
+      "target": "ZG5XtNtvj",
+      "targetHandle": null,
+      "id": "ouwz-RUjB"
+    },
+    {
+      "source": "SWsE5bHd5",
+      "sourceHandle": "1",
       "target": "3sjCQZoVh",
       "targetHandle": null,
-      "id": "X6G3H_UwJ"
+      "id": "DN7MHHv85"
     },
     {
       "source": "P8olNdWOs",
       "sourceHandle": "1",
-      "target": "PJJ0EtQMC",
+      "target": "F6gsCTRpN",
       "targetHandle": null,
-      "id": "0ZzqOoU1-"
+      "id": "lyHd_HNJR"
     },
     {
-      "source": "P8olNdWOs",
+      "source": "ZG5XtNtvj",
       "sourceHandle": "err1",
-      "target": "PJJ0EtQMC",
+      "target": "eUFrmVIZc",
       "targetHandle": null,
-      "id": "_UEqfouRj"
+      "id": "_tokgp9pz"
     },
     {
-      "source": "MoyDWZW8i",
-      "sourceHandle": "err1",
-      "target": "3sjCQZoVh",
-      "targetHandle": null,
-      "id": "JpEyE80H1"
-    },
-    {
-      "source": "MoyDWZW8i",
+      "source": "eUFrmVIZc",
       "sourceHandle": "1",
-      "target": "3sjCQZoVh",
+      "target": "F6gsCTRpN",
       "targetHandle": null,
-      "id": "g65bpx_Yp"
+      "id": "59EXegFrd"
     }
   ]
 }
