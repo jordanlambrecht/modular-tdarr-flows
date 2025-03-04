@@ -1,6 +1,17 @@
 # CHANGELOG
 
-## March 2, 2025
+## v1.0.2 - March 4, 2025
+
+### Added
+
+- Emojis to subtitles flow
+
+### Changed
+
+- Better error handling. Multiple 'reset flow errors' have been added so
+  progress can continue even if some steps fail.
+
+## v1.0.1 - March 2, 2025
 
 ### Added
 
