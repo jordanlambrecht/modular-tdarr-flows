@@ -198,6 +198,18 @@
         "y": 1169.5186594535858
       },
       "fpEnabled": true
+    },
+    {
+      "name": "Bypass for Single-Node setups --->>",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "nQPuDEwvv",
+      "position": {
+        "x": 731.5366295013413,
+        "y": 1359.4536717118756
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [

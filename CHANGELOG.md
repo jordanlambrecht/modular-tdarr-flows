@@ -1,13 +1,11 @@
 # CHANGELOG
 
-## v1.0.2 - March 4, 2025
+## v1.2.0 - March 4, 2025
 
 ### Added
 
 - Emojis to subtitles flow
-
-### Changed
-
+- Comments indicating which plugins to bypass for single-node setups
 - Better error handling. Multiple 'reset flow errors' have been added so
   progress can continue even if some steps fail.
 

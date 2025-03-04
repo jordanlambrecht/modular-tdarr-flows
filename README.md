@@ -105,6 +105,47 @@ If {{{args.userVariables.library.is_remux}}} is set to `true`, we will only
 transcode a single AAC audio channel at the highest channel count. Commentary is
 not removed.
 
+## Customizing for Your Personal Setup
+
+Since I take advantage of three nodes (two mac, one PC), I have a few logic
+flows specific to my setup. If you have a different setup or only use one node,
+you'll have to adjust these flows accordingly. I've added comments on the flows
+to help pinpoint which ones need to be adjusted.
+
+### Controller Flow
+
+- Bypass `🧠 | 🤖 Tags: Worker Type (MEDIA SERVER)` at the top of the flow.
+- Bypass `🧠 | 🤖 Tags: Worker Type (PC)` at the top-middle of the flow after
+  the 'copy to working directory' plugin.
+
+### Subtitle Flow
+
+- No adjustments needed.
+
+### Audio Cleaning Flow
+
+- No adjustments needed.
+
+### Audio Transcoding Flow
+
+- No adjustments needed.
+
+### Video Transcoding Flow
+
+- Bypass `Tags: Worker Type GPU` after the NVENC decision making plugin towards
+  the middle.
+- Bypass `Tags: Worker Type CPU` after the NVENC decision making plugin towards
+  the middle.
+- Bypass `Tags: Worker Type ANY` in the NVENC sub-flow area towards the bottom.
+
+### Cleanup Flow
+
+- Bypass `🧼 | 🤖 Tags: Worker Type (ANY)` at the bottom of the flow.
+
+### Notification Flow
+
+- No adjustments needed.
+
 ## ToDo
 
 - Add support for commentary filtering (low priority)

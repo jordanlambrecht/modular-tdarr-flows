@@ -5,6 +5,18 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "<----- Remove for single-node setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "7YzUZ1Wbs",
+      "position": {
+        "x": 906.475372097816,
+        "y": -672.6953090241327
+      },
+      "fpEnabled": true
+    },
+    {
       "name": "🧠 | ☠️ Couldn't replace original file. Continuing Anyways.",
       "sourceRepo": "Community",
       "pluginName": "resetFlowError",
@@ -742,6 +754,18 @@
       "position": {
         "x": 2232.333616732091,
         "y": 236.09285512069653
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "<----- Remove for single-node setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "LnPkL7zUG",
+      "position": {
+        "x": 1158.6586303731729,
+        "y": 112.38572693998833
       },
       "fpEnabled": true
     }

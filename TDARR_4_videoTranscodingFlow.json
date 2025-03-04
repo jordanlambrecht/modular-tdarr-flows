@@ -1402,6 +1402,30 @@
         "y": 2252.4682930935464
       },
       "fpEnabled": true
+    },
+    {
+      "name": "^^^ Bypass these two plugins if using single-node setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "FwX6tKpGn",
+      "position": {
+        "x": 113.6374912140067,
+        "y": 1318.069850985013
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Bypass for Single-Node setup -->>",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "2CS4h_i9b",
+      "position": {
+        "x": 183.69142300469218,
+        "y": 2124.7514897868455
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
