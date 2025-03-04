@@ -1392,38 +1392,6 @@
       "fpEnabled": true
     },
     {
-      "name": "Check Flow Variable",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "8-44irbYY",
-      "position": {
-        "x": 57.16001050354967,
-        "y": 2098.248939824106
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "{{{args.userVariables.library.fileSizeLowerBounds}}}",
-        "condition": "!="
-      }
-    },
-    {
-      "name": "Set Flow Variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "ZeyU49OIs",
-      "position": {
-        "x": 37.21465414052365,
-        "y": 2195.912408912027
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "{{{args.userVariables.library.test}}} ",
-        "value": "8"
-      }
-    },
-    {
       "name": "Require Review",
       "sourceRepo": "Community",
       "pluginName": "requireReview",
