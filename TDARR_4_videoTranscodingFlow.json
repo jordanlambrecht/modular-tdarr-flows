@@ -92,8 +92,8 @@
       "version": "1.0.0",
       "id": "eMjxTGUMF",
       "position": {
-        "x": 9.887802072840998,
-        "y": 1624.3017150375115
+        "x": 35.842577411624404,
+        "y": 1632.0881476391467
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -175,8 +175,8 @@
       "version": "1.0.0",
       "id": "O75tHAMme",
       "position": {
-        "x": -208.4248456476979,
-        "y": 1262.284475277672
+        "x": -211.27089859311923,
+        "y": 1219.5936810963524
       },
       "fpEnabled": true
     },
@@ -372,8 +372,8 @@
       "version": "1.0.0",
       "id": "S08-ELDeH",
       "position": {
-        "x": 381.4882340878587,
-        "y": 1270.0013432386404
+        "x": 459.2803479293744,
+        "y": 1214.977652960495
       },
       "fpEnabled": true
     },
@@ -532,7 +532,7 @@
       }
     },
     {
-      "name": "Reorder Streams",
+      "name": "Not Anime. Reorder Streams w/ English first",
       "sourceRepo": "Community",
       "pluginName": "ffmpegCommandRorderStreams",
       "version": "1.0.0",
@@ -541,8 +541,8 @@
       },
       "id": "hgAJYApF4",
       "position": {
-        "x": 248.1694370308187,
-        "y": 517.2042167762162
+        "x": 250.28347311194142,
+        "y": 554.1998481958639
       },
       "fpEnabled": true
     },
@@ -553,8 +553,8 @@
       "version": "1.0.0",
       "id": "WSgEHqXja",
       "position": {
-        "x": 899.2276965846257,
-        "y": -393.9393308473734
+        "x": 894.2431500083405,
+        "y": -718.6819154807831
       },
       "fpEnabled": true
     },
@@ -845,7 +845,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Reorder Streams",
+      "name": "Anime. Reorder Streams w/ Jpn first",
       "sourceRepo": "Community",
       "pluginName": "ffmpegCommandRorderStreams",
       "version": "1.0.0",
@@ -855,8 +855,8 @@
       },
       "id": "0bmlQPqIK",
       "position": {
-        "x": 34.887941814521014,
-        "y": 516.5822822728353
+        "x": 33.830923773959654,
+        "y": 553.5779136924829
       },
       "fpEnabled": true
     },
@@ -888,8 +888,8 @@
       },
       "id": "pE6rU7gkW",
       "position": {
-        "x": 646.2518581531596,
-        "y": -446.37178880229385
+        "x": 647.3426404209772,
+        "y": -800.7361231245858
       },
       "fpEnabled": true
     },
@@ -903,8 +903,8 @@
       },
       "id": "broG1J9Nb",
       "position": {
-        "x": 776.9917364853281,
-        "y": -296.1410095043792
+        "x": 775.9858352127947,
+        "y": -623.1962122785857
       },
       "fpEnabled": true
     },
@@ -927,8 +927,8 @@
       "version": "1.0.0",
       "id": "kAd1CKd4_",
       "position": {
-        "x": 800.9290937398376,
-        "y": 290.80414904885305
+        "x": 801.986111780399,
+        "y": 310.88749181951886
       },
       "fpEnabled": true
     },
@@ -963,8 +963,8 @@
       "version": "1.0.0",
       "id": "bLBk_0TqO",
       "position": {
-        "x": 640.2532885082361,
-        "y": 289.6216895485725
+        "x": 642.3673245893588,
+        "y": 310.7620503597997
       },
       "fpEnabled": true
     },
@@ -976,7 +976,7 @@
       "id": "pjsP2l_so",
       "position": {
         "x": 184.48776689513164,
-        "y": 374.29675146127124
+        "y": 396.4941303130598
       },
       "fpEnabled": true
     },
@@ -1117,8 +1117,8 @@
       "version": "1.0.0",
       "id": "cYIbqVNto",
       "position": {
-        "x": 190.64806674376752,
-        "y": 1272.615848167122
+        "x": 242.82570407649143,
+        "y": 1270.7184795368412
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1192,7 +1192,7 @@
       "id": "zEUftmE3V",
       "position": {
         "x": 184.4953960091438,
-        "y": 444.8798336448268
+        "y": 480.818447023913
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1302,8 +1302,8 @@
       "version": "1.0.0",
       "id": "uTsBT2bqZ",
       "position": {
-        "x": 646.5158187018695,
-        "y": -379.7223452486413
+        "x": 647.4791999269164,
+        "y": -706.9730295285673
       },
       "fpEnabled": true
     },
@@ -1410,8 +1410,8 @@
       "version": "1.0.0",
       "id": "FwX6tKpGn",
       "position": {
-        "x": 113.6374912140067,
-        "y": 1318.069850985013
+        "x": 135.75285555402226,
+        "y": 1308.9900235216444
       },
       "fpEnabled": true
     },
@@ -1426,16 +1426,52 @@
         "y": 2124.7514897868455
       },
       "fpEnabled": true
+    },
+    {
+      "name": "📼 | ❓ Is it a movie or kids movie, per chance?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "KjHjKbfzb",
+      "position": {
+        "x": 615.6299075765758,
+        "y": -541.7447754128541
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MOVIES,MOVIES_KIDS"
+      }
+    },
+    {
+      "name": "📼 | ❓ Is the movie already under 4.25 GB?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFileSize",
+      "version": "1.0.0",
+      "id": "lbzrgwtad",
+      "position": {
+        "x": 514.905392181137,
+        "y": -453.1280882112003
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "lessThan": "4.25"
+      }
+    },
+    {
+      "name": "📼 | ✋ The movie is already pretty tiny. We might not want to transcode. Require human review.",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "X83IhT4sk",
+      "position": {
+        "x": 417.19397523853695,
+        "y": -356.1893171287219
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
-    {
-      "source": "broG1J9Nb",
-      "sourceHandle": "1",
-      "target": "lxznnqDwh",
-      "targetHandle": null,
-      "id": "svYdUmZ-s"
-    },
     {
       "source": "wPoLwMcyZ",
       "sourceHandle": "3",
@@ -2450,6 +2486,48 @@
       "target": "QEYKEgMPy",
       "targetHandle": null,
       "id": "6UNbf0m_v"
+    },
+    {
+      "source": "broG1J9Nb",
+      "sourceHandle": "1",
+      "target": "KjHjKbfzb",
+      "targetHandle": null,
+      "id": "OIPX3fZEL"
+    },
+    {
+      "source": "KjHjKbfzb",
+      "sourceHandle": "1",
+      "target": "lbzrgwtad",
+      "targetHandle": null,
+      "id": "rqGYt89Df"
+    },
+    {
+      "source": "lbzrgwtad",
+      "sourceHandle": "1",
+      "target": "X83IhT4sk",
+      "targetHandle": null,
+      "id": "vdNFRzSzu"
+    },
+    {
+      "source": "KjHjKbfzb",
+      "sourceHandle": "2",
+      "target": "lxznnqDwh",
+      "targetHandle": null,
+      "id": "gORw12zT6"
+    },
+    {
+      "source": "lbzrgwtad",
+      "sourceHandle": "2",
+      "target": "lxznnqDwh",
+      "targetHandle": null,
+      "id": "h4SoTDbvI"
+    },
+    {
+      "source": "X83IhT4sk",
+      "sourceHandle": "1",
+      "target": "lxznnqDwh",
+      "targetHandle": null,
+      "id": "71Rt-t36q"
     }
   ]
 }

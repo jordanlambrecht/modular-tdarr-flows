@@ -8,6 +8,8 @@
 - Comments indicating which plugins to bypass for single-node setups
 - Better error handling. Multiple 'reset flow errors' have been added so
   progress can continue even if some steps fail.
+- File size check for movies/kids movies. Tdarr will now hold for review if a
+  movie is already under 4.25gb.
 
 ### Removed
 
