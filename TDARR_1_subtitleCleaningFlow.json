@@ -5,14 +5,26 @@
   "tags": "",
   "flowPlugins": [
     {
-      "name": "Remove \"mov_text\" stream (rare, but it happens)",
+      "name": "💬 | Reset Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "mqaN8eSoz",
+      "position": {
+        "x": 570.6397755140792,
+        "y": 521.5450092465792
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "💬 | 🧼 Remove \"mov_text\" stream (rare, but it happens)",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "oRVuh6Mph",
       "position": {
-        "x": 426.10474051508936,
-        "y": 470.91618765325876
+        "x": 419.3899749171576,
+        "y": 592.9932889037342
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -22,7 +34,7 @@
       }
     },
     {
-      "name": "We sure did.",
+      "name": "💬 | 👍 We sure did.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -34,74 +46,74 @@
       "fpEnabled": true
     },
     {
-      "name": "🧼 Let's get rid of any subtitles that aren't English or Undetermined. We'll also keep Japanese because Kevin is learning Japanese.",
+      "name": "💬 | 🧼 Let's get rid of any subtitles that aren't English or Undetermined. We'll also keep Japanese because Kevin is learning Japanese.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "6b337NID_",
       "position": {
-        "x": 214.1285843767423,
-        "y": 640.0095024420846
+        "x": 423.6895922898767,
+        "y": 897.9587628917837
       },
       "fpEnabled": true
     },
     {
-      "name": "English subtitles should always come first.",
+      "name": "💬 | 🇺🇸 English subtitles should always come first.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "krw2Ezrcf",
       "position": {
-        "x": 736.941843032923,
-        "y": 689.6508807364052
+        "x": 424.46057064654394,
+        "y": 1099.9898741339082
       },
       "fpEnabled": true
     },
     {
-      "name": "👍 We sure did.",
+      "name": "💬 | 👍 We sure did.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "-G6abB52E",
       "position": {
-        "x": 280.55971574850093,
-        "y": 1131.2098730428827
+        "x": 321.0241883835139,
+        "y": 1687.9986394169032
       },
       "fpEnabled": true
     },
     {
-      "name": "👍 All systems are go. We can start cleaning the subtitles.",
+      "name": "💬 | 👍 All systems are go. We can start cleaning the subtitles.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "30Ws_s_77",
       "position": {
-        "x": 425.71126443678463,
-        "y": 386.23886538911296
+        "x": 420.67519023833574,
+        "y": 385.3995196893715
       },
       "fpEnabled": true
     },
     {
-      "name": "🚀🚀🚀 Beginning work on subtitles 🚀🚀🚀",
+      "name": "💬 | 🚀🚀🚀 Beginning work on subtitles 🚀🚀🚀",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "8RGQofisa",
       "position": {
-        "x": 643.9043489535235,
-        "y": 159.4997220051323
+        "x": 554.7088506325451,
+        "y": 107.14584255586244
       },
       "fpEnabled": true
     },
     {
-      "name": "Set subs_have_been_cleaned = true",
+      "name": "💬 | 🪪 Set subs_have_been_cleaned = true",
       "sourceRepo": "Community",
       "pluginName": "setFlowVariable",
       "version": "1.0.0",
       "id": "OT6kJBOX0",
       "position": {
-        "x": 281.359925411109,
-        "y": 1255.2740747169194
+        "x": 321.1113851874399,
+        "y": 1867.0167985902724
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -110,7 +122,7 @@
       }
     },
     {
-      "name": "Did we come here from the controller flow?",
+      "name": "💬 | ❓ Did we come here from the controller flow?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -126,38 +138,38 @@
       }
     },
     {
-      "name": "✅✅✅ SUBTITLES HAVE BEEN CLEANED ✅✅✅",
+      "name": "💬 | ✅✅✅ SUBTITLES HAVE BEEN CLEANED ✅✅✅",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "cYFlPlQrZ",
       "position": {
-        "x": 281.06488805914285,
-        "y": 1176.228078576463
+        "x": 320.8163478354738,
+        "y": 1760.8763138198983
       },
       "fpEnabled": true
     },
     {
-      "name": "‼️‼️‼️ SUBTITLE FILE SIZE CHECK FAILED  ‼️‼️‼️",
+      "name": "💬 | ‼️‼️‼️ SUBTITLE FILE SIZE CHECK FAILED  ‼️‼️‼️",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "8baYQjNQw",
       "position": {
-        "x": 646.6329841748232,
-        "y": 929.6713971884103
+        "x": 599.9623548891549,
+        "y": 1417.5625133143615
       },
       "fpEnabled": true
     },
     {
-      "name": "Did we come here from the controller flow?",
+      "name": "💬 | ❓ Did we come here from the controller flow?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "3xMZOp3fE",
       "position": {
-        "x": 419.5562223454617,
-        "y": 1033.546602519391
+        "x": 429.1839973727575,
+        "y": 1600.93765762758
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -166,14 +178,14 @@
       }
     },
     {
-      "name": "🏁 SUBTITLE CLEANING CHECKPOINT: File Size Check",
+      "name": "💬 | 🏁 SUBTITLE CLEANING CHECKPOINT: File Size Check",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "ER4WdJtk7",
       "position": {
-        "x": 420.3305308086813,
-        "y": 932.4686884516841
+        "x": 428.21104606173276,
+        "y": 1368.27195788962
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -183,19 +195,19 @@
       }
     },
     {
-      "name": "‼️‼️‼️ SUBTITLES HAVE ALREADY BEEN CLEANED  ‼️‼️‼️",
+      "name": "💬 | ‼️‼️‼️ SUBTITLES HAVE ALREADY BEEN CLEANED  ‼️‼️‼️",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "A3u3d9Gnp",
       "position": {
-        "x": 634.7813437568254,
-        "y": 426.1905678853501
+        "x": 633.2259041397388,
+        "y": 386.5268576496397
       },
       "fpEnabled": true
     },
     {
-      "name": "‼️‼️‼️ SUBTITLE CLEANING DISABLED  ‼️‼️‼️",
+      "name": "💬 | ‼️‼️‼️ SUBTITLE CLEANING DISABLED  ‼️‼️‼️",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -207,7 +219,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Set subs_have_been_cleaned = false",
+      "name": "💬 | 🪪 Set subs_have_been_cleaned = false",
       "sourceRepo": "Community",
       "pluginName": "setFlowVariable",
       "version": "1.0.0",
@@ -223,7 +235,7 @@
       }
     },
     {
-      "name": "Check if subs have already been cleaned",
+      "name": "💬 | 🔍 Check if subs have already been cleaned",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -240,38 +252,38 @@
       }
     },
     {
-      "name": "✅✅✅ SUBTITLES HAVE BEEN CLEANED ✅✅✅",
+      "name": "💬 | ✅✅✅ SUBTITLES HAVE BEEN CLEANED ✅✅✅",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "efbc31Bfw",
       "position": {
-        "x": 658.7159505107713,
-        "y": 1337.6700675129025
+        "x": 524.6823494768115,
+        "y": 1960.2351101163986
       },
       "fpEnabled": true
     },
     {
-      "name": "‼️‼️‼️ SUBTITLE DURATION CHECK FAILED  ‼️‼️‼️",
+      "name": "💬 | ‼️‼️‼️ SUBTITLE DURATION CHECK FAILED  ‼️‼️‼️",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "AGLzSPLLB",
       "position": {
-        "x": 766.7189348699201,
-        "y": 875.5611054888706
+        "x": 770.420580967867,
+        "y": 1416.261629561401
       },
       "fpEnabled": true
     },
     {
-      "name": "Input File",
+      "name": "💬 | ⬇️ Input File",
       "sourceRepo": "Community",
       "pluginName": "inputFile",
       "version": "1.0.0",
       "id": "PH-owVC7K",
       "position": {
-        "x": 539.3399170752691,
-        "y": 10.73728732108492
+        "x": 451.11393504038836,
+        "y": -60.03740156403914
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -279,38 +291,38 @@
       }
     },
     {
-      "name": "Enter from the controller flow.",
+      "name": "💬 | 🛬 Entry from the controller flow.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "HV73FJ9OC",
       "position": {
-        "x": 785.4326931055195,
-        "y": 59.904270566609455
+        "x": 696.2371947845412,
+        "y": 7.5503911173396006
       },
       "fpEnabled": true
     },
     {
-      "name": "Copy to Working Directory",
+      "name": "💬 | 💾 Copy to Working Directory",
       "sourceRepo": "Community",
       "pluginName": "copyToWorkDirectory",
       "version": "1.0.0",
       "id": "rO68NTLBg",
       "position": {
-        "x": 540.3915338074017,
-        "y": 70.25154149213381
+        "x": 451.1960354864234,
+        "y": 17.897662042863956
       },
       "fpEnabled": true
     },
     {
-      "name": "Migz Clean Subtitles",
+      "name": "💬 | 🧼 Run Migz Clean Subtitles",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "1V-A4F8Qg",
       "position": {
-        "x": 422.1127872280572,
-        "y": 710.1949960427661
+        "x": 424.16426061091715,
+        "y": 1027.0718647464691
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -320,14 +332,14 @@
       }
     },
     {
-      "name": "Remove Closed Captions",
+      "name": "💬 | 🧼 Remove Closed Captions",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "_MBPZQUBj",
       "position": {
-        "x": 429.46287229545396,
-        "y": 545.7079120905246
+        "x": 419.78194826222034,
+        "y": 679.3784490933585
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -335,14 +347,14 @@
       }
     },
     {
-      "name": "Remove subs with 'CC' in their title (rare, but sometimes it happens)",
+      "name": "💬 | 🧼 Remove subs with 'CC' in their title (rare, but sometimes it happens)",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "r5l1WgyuP",
       "position": {
-        "x": 427.62557237697376,
-        "y": 598.0631652667707
+        "x": 422.34270061520164,
+        "y": 797.182888836946
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -352,14 +364,14 @@
       }
     },
     {
-      "name": "Re-order subtitle streams",
+      "name": "💬 | 🎛️ Re-order subtitle streams",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "e95328ErK",
       "position": {
-        "x": 737.7067739484872,
-        "y": 752.4154867625736
+        "x": 424.5157740988773,
+        "y": 1183.3365765937729
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -367,14 +379,14 @@
       }
     },
     {
-      "name": "Set subs_have_been_cleaned = true",
+      "name": "💬 | 🪪 Set subs_have_been_cleaned = true",
       "sourceRepo": "Community",
       "pluginName": "setFlowVariable",
       "version": "1.0.0",
       "id": "By1xWQv62",
       "position": {
-        "x": 658.490981485468,
-        "y": 1246.4635955809442
+        "x": 524.4573804515078,
+        "y": 1849.538745138507
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -383,7 +395,7 @@
       }
     },
     {
-      "name": "On Flow Error",
+      "name": "💬 | ☠️ On Flow Error",
       "sourceRepo": "Community",
       "pluginName": "onFlowError",
       "version": "1.0.0",
@@ -395,26 +407,26 @@
       "fpEnabled": true
     },
     {
-      "name": "Fail Flow",
+      "name": "💬 | ☠️ Fail Flow",
       "sourceRepo": "Community",
       "pluginName": "failFlow",
       "version": "1.0.0",
       "id": "aEiXGFlxg",
       "position": {
-        "x": 1004.7219836379016,
-        "y": 1054.3990611881977
+        "x": 836.3408114650554,
+        "y": 1568.332139881606
       },
       "fpEnabled": true
     },
     {
-      "name": "🏁 SUBTITLE CLEANING CHECKPOINT: Duration Check",
+      "name": "💬 | 🏁 SUBTITLE CLEANING CHECKPOINT: Duration Check",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "d7VdU6y0e",
       "position": {
-        "x": 422.10657751172823,
-        "y": 826.0002412358654
+        "x": 425.5561081873559,
+        "y": 1268.1738346826655
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -422,14 +434,14 @@
       }
     },
     {
-      "name": "Check if sub cleaning is enabled",
+      "name": "💬 | 🔍 Check if sub cleaning is enabled",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "XwSoQBMTl",
       "position": {
-        "x": 643.9544602570755,
-        "y": 218.36068687300192
+        "x": 554.7589619360972,
+        "y": 197.03132857885495
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -438,7 +450,7 @@
       }
     },
     {
-      "name": "Did we come here from the controller flow?",
+      "name": "💬 | ❓ Did we come here from the controller flow?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -454,7 +466,7 @@
       }
     },
     {
-      "name": "Delete working file",
+      "name": "💬 | 🗑️ Delete working file",
       "sourceRepo": "Community",
       "pluginName": "deleteFile",
       "version": "1.0.0",
@@ -466,14 +478,14 @@
       "fpEnabled": true
     },
     {
-      "name": "⏎ Returning back to the controller flow",
+      "name": "💬 | 🛫  Returning to the Controller Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "HfwmBha1M",
       "position": {
         "x": 1039.1822623018418,
-        "y": 494.34857726978186
+        "y": 570.7345185682731
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -482,38 +494,38 @@
       }
     },
     {
-      "name": "Replace Original File",
+      "name": "💬 | 🚚 Replace Original File",
       "sourceRepo": "Community",
       "pluginName": "replaceOriginalFile",
       "version": "1.0.0",
       "id": "V15od2GxG",
       "position": {
-        "x": 565.3114017291931,
-        "y": 1104.6803207467083
+        "x": 524.8776306623283,
+        "y": 1684.6067880466317
       },
       "fpEnabled": true
     },
     {
-      "name": "Delete Working File",
+      "name": "💬 | 🗑️ Delete Working File",
       "sourceRepo": "Community",
       "pluginName": "deleteFile",
       "version": "1.0.0",
       "id": "zzaqWbGpr",
       "position": {
-        "x": 656.9814753856865,
-        "y": 1168.1937822433188
+        "x": 524.6210310046765,
+        "y": 1770.5559189421992
       },
       "fpEnabled": true
     },
     {
-      "name": "⏎ Returning back to the controller flow",
+      "name": "💬 | 🛫 Returning back to the Controller Flow",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "l-yHwpMZE",
       "position": {
-        "x": 282.54018154701293,
-        "y": 1341.7558092460458
+        "x": 321.5320357531966,
+        "y": 1974.1382439643833
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -522,38 +534,38 @@
       }
     },
     {
-      "name": "Failed to replace original file, let's try to copy and delete instead.",
+      "name": "💬 | ☠️ Failed to replace original file, let's try to copy and delete instead.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "yBDcscF6k",
       "position": {
-        "x": 874.6918472440356,
-        "y": 1124.8855790236896
+        "x": 737.2835529560996,
+        "y": 1726.59146276004
       },
       "fpEnabled": true
     },
     {
-      "name": "Move To Original Directory",
+      "name": "💬 | 🚚 Move To Original Directory",
       "sourceRepo": "Community",
       "pluginName": "moveToOriginalDirectory",
       "version": "1.0.0",
       "id": "aSznvw0VB",
       "position": {
-        "x": 874.6918472440354,
-        "y": 1206.2058056544504
+        "x": 737.2835529560994,
+        "y": 1823.768251970261
       },
       "fpEnabled": true
     },
     {
-      "name": "Delete Original File",
+      "name": "💬 | 🗑️ Delete Original File",
       "sourceRepo": "Community",
       "pluginName": "deleteFile",
       "version": "1.0.0",
       "id": "aTgChc8XH",
       "position": {
-        "x": 876.9096716066925,
-        "y": 1274.9583608968212
+        "x": 737.5810897302204,
+        "y": 1907.5224571930312
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -561,14 +573,14 @@
       }
     },
     {
-      "name": "Add Local Subtitles",
+      "name": "💬 | ✍️ Add Local Subtitles",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "tSforWSWr",
       "position": {
-        "x": 216.84532070262475,
-        "y": 442.6210564827295
+        "x": 419.4516566779318,
+        "y": 484.6777528717168
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -577,14 +589,38 @@
       }
     },
     {
-      "name": "Require Review",
+      "name": "💬 | 🧐 Require Human Review",
       "sourceRepo": "Community",
       "pluginName": "requireReview",
       "version": "1.0.0",
       "id": "bruIklukX",
       "position": {
-        "x": 764.087171970989,
-        "y": 1030.5589279209191
+        "x": 678.1027039641818,
+        "y": 1516.8521907140184
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "💬 | Reset any Flow Errors",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "Ko2ZGeuBj",
+      "position": {
+        "x": 1038.8306910579379,
+        "y": 493.37067810823135
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "💬 | 🫥 Reset Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "UHewDsBDJ",
+      "position": {
+        "x": 613.8071481853846,
+        "y": 716.6339535710943
       },
       "fpEnabled": true
     }
@@ -892,13 +928,6 @@
       "id": "Uh2VD93oj"
     },
     {
-      "source": "3bczEwhkY",
-      "sourceHandle": "1",
-      "target": "HfwmBha1M",
-      "targetHandle": null,
-      "id": "JCe54iJPx"
-    },
-    {
       "source": "oRVuh6Mph",
       "sourceHandle": "2",
       "target": "_MBPZQUBj",
@@ -934,13 +963,6 @@
       "id": "45EExLX3J"
     },
     {
-      "source": "tSforWSWr",
-      "sourceHandle": "err1",
-      "target": "oRVuh6Mph",
-      "targetHandle": null,
-      "id": "li37CfdD2"
-    },
-    {
       "source": "AGLzSPLLB",
       "sourceHandle": "1",
       "target": "bruIklukX",
@@ -967,6 +989,48 @@
       "target": "3xMZOp3fE",
       "targetHandle": null,
       "id": "4QakOXlX7"
+    },
+    {
+      "source": "3bczEwhkY",
+      "sourceHandle": "1",
+      "target": "Ko2ZGeuBj",
+      "targetHandle": null,
+      "id": "tXI2YG3m8"
+    },
+    {
+      "source": "Ko2ZGeuBj",
+      "sourceHandle": "1",
+      "target": "HfwmBha1M",
+      "targetHandle": null,
+      "id": "wSkxI4ToE"
+    },
+    {
+      "source": "_MBPZQUBj",
+      "sourceHandle": "err1",
+      "target": "UHewDsBDJ",
+      "targetHandle": null,
+      "id": "l8BbF3auj"
+    },
+    {
+      "source": "UHewDsBDJ",
+      "sourceHandle": "1",
+      "target": "r5l1WgyuP",
+      "targetHandle": null,
+      "id": "hAggGm3Z1"
+    },
+    {
+      "source": "tSforWSWr",
+      "sourceHandle": "err1",
+      "target": "mqaN8eSoz",
+      "targetHandle": null,
+      "id": "Ol_c0WTk8"
+    },
+    {
+      "source": "mqaN8eSoz",
+      "sourceHandle": "1",
+      "target": "oRVuh6Mph",
+      "targetHandle": null,
+      "id": "j6n8gIu0t"
     }
   ]
 }

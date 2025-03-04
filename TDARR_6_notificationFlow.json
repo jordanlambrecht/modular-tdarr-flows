@@ -1,7 +1,7 @@
 {
   "_id": "ePzi19b_S",
-  "name": "🛎️ Notify the Powers That Be",
-  "description": "🛎️ Notify the Powers That Be",
+  "name": "🛎️ Handle Notifications",
+  "description": "🛎️ Handle Notifications",
   "tags": "",
   "flowPlugins": [
     {
@@ -713,6 +713,18 @@
         "y": 1320.767826361398
       },
       "fpEnabled": true
+    },
+    {
+      "name": "On Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "onFlowError",
+      "version": "1.0.0",
+      "id": "V1jOtvxBM",
+      "position": {
+        "x": 1482.130259005102,
+        "y": 1656.9135013013192
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -1422,6 +1434,13 @@
       "target": "woKzLVsUQ",
       "targetHandle": null,
       "id": "bqQeSnS-F"
+    },
+    {
+      "source": "V1jOtvxBM",
+      "sourceHandle": "1",
+      "target": "woKzLVsUQ",
+      "targetHandle": null,
+      "id": "7vkYJMN4v"
     }
   ]
 }
