@@ -9,6 +9,11 @@
 - Better error handling. Multiple 'reset flow errors' have been added so
   progress can continue even if some steps fail.
 
+### Removed
+
+- Disabled 'Add local subtitles' plugin from the subtitles cleaning flow. It
+  errors out no matter what, so removing it for now.
+
 ## v1.0.1 - March 2, 2025
 
 ### Added

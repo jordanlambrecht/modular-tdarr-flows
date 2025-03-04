@@ -11,10 +11,10 @@
       "version": "1.0.0",
       "id": "mqaN8eSoz",
       "position": {
-        "x": 570.6397755140792,
-        "y": 521.5450092465792
+        "x": 306.81932098068035,
+        "y": 519.0639391412494
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "💬 | 🧼 Remove \"mov_text\" stream (rare, but it happens)",
@@ -579,10 +579,10 @@
       "version": "2.0.0",
       "id": "tSforWSWr",
       "position": {
-        "x": 419.4516566779318,
-        "y": 484.6777528717168
+        "x": 158.1122722498627,
+        "y": 483.8507295032735
       },
-      "fpEnabled": true,
+      "fpEnabled": false,
       "inputsDB": {
         "pluginSourceId": "Community:Tdarr_Plugin_e5c3_CnT_Add_Subtitles",
         "install_packages": "yes"
@@ -621,6 +621,18 @@
       "position": {
         "x": 613.8071481853846,
         "y": 716.6339535710943
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Disabled for now. Errors out no matter what.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "0RStNO9ld",
+      "position": {
+        "x": 166.0661352186119,
+        "y": 428.6783862943701
       },
       "fpEnabled": true
     }
@@ -942,13 +954,6 @@
       "id": "VJQF86dTl"
     },
     {
-      "source": "30Ws_s_77",
-      "sourceHandle": "1",
-      "target": "tSforWSWr",
-      "targetHandle": null,
-      "id": "ZAcyVywar"
-    },
-    {
       "source": "tSforWSWr",
       "sourceHandle": "2",
       "target": "oRVuh6Mph",
@@ -1031,6 +1036,13 @@
       "target": "oRVuh6Mph",
       "targetHandle": null,
       "id": "j6n8gIu0t"
+    },
+    {
+      "source": "30Ws_s_77",
+      "sourceHandle": "1",
+      "target": "oRVuh6Mph",
+      "targetHandle": null,
+      "id": "VVCqfcF-F"
     }
   ]
 }
