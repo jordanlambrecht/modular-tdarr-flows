@@ -380,7 +380,7 @@
         "radarr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
         "api_key": "{{{args.userVariables.global.api_key_tmdb}}}",
         "sonarr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
-        "sonarr_url": "{{{args.userVariables.global.api_key_sonarrAnime}}}"
+        "sonarr_url": "{{{args.userVariables.global.url_sonarrAnime}}}"
       }
     },
     {
