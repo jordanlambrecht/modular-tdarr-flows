@@ -5,6 +5,34 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "🧼 | 🫥 Couldn't set Unraid file permissions. Moving on regardless",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "8SZ5Z9-Rf",
+      "position": {
+        "x": 1200.125333286897,
+        "y": 1367.5261513642267
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧼 | 🤖 Tags: Worker Type (media server)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "0hGIZzc94",
+      "position": {
+        "x": 895.9981504684783,
+        "y": 677.3291042007087
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredWorkerType": "CPU",
+        "requiredNodeTags": "media-server-only"
+      }
+    },
+    {
       "name": "🧼 | ❓ Is this a personal release?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
@@ -27,8 +55,8 @@
       "version": "1.0.0",
       "id": "FpvsFPLjd",
       "position": {
-        "x": 905.5546934696704,
-        "y": 1270.6204317749975
+        "x": 881.7646857450615,
+        "y": 1469.86687799646
       },
       "fpEnabled": true
     },
@@ -126,8 +154,8 @@
       "version": "1.0.0",
       "id": "MoyDWZW8i",
       "position": {
-        "x": 905.559013574989,
-        "y": 1360.290980343432
+        "x": 880.62547239312,
+        "y": 1555.6951988177766
       },
       "fpEnabled": true
     },
@@ -154,8 +182,8 @@
       "version": "1.0.0",
       "id": "wnjcuNsKU",
       "position": {
-        "x": 896.2677303794019,
-        "y": 679.2975198702727
+        "x": 897.0031038203912,
+        "y": 469.29106108406506
       },
       "fpEnabled": true
     },
@@ -166,8 +194,8 @@
       "version": "2.0.0",
       "id": "LWRm3X4a1",
       "position": {
-        "x": 905.1913295669704,
-        "y": 1447.3929039665097
+        "x": 881.4013218423614,
+        "y": 1646.6393501879722
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -185,31 +213,80 @@
         "x": 905.584830743459,
         "y": 1124.2210285545582
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
-      "name": "🧼 | ‼️ Couldn't clean the job cache. Moving on anyways.",
-      "sourceRepo": "Community",
-      "pluginName": "resetFlowError",
-      "version": "1.0.0",
-      "id": "Rborxe5tX",
-      "position": {
-        "x": 1128.4209968118917,
-        "y": 1169.5186594535858
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "Bypass for Single-Node setups --->>",
+      "name": "Bypass for Single-Node setups \n ----------------->>",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "nQPuDEwvv",
       "position": {
-        "x": 731.5366295013413,
-        "y": 1359.4536717118756
+        "x": 708.6558345711139,
+        "y": 1535.9697980737994
       },
       "fpEnabled": true
+    },
+    {
+      "name": "<<------ \nBypass for single-node setups",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "aCzAdduee",
+      "position": {
+        "x": 1072.1648815870171,
+        "y": 678.3561737959511
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Clean Metadata",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "wM2G9JSrv",
+      "position": {
+        "x": 897.0409789052499,
+        "y": 590.3826600717326
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_Migz2CleanTitle",
+        "clean_audio": "true",
+        "clean_subtitles": "true"
+      }
+    },
+    {
+      "name": "🧼 | 🔑 Set File Permissions for Unraid",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "rNbQuh5YF",
+      "position": {
+        "x": 1037.0726676070256,
+        "y": 1282.5640750255038
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_O8O0dCTlb_Set_File_Permissions_For_UnRaid"
+      }
+    },
+    {
+      "name": "🧼 | ❓ Are we not using Unraid via enable_unraid",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "7gRxL4Xnp",
+      "position": {
+        "x": 905.7631709043148,
+        "y": 1197.7153463631437
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_unraid}}} ",
+        "value": "true",
+        "condition": "!="
+      }
     }
   ],
   "flowEdges": [
@@ -277,25 +354,11 @@
       "id": "r5xuCO7wa"
     },
     {
-      "source": "wnjcuNsKU",
-      "sourceHandle": "1",
-      "target": "QYllWNCXv",
-      "targetHandle": null,
-      "id": "3k63aeYbl"
-    },
-    {
       "source": "MoyDWZW8i",
       "sourceHandle": "1",
       "target": "LWRm3X4a1",
       "targetHandle": null,
       "id": "_KDstyfre"
-    },
-    {
-      "source": "M4pk158Vd",
-      "sourceHandle": "1",
-      "target": "FpvsFPLjd",
-      "targetHandle": null,
-      "id": "_iXEbXwKA"
     },
     {
       "source": "XEt7oC1e6",
@@ -326,25 +389,88 @@
       "id": "FHxq5YyJA"
     },
     {
-      "source": "M4pk158Vd",
-      "sourceHandle": "err1",
-      "target": "Rborxe5tX",
-      "targetHandle": null,
-      "id": "8mQ2-SrUS"
-    },
-    {
-      "source": "Rborxe5tX",
-      "sourceHandle": "1",
-      "target": "FpvsFPLjd",
-      "targetHandle": null,
-      "id": "0VGhXsK8o"
-    },
-    {
       "source": "MoyDWZW8i",
       "sourceHandle": "err1",
       "target": "LWRm3X4a1",
       "targetHandle": null,
       "id": "Xxfz2ChYd"
+    },
+    {
+      "source": "0hGIZzc94",
+      "sourceHandle": "1",
+      "target": "QYllWNCXv",
+      "targetHandle": null,
+      "id": "TWb9cmosX"
+    },
+    {
+      "source": "wnjcuNsKU",
+      "sourceHandle": "1",
+      "target": "wM2G9JSrv",
+      "targetHandle": null,
+      "id": "rkmpeMfhq"
+    },
+    {
+      "source": "wM2G9JSrv",
+      "sourceHandle": "1",
+      "target": "0hGIZzc94",
+      "targetHandle": null,
+      "id": "hY5Lk5se0"
+    },
+    {
+      "source": "wM2G9JSrv",
+      "sourceHandle": "2",
+      "target": "0hGIZzc94",
+      "targetHandle": null,
+      "id": "q4GBPb2Ry"
+    },
+    {
+      "source": "M4pk158Vd",
+      "sourceHandle": "1",
+      "target": "7gRxL4Xnp",
+      "targetHandle": null,
+      "id": "XSU1SGVxU"
+    },
+    {
+      "source": "rNbQuh5YF",
+      "sourceHandle": "err1",
+      "target": "8SZ5Z9-Rf",
+      "targetHandle": null,
+      "id": "cb4eSqq68"
+    },
+    {
+      "source": "rNbQuh5YF",
+      "sourceHandle": "2",
+      "target": "8SZ5Z9-Rf",
+      "targetHandle": null,
+      "id": "SOXmevNfe"
+    },
+    {
+      "source": "8SZ5Z9-Rf",
+      "sourceHandle": "1",
+      "target": "FpvsFPLjd",
+      "targetHandle": null,
+      "id": "T8lbMSoCw"
+    },
+    {
+      "source": "rNbQuh5YF",
+      "sourceHandle": "1",
+      "target": "FpvsFPLjd",
+      "targetHandle": null,
+      "id": "AMrqJEv2v"
+    },
+    {
+      "source": "7gRxL4Xnp",
+      "sourceHandle": "1",
+      "target": "FpvsFPLjd",
+      "targetHandle": null,
+      "id": "zvm9cve3U"
+    },
+    {
+      "source": "7gRxL4Xnp",
+      "sourceHandle": "2",
+      "target": "rNbQuh5YF",
+      "targetHandle": null,
+      "id": "OfsuvsOro"
     }
   ]
 }
