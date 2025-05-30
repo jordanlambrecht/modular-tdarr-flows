@@ -1,0 +1,2516 @@
+{
+  "_id": "gt7gZldIe",
+  "name": "👋 Initialization",
+  "description": "👋 Initialization",
+  "tags": "",
+  "flowPlugins": [
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "qpOA2t6un",
+      "position": {
+        "x": 1228.90776798328,
+        "y": 3019.9354232993373
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "fttTP6Tnp",
+      "position": {
+        "x": 1175.2143347432454,
+        "y": 2675.6919085099066
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "rL-qhwkN1",
+      "position": {
+        "x": 1191.69613306387,
+        "y": 2320.3680940003715
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "wc2mTPo5z",
+      "position": {
+        "x": 1253.730274678256,
+        "y": 1942.8836800506276
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "6a59YbaL8",
+      "position": {
+        "x": 1316.9955607059867,
+        "y": 1597.4090208478515
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "gGZ0w1NR4",
+      "position": {
+        "x": 1315.0101928264378,
+        "y": 1258.0900837118
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "Initialize removeTitleMetaErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "lns2cRMWy",
+      "position": {
+        "x": 2312.3153307518255,
+        "y": -363.69998338871045
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "removeTitleMetaErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "👋 | 👍 We sure did.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "JcaZovW7Y",
+      "position": {
+        "x": 1150.4030742620919,
+        "y": -645.7773065381541
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👍✅ Nope. We're all good. Exiting cleanly",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "P_LYkY8LB",
+      "position": {
+        "x": 1391.114023572356,
+        "y": -604.2233481854862
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ⛔️ INITIALIZATION PROCESS IS DISABLED. EXITING.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "FGO8K2mVU",
+      "position": {
+        "x": 973.914760642602,
+        "y": -841.7459526420715
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ⛔️ INITIALIZATION PROCESS HAS ALREADY RAN. EXITING.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "qvxiWh3gT",
+      "position": {
+        "x": 948.4590033195467,
+        "y": -717.5468096785198
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🔍 Has initialization process already been run?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "RCn9IGUlm",
+      "position": {
+        "x": 742.5192613647731,
+        "y": -736.7563055010104
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.initializationProcessComplete}}}",
+        "value": "true",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "👋 | 🚀🚀🚀 All systems go. Begin Initialization 🚀🚀🚀",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "GgVfjXlWl",
+      "position": {
+        "x": 719.5840252222781,
+        "y": -499.19375373663814
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🔍 Check if initialization is enabled",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "6UW0zoWGc",
+      "position": {
+        "x": 767.2196813668734,
+        "y": -844.0918497616824
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_initialization}}}",
+        "value": "true",
+        "condition": "=="
+      }
+    },
+    {
+      "name": "<–––––––––––––––––––\nRemove for single-node setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "5Au_FT_cg",
+      "position": {
+        "x": 1172.1871096128075,
+        "y": 3516.79514699269
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🤖 Tags: Worker Type (MEDIA SERVER)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "QAiqAzlVj",
+      "position": {
+        "x": 996.8967588054288,
+        "y": 3513.8503471107338
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredNodeTags": "media-server-only"
+      }
+    },
+    {
+      "name": "👋 | 🫥 Reset Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "cL_rw_j6M",
+      "position": {
+        "x": 1094.9516062266048,
+        "y": 3896.882409428029
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🧐 Require Human Review",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "8pviw3ZKa",
+      "position": {
+        "x": 1096.3586115118492,
+        "y": 3799.7174849559315
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🗑️ Delete Working File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "Po0jAEKx3",
+      "position": {
+        "x": 996.7052702910421,
+        "y": 3721.4998190052684
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToDelete": "workingFile"
+      }
+    },
+    {
+      "name": "Increment removeDatastreamsErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "ZTYe64FC2",
+      "position": {
+        "x": 1010.1018038407251,
+        "y": 2221.559041754691
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "removeDatastreamsErrorCount",
+        "value": "{{{args.variables.user.removeDatastreamsErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "👋 | ↪️ We haven't had any flow errors yet. Skipping remux.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "wLXzyUjzN",
+      "position": {
+        "x": 698.3410351049546,
+        "y": 813.2264908182896
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ✅ Initialization logic finished.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "2dqmMJnxB",
+      "position": {
+        "x": 798.2713514048776,
+        "y": 3292.609860268608
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🧮 Set initializationProcessComplete = false",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "iYRl3e8ca",
+      "position": {
+        "x": 1400.9217377152459,
+        "y": 4100.951317560138
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "initializationProcessComplete",
+        "value": "false"
+      }
+    },
+    {
+      "name": "👋 | 🧮 Set initializationProcessComplete = true",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "U1HbFF5jY",
+      "position": {
+        "x": 773.6467905604715,
+        "y": 3705.468490442302
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "initializationProcessComplete",
+        "value": "true"
+      }
+    },
+    {
+      "name": "👋 | 💬 \n✅✅✅ \nINITIALIZATION PROCESS COMPLETE \n✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "jP4Rq0yuI",
+      "position": {
+        "x": 1152.1502294015527,
+        "y": 4233.670461907767
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ☠️ Failed to replace original file, let's try to copy and delete instead.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "IxMRHBL5o",
+      "position": {
+        "x": 1260.4104288960455,
+        "y": 3665.1358740088494
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👍 We sure did.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "hxfYGpivA",
+      "position": {
+        "x": 774.6036823454036,
+        "y": 3597.5231388544703
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 💬 \n✅✅✅ \nINITIALIZATION PROCESS COMPLETE \n✅✅✅",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "jouA7KM1w",
+      "position": {
+        "x": 773.9089872964777,
+        "y": 3832.4446237628604
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ↪️ removeTitleMetaErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ctXXLKkuT",
+      "position": {
+        "x": 601.1512819806744,
+        "y": 2935.208123394492
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🫥 failed to Removing Title Meta. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "I9Yn49gZ4",
+      "position": {
+        "x": 1250.0133516350115,
+        "y": 2927.1651599127194
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ↪️ cleanTitlesErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "uwdPcxesc",
+      "position": {
+        "x": 624.1771667115938,
+        "y": 2580.279703085182
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Remove Title Meta",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "zyUL4qUYA",
+      "position": {
+        "x": 859.5501008596881,
+        "y": 2932.845861056604
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_nc7x_Drawmonster_No_Title_Meta"
+      }
+    },
+    {
+      "name": "👋 | ↪️ removeDatastreamsErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "27F4NWj-7",
+      "position": {
+        "x": 624.0145796724934,
+        "y": 2213.148840343477
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👌 No image issues found. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "3MZdGe7Kt",
+      "position": {
+        "x": 937.9777419935228,
+        "y": 1953.2944665992045
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Image Removal",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "fTp-Wgoqq",
+      "position": {
+        "x": 826.9858547261284,
+        "y": 1858.5558393496474
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_MigzImageRemoval"
+      }
+    },
+    {
+      "name": "👋 | ↪️ imageRemovalErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "dff5d1MWw",
+      "position": {
+        "x": 622.6957568417753,
+        "y": 1847.5327520105109
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ↪️ migzOrderStreamsErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "d8lKDWDoy",
+      "position": {
+        "x": 617.3234954163208,
+        "y": 1527.0625278492023
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Increment migzOrderStreamsErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "-QNyood_d",
+      "position": {
+        "x": 1142.1267106004066,
+        "y": 1504.7452088927168
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "remuxErrorCount",
+        "value": "{{{args.variables.user.migzOrderStreamsErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "Migz Order Streams",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "170tbF9Nf",
+      "position": {
+        "x": 828.2364995957348,
+        "y": 1530.7657060942954
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_Migz6OrderStreams"
+      }
+    },
+    {
+      "name": "Check mjpegErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "_cGmPQi5R",
+      "position": {
+        "x": 796.5699148943884,
+        "y": 1147.773924237579
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}}",
+        "variable": " {{{args.variables.user.mjpegErrorCount}}} ",
+        "condition": "=="
+      }
+    },
+    {
+      "name": "👋 | ↪️ remuxErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "kdFVje_6l",
+      "position": {
+        "x": 672.4334976670011,
+        "y": 1223.9789514376337
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ↪️ remuxErrorCount past threshold. Skipping.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "CDgcOPLOb",
+      "position": {
+        "x": 796.6637189783371,
+        "y": 918.7775572015793
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Check remuxErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "YTV4UKsz1",
+      "position": {
+        "x": 913.903345858208,
+        "y": 836.8096537024599
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.remuxErrorCount}}} ",
+        "condition": "=="
+      }
+    },
+    {
+      "name": "Initialize cleanTitlesErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "UOUgru3uq",
+      "position": {
+        "x": 2130.3153070917438,
+        "y": -370.72940830990154
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "cleanTitlesErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "Initialize removeDatastreamsErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "-4CTLlbdj",
+      "position": {
+        "x": 1962.5650512449233,
+        "y": -377.5276508663158
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "removeDatastreamsErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "Initialize imageRemovalErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "vEWLxpSzu",
+      "position": {
+        "x": 1794.987987787057,
+        "y": -368.71401501557574
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "imageRemovalErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "Initialize migzOrderStreamsErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "7GqASCevN",
+      "position": {
+        "x": 1620.4946264787266,
+        "y": -374.62261621887563
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "migzOrderStreamsErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "👋 | 👌 Didn't need to remux. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "-M_0PUNXE",
+      "position": {
+        "x": 1021.3637192615174,
+        "y": 1045.8417970135908
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Initialize remuxErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "sNpHoMOBC",
+      "position": {
+        "x": 1267.386374955209,
+        "y": -367.1564922217189
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "remuxErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "Initialize mjpegErrorCount variable",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "pxSiIZiba",
+      "position": {
+        "x": 1445.9433796205376,
+        "y": -364.27429132042954
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "mjpegErrorCount",
+        "value": "0"
+      }
+    },
+    {
+      "name": "Set max amount of times we'll allow a plugin to fail (pluginErrorThreshold)",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "kM026o-bI",
+      "position": {
+        "x": 1094.6549199871506,
+        "y": -385.11359284118765
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "pluginErrorThreshold",
+        "value": "2"
+      }
+    },
+    {
+      "name": "Mjpeg Fix",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "uu2ov1WfM",
+      "position": {
+        "x": 899.5281148446164,
+        "y": 1234.2061998259687
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_d5d4_iiDrakeii_Not_A_Video_Mjpeg_Fix"
+      }
+    },
+    {
+      "name": "👋 | 👌 No Mjpeg issues found. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ZYOtxIAaD",
+      "position": {
+        "x": 988.1274623491859,
+        "y": 1323.3871203726642
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Remux to MKV",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "KoEtw_mvw",
+      "position": {
+        "x": 940.0599943284765,
+        "y": 972.8092443594696
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_Migz1Remux",
+        "force_conform": "false"
+      }
+    },
+    {
+      "name": "Increment removeTitleMetaErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "vtCZPe3yC",
+      "position": {
+        "x": 1054.4314070167832,
+        "y": 2926.521852970707
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "remuxErrorCount",
+        "value": "{{{args.variables.user.removeTitleMetaErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "Increment cleanTitlesErrorCount Error Count",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "McT6TFbUB",
+      "position": {
+        "x": 981.3401018533517,
+        "y": 2580.113825126877
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "cleanTitles",
+        "value": "{{{args.variables.user.cleanTitlesErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "👋 | 🫥 failed to Remove Images. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "mzSLNFg6P",
+      "position": {
+        "x": 1255.8008629271644,
+        "y": 1850.3089711335099
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Increment imageRemovalErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "qRY6FGbFP",
+      "position": {
+        "x": 1080.7321483514627,
+        "y": 1866.1500260796988
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "remuxErrorCount",
+        "value": "{{{args.variables.user.imageRemovalErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "👋 | 🫥 failed to run MigzOrderStreams. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "fLyzbfSTc",
+      "position": {
+        "x": 1339.3288705287205,
+        "y": 1502.1038955266042
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🫥 failed to Clean Titles. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "Vxxj_2ASU",
+      "position": {
+        "x": 1165.2012315216998,
+        "y": 2578.777516497781
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🫥 failed to Remove Datastreams. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "kAsA02Hz-",
+      "position": {
+        "x": 1197.6471032756265,
+        "y": 2219.8572634046577
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🫥 failed to remux. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "OiJUVLCck",
+      "position": {
+        "x": 1368.2063272190348,
+        "y": 963.5280611703389
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Increase Remux Error Count",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "vsF9ybubQ",
+      "position": {
+        "x": 1159.0847428098684,
+        "y": 959.9127093161308
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "remuxErrorCount",
+        "value": "{{{args.variables.user.remuxErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "Don't run remux until we've had a Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "k2ERly_0o",
+      "position": {
+        "x": 828.7013147228428,
+        "y": 712.9726737794715
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "1,2,3,4,5,6,7,8,9",
+        "variable": " {{{args.variables.user.flowErrorCount}}} ",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "👋 | 👌 Flow Error Count is too high. Exiting",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "oO1r9jA_y",
+      "position": {
+        "x": 233.8790247802412,
+        "y": 703.3722828570784
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Check removeTitleMetaErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "RO0Zf4LTo",
+      "position": {
+        "x": 738.1636366571859,
+        "y": 2842.501978249417
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.removeTitleMetaErrorCount}}}"
+      }
+    },
+    {
+      "name": "Check cleanTitlesErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "t4dWQ_dfn",
+      "position": {
+        "x": 785.1986027660646,
+        "y": 2488.7271769653685
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.cleanTitlesErrorCount}}} "
+      }
+    },
+    {
+      "name": "Check removeDatastreamsErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "PcD-5bR2W",
+      "position": {
+        "x": 785.4705874025589,
+        "y": 2111.561413861285
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.removeDatastreamsErrorCount}}} "
+      }
+    },
+    {
+      "name": "Check imageRemovalErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "a99I4QBr4",
+      "position": {
+        "x": 802.8111776593676,
+        "y": 1761.8984550426562
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.imageRemovalErrorCount}}} "
+      }
+    },
+    {
+      "name": "Check migzOrderStreamsErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "F8B9mEAtB",
+      "position": {
+        "x": 802.9547376511201,
+        "y": 1428.7789853900601
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.pluginErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.migzOrderStreamsErrorCount}}} "
+      }
+    },
+    {
+      "name": "👋 | 👌 Didn't need to reorder any streams. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "fjulhPIH8",
+      "position": {
+        "x": 925.4312905776725,
+        "y": 1613.9606354938987
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👌 No titles needed cleaning. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "VzT5TF5Zz",
+      "position": {
+        "x": 896.6246454399683,
+        "y": 2683.2914557708204
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👌 No title meta needed removing. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "EaCuC_41T",
+      "position": {
+        "x": 926.5408428191196,
+        "y": 3009.265869733358
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👌 No bad datastreams found. No processing done. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "TYM_UxtFs",
+      "position": {
+        "x": 914.2337427792268,
+        "y": 2309.4680072393767
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 🚨 .tdarr_ignore file found! Not processing.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "KpDr5glWd",
+      "position": {
+        "x": 455.4787065775565,
+        "y": -134.9167584382838
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "<–––––––––––––––––––\nWe only care about movie hardlinks. otherwise the review queue will be overwhelming",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "6TaHRgAR_",
+      "position": {
+        "x": 1010.719700973762,
+        "y": 20.456439893027778
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ❓ Yes, we should check for hard links. Is this something other than a movie/kids movie?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "bemWPldj4",
+      "position": {
+        "x": 838.0036551770759,
+        "y": 17.048756174763568
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MOVIES,MOVIES_KIDS",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "👋 | ❓ Should we check for hardlinks?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "xqmG89krx",
+      "position": {
+        "x": 674.2420469194192,
+        "y": -85.85549766281792
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.check_hardlinks}}}",
+        "value": "true",
+        "condition": "!="
+      }
+    },
+    {
+      "name": "<–––––––––––––––––––\nRemove for single-node setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "P9Lt5ALHZ",
+      "position": {
+        "x": 838.8400935936586,
+        "y": -266.475248541718
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🤖 Tags: Worker Type (MEDIA SERVER)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "dbrdZLn3w",
+      "position": {
+        "x": 673.1515405269006,
+        "y": -269.4334073463962
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredNodeTags": "media-server-only"
+      }
+    },
+    {
+      "name": "👋 | 👎 We're not supposed to check for hard links. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "xjAzsOLKM",
+      "position": {
+        "x": 538.3880120720429,
+        "y": 73.21989592861627
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👍 No hard links for this movie/kids movie were found. Moving forward.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "GnZlGi0i5",
+      "position": {
+        "x": 1059.3966356109436,
+        "y": 296.9039152007674
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 👍 Review completed. Boss has decided to move forward regardless of hard link status.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "uHbm9C4Gp",
+      "position": {
+        "x": 906.2919178452613,
+        "y": 271.1020982707267
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Remove Datastreams",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "G95EOyewL",
+      "position": {
+        "x": 810.2103385020109,
+        "y": 2227.8572154124377
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_vdka_Remove_DataStreams"
+      }
+    },
+    {
+      "name": "👋 | Input File",
+      "sourceRepo": "Community",
+      "pluginName": "inputFile",
+      "version": "1.0.0",
+      "id": "yZlJH4368",
+      "position": {
+        "x": 605.1928248743415,
+        "y": -1057.5511530376964
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🛬 Entry point from Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "MD77c1-Ek",
+      "position": {
+        "x": 877.891100187762,
+        "y": -983.1863957255146
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Run MKVPropEdit",
+      "sourceRepo": "Community",
+      "pluginName": "runMkvPropEdit",
+      "version": "1.0.0",
+      "id": "4tpX2W5yT",
+      "position": {
+        "x": 827.7368605687575,
+        "y": 550.8296612932867
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Clean Titles",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "dF4hNaUND",
+      "position": {
+        "x": 788.8412230888207,
+        "y": 2591.0833978057763
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_MC93_Migz2CleanTitle",
+        "clean_subtitles": "true",
+        "clean_audio": "true"
+      }
+    },
+    {
+      "name": "🧠 | ❓Does this file have any hard links associated with it?",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "fozsSVT79",
+      "position": {
+        "x": 1017.5668024510778,
+        "y": 183.09986389090287
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const fs = require('fs');\n  const path = require('path');\n  \n  // Get file path from input file object\n  const filePath = args.inputFileObj.file;\n  \n  // Check if file path exists\n  if (!filePath) {\n    console.error('Error: File path is undefined or empty');\n    args.variables.error = 'File path is undefined or empty';\n    args.variables.isHardLinked = false;\n    args.variables.hardLinkCount = 0;\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2, // Default to output 2 on error\n      variables: args.variables,\n    };\n  }\n  \n  try {\n    // Check if file exists\n    if (!fs.existsSync(filePath)) {\n      console.error(`Error: File does not exist at path: ${filePath}`);\n      args.variables.error = `File does not exist at path: ${filePath}`;\n      args.variables.isHardLinked = false;\n      args.variables.hardLinkCount = 0;\n      return {\n        outputFileObj: args.inputFileObj,\n        outputNumber: 2, // Default to output 2 on error\n        variables: args.variables,\n      };\n    }\n    \n    // Get file stats to check hard links\n    const stats = fs.statSync(filePath);\n    \n    // If nlink > 1, the file has multiple hard links\n    const isHardLinked = stats.nlink > 1;\n    \n    // Log the result\n    console.log(`File: ${path.basename(filePath)}`);\n    console.log(`Hard links: ${stats.nlink}`);\n    console.log(`Is hard linked: ${isHardLinked}`);\n    \n    // Store the result in a variable for later use\n    args.variables.isHardLinked = isHardLinked;\n    args.variables.hardLinkCount = stats.nlink;\n    args.variables.error = null; // No error\n    \n    // Route to output 1 if hard linked, output 2 if not\n    const outputNumber = isHardLinked ? 1 : 2;\n    \n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: outputNumber,\n      variables: args.variables,\n    };\n  } catch (error) {\n    // More detailed error handling\n    const errorMessage = `Error checking hard links for ${filePath}: ${error.message}`;\n    console.error(errorMessage);\n    \n    // Set error information in variables\n    args.variables.error = errorMessage;\n    args.variables.isHardLinked = false;\n    args.variables.hardLinkCount = 0;\n    \n    // Default to output 2 (not hard linked) in case of error\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2,\n      variables: args.variables,\n    };\n  }\n};"
+      }
+    },
+    {
+      "name": "🧠 | ☠️ Error stating file for hard link status. Failing flow.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "2_VqfuBG8",
+      "position": {
+        "x": 1271.5021504082038,
+        "y": 375.81865475122186
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ‼️🔗 HARDLINKS FOUND. Not moving forward unless the boss says so. Holding for review.",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "bEqPoviQW",
+      "position": {
+        "x": 995.3910354907403,
+        "y": 396.3369767999695
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 💾 Copy to Working Directory",
+      "sourceRepo": "Community",
+      "pluginName": "copyToWorkDirectory",
+      "version": "1.0.0",
+      "id": "oe5Vub0sj",
+      "position": {
+        "x": 830.3263284967984,
+        "y": 480.4293179625152
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🤖 Tags: Worker Type (All Remote Nodes)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "6vV13YaTq",
+      "position": {
+        "x": 829.2469798838822,
+        "y": 631.2403130657159
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredNodeTags": "all-remote-nodes"
+      }
+    },
+    {
+      "name": "<–––––––––––––––––––\nRemove for single-node setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "2nF-i5dJO",
+      "position": {
+        "x": 1007.3437977967128,
+        "y": 629.3250824409747
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | 🔍 Checking for .tdarr_ignore File",
+      "sourceRepo": "Community",
+      "pluginName": "checkFileExists",
+      "version": "1.0.0",
+      "id": "YMSxPHx2g",
+      "position": {
+        "x": 674.482109149035,
+        "y": -159.7437194534036
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "directory": "{{{args.inputFileObj.meta.Directory}}}",
+        "fileToCheck": ".tdarr_ignore"
+      }
+    },
+    {
+      "name": "On Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "onFlowError",
+      "version": "1.0.0",
+      "id": "O3rskBCqt",
+      "position": {
+        "x": 573.8505854011069,
+        "y": 413.3974375674081
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Increase Flow Error Count",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "Aq5IVY75G",
+      "position": {
+        "x": 489.296008592632,
+        "y": 512.5395066352515
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "flowErrorCount",
+        "value": "{{{args.variables.user.transcodeStage}}}+1"
+      }
+    },
+    {
+      "name": "How many Flow Errors have we had?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "nlGNQKWvy",
+      "position": {
+        "x": 439.4216764501958,
+        "y": 604.8248403669397
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "{{{args.variables.user.flowErrorThreshold}}} ",
+        "variable": " {{{args.variables.user.flowErrorCount}}} "
+      }
+    },
+    {
+      "name": "Increment mjpegErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "ZgrPOmdzd",
+      "position": {
+        "x": 1163.843053272449,
+        "y": 1223.8523696312666
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "mjpegErrorCount",
+        "value": "{{{args.variables.user.mjpegErrorCount}}}+1"
+      }
+    },
+    {
+      "name": "👋 | 🫥 failed to run Mjpeg Fix. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "failFlow",
+      "version": "1.0.0",
+      "id": "z8IWWyJnB",
+      "position": {
+        "x": 1285.0412801672694,
+        "y": 1318.7718026775672
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Set max amount of times we'll allow this flow to fail (flowErrorThreshold)",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "XPC6gX4W_",
+      "position": {
+        "x": 906.8723099007623,
+        "y": -389.0275795404979
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "flowErrorThreshold",
+        "value": "4"
+      }
+    },
+    {
+      "name": "Initialize flowErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "QHSIdQm6t",
+      "position": {
+        "x": 719.726323547678,
+        "y": -371.5933129841364
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "flowErrorCount0"
+      }
+    },
+    {
+      "name": "👋 | ❓ Did we come here from the controller flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "wBoXVq5hA",
+      "position": {
+        "x": 799.0320302008478,
+        "y": 3428.22787603801
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "👋 | 🚚 Nope. Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "-c2OiSY7J",
+      "position": {
+        "x": 996.8187318081608,
+        "y": 3620.6178498261706
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🚚 Move To Original Directory",
+      "sourceRepo": "Community",
+      "pluginName": "moveToOriginalDirectory",
+      "version": "1.0.0",
+      "id": "rB5x7HDmK",
+      "position": {
+        "x": 1260.4305525581087,
+        "y": 3766.16741061038
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🗑️ Delete Original File",
+      "sourceRepo": "Community",
+      "pluginName": "deleteFile",
+      "version": "1.0.0",
+      "id": "GqilRUile",
+      "position": {
+        "x": 1260.2512142426842,
+        "y": 3898.284955118157
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToDelete": "originalFile"
+      }
+    },
+    {
+      "name": "👋 | 🫥 Reset Flow Error",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "v4lKnrC63",
+      "position": {
+        "x": 1401.3136460245835,
+        "y": 4020.9850435902467
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🧮 Set initializationProcessComplete = true",
+      "sourceRepo": "Community",
+      "pluginName": "setFlowVariable",
+      "version": "1.0.0",
+      "id": "NqLCQBlpw",
+      "position": {
+        "x": 996.4272987408051,
+        "y": 4102.7907668290645
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "initializationProcessComplete",
+        "value": "true"
+      }
+    },
+    {
+      "name": "👋 | 🛫 Returning back to the Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "sUnOP3mEb",
+      "position": {
+        "x": 774.1027430511261,
+        "y": 4005.0570910814204
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "F4KO4luxb",
+        "pluginId": "_TIbs0ACH"
+      }
+    },
+    {
+      "name": "👋 | 🧐 Require Human Review",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "YqIN29_CA",
+      "position": {
+        "x": 1401.1922119541343,
+        "y": 3938.059780162603
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Copy to Working Directory",
+      "sourceRepo": "Community",
+      "pluginName": "copyToWorkDirectory",
+      "version": "1.0.0",
+      "id": "yK5TvMkg9",
+      "position": {
+        "x": 604.7792513852995,
+        "y": -976.1910864614931
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ❓ Did we come here from the controller flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "v0RBmC27w",
+      "position": {
+        "x": 1175.329951601721,
+        "y": -740.7176790813843
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "true",
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}"
+      }
+    },
+    {
+      "name": "👋 | 🛫  Returning to the Controller Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "G5yhTDsp8",
+      "position": {
+        "x": 1150.7665839855265,
+        "y": -492.2713680972942
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "F4KO4luxb",
+        "pluginId": "_TIbs0ACH"
+      }
+    },
+    {
+      "name": "👋 | 🫥 Reset any Flow Errors",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "yo9S-N4qh",
+      "position": {
+        "x": 1150.265989682717,
+        "y": -577.507032271762
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️\nTHIS FLOW HAS \n3 WORKER TAGS THAT \nNEED TO BE MODIFIED\n⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "N16D0UsQ4",
+      "position": {
+        "x": 370.3728198555589,
+        "y": -1043.4159790714086
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Go To Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "RDBBhnp8A",
+      "position": {
+        "x": 1373.3509012007892,
+        "y": 1043.1167323235832
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    }
+  ],
+  "flowEdges": [
+    {
+      "source": "fozsSVT79",
+      "sourceHandle": "err1",
+      "target": "2_VqfuBG8",
+      "targetHandle": null,
+      "id": "3ED9g6YV2"
+    },
+    {
+      "source": "bemWPldj4",
+      "sourceHandle": "2",
+      "target": "fozsSVT79",
+      "targetHandle": null,
+      "id": "TH82EXd7B"
+    },
+    {
+      "source": "fozsSVT79",
+      "sourceHandle": "1",
+      "target": "bEqPoviQW",
+      "targetHandle": null,
+      "id": "dTjDx5eR1"
+    },
+    {
+      "source": "xqmG89krx",
+      "sourceHandle": "1",
+      "target": "xjAzsOLKM",
+      "targetHandle": null,
+      "id": "icAQVpFXn"
+    },
+    {
+      "source": "xqmG89krx",
+      "sourceHandle": "2",
+      "target": "bemWPldj4",
+      "targetHandle": null,
+      "id": "ntIUGE3Gf"
+    },
+    {
+      "source": "bEqPoviQW",
+      "sourceHandle": "1",
+      "target": "uHbm9C4Gp",
+      "targetHandle": null,
+      "id": "ZMbVtad-f"
+    },
+    {
+      "source": "fozsSVT79",
+      "sourceHandle": "2",
+      "target": "GnZlGi0i5",
+      "targetHandle": null,
+      "id": "b9hJAI58X"
+    },
+    {
+      "source": "uHbm9C4Gp",
+      "sourceHandle": "1",
+      "target": "oe5Vub0sj",
+      "targetHandle": null,
+      "id": "07vgJ7WXe"
+    },
+    {
+      "source": "GnZlGi0i5",
+      "sourceHandle": "1",
+      "target": "oe5Vub0sj",
+      "targetHandle": null,
+      "id": "K15FhnpL2"
+    },
+    {
+      "source": "oe5Vub0sj",
+      "sourceHandle": "1",
+      "target": "4tpX2W5yT",
+      "targetHandle": null,
+      "id": "f54opz91W"
+    },
+    {
+      "source": "4tpX2W5yT",
+      "sourceHandle": "1",
+      "target": "6vV13YaTq",
+      "targetHandle": null,
+      "id": "989mh4HgA"
+    },
+    {
+      "source": "dbrdZLn3w",
+      "sourceHandle": "1",
+      "target": "YMSxPHx2g",
+      "targetHandle": null,
+      "id": "CtqgdOPkI"
+    },
+    {
+      "source": "YMSxPHx2g",
+      "sourceHandle": "2",
+      "target": "xqmG89krx",
+      "targetHandle": null,
+      "id": "U5JyPPPrq"
+    },
+    {
+      "source": "YMSxPHx2g",
+      "sourceHandle": "1",
+      "target": "KpDr5glWd",
+      "targetHandle": null,
+      "id": "BPxU-F13y"
+    },
+    {
+      "source": "xjAzsOLKM",
+      "sourceHandle": "1",
+      "target": "oe5Vub0sj",
+      "targetHandle": null,
+      "id": "jv4LEaX_Q"
+    },
+    {
+      "source": "bemWPldj4",
+      "sourceHandle": "1",
+      "target": "oe5Vub0sj",
+      "targetHandle": null,
+      "id": "NCgx8tlIW"
+    },
+    {
+      "source": "G95EOyewL",
+      "sourceHandle": "2",
+      "target": "TYM_UxtFs",
+      "targetHandle": null,
+      "id": "dx0zR_GxA"
+    },
+    {
+      "source": "dF4hNaUND",
+      "sourceHandle": "2",
+      "target": "VzT5TF5Zz",
+      "targetHandle": null,
+      "id": "mJXUOmPGt"
+    },
+    {
+      "source": "6vV13YaTq",
+      "sourceHandle": "1",
+      "target": "k2ERly_0o",
+      "targetHandle": null,
+      "id": "UPhHNVkku"
+    },
+    {
+      "source": "O3rskBCqt",
+      "sourceHandle": "1",
+      "target": "Aq5IVY75G",
+      "targetHandle": null,
+      "id": "XmjWeNvDj"
+    },
+    {
+      "source": "Aq5IVY75G",
+      "sourceHandle": "1",
+      "target": "nlGNQKWvy",
+      "targetHandle": null,
+      "id": "PpauRZ_Gd"
+    },
+    {
+      "source": "nlGNQKWvy",
+      "sourceHandle": "1",
+      "target": "oO1r9jA_y",
+      "targetHandle": null,
+      "id": "TtlRyovim"
+    },
+    {
+      "source": "nlGNQKWvy",
+      "sourceHandle": "2",
+      "target": "k2ERly_0o",
+      "targetHandle": null,
+      "id": "3Ut4fwswQ"
+    },
+    {
+      "source": "uu2ov1WfM",
+      "sourceHandle": "2",
+      "target": "ZYOtxIAaD",
+      "targetHandle": null,
+      "id": "4ClvFDmjV"
+    },
+    {
+      "source": "uu2ov1WfM",
+      "sourceHandle": "err1",
+      "target": "ZgrPOmdzd",
+      "targetHandle": null,
+      "id": "4ds4o1XBW"
+    },
+    {
+      "source": "XPC6gX4W_",
+      "sourceHandle": "1",
+      "target": "kM026o-bI",
+      "targetHandle": null,
+      "id": "Brob0n5Nc"
+    },
+    {
+      "source": "KoEtw_mvw",
+      "sourceHandle": "2",
+      "target": "-M_0PUNXE",
+      "targetHandle": null,
+      "id": "UAtpJ7CKO"
+    },
+    {
+      "source": "KoEtw_mvw",
+      "sourceHandle": "err1",
+      "target": "vsF9ybubQ",
+      "targetHandle": null,
+      "id": "98SOuvS7k"
+    },
+    {
+      "source": "k2ERly_0o",
+      "sourceHandle": "2",
+      "target": "YTV4UKsz1",
+      "targetHandle": null,
+      "id": "odlghXYmz"
+    },
+    {
+      "source": "_cGmPQi5R",
+      "sourceHandle": "1",
+      "target": "kdFVje_6l",
+      "targetHandle": null,
+      "id": "BIH6HiiBz"
+    },
+    {
+      "source": "_cGmPQi5R",
+      "sourceHandle": "2",
+      "target": "uu2ov1WfM",
+      "targetHandle": null,
+      "id": "3bTb6B1Vi"
+    },
+    {
+      "source": "170tbF9Nf",
+      "sourceHandle": "2",
+      "target": "fjulhPIH8",
+      "targetHandle": null,
+      "id": "7ASn8dZx0"
+    },
+    {
+      "source": "170tbF9Nf",
+      "sourceHandle": "err1",
+      "target": "-QNyood_d",
+      "targetHandle": null,
+      "id": "2sBaI8alx"
+    },
+    {
+      "source": "F8B9mEAtB",
+      "sourceHandle": "1",
+      "target": "d8lKDWDoy",
+      "targetHandle": null,
+      "id": "31OCod8Ib"
+    },
+    {
+      "source": "F8B9mEAtB",
+      "sourceHandle": "2",
+      "target": "170tbF9Nf",
+      "targetHandle": null,
+      "id": "Zl3OjWTs7"
+    },
+    {
+      "source": "a99I4QBr4",
+      "sourceHandle": "1",
+      "target": "dff5d1MWw",
+      "targetHandle": null,
+      "id": "Curzb-0qo"
+    },
+    {
+      "source": "a99I4QBr4",
+      "sourceHandle": "2",
+      "target": "fTp-Wgoqq",
+      "targetHandle": null,
+      "id": "J6RanZ_js"
+    },
+    {
+      "source": "fTp-Wgoqq",
+      "sourceHandle": "2",
+      "target": "3MZdGe7Kt",
+      "targetHandle": null,
+      "id": "x6rfsD8Xl"
+    },
+    {
+      "source": "fTp-Wgoqq",
+      "sourceHandle": "err1",
+      "target": "qRY6FGbFP",
+      "targetHandle": null,
+      "id": "xx05MI3Y6"
+    },
+    {
+      "source": "PcD-5bR2W",
+      "sourceHandle": "2",
+      "target": "G95EOyewL",
+      "targetHandle": null,
+      "id": "yKFtc2AF_"
+    },
+    {
+      "source": "PcD-5bR2W",
+      "sourceHandle": "1",
+      "target": "27F4NWj-7",
+      "targetHandle": null,
+      "id": "l8jId_jBw"
+    },
+    {
+      "source": "t4dWQ_dfn",
+      "sourceHandle": "2",
+      "target": "dF4hNaUND",
+      "targetHandle": null,
+      "id": "WRMu9IzMM"
+    },
+    {
+      "source": "dF4hNaUND",
+      "sourceHandle": "err1",
+      "target": "McT6TFbUB",
+      "targetHandle": null,
+      "id": "OLPk8U-gF"
+    },
+    {
+      "source": "t4dWQ_dfn",
+      "sourceHandle": "1",
+      "target": "uwdPcxesc",
+      "targetHandle": null,
+      "id": "pxgjIdVgZ"
+    },
+    {
+      "source": "RO0Zf4LTo",
+      "sourceHandle": "2",
+      "target": "zyUL4qUYA",
+      "targetHandle": null,
+      "id": "n2IaAusWh"
+    },
+    {
+      "source": "zyUL4qUYA",
+      "sourceHandle": "2",
+      "target": "EaCuC_41T",
+      "targetHandle": null,
+      "id": "4gxxlNV6L"
+    },
+    {
+      "source": "zyUL4qUYA",
+      "sourceHandle": "err1",
+      "target": "vtCZPe3yC",
+      "targetHandle": null,
+      "id": "DBLlJyp7L"
+    },
+    {
+      "source": "RO0Zf4LTo",
+      "sourceHandle": "1",
+      "target": "ctXXLKkuT",
+      "targetHandle": null,
+      "id": "sisUlTL1G"
+    },
+    {
+      "source": "wBoXVq5hA",
+      "sourceHandle": "1",
+      "target": "hxfYGpivA",
+      "targetHandle": null,
+      "id": "21uO6bYaI"
+    },
+    {
+      "source": "rB5x7HDmK",
+      "sourceHandle": "1",
+      "target": "GqilRUile",
+      "targetHandle": null,
+      "id": "pb8yWTVsF"
+    },
+    {
+      "source": "-c2OiSY7J",
+      "sourceHandle": "err1",
+      "target": "IxMRHBL5o",
+      "targetHandle": null,
+      "id": "frSPpz_4e"
+    },
+    {
+      "source": "IxMRHBL5o",
+      "sourceHandle": "1",
+      "target": "rB5x7HDmK",
+      "targetHandle": null,
+      "id": "AzHUKrhNc"
+    },
+    {
+      "source": "GqilRUile",
+      "sourceHandle": "1",
+      "target": "NqLCQBlpw",
+      "targetHandle": null,
+      "id": "C41MOzniJ"
+    },
+    {
+      "source": "NqLCQBlpw",
+      "sourceHandle": "1",
+      "target": "jP4Rq0yuI",
+      "targetHandle": null,
+      "id": "1oMFhOneF"
+    },
+    {
+      "source": "jouA7KM1w",
+      "sourceHandle": "1",
+      "target": "sUnOP3mEb",
+      "targetHandle": null,
+      "id": "fLnv3AcIG"
+    },
+    {
+      "source": "U1HbFF5jY",
+      "sourceHandle": "1",
+      "target": "jouA7KM1w",
+      "targetHandle": null,
+      "id": "8IfcxQNaW"
+    },
+    {
+      "source": "hxfYGpivA",
+      "sourceHandle": "1",
+      "target": "U1HbFF5jY",
+      "targetHandle": null,
+      "id": "8JEf7Hydh"
+    },
+    {
+      "source": "v4lKnrC63",
+      "sourceHandle": "1",
+      "target": "iYRl3e8ca",
+      "targetHandle": null,
+      "id": "7EKNYBdzh"
+    },
+    {
+      "source": "iYRl3e8ca",
+      "sourceHandle": "1",
+      "target": "jP4Rq0yuI",
+      "targetHandle": null,
+      "id": "lYlCZ-8Q_"
+    },
+    {
+      "source": "2dqmMJnxB",
+      "sourceHandle": "1",
+      "target": "wBoXVq5hA",
+      "targetHandle": null,
+      "id": "rBzcSsQDy"
+    },
+    {
+      "source": "rB5x7HDmK",
+      "sourceHandle": "err1",
+      "target": "YqIN29_CA",
+      "targetHandle": null,
+      "id": "C9oOKtCUC"
+    },
+    {
+      "source": "GqilRUile",
+      "sourceHandle": "err1",
+      "target": "YqIN29_CA",
+      "targetHandle": null,
+      "id": "uEclQUnvR"
+    },
+    {
+      "source": "YqIN29_CA",
+      "sourceHandle": "1",
+      "target": "v4lKnrC63",
+      "targetHandle": null,
+      "id": "DibqPy9JV"
+    },
+    {
+      "source": "k2ERly_0o",
+      "sourceHandle": "1",
+      "target": "wLXzyUjzN",
+      "targetHandle": null,
+      "id": "xY2OMQ484"
+    },
+    {
+      "source": "YTV4UKsz1",
+      "sourceHandle": "2",
+      "target": "KoEtw_mvw",
+      "targetHandle": null,
+      "id": "oi15U1IH2"
+    },
+    {
+      "source": "YTV4UKsz1",
+      "sourceHandle": "1",
+      "target": "CDgcOPLOb",
+      "targetHandle": null,
+      "id": "sV4UJnhR8"
+    },
+    {
+      "source": "CDgcOPLOb",
+      "sourceHandle": "1",
+      "target": "_cGmPQi5R",
+      "targetHandle": null,
+      "id": "2pIU27qca"
+    },
+    {
+      "source": "wLXzyUjzN",
+      "sourceHandle": "1",
+      "target": "_cGmPQi5R",
+      "targetHandle": null,
+      "id": "3rGzsJJP0"
+    },
+    {
+      "source": "KoEtw_mvw",
+      "sourceHandle": "1",
+      "target": "_cGmPQi5R",
+      "targetHandle": null,
+      "id": "w8eM6ArHT"
+    },
+    {
+      "source": "-M_0PUNXE",
+      "sourceHandle": "1",
+      "target": "_cGmPQi5R",
+      "targetHandle": null,
+      "id": "EfVp4AAA7"
+    },
+    {
+      "source": "uu2ov1WfM",
+      "sourceHandle": "1",
+      "target": "F8B9mEAtB",
+      "targetHandle": null,
+      "id": "dVxNGEuw_"
+    },
+    {
+      "source": "kdFVje_6l",
+      "sourceHandle": "1",
+      "target": "F8B9mEAtB",
+      "targetHandle": null,
+      "id": "jKr-g_5HT"
+    },
+    {
+      "source": "ZYOtxIAaD",
+      "sourceHandle": "1",
+      "target": "F8B9mEAtB",
+      "targetHandle": null,
+      "id": "iKJ10Q93g"
+    },
+    {
+      "source": "170tbF9Nf",
+      "sourceHandle": "1",
+      "target": "a99I4QBr4",
+      "targetHandle": null,
+      "id": "Qugz3DLlx"
+    },
+    {
+      "source": "fjulhPIH8",
+      "sourceHandle": "1",
+      "target": "a99I4QBr4",
+      "targetHandle": null,
+      "id": "NWIyueUvj"
+    },
+    {
+      "source": "d8lKDWDoy",
+      "sourceHandle": "1",
+      "target": "a99I4QBr4",
+      "targetHandle": null,
+      "id": "oqBscCj_2"
+    },
+    {
+      "source": "3MZdGe7Kt",
+      "sourceHandle": "1",
+      "target": "PcD-5bR2W",
+      "targetHandle": null,
+      "id": "Sv8f8POKQ"
+    },
+    {
+      "source": "fTp-Wgoqq",
+      "sourceHandle": "1",
+      "target": "PcD-5bR2W",
+      "targetHandle": null,
+      "id": "4niURDlcI"
+    },
+    {
+      "source": "dff5d1MWw",
+      "sourceHandle": "1",
+      "target": "PcD-5bR2W",
+      "targetHandle": null,
+      "id": "DT4Um6Ib8"
+    },
+    {
+      "source": "G95EOyewL",
+      "sourceHandle": "1",
+      "target": "t4dWQ_dfn",
+      "targetHandle": null,
+      "id": "iPl84NQPJ"
+    },
+    {
+      "source": "TYM_UxtFs",
+      "sourceHandle": "1",
+      "target": "t4dWQ_dfn",
+      "targetHandle": null,
+      "id": "GXFgnpMig"
+    },
+    {
+      "source": "27F4NWj-7",
+      "sourceHandle": "1",
+      "target": "t4dWQ_dfn",
+      "targetHandle": null,
+      "id": "CQeBtfQvZ"
+    },
+    {
+      "source": "G95EOyewL",
+      "sourceHandle": "err1",
+      "target": "ZTYe64FC2",
+      "targetHandle": null,
+      "id": "ImCGgE1NG"
+    },
+    {
+      "source": "VzT5TF5Zz",
+      "sourceHandle": "1",
+      "target": "RO0Zf4LTo",
+      "targetHandle": null,
+      "id": "tp38UKAQ2"
+    },
+    {
+      "source": "dF4hNaUND",
+      "sourceHandle": "1",
+      "target": "RO0Zf4LTo",
+      "targetHandle": null,
+      "id": "Lc3u583Km"
+    },
+    {
+      "source": "uwdPcxesc",
+      "sourceHandle": "1",
+      "target": "RO0Zf4LTo",
+      "targetHandle": null,
+      "id": "V8gV2QWyy"
+    },
+    {
+      "source": "ctXXLKkuT",
+      "sourceHandle": "1",
+      "target": "2dqmMJnxB",
+      "targetHandle": null,
+      "id": "kTjMGTlD2"
+    },
+    {
+      "source": "EaCuC_41T",
+      "sourceHandle": "1",
+      "target": "2dqmMJnxB",
+      "targetHandle": null,
+      "id": "1X1lEDdLX"
+    },
+    {
+      "source": "-c2OiSY7J",
+      "sourceHandle": "1",
+      "target": "Po0jAEKx3",
+      "targetHandle": null,
+      "id": "gJF8nA0fh"
+    },
+    {
+      "source": "Po0jAEKx3",
+      "sourceHandle": "1",
+      "target": "NqLCQBlpw",
+      "targetHandle": null,
+      "id": "I3AHhypyk"
+    },
+    {
+      "source": "Po0jAEKx3",
+      "sourceHandle": "err1",
+      "target": "8pviw3ZKa",
+      "targetHandle": null,
+      "id": "JDeVwMGUZ"
+    },
+    {
+      "source": "8pviw3ZKa",
+      "sourceHandle": "1",
+      "target": "cL_rw_j6M",
+      "targetHandle": null,
+      "id": "O5UmRCV_F"
+    },
+    {
+      "source": "cL_rw_j6M",
+      "sourceHandle": "1",
+      "target": "NqLCQBlpw",
+      "targetHandle": null,
+      "id": "YZMlmMQ5Q"
+    },
+    {
+      "source": "wBoXVq5hA",
+      "sourceHandle": "2",
+      "target": "QAiqAzlVj",
+      "targetHandle": null,
+      "id": "4YrAvWB3N"
+    },
+    {
+      "source": "QAiqAzlVj",
+      "sourceHandle": "1",
+      "target": "-c2OiSY7J",
+      "targetHandle": null,
+      "id": "1MUEzTCjq"
+    },
+    {
+      "source": "zyUL4qUYA",
+      "sourceHandle": "1",
+      "target": "2dqmMJnxB",
+      "targetHandle": null,
+      "id": "mPl8S2vk3"
+    },
+    {
+      "source": "QHSIdQm6t",
+      "sourceHandle": "1",
+      "target": "XPC6gX4W_",
+      "targetHandle": null,
+      "id": "zK07HKMPI"
+    },
+    {
+      "source": "kM026o-bI",
+      "sourceHandle": "1",
+      "target": "sNpHoMOBC",
+      "targetHandle": null,
+      "id": "62yUykEN-"
+    },
+    {
+      "source": "-4CTLlbdj",
+      "sourceHandle": "1",
+      "target": "UOUgru3uq",
+      "targetHandle": null,
+      "id": "zLytp3F8c"
+    },
+    {
+      "source": "vEWLxpSzu",
+      "sourceHandle": "1",
+      "target": "-4CTLlbdj",
+      "targetHandle": null,
+      "id": "PPzrT8kt7"
+    },
+    {
+      "source": "7GqASCevN",
+      "sourceHandle": "1",
+      "target": "vEWLxpSzu",
+      "targetHandle": null,
+      "id": "nbzxyofHh"
+    },
+    {
+      "source": "pxSiIZiba",
+      "sourceHandle": "1",
+      "target": "7GqASCevN",
+      "targetHandle": null,
+      "id": "OhAjog13J"
+    },
+    {
+      "source": "sNpHoMOBC",
+      "sourceHandle": "1",
+      "target": "pxSiIZiba",
+      "targetHandle": null,
+      "id": "80MKwxFZl"
+    },
+    {
+      "source": "yZlJH4368",
+      "sourceHandle": "1",
+      "target": "yK5TvMkg9",
+      "targetHandle": null,
+      "id": "dKypa-FgE"
+    },
+    {
+      "source": "MD77c1-Ek",
+      "sourceHandle": "1",
+      "target": "6UW0zoWGc",
+      "targetHandle": null,
+      "id": "8QauYAtWU"
+    },
+    {
+      "source": "yK5TvMkg9",
+      "sourceHandle": "1",
+      "target": "6UW0zoWGc",
+      "targetHandle": null,
+      "id": "8drQ7t_g6"
+    },
+    {
+      "source": "RCn9IGUlm",
+      "sourceHandle": "1",
+      "target": "GgVfjXlWl",
+      "targetHandle": null,
+      "id": "Vdl3aA9Om"
+    },
+    {
+      "source": "6UW0zoWGc",
+      "sourceHandle": "1",
+      "target": "RCn9IGUlm",
+      "targetHandle": null,
+      "id": "ccgn6GBtL"
+    },
+    {
+      "source": "RCn9IGUlm",
+      "sourceHandle": "2",
+      "target": "qvxiWh3gT",
+      "targetHandle": null,
+      "id": "LJmcW0WA0"
+    },
+    {
+      "source": "6UW0zoWGc",
+      "sourceHandle": "2",
+      "target": "FGO8K2mVU",
+      "targetHandle": null,
+      "id": "fu3GeLZRh"
+    },
+    {
+      "source": "GgVfjXlWl",
+      "sourceHandle": "1",
+      "target": "QHSIdQm6t",
+      "targetHandle": null,
+      "id": "oGGKHhnU8"
+    },
+    {
+      "source": "FGO8K2mVU",
+      "sourceHandle": "1",
+      "target": "v0RBmC27w",
+      "targetHandle": null,
+      "id": "1P4pDNalA"
+    },
+    {
+      "source": "qvxiWh3gT",
+      "sourceHandle": "1",
+      "target": "v0RBmC27w",
+      "targetHandle": null,
+      "id": "QoF4cVmik"
+    },
+    {
+      "source": "v0RBmC27w",
+      "sourceHandle": "2",
+      "target": "P_LYkY8LB",
+      "targetHandle": null,
+      "id": "bTRPTK4RG"
+    },
+    {
+      "source": "v0RBmC27w",
+      "sourceHandle": "1",
+      "target": "JcaZovW7Y",
+      "targetHandle": null,
+      "id": "GYmsdbeRQ"
+    },
+    {
+      "source": "JcaZovW7Y",
+      "sourceHandle": "1",
+      "target": "yo9S-N4qh",
+      "targetHandle": null,
+      "id": "qNyAWjwTJ"
+    },
+    {
+      "source": "yo9S-N4qh",
+      "sourceHandle": "1",
+      "target": "G5yhTDsp8",
+      "targetHandle": null,
+      "id": "HBgvpc_BH"
+    },
+    {
+      "source": "UOUgru3uq",
+      "sourceHandle": "1",
+      "target": "lns2cRMWy",
+      "targetHandle": null,
+      "id": "FX0RoM-yE"
+    },
+    {
+      "source": "lns2cRMWy",
+      "sourceHandle": "1",
+      "target": "dbrdZLn3w",
+      "targetHandle": null,
+      "id": "Vj1JVAcpd"
+    },
+    {
+      "source": "vsF9ybubQ",
+      "sourceHandle": "1",
+      "target": "RDBBhnp8A",
+      "targetHandle": null,
+      "id": "NoIm3LkEI"
+    },
+    {
+      "source": "ZgrPOmdzd",
+      "sourceHandle": "1",
+      "target": "gGZ0w1NR4",
+      "targetHandle": null,
+      "id": "3qJe05EFN"
+    },
+    {
+      "source": "-QNyood_d",
+      "sourceHandle": "1",
+      "target": "6a59YbaL8",
+      "targetHandle": null,
+      "id": "OP421ye0t"
+    },
+    {
+      "source": "qRY6FGbFP",
+      "sourceHandle": "1",
+      "target": "wc2mTPo5z",
+      "targetHandle": null,
+      "id": "4uB2OutpR"
+    },
+    {
+      "source": "ZTYe64FC2",
+      "sourceHandle": "1",
+      "target": "rL-qhwkN1",
+      "targetHandle": null,
+      "id": "UgwQ0Ggqv"
+    },
+    {
+      "source": "McT6TFbUB",
+      "sourceHandle": "1",
+      "target": "fttTP6Tnp",
+      "targetHandle": null,
+      "id": "Z6nCAw6vB"
+    },
+    {
+      "source": "vtCZPe3yC",
+      "sourceHandle": "1",
+      "target": "qpOA2t6un",
+      "targetHandle": null,
+      "id": "ne0oeK6P1"
+    }
+  ]
+}
