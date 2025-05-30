@@ -1,5 +1,7 @@
 # Modular Tdarr Flows
 
+> _She's built like a steakhouse but handles like a Bistro_
+
 The overall goal of this project is to be able to controll advanced flows
 completely via a handful of library variables. In a perfect world, you should
 never need to touch any of the flows.
