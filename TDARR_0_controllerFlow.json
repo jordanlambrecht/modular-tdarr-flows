@@ -5,14 +5,127 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "🧠 | 👋 1) INITIALIZATION",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "EUuTnrQGI",
+      "position": {
+        "x": 707.0163869004247,
+        "y": 72.31630340367968
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ❓ Is Initialization Flow Disabled?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "eYIoW0Lby",
+      "position": {
+        "x": 947.2228866407705,
+        "y": 71.72044813402734
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.enable_initialization}}}",
+        "value": "false"
+      }
+    },
+    {
+      "name": "🧠 | ❓ Has Initialization already been completed?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "Q1Bm0K-Zv",
+      "position": {
+        "x": 1162.5346674832756,
+        "y": 72.47896227400386
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "initializationProcessComplete",
+        "value": "true"
+      }
+    },
+    {
+      "name": "🧠 | 🛫 Go To Initialization Flow",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "WVM8T_Q8T",
+      "position": {
+        "x": 1378.9669481041385,
+        "y": 72.57765341100415
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "MD77c1-Ek"
+      }
+    },
+    {
+      "name": "🧠 | 🛬 Returned from Subtitle Cleaning Flow",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "_TIbs0ACH",
+      "position": {
+        "x": 1592.8402483270922,
+        "y": 71.98069004671592
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ❓ Are we using checkpoints?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "KbjxpA1Of",
+      "position": {
+        "x": 1810.151874763742,
+        "y": 72.5998739781675
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "condition": "!=",
+        "value": "true",
+        "variable": "{{{args.userVariables.library.use_checkpoints}}}"
+      }
+    },
+    {
+      "name": "🧠 | 🔄 Replace Original File",
+      "sourceRepo": "Community",
+      "pluginName": "replaceOriginalFile",
+      "version": "1.0.0",
+      "id": "GTiChqqfn",
+      "position": {
+        "x": 2014.5312698948983,
+        "y": 72.56400317200018
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🧠 | ☠️ Couldn't replace original file. Continuing Anyways.",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "aqempSgVT",
+      "position": {
+        "x": 2230.8137941564587,
+        "y": 57.69664979975832
+      },
+      "fpEnabled": true
+    },
+    {
       "name": "<----- Remove for single-node setup",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "7YzUZ1Wbs",
       "position": {
-        "x": 906.475372097816,
-        "y": -672.6953090241327
+        "x": 1062.5237989290786,
+        "y": -399.1289311224133
       },
       "fpEnabled": true
     },
@@ -156,34 +269,18 @@
       }
     },
     {
-      "name": "🧠 | ❓ Is this meant to be a personal release? (FUTURE WORK)",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "UzXrbJfuH",
-      "position": {
-        "x": 734.5580005371207,
-        "y": -21.05535969221296
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "{{{args.userVariables.library.is_remux}}}",
-        "value": "true"
-      }
-    },
-    {
-      "name": "🧠 | 🤖 Tags: Worker Type (PC)",
+      "name": "🧠 | 🤖 Tags: Worker Type (All Remote Nodes)",
       "sourceRepo": "Community",
       "pluginName": "tagsWorkerType",
       "version": "1.0.0",
       "id": "JqxAaZQvt",
       "position": {
-        "x": 990.2120483460512,
-        "y": 112.98194873889776
+        "x": 890.712448356746,
+        "y": -191.84469253963135
       },
       "fpEnabled": true,
       "inputsDB": {
-        "requiredNodeTags": "pc-only"
+        "requiredNodeTags": "all-remote-nodes"
       }
     },
     {
@@ -443,7 +540,7 @@
       "fpEnabled": true
     },
     {
-      "name": "🧠 1) SUBTITLE CLEANING",
+      "name": "🧠 | 💬 2) SUBTITLE CLEANING",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -461,8 +558,8 @@
       "version": "1.0.0",
       "id": "CD5WOlva6",
       "position": {
-        "x": 1166.2223427188192,
-        "y": 251.51910684414082
+        "x": 1164.1024371520245,
+        "y": 252.57905962753813
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -477,8 +574,8 @@
       "version": "1.0.0",
       "id": "DL-kZwstl",
       "position": {
-        "x": 711.3074205539046,
-        "y": -862.9974347621527
+        "x": 867.3558473851672,
+        "y": -589.4310568604333
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -508,8 +605,8 @@
       "version": "2.0.0",
       "id": "BMcd-4h_T",
       "position": {
-        "x": 1381.5941525478538,
-        "y": 257.0975405200105
+        "x": 1378.9442705893605,
+        "y": 265.5771627871886
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -536,8 +633,8 @@
       "version": "1.0.0",
       "id": "kgrnNlrq-",
       "position": {
-        "x": 988.8214954496739,
-        "y": 27.919419387240538
+        "x": 891.0130400351237,
+        "y": -287.0540893398187
       },
       "fpEnabled": true
     },
@@ -548,8 +645,8 @@
       "version": "1.0.0",
       "id": "9dk_w0FfB",
       "position": {
-        "x": 736.1204846082276,
-        "y": -673.7197956495734
+        "x": 892.1689114394901,
+        "y": -400.15341774785395
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -563,8 +660,8 @@
       "version": "1.0.0",
       "id": "BoW-FQxbG",
       "position": {
-        "x": 711.736625939533,
-        "y": -768.6898970023877
+        "x": 867.7850527707956,
+        "y": -495.1235191006683
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -578,117 +675,8 @@
       "version": "1.0.0",
       "id": "4kgU3zJ7C",
       "position": {
-        "x": 556.8669230676676,
-        "y": -677.7962040138572
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "🧠 | ❓ Yes, we should check for hard links. Is this something other than a movie/kids movie?",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "7IBdVnNvZ",
-      "position": {
-        "x": 818.1537366820526,
-        "y": -500.6908695128043
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "{{{args.userVariables.library.name}}}",
-        "value": "MOVIES,MOVIES_KIDS",
-        "condition": "!="
-      }
-    },
-    {
-      "name": "🧠 | ❓Does this file have any hard links associated with it?",
-      "sourceRepo": "Community",
-      "pluginName": "customFunction",
-      "version": "1.0.0",
-      "id": "xI4LW1wZL",
-      "position": {
-        "x": 1104.075508866098,
-        "y": -383.27792627564315
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "code": "module.exports = async (args) => {\n  const fs = require('fs');\n  const path = require('path');\n  \n  // Get file path from input file object\n  const filePath = args.inputFileObj.file;\n  \n  // Check if file path exists\n  if (!filePath) {\n    console.error('Error: File path is undefined or empty');\n    args.variables.error = 'File path is undefined or empty';\n    args.variables.isHardLinked = false;\n    args.variables.hardLinkCount = 0;\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2, // Default to output 2 on error\n      variables: args.variables,\n    };\n  }\n  \n  try {\n    // Check if file exists\n    if (!fs.existsSync(filePath)) {\n      console.error(`Error: File does not exist at path: ${filePath}`);\n      args.variables.error = `File does not exist at path: ${filePath}`;\n      args.variables.isHardLinked = false;\n      args.variables.hardLinkCount = 0;\n      return {\n        outputFileObj: args.inputFileObj,\n        outputNumber: 2, // Default to output 2 on error\n        variables: args.variables,\n      };\n    }\n    \n    // Get file stats to check hard links\n    const stats = fs.statSync(filePath);\n    \n    // If nlink > 1, the file has multiple hard links\n    const isHardLinked = stats.nlink > 1;\n    \n    // Log the result\n    console.log(`File: ${path.basename(filePath)}`);\n    console.log(`Hard links: ${stats.nlink}`);\n    console.log(`Is hard linked: ${isHardLinked}`);\n    \n    // Store the result in a variable for later use\n    args.variables.isHardLinked = isHardLinked;\n    args.variables.hardLinkCount = stats.nlink;\n    args.variables.error = null; // No error\n    \n    // Route to output 1 if hard linked, output 2 if not\n    const outputNumber = isHardLinked ? 1 : 2;\n    \n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: outputNumber,\n      variables: args.variables,\n    };\n  } catch (error) {\n    // More detailed error handling\n    const errorMessage = `Error checking hard links for ${filePath}: ${error.message}`;\n    console.error(errorMessage);\n    \n    // Set error information in variables\n    args.variables.error = errorMessage;\n    args.variables.isHardLinked = false;\n    args.variables.hardLinkCount = 0;\n    \n    // Default to output 2 (not hard linked) in case of error\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2,\n      variables: args.variables,\n    };\n  }\n};"
-      }
-    },
-    {
-      "name": "🧠 | ‼️🔗 HARDLINKS FOUND. Not moving forward unless the boss says so. Holding for review.",
-      "sourceRepo": "Community",
-      "pluginName": "requireReview",
-      "version": "1.0.0",
-      "id": "KmttU-xLN",
-      "position": {
-        "x": 910.4871886299347,
-        "y": -284.9140461912652
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "🧠 | 👍 Review completed. Boss has decided to move forward regardless of hard link status.",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "ZEeWFgBWC",
-      "position": {
-        "x": 910.8287747036809,
-        "y": -139.32507146883302
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "🧠 | 👍 No hard links for this movie/kids movie were found. Moving forward.",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "MofL30Gqj",
-      "position": {
-        "x": 1088.8781948908186,
-        "y": -124.73637388343774
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "🧠 | ☠️ Error stating file for hard link status. Failing flow.",
-      "sourceRepo": "Community",
-      "pluginName": "failFlow",
-      "version": "1.0.0",
-      "id": "DK5f70U2u",
-      "position": {
-        "x": 1271.0291863953962,
-        "y": -288.31936792765606
-      },
-      "fpEnabled": true
-    },
-    {
-      "name": "🧠 | ❓ Should we check for hardlinks?",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "A_I5epkJ_",
-      "position": {
-        "x": 736.0546066318851,
-        "y": -587.1314055406729
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "value": "true",
-        "condition": "!=",
-        "variable": "{{{args.userVariables.library.check_hardlinks}}}"
-      }
-    },
-    {
-      "name": "🧠 | 👎 We're not supposed to check for hard links. Moving on.",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "gJuPucJHX",
-      "position": {
-        "x": 635.9871488203298,
-        "y": -485.32379030908737
+        "x": 712.9153498989301,
+        "y": -404.22982611213774
       },
       "fpEnabled": true
     },
@@ -699,8 +687,8 @@
       "version": "1.0.0",
       "id": "8Mjm7I-8f",
       "position": {
-        "x": 1811.1797085668422,
-        "y": 251.13807030182198
+        "x": 1810.6497321751438,
+        "y": 252.19802308521923
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -716,8 +704,8 @@
       "version": "1.0.0",
       "id": "AQ8R5kct8",
       "position": {
-        "x": 2021.5588631546157,
-        "y": 250.78022987105527
+        "x": 2015.7291228459308,
+        "y": 252.37015904615117
       },
       "fpEnabled": true
     },
@@ -752,8 +740,8 @@
       "version": "1.0.0",
       "id": "PtKttHg9j",
       "position": {
-        "x": 2232.333616732091,
-        "y": 236.09285512069653
+        "x": 2231.2736639486934,
+        "y": 237.15280790409378
       },
       "fpEnabled": true
     },
@@ -764,8 +752,8 @@
       "version": "1.0.0",
       "id": "LnPkL7zUG",
       "position": {
-        "x": 1158.6586303731729,
-        "y": 112.38572693998833
+        "x": 1059.1590303838677,
+        "y": -189.90419747640823
       },
       "fpEnabled": true
     }
@@ -954,34 +942,6 @@
       "id": "vk2NGWWoL"
     },
     {
-      "source": "JqxAaZQvt",
-      "sourceHandle": "1",
-      "target": "r2AHO6udX",
-      "targetHandle": null,
-      "id": "OQLrevFVK"
-    },
-    {
-      "source": "UzXrbJfuH",
-      "sourceHandle": "2",
-      "target": "kgrnNlrq-",
-      "targetHandle": null,
-      "id": "ZOKa9NytB"
-    },
-    {
-      "source": "UzXrbJfuH",
-      "sourceHandle": "1",
-      "target": "kgrnNlrq-",
-      "targetHandle": null,
-      "id": "J4tarhEam"
-    },
-    {
-      "source": "UzXrbJfuH",
-      "sourceHandle": "err1",
-      "target": "kgrnNlrq-",
-      "targetHandle": null,
-      "id": "PlU5PPxqo"
-    },
-    {
       "source": "DL-kZwstl",
       "sourceHandle": "1",
       "target": "BoW-FQxbG",
@@ -1001,90 +961,6 @@
       "target": "9dk_w0FfB",
       "targetHandle": null,
       "id": "6CDuGXL4n"
-    },
-    {
-      "source": "7IBdVnNvZ",
-      "sourceHandle": "1",
-      "target": "UzXrbJfuH",
-      "targetHandle": null,
-      "id": "LsOVNYFNo"
-    },
-    {
-      "source": "7IBdVnNvZ",
-      "sourceHandle": "2",
-      "target": "xI4LW1wZL",
-      "targetHandle": null,
-      "id": "H9GTcHZMO"
-    },
-    {
-      "source": "xI4LW1wZL",
-      "sourceHandle": "1",
-      "target": "KmttU-xLN",
-      "targetHandle": null,
-      "id": "Ce0FnCwL8"
-    },
-    {
-      "source": "KmttU-xLN",
-      "sourceHandle": "1",
-      "target": "ZEeWFgBWC",
-      "targetHandle": null,
-      "id": "TY-E7Rqnz"
-    },
-    {
-      "source": "ZEeWFgBWC",
-      "sourceHandle": "1",
-      "target": "UzXrbJfuH",
-      "targetHandle": null,
-      "id": "0OStCCUq1"
-    },
-    {
-      "source": "xI4LW1wZL",
-      "sourceHandle": "2",
-      "target": "MofL30Gqj",
-      "targetHandle": null,
-      "id": "H4qb_RfHF"
-    },
-    {
-      "source": "MofL30Gqj",
-      "sourceHandle": "1",
-      "target": "UzXrbJfuH",
-      "targetHandle": null,
-      "id": "13xVhgMed"
-    },
-    {
-      "source": "xI4LW1wZL",
-      "sourceHandle": "err1",
-      "target": "DK5f70U2u",
-      "targetHandle": null,
-      "id": "obMImmrOm"
-    },
-    {
-      "source": "9dk_w0FfB",
-      "sourceHandle": "1",
-      "target": "A_I5epkJ_",
-      "targetHandle": null,
-      "id": "MIRU3qD3I"
-    },
-    {
-      "source": "A_I5epkJ_",
-      "sourceHandle": "2",
-      "target": "7IBdVnNvZ",
-      "targetHandle": null,
-      "id": "p3t-1HkbA"
-    },
-    {
-      "source": "A_I5epkJ_",
-      "sourceHandle": "1",
-      "target": "gJuPucJHX",
-      "targetHandle": null,
-      "id": "UrIel1Krl"
-    },
-    {
-      "source": "gJuPucJHX",
-      "sourceHandle": "1",
-      "target": "UzXrbJfuH",
-      "targetHandle": null,
-      "id": "CLGjWXkdp"
     },
     {
       "source": "gCJToxGbl",
@@ -1234,13 +1110,6 @@
       "id": "5GAMMUxd6"
     },
     {
-      "source": "Ix-QJ5elJ",
-      "sourceHandle": "err1",
-      "target": "F6gsCTRpN",
-      "targetHandle": null,
-      "id": "aJEgpF5rU"
-    },
-    {
       "source": "AQ8R5kct8",
       "sourceHandle": "err1",
       "target": "PtKttHg9j",
@@ -1281,6 +1150,104 @@
       "target": "U0uFOidd0",
       "targetHandle": null,
       "id": "fwLJbW_ma"
+    },
+    {
+      "source": "9dk_w0FfB",
+      "sourceHandle": "1",
+      "target": "kgrnNlrq-",
+      "targetHandle": null,
+      "id": "EQK30Wsf3"
+    },
+    {
+      "source": "eYIoW0Lby",
+      "sourceHandle": "2",
+      "target": "Q1Bm0K-Zv",
+      "targetHandle": null,
+      "id": "i7dLR7ICs"
+    },
+    {
+      "source": "Q1Bm0K-Zv",
+      "sourceHandle": "2",
+      "target": "WVM8T_Q8T",
+      "targetHandle": null,
+      "id": "0T1YSPgoK"
+    },
+    {
+      "source": "WVM8T_Q8T",
+      "sourceHandle": "err1",
+      "target": "_TIbs0ACH",
+      "targetHandle": null,
+      "id": "2hirqz_58"
+    },
+    {
+      "source": "_TIbs0ACH",
+      "sourceHandle": "1",
+      "target": "KbjxpA1Of",
+      "targetHandle": null,
+      "id": "ymf9PuJR-"
+    },
+    {
+      "source": "KbjxpA1Of",
+      "sourceHandle": "2",
+      "target": "GTiChqqfn",
+      "targetHandle": null,
+      "id": "V3amI7ZCO"
+    },
+    {
+      "source": "KbjxpA1Of",
+      "sourceHandle": "1",
+      "target": "r2AHO6udX",
+      "targetHandle": null,
+      "id": "MTDpt89Mr"
+    },
+    {
+      "source": "GTiChqqfn",
+      "sourceHandle": "err1",
+      "target": "aqempSgVT",
+      "targetHandle": null,
+      "id": "UDQZDRhA4"
+    },
+    {
+      "source": "GTiChqqfn",
+      "sourceHandle": "1",
+      "target": "r2AHO6udX",
+      "targetHandle": null,
+      "id": "lXHtbKT2C"
+    },
+    {
+      "source": "aqempSgVT",
+      "sourceHandle": "1",
+      "target": "r2AHO6udX",
+      "targetHandle": null,
+      "id": "l-GWQW4dU"
+    },
+    {
+      "source": "JqxAaZQvt",
+      "sourceHandle": "1",
+      "target": "EUuTnrQGI",
+      "targetHandle": null,
+      "id": "H2mcQxbxf"
+    },
+    {
+      "source": "EUuTnrQGI",
+      "sourceHandle": "1",
+      "target": "eYIoW0Lby",
+      "targetHandle": null,
+      "id": "FV_ji58fJ"
+    },
+    {
+      "source": "Q1Bm0K-Zv",
+      "sourceHandle": "1",
+      "target": "r2AHO6udX",
+      "targetHandle": null,
+      "id": "_-NnbUjkJ"
+    },
+    {
+      "source": "eYIoW0Lby",
+      "sourceHandle": "1",
+      "target": "r2AHO6udX",
+      "targetHandle": null,
+      "id": "aKMUZ2gA7"
     }
   ]
 }
