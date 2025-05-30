@@ -5,6 +5,34 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "💬 | 🤖 Tags: Worker Type - All Remote (CPUorGPU)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "Vo7SGJGLO",
+      "position": {
+        "x": 189.3034062062885,
+        "y": 1540.056231132701
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredWorkerType": "CPUorGPU",
+        "requiredNodeTags": "all-remote-nodes"
+      }
+    },
+    {
+      "name": "⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️\nTHIS FLOW HAS \n2 WORKER TAGS THAT \nNEED TO BE MODIFIED\n⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ligBFrz8Q",
+      "position": {
+        "x": 228.02657564046626,
+        "y": -2047.8113412121772
+      },
+      "fpEnabled": true
+    },
+    {
       "name": "––––––––––––––––––>\nBypass for single-node setups",
       "sourceRepo": "Community",
       "pluginName": "comment",
@@ -935,7 +963,7 @@
       "fpEnabled": true
     },
     {
-      "name": "💬 | Reset any Flow Errors",
+      "name": "💬 | 🫥 Reset any Flow Errors",
       "sourceRepo": "Community",
       "pluginName": "resetFlowError",
       "version": "1.0.0",
@@ -1740,27 +1768,6 @@
       "id": "XcVxLkEyF"
     },
     {
-      "source": "KxopXNEqB",
-      "sourceHandle": "1",
-      "target": "krw2Ezrcf",
-      "targetHandle": null,
-      "id": "YmH06IjEl"
-    },
-    {
-      "source": "tSforWSWr",
-      "sourceHandle": "2",
-      "target": "krw2Ezrcf",
-      "targetHandle": null,
-      "id": "H7aqJXV0P"
-    },
-    {
-      "source": "tSforWSWr",
-      "sourceHandle": "1",
-      "target": "krw2Ezrcf",
-      "targetHandle": null,
-      "id": "x3sMclPK6"
-    },
-    {
       "source": "EfBK8ZU7C",
       "sourceHandle": "2",
       "target": "SAbAeyVbk",
@@ -1878,6 +1885,34 @@
       "target": "d7VdU6y0e",
       "targetHandle": null,
       "id": "zvq9wOETO"
+    },
+    {
+      "source": "tSforWSWr",
+      "sourceHandle": "1",
+      "target": "Vo7SGJGLO",
+      "targetHandle": null,
+      "id": "DuEH8FaWC"
+    },
+    {
+      "source": "tSforWSWr",
+      "sourceHandle": "2",
+      "target": "Vo7SGJGLO",
+      "targetHandle": null,
+      "id": "ISf0ub6z1"
+    },
+    {
+      "source": "KxopXNEqB",
+      "sourceHandle": "1",
+      "target": "Vo7SGJGLO",
+      "targetHandle": null,
+      "id": "TAcD3NK3_"
+    },
+    {
+      "source": "Vo7SGJGLO",
+      "sourceHandle": "1",
+      "target": "krw2Ezrcf",
+      "targetHandle": null,
+      "id": "8QrYgh5Gu"
     }
   ]
 }

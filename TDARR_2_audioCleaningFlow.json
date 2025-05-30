@@ -5,26 +5,137 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "🎧 | 🤖 Tag Worker: Media Server Only (ANY)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "gE97qOapC",
+      "position": {
+        "x": 1235.4266664353574,
+        "y": 1076.3202087019627
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredNodeTags": "media-server-only"
+      }
+    },
+    {
+      "name": "–––––––––––––––––––––>\nBypass/modify for your personal setup",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "2CoPuaQCX",
+      "position": {
+        "x": 790.391237033887,
+        "y": -413.7325896427272
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️\nTHIS FLOW HAS \n2 WORKER TAGS THAT \nNEED TO BE MODIFIED\n⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yWo-LGW4j",
+      "position": {
+        "x": 1209.3697509463345,
+        "y": -1015.9425019007339
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 🗑️ Let's continue by getting rid of languages we don't need.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ogX21Rc11",
+      "position": {
+        "x": 1136.6936089108735,
+        "y": 154.37988019358494
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | ✅ Commentary track logic complete",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "DBYzbXZeC",
+      "position": {
+        "x": 1188.2903168108044,
+        "y": 70.16874385993472
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | ⭐️ Successfully removed commentary tracks",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "5BoC5K0aj",
+      "position": {
+        "x": 694.720293446048,
+        "y": -34.50267980850612
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 🙈 We didn't find any commentary tracks to remove. Moving on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "CbIaWALN8",
+      "position": {
+        "x": 891.4219020609139,
+        "y": -35.88369608768308
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 👎 No we haven't. Continuing on.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "yu6BuB3pz",
+      "position": {
+        "x": 1187.9588651886033,
+        "y": -215.13490192360592
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 👍 Yes we have. ",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "fz8eyy3Wd",
+      "position": {
+        "x": 996.2713875621473,
+        "y": -215.31343473218016
+      },
+      "fpEnabled": true
+    },
+    {
       "name": "🚀🚀🚀 BEGINNING WORK ON AUDIO CLEANING 🚀🚀🚀",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "YHHJeAOmS",
       "position": {
-        "x": 1184.3394372258558,
-        "y": -187.55324783183448
+        "x": 1182.8975083543955,
+        "y": -778.7440851305198
       },
       "fpEnabled": true
     },
     {
-      "name": "🎧 Audio has not been cleaned yet. Let's start off by getting rid of languages we don't need.",
+      "name": "🎧 Audio has not been cleaned yet. ",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "9MQOBYr9B",
       "position": {
-        "x": 1136.4949035159434,
-        "y": 117.0209568875323
+        "x": 1135.0529746444831,
+        "y": -474.16988041115314
       },
       "fpEnabled": true
     },
@@ -90,8 +201,8 @@
       "version": "1.0.0",
       "id": "EuecZCFiv",
       "position": {
-        "x": 1640.6487413024333,
-        "y": 1117.3365824890539
+        "x": 1639.3233106026426,
+        "y": 1219.0737654841514
       },
       "fpEnabled": true
     },
@@ -102,8 +213,8 @@
       "version": "1.0.0",
       "id": "FFll-kYBC",
       "position": {
-        "x": 1234.3803039553457,
-        "y": 1162.8211742957135
+        "x": 1235.4431996297042,
+        "y": 1238.2867671751706
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -134,8 +245,8 @@
       "version": "1.0.0",
       "id": "ocVciVFsa",
       "position": {
-        "x": 1441.779279856946,
-        "y": 1020.2859895407569
+        "x": 1442.8421755313045,
+        "y": 1095.7515824202142
       },
       "fpEnabled": true
     },
@@ -146,8 +257,8 @@
       "version": "1.0.0",
       "id": "PwEhibX1Z",
       "position": {
-        "x": 1234.8706655778967,
-        "y": 1248.3518882631224
+        "x": 1235.9335612522552,
+        "y": 1323.8174811425797
       },
       "fpEnabled": true
     },
@@ -235,8 +346,8 @@
       "version": "1.0.0",
       "id": "yx0wwA1rj",
       "position": {
-        "x": 1352.5054255122639,
-        "y": 120.66453358222552
+        "x": 1351.0634966408036,
+        "y": -470.5263037164599
       },
       "fpEnabled": true
     },
@@ -334,8 +445,8 @@
       "version": "1.0.0",
       "id": "GudmPNgxO",
       "position": {
-        "x": 1159.6926623694735,
-        "y": 34.24585346878086
+        "x": 1158.2507334980132,
+        "y": -556.9449838299046
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -351,8 +462,8 @@
       "version": "1.0.0",
       "id": "x_65k3lxU",
       "position": {
-        "x": 1184.135774026661,
-        "y": -90.5643687843782
+        "x": 1182.6938451552007,
+        "y": -681.7552060830636
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -423,8 +534,8 @@
       "version": "1.0.0",
       "id": "xR8gCEb7_",
       "position": {
-        "x": 971.6426966454992,
-        "y": -347.7379233473291
+        "x": 970.2007677740389,
+        "y": -938.9287606460146
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -487,8 +598,8 @@
       "version": "1.0.0",
       "id": "3ljdCJLGm",
       "position": {
-        "x": 1233.383116383866,
-        "y": 1018.445103146916
+        "x": 1235.323833855834,
+        "y": 1161.5029744423045
       },
       "fpEnabled": true
     },
@@ -499,8 +610,8 @@
       "version": "1.0.0",
       "id": "Oi_aXaz7O",
       "position": {
-        "x": 1446.759131609964,
-        "y": -6.170865889327159
+        "x": 1445.3172027385037,
+        "y": -597.3617031880126
       },
       "fpEnabled": true
     },
@@ -523,8 +634,8 @@
       "version": "1.0.0",
       "id": "-O_1ZjPQ3",
       "position": {
-        "x": 1216.9752194005741,
-        "y": -283.0630621129967
+        "x": 1215.5332905291139,
+        "y": -874.2538994116821
       },
       "fpEnabled": true
     },
@@ -547,8 +658,8 @@
       "version": "1.0.0",
       "id": "XSNXsXj2m",
       "position": {
-        "x": 971.2236626289114,
-        "y": -269.1207602435841
+        "x": 969.7817337574511,
+        "y": -860.3115975422695
       },
       "fpEnabled": true
     },
@@ -559,8 +670,8 @@
       "version": "1.0.0",
       "id": "vr5aLl2cF",
       "position": {
-        "x": 1443.4849429124358,
-        "y": 1108.3315157752738
+        "x": 1444.5478385867943,
+        "y": 1183.797108654731
       },
       "fpEnabled": true
     },
@@ -571,8 +682,8 @@
       "version": "1.0.0",
       "id": "JUgXchjWT",
       "position": {
-        "x": 1443.11566772866,
-        "y": 1186.6007707112637
+        "x": 1444.1785634030184,
+        "y": 1262.0663635907208
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -611,7 +722,7 @@
       "id": "xMJkA85Y-",
       "position": {
         "x": 1616.572751276098,
-        "y": 426.21704654458546
+        "y": 430.36385094866426
       },
       "fpEnabled": true
     },
@@ -624,6 +735,76 @@
       "position": {
         "x": 947.4982397189672,
         "y": 268.8134978484813
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 🧮 Have we been instructed to remove commentary tracks via remove_commentary?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "hmjottpld",
+      "position": {
+        "x": 1134.4586413852107,
+        "y": -347.06172681023094
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.remove_commentary}}}",
+        "value": "true"
+      }
+    },
+    {
+      "name": "🎧 | 🗑️ Removing commentary tracks",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "bL047SkXn",
+      "position": {
+        "x": 867.5553838339282,
+        "y": -142.83934721353114
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_sdd3_Remove_Commentary_Tracks"
+      }
+    },
+    {
+      "name": "🎧 | 🫥 Uh oh. We ran into an error while removing commentary tracks. Resetting the error and trudging on anyways.",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "ZelYnTG-b",
+      "position": {
+        "x": 1077.6758804403291,
+        "y": -65.20046396151798
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 🤖 Tag Worker: All Remote Nodes (CPU/GPU)",
+      "sourceRepo": "Community",
+      "pluginName": "tagsWorkerType",
+      "version": "1.0.0",
+      "id": "GSDnCVdhI",
+      "position": {
+        "x": 965.6831915957953,
+        "y": -411.93878970456103
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "requiredNodeTags": "all-remote-nodes"
+      }
+    },
+    {
+      "name": "│ Bypass/modify for \n│  your personal setup\n▼  ",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "PcQFkRTn-",
+      "position": {
+        "x": 1326.832219996292,
+        "y": 995.4245225085573
       },
       "fpEnabled": true
     }
@@ -670,13 +851,6 @@
       "target": "Oi_aXaz7O",
       "targetHandle": null,
       "id": "92y3UNRVV"
-    },
-    {
-      "source": "x_65k3lxU",
-      "sourceHandle": "1",
-      "target": "GudmPNgxO",
-      "targetHandle": null,
-      "id": "EjOxWqqaX"
     },
     {
       "source": "2Qv7h0eMc",
@@ -840,27 +1014,6 @@
       "id": "YDNRfn2R5"
     },
     {
-      "source": "kwVAOnYRB",
-      "sourceHandle": "1",
-      "target": "-G67OyKM7",
-      "targetHandle": null,
-      "id": "WR_dWY7ZE"
-    },
-    {
-      "source": "kwVAOnYRB",
-      "sourceHandle": "2",
-      "target": "-G67OyKM7",
-      "targetHandle": null,
-      "id": "7t-ZIXPWP"
-    },
-    {
-      "source": "-G67OyKM7",
-      "sourceHandle": "2",
-      "target": "3ljdCJLGm",
-      "targetHandle": null,
-      "id": "eoGEQoiUb"
-    },
-    {
       "source": "3ljdCJLGm",
       "sourceHandle": "err1",
       "target": "ocVciVFsa",
@@ -973,13 +1126,6 @@
       "id": "QJeVp5E-r"
     },
     {
-      "source": "9MQOBYr9B",
-      "sourceHandle": "1",
-      "target": "lzluIcJwO",
-      "targetHandle": null,
-      "id": "8OSDsGgF-"
-    },
-    {
       "source": "9IqHpqoHI",
       "sourceHandle": "1",
       "target": "4kzrWuLOk",
@@ -1062,6 +1208,139 @@
       "target": "x_65k3lxU",
       "targetHandle": null,
       "id": "9Ox_ktypf"
+    },
+    {
+      "source": "x_65k3lxU",
+      "sourceHandle": "1",
+      "target": "GudmPNgxO",
+      "targetHandle": null,
+      "id": "6oNL7J7gE"
+    },
+    {
+      "source": "hmjottpld",
+      "sourceHandle": "2",
+      "target": "yu6BuB3pz",
+      "targetHandle": null,
+      "id": "AWmPvKN1Y"
+    },
+    {
+      "source": "hmjottpld",
+      "sourceHandle": "1",
+      "target": "fz8eyy3Wd",
+      "targetHandle": null,
+      "id": "TJmeWp3hj"
+    },
+    {
+      "source": "fz8eyy3Wd",
+      "sourceHandle": "1",
+      "target": "bL047SkXn",
+      "targetHandle": null,
+      "id": "w2b8spMuG"
+    },
+    {
+      "source": "bL047SkXn",
+      "sourceHandle": "2",
+      "target": "CbIaWALN8",
+      "targetHandle": null,
+      "id": "dLYUkYlv4"
+    },
+    {
+      "source": "bL047SkXn",
+      "sourceHandle": "1",
+      "target": "5BoC5K0aj",
+      "targetHandle": null,
+      "id": "d-12PYtgk"
+    },
+    {
+      "source": "bL047SkXn",
+      "sourceHandle": "err1",
+      "target": "ZelYnTG-b",
+      "targetHandle": null,
+      "id": "8LLaGQMu3"
+    },
+    {
+      "source": "ZelYnTG-b",
+      "sourceHandle": "1",
+      "target": "DBYzbXZeC",
+      "targetHandle": null,
+      "id": "BUbs4i9IT"
+    },
+    {
+      "source": "5BoC5K0aj",
+      "sourceHandle": "1",
+      "target": "DBYzbXZeC",
+      "targetHandle": null,
+      "id": "C9e0KUTiT"
+    },
+    {
+      "source": "CbIaWALN8",
+      "sourceHandle": "1",
+      "target": "DBYzbXZeC",
+      "targetHandle": null,
+      "id": "4YIMJLelq"
+    },
+    {
+      "source": "yu6BuB3pz",
+      "sourceHandle": "1",
+      "target": "DBYzbXZeC",
+      "targetHandle": null,
+      "id": "4r6BvoJWb"
+    },
+    {
+      "source": "DBYzbXZeC",
+      "sourceHandle": "1",
+      "target": "ogX21Rc11",
+      "targetHandle": null,
+      "id": "2_n6KFZpt"
+    },
+    {
+      "source": "ogX21Rc11",
+      "sourceHandle": "1",
+      "target": "lzluIcJwO",
+      "targetHandle": null,
+      "id": "PMR4lQnHo"
+    },
+    {
+      "source": "9MQOBYr9B",
+      "sourceHandle": "1",
+      "target": "GSDnCVdhI",
+      "targetHandle": null,
+      "id": "U7eQfk4-X"
+    },
+    {
+      "source": "GSDnCVdhI",
+      "sourceHandle": "1",
+      "target": "hmjottpld",
+      "targetHandle": null,
+      "id": "aFMCoCNHm"
+    },
+    {
+      "source": "-G67OyKM7",
+      "sourceHandle": "2",
+      "target": "gE97qOapC",
+      "targetHandle": null,
+      "id": "MwGfDlR-g"
+    },
+    {
+      "source": "gE97qOapC",
+      "sourceHandle": "1",
+      "target": "3ljdCJLGm",
+      "targetHandle": null,
+      "id": "k53jNPFiI"
+    },
+    {
+      "source": "kwVAOnYRB",
+      "sourceHandle": "1",
+      "target": "-G67OyKM7",
+      "targetHandle": null,
+      "id": "5fpnTi08C"
+    },
+    {
+      "source": "kwVAOnYRB",
+      "sourceHandle": "2",
+      "target": "-G67OyKM7",
+      "targetHandle": null,
+      "id": "POxaE9uCR"
     }
   ]
 }
