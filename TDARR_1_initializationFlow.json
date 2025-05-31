@@ -1196,14 +1196,14 @@
       "fpEnabled": true
     },
     {
-      "name": "Run MKVPropEdit",
+      "name": "👋 | 📝 Run MKVPropEdit",
       "sourceRepo": "Community",
       "pluginName": "runMkvPropEdit",
       "version": "1.0.0",
       "id": "4tpX2W5yT",
       "position": {
-        "x": 827.7368605687575,
-        "y": 550.8296612932867
+        "x": 830.6207183116779,
+        "y": 555.1554479076673
       },
       "fpEnabled": true
     },

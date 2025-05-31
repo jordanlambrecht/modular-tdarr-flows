@@ -786,6 +786,18 @@
       "inputsDB": {
         "checkType": "fileHash"
       }
+    },
+    {
+      "name": "🧠 | 📝 Run MKVPropEdit",
+      "sourceRepo": "Community",
+      "pluginName": "runMkvPropEdit",
+      "version": "1.0.0",
+      "id": "wMKt-sTQS",
+      "position": {
+        "x": 890.9171285560103,
+        "y": -96.58996633193829
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -1238,13 +1250,6 @@
       "id": "l-GWQW4dU"
     },
     {
-      "source": "JqxAaZQvt",
-      "sourceHandle": "1",
-      "target": "EUuTnrQGI",
-      "targetHandle": null,
-      "id": "H2mcQxbxf"
-    },
-    {
       "source": "EUuTnrQGI",
       "sourceHandle": "1",
       "target": "eYIoW0Lby",
@@ -1299,6 +1304,20 @@
       "target": "LvcFJsRM-",
       "targetHandle": null,
       "id": "ritU2yoPI"
+    },
+    {
+      "source": "JqxAaZQvt",
+      "sourceHandle": "1",
+      "target": "wMKt-sTQS",
+      "targetHandle": null,
+      "id": "lOGPt0d3K"
+    },
+    {
+      "source": "wMKt-sTQS",
+      "sourceHandle": "1",
+      "target": "EUuTnrQGI",
+      "targetHandle": null,
+      "id": "BcUUk2KEW"
     }
   ]
 }

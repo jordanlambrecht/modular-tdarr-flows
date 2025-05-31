@@ -57,7 +57,7 @@
       }
     },
     {
-      "name": "🧼 | ❓ Is this a personal release?",
+      "name": "🧼 | ❓ Is this a personal release? Check variable 'is_remux'",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -207,7 +207,7 @@
       "id": "wnjcuNsKU",
       "position": {
         "x": 897.0031038203912,
-        "y": 469.29106108406506
+        "y": 414.45117661015377
       },
       "fpEnabled": true
     },
@@ -311,6 +311,18 @@
         "value": "true",
         "condition": "!="
       }
+    },
+    {
+      "name": "🧼 | 📝 Run MkvPropEdit",
+      "sourceRepo": "Community",
+      "pluginName": "runMkvPropEdit",
+      "version": "1.0.0",
+      "id": "kNgV6sRbM",
+      "position": {
+        "x": 896.5234230750455,
+        "y": 515.3661761724569
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -427,13 +439,6 @@
       "id": "TWb9cmosX"
     },
     {
-      "source": "wnjcuNsKU",
-      "sourceHandle": "1",
-      "target": "wM2G9JSrv",
-      "targetHandle": null,
-      "id": "rkmpeMfhq"
-    },
-    {
       "source": "wM2G9JSrv",
       "sourceHandle": "1",
       "target": "0hGIZzc94",
@@ -495,6 +500,20 @@
       "target": "rNbQuh5YF",
       "targetHandle": null,
       "id": "OfsuvsOro"
+    },
+    {
+      "source": "wnjcuNsKU",
+      "sourceHandle": "1",
+      "target": "kNgV6sRbM",
+      "targetHandle": null,
+      "id": "YnXeY-p4t"
+    },
+    {
+      "source": "kNgV6sRbM",
+      "sourceHandle": "1",
+      "target": "wM2G9JSrv",
+      "targetHandle": null,
+      "id": "JJijZGUcl"
     }
   ]
 }
