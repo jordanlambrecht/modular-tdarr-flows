@@ -129,18 +129,6 @@
       "fpEnabled": true
     },
     {
-      "name": "👋 | 👍✅ Nope. We're all good. Exiting cleanly",
-      "sourceRepo": "Community",
-      "pluginName": "comment",
-      "version": "1.0.0",
-      "id": "P_LYkY8LB",
-      "position": {
-        "x": 1391.114023572356,
-        "y": -604.2233481854862
-      },
-      "fpEnabled": true
-    },
-    {
       "name": "👋 | ⛔️ INITIALIZATION PROCESS IS DISABLED. EXITING.",
       "sourceRepo": "Community",
       "pluginName": "comment",
@@ -159,8 +147,8 @@
       "version": "1.0.0",
       "id": "qvxiWh3gT",
       "position": {
-        "x": 948.4590033195467,
-        "y": -717.5468096785198
+        "x": 931.3589597617073,
+        "y": -647.4366310913781
       },
       "fpEnabled": true
     },
@@ -171,7 +159,7 @@
       "version": "1.0.0",
       "id": "RCn9IGUlm",
       "position": {
-        "x": 742.5192613647731,
+        "x": 744.5984202351236,
         "y": -736.7563055010104
       },
       "fpEnabled": true,
@@ -200,7 +188,7 @@
       "version": "1.0.0",
       "id": "6UW0zoWGc",
       "position": {
-        "x": 767.2196813668734,
+        "x": 769.2988402372239,
         "y": -844.0918497616824
       },
       "fpEnabled": true,
@@ -1184,14 +1172,14 @@
       }
     },
     {
-      "name": "👋 | Input File",
+      "name": "👋 | 🛬 Input File",
       "sourceRepo": "Community",
       "pluginName": "inputFile",
       "version": "1.0.0",
       "id": "yZlJH4368",
       "position": {
-        "x": 605.1928248743415,
-        "y": -1057.5511530376964
+        "x": 630.5682940669606,
+        "y": -1262.804258190422
       },
       "fpEnabled": true
     },
@@ -1202,8 +1190,8 @@
       "version": "1.0.0",
       "id": "MD77c1-Ek",
       "position": {
-        "x": 877.891100187762,
-        "y": -983.1863957255146
+        "x": 1030.656582639809,
+        "y": -986.866962880935
       },
       "fpEnabled": true
     },
@@ -1564,7 +1552,7 @@
       "id": "v0RBmC27w",
       "position": {
         "x": 1175.329951601721,
-        "y": -740.7176790813843
+        "y": -741.5726812592762
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1626,6 +1614,48 @@
       "inputsDB": {
         "flowId": "gt7gZldIe",
         "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "👋 | ❓ Has the file already been processed?",
+      "sourceRepo": "Community",
+      "pluginName": "processedCheck",
+      "version": "1.0.0",
+      "id": "jMSrbNsm0",
+      "position": {
+        "x": 630.2250844525238,
+        "y": -1180.0197822026216
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "👋 | 🙋‍♀️ It seems like this file has already been processed. Continue anyways? ",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "XHO6iCwfe",
+      "position": {
+        "x": 773.3787026185958,
+        "y": -1090.684221224813
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 |  👍✅ Nope. We're all good. Marking as 'Processed' and exiting cleanly",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "4v6nV2xAg",
+      "position": {
+        "x": 1413.8975953014906,
+        "y": -656.0072176467786
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
       }
     }
   ],
@@ -1799,13 +1829,6 @@
       "id": "4ClvFDmjV"
     },
     {
-      "source": "uu2ov1WfM",
-      "sourceHandle": "err1",
-      "target": "ZgrPOmdzd",
-      "targetHandle": null,
-      "id": "4ds4o1XBW"
-    },
-    {
       "source": "XPC6gX4W_",
       "sourceHandle": "1",
       "target": "kM026o-bI",
@@ -1818,13 +1841,6 @@
       "target": "-M_0PUNXE",
       "targetHandle": null,
       "id": "UAtpJ7CKO"
-    },
-    {
-      "source": "KoEtw_mvw",
-      "sourceHandle": "err1",
-      "target": "vsF9ybubQ",
-      "targetHandle": null,
-      "id": "98SOuvS7k"
     },
     {
       "source": "k2ERly_0o",
@@ -1853,13 +1869,6 @@
       "target": "fjulhPIH8",
       "targetHandle": null,
       "id": "7ASn8dZx0"
-    },
-    {
-      "source": "170tbF9Nf",
-      "sourceHandle": "err1",
-      "target": "-QNyood_d",
-      "targetHandle": null,
-      "id": "2sBaI8alx"
     },
     {
       "source": "F8B9mEAtB",
@@ -1897,13 +1906,6 @@
       "id": "x6rfsD8Xl"
     },
     {
-      "source": "fTp-Wgoqq",
-      "sourceHandle": "err1",
-      "target": "qRY6FGbFP",
-      "targetHandle": null,
-      "id": "xx05MI3Y6"
-    },
-    {
       "source": "PcD-5bR2W",
       "sourceHandle": "2",
       "target": "G95EOyewL",
@@ -1925,13 +1927,6 @@
       "id": "WRMu9IzMM"
     },
     {
-      "source": "dF4hNaUND",
-      "sourceHandle": "err1",
-      "target": "McT6TFbUB",
-      "targetHandle": null,
-      "id": "OLPk8U-gF"
-    },
-    {
       "source": "t4dWQ_dfn",
       "sourceHandle": "1",
       "target": "uwdPcxesc",
@@ -1951,13 +1946,6 @@
       "target": "EaCuC_41T",
       "targetHandle": null,
       "id": "4gxxlNV6L"
-    },
-    {
-      "source": "zyUL4qUYA",
-      "sourceHandle": "err1",
-      "target": "vtCZPe3yC",
-      "targetHandle": null,
-      "id": "DBLlJyp7L"
     },
     {
       "source": "RO0Zf4LTo",
@@ -2205,13 +2193,6 @@
       "id": "CQeBtfQvZ"
     },
     {
-      "source": "G95EOyewL",
-      "sourceHandle": "err1",
-      "target": "ZTYe64FC2",
-      "targetHandle": null,
-      "id": "ImCGgE1NG"
-    },
-    {
       "source": "VzT5TF5Zz",
       "sourceHandle": "1",
       "target": "RO0Zf4LTo",
@@ -2352,13 +2333,6 @@
       "id": "80MKwxFZl"
     },
     {
-      "source": "yZlJH4368",
-      "sourceHandle": "1",
-      "target": "yK5TvMkg9",
-      "targetHandle": null,
-      "id": "dKypa-FgE"
-    },
-    {
       "source": "MD77c1-Ek",
       "sourceHandle": "1",
       "target": "6UW0zoWGc",
@@ -2420,13 +2394,6 @@
       "target": "v0RBmC27w",
       "targetHandle": null,
       "id": "QoF4cVmik"
-    },
-    {
-      "source": "v0RBmC27w",
-      "sourceHandle": "2",
-      "target": "P_LYkY8LB",
-      "targetHandle": null,
-      "id": "bTRPTK4RG"
     },
     {
       "source": "v0RBmC27w",
@@ -2511,6 +2478,90 @@
       "target": "qpOA2t6un",
       "targetHandle": null,
       "id": "ne0oeK6P1"
+    },
+    {
+      "source": "dF4hNaUND",
+      "sourceHandle": "err1",
+      "target": "VzT5TF5Zz",
+      "targetHandle": null,
+      "id": "oNHlczd_t"
+    },
+    {
+      "source": "G95EOyewL",
+      "sourceHandle": "err1",
+      "target": "TYM_UxtFs",
+      "targetHandle": null,
+      "id": "f9eXnU6n-"
+    },
+    {
+      "source": "fTp-Wgoqq",
+      "sourceHandle": "err1",
+      "target": "3MZdGe7Kt",
+      "targetHandle": null,
+      "id": "UpTbRmn0q"
+    },
+    {
+      "source": "170tbF9Nf",
+      "sourceHandle": "err1",
+      "target": "fjulhPIH8",
+      "targetHandle": null,
+      "id": "sVuwepGie"
+    },
+    {
+      "source": "uu2ov1WfM",
+      "sourceHandle": "err1",
+      "target": "ZYOtxIAaD",
+      "targetHandle": null,
+      "id": "pE6AoGT7h"
+    },
+    {
+      "source": "KoEtw_mvw",
+      "sourceHandle": "err1",
+      "target": "-M_0PUNXE",
+      "targetHandle": null,
+      "id": "BNgWdopVD"
+    },
+    {
+      "source": "zyUL4qUYA",
+      "sourceHandle": "err1",
+      "target": "EaCuC_41T",
+      "targetHandle": null,
+      "id": "aTgluXZAK"
+    },
+    {
+      "source": "yZlJH4368",
+      "sourceHandle": "1",
+      "target": "jMSrbNsm0",
+      "targetHandle": null,
+      "id": "Gr6dppMJf"
+    },
+    {
+      "source": "jMSrbNsm0",
+      "sourceHandle": "1",
+      "target": "yK5TvMkg9",
+      "targetHandle": null,
+      "id": "43AsgNeEC"
+    },
+    {
+      "source": "jMSrbNsm0",
+      "sourceHandle": "2",
+      "target": "XHO6iCwfe",
+      "targetHandle": null,
+      "id": "zfj_87jgT"
+    },
+    {
+      "source": "XHO6iCwfe",
+      "sourceHandle": "1",
+      "target": "yK5TvMkg9",
+      "targetHandle": null,
+      "id": "neL3ULNzr"
+    },
+    {
+      "source": "v0RBmC27w",
+      "sourceHandle": "2",
+      "target": "4v6nV2xAg",
+      "targetHandle": null,
+      "id": "0E3gUNmn9"
     }
   ]
 }

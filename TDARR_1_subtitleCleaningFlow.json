@@ -55,8 +55,8 @@
       "version": "1.0.0",
       "id": "ligBFrz8Q",
       "position": {
-        "x": 228.02657564046626,
-        "y": -2047.8113412121772
+        "x": 1022.1125446805138,
+        "y": -2165.4880250722545
       },
       "fpEnabled": true
     },
@@ -441,7 +441,7 @@
       "id": "3bczEwhkY",
       "position": {
         "x": 694.7843426320526,
-        "y": -1366.0563188919293
+        "y": -1290.4806465774477
       },
       "fpEnabled": true
     },
@@ -613,8 +613,8 @@
       "version": "1.0.0",
       "id": "vf1vFX4FS",
       "position": {
-        "x": 1028.032272497909,
-        "y": -1552.8066791160522
+        "x": 1164.2550892622828,
+        "y": -1476.297973810034
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -646,8 +646,8 @@
       "version": "1.0.0",
       "id": "efbc31Bfw",
       "position": {
-        "x": 570.5226821755118,
-        "y": 2392.7767126176227
+        "x": 569.7488996787407,
+        "y": 2470.1549622947414
       },
       "fpEnabled": true
     },
@@ -670,8 +670,8 @@
       "version": "1.0.0",
       "id": "PH-owVC7K",
       "position": {
-        "x": 482.9033158963134,
-        "y": -2099.312213170594
+        "x": 507.2295268399296,
+        "y": -2317.705985506678
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -685,8 +685,8 @@
       "version": "1.0.0",
       "id": "HV73FJ9OC",
       "position": {
-        "x": 728.0265756404663,
-        "y": -2025.8113412121772
+        "x": 1033.9754594313315,
+        "y": -2023.9400942165146
       },
       "fpEnabled": true
     },
@@ -742,7 +742,7 @@
       "id": "By1xWQv62",
       "position": {
         "x": 570.2977131502082,
-        "y": 2286.3319303371654
+        "y": 2286.919161322772
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -757,8 +757,8 @@
       "version": "1.0.0",
       "id": "solVKi_jv",
       "position": {
-        "x": 1027.7779157797129,
-        "y": -1631.0819964780324
+        "x": 1164.0007325440868,
+        "y": -1554.573291172014
       },
       "fpEnabled": true
     },
@@ -812,8 +812,8 @@
       "version": "1.0.0",
       "id": "QXu2TbHcb",
       "position": {
-        "x": 1028.1639670200334,
-        "y": -1453.604039280921
+        "x": 1164.3867837844073,
+        "y": -1377.0953339749026
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -828,8 +828,8 @@
       "version": "1.0.0",
       "id": "BrN7zhTEV",
       "position": {
-        "x": 1053.191419874258,
-        "y": -1364.077132159462
+        "x": 1189.4142366386318,
+        "y": -1287.5684268534437
       },
       "fpEnabled": true
     },
@@ -841,7 +841,7 @@
       "id": "HfwmBha1M",
       "position": {
         "x": 694.4756249835065,
-        "y": -1222.5345213632081
+        "y": -1146.9588490487265
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -964,7 +964,7 @@
       "id": "Ko2ZGeuBj",
       "position": {
         "x": 694.8042391658055,
-        "y": -1295.1645547623987
+        "y": -1219.588882447917
       },
       "fpEnabled": true
     },
@@ -1077,7 +1077,7 @@
       "version": "1.0.0",
       "id": "SAbAeyVbk",
       "position": {
-        "x": 805.7304686364439,
+        "x": 827.1902274417905,
         "y": -1451.7346237425375
       },
       "fpEnabled": true
@@ -1105,8 +1105,8 @@
       "version": "1.0.0",
       "id": "8Bjx4hOet",
       "position": {
-        "x": 1053.0164753000054,
-        "y": -1291.8217503302267
+        "x": 1189.2392920643792,
+        "y": -1215.3130450242083
       },
       "fpEnabled": true
     },
@@ -1145,16 +1145,66 @@
         "y": 324.2069375614511
       },
       "fpEnabled": true
+    },
+    {
+      "name": "💬 | 🪪 Mark as 'processed'",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "Wj79I4Abv",
+      "position": {
+        "x": 569.7870912099813,
+        "y": 2389.041110722117
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "💬 | 🪪 Mark as 'processed'",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "tUmbVUF5C",
+      "position": {
+        "x": 924.3314292559033,
+        "y": -1362.1648327456912
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "💬 | ❓ Has the file already been processed?",
+      "sourceRepo": "Community",
+      "pluginName": "processedCheck",
+      "version": "1.0.0",
+      "id": "B-f8lvzwL",
+      "position": {
+        "x": 507.1365091069357,
+        "y": -2228.38498844931
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "💬 | 🙋‍♀️ It seems like this file has already been processed. Continue anyways? ",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "4sJzzfEeX",
+      "position": {
+        "x": 659.6250683815707,
+        "y": -2140.4454150891006
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
-    {
-      "source": "PH-owVC7K",
-      "sourceHandle": "1",
-      "target": "rO68NTLBg",
-      "targetHandle": null,
-      "id": "CGEwOW9gE"
-    },
     {
       "source": "solVKi_jv",
       "sourceHandle": "1",
@@ -1203,13 +1253,6 @@
       "target": "AGLzSPLLB",
       "targetHandle": null,
       "id": "b_R52s5Ag"
-    },
-    {
-      "source": "By1xWQv62",
-      "sourceHandle": "1",
-      "target": "efbc31Bfw",
-      "targetHandle": null,
-      "id": "EkZwPYikv"
     },
     {
       "source": "d7VdU6y0e",
@@ -1938,6 +1981,55 @@
       "target": "u0b4C7dHk",
       "targetHandle": null,
       "id": "i-iOwid1c"
+    },
+    {
+      "source": "By1xWQv62",
+      "sourceHandle": "1",
+      "target": "Wj79I4Abv",
+      "targetHandle": null,
+      "id": "s4p4kLiK7"
+    },
+    {
+      "source": "Wj79I4Abv",
+      "sourceHandle": "1",
+      "target": "efbc31Bfw",
+      "targetHandle": null,
+      "id": "8SFUf9nZ6"
+    },
+    {
+      "source": "SAbAeyVbk",
+      "sourceHandle": "1",
+      "target": "tUmbVUF5C",
+      "targetHandle": null,
+      "id": "mS8CdsgWZ"
+    },
+    {
+      "source": "PH-owVC7K",
+      "sourceHandle": "1",
+      "target": "B-f8lvzwL",
+      "targetHandle": null,
+      "id": "MoZ_CXhx6"
+    },
+    {
+      "source": "B-f8lvzwL",
+      "sourceHandle": "1",
+      "target": "rO68NTLBg",
+      "targetHandle": null,
+      "id": "DO9-JdpXl"
+    },
+    {
+      "source": "B-f8lvzwL",
+      "sourceHandle": "2",
+      "target": "4sJzzfEeX",
+      "targetHandle": null,
+      "id": "6RVPaSzGq"
+    },
+    {
+      "source": "4sJzzfEeX",
+      "sourceHandle": "1",
+      "target": "rO68NTLBg",
+      "targetHandle": null,
+      "id": "Okki7dJeh"
     }
   ]
 }

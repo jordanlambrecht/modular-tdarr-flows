@@ -164,8 +164,8 @@
       "version": "1.0.0",
       "id": "048V9RVZd",
       "position": {
-        "x": 1220.6986916049943,
-        "y": -281.4391039095856
+        "x": 833.2386904423638,
+        "y": -399.44250953945146
       },
       "fpEnabled": true
     },
@@ -693,8 +693,8 @@
       "version": "1.0.0",
       "id": "ujg0vS9ka",
       "position": {
-        "x": 1770.4926967044921,
-        "y": 263.2471651582676
+        "x": 1779.3811235161577,
+        "y": 145.91993124428058
       },
       "fpEnabled": true
     },
@@ -1254,8 +1254,8 @@
       "version": "1.0.0",
       "id": "PwEhibX1Z",
       "position": {
-        "x": 1529.4983688005277,
-        "y": 3719.930116533673
+        "x": 1528.821006311785,
+        "y": 3789.698452874169
       },
       "fpEnabled": true
     },
@@ -1327,8 +1327,8 @@
       "version": "1.0.0",
       "id": "5h3aU2wWR",
       "position": {
-        "x": 1567.8278024124543,
-        "y": 281.0867885533556
+        "x": 1568.7166450936209,
+        "y": 253.53266543719195
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1396,8 +1396,8 @@
       "version": "1.0.0",
       "id": "rmmzJ9UVr",
       "position": {
-        "x": 1841.9131366601741,
-        "y": 148.74904187314735
+        "x": 1985.9056510091582,
+        "y": -90.34963936065947
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1412,8 +1412,8 @@
       "version": "1.0.0",
       "id": "LDfgoIQyV",
       "position": {
-        "x": 2022.5573429100361,
-        "y": 214.74636291007317
+        "x": 1924.7846479817135,
+        "y": 59.19889370592364
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1472,14 +1472,14 @@
       }
     },
     {
-      "name": "Input File",
+      "name": "🔊 | 🛬 Input File",
       "sourceRepo": "Community",
       "pluginName": "inputFile",
       "version": "1.0.0",
       "id": "xR8gCEb7_",
       "position": {
-        "x": 1044.8519815262307,
-        "y": -206.28486467101789
+        "x": 1068.0809983825036,
+        "y": -433.10103374004075
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1523,14 +1523,14 @@
       "fpEnabled": true
     },
     {
-      "name": "Entry point from another flow",
+      "name": "🔊 | 🛬 Entry point from another flow",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "-O_1ZjPQ3",
       "position": {
-        "x": 1318.6986916049943,
-        "y": -167.43910390958564
+        "x": 1511.964111849184,
+        "y": -164.6516218868329
       },
       "fpEnabled": true
     },
@@ -1541,8 +1541,8 @@
       "version": "1.0.0",
       "id": "XnTBk97W9",
       "position": {
-        "x": 1841.498789090928,
-        "y": 80.44581725891616
+        "x": 1985.4913034399121,
+        "y": -158.6528639748907
       },
       "fpEnabled": true
     },
@@ -1945,6 +1945,64 @@
         "y": 1039.4192841222855
       },
       "fpEnabled": true
+    },
+    {
+      "name": "🔊 | ✅ Mark as 'processed'",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "F4NXgdYjZ",
+      "position": {
+        "x": 1530.0180485389349,
+        "y": 3700.201782235143
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "🔊 | ❓ Has the file already been processed?",
+      "sourceRepo": "Community",
+      "pluginName": "processedCheck",
+      "version": "1.0.0",
+      "id": "JMa2-AJ4m",
+      "position": {
+        "x": 1067.905533496845,
+        "y": -354.43915161257206
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "🔊 | 🙋‍♀️ It seems like this file has already been processed. Continue anyways? ",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "aJKvG1XlR",
+      "position": {
+        "x": 1211.8221549964214,
+        "y": -268.95636958148816
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "🔊 | ✅ Mark file as 'Processed'",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "4VSWGaJHH",
+      "position": {
+        "x": 1779.2502125813674,
+        "y": 248.55435384585036
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "fileToAdd": "originalFile",
+        "checkType": "fileHash"
+      }
     }
   ],
   "flowEdges": [
@@ -1982,13 +2040,6 @@
       "target": "gUXAUSLbT",
       "targetHandle": null,
       "id": "a1gk5lQGe"
-    },
-    {
-      "source": "xR8gCEb7_",
-      "sourceHandle": "1",
-      "target": "XSNXsXj2m",
-      "targetHandle": null,
-      "id": "LiXT4hYtO"
     },
     {
       "source": "rmmzJ9UVr",
@@ -2080,13 +2131,6 @@
       "target": "FFll-kYBC",
       "targetHandle": null,
       "id": "Whq9p3nNP"
-    },
-    {
-      "source": "FFll-kYBC",
-      "sourceHandle": "1",
-      "target": "PwEhibX1Z",
-      "targetHandle": null,
-      "id": "Q4rYUGJVS"
     },
     {
       "source": "ocVciVFsa",
@@ -3305,6 +3349,55 @@
       "target": "GPtup6fdX",
       "targetHandle": null,
       "id": "bKZ9byx9E"
+    },
+    {
+      "source": "FFll-kYBC",
+      "sourceHandle": "1",
+      "target": "F4NXgdYjZ",
+      "targetHandle": null,
+      "id": "c6-QPtEHY"
+    },
+    {
+      "source": "F4NXgdYjZ",
+      "sourceHandle": "1",
+      "target": "PwEhibX1Z",
+      "targetHandle": null,
+      "id": "SJoBAsfI9"
+    },
+    {
+      "source": "xR8gCEb7_",
+      "sourceHandle": "1",
+      "target": "JMa2-AJ4m",
+      "targetHandle": null,
+      "id": "S181oFrII"
+    },
+    {
+      "source": "JMa2-AJ4m",
+      "sourceHandle": "1",
+      "target": "XSNXsXj2m",
+      "targetHandle": null,
+      "id": "nJJU0Lpmh"
+    },
+    {
+      "source": "JMa2-AJ4m",
+      "sourceHandle": "2",
+      "target": "aJKvG1XlR",
+      "targetHandle": null,
+      "id": "t82fe0fZc"
+    },
+    {
+      "source": "aJKvG1XlR",
+      "sourceHandle": "1",
+      "target": "XSNXsXj2m",
+      "targetHandle": null,
+      "id": "frAYsALH4"
+    },
+    {
+      "source": "ujg0vS9ka",
+      "sourceHandle": "1",
+      "target": "4VSWGaJHH",
+      "targetHandle": null,
+      "id": "WJ6YkP_cF"
     }
   ]
 }

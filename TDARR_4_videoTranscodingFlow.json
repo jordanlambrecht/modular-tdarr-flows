@@ -50,8 +50,8 @@
       "version": "1.0.0",
       "id": "wiw3H6uDZ",
       "position": {
-        "x": 364.44091412691125,
-        "y": -974.3883198766301
+        "x": 1090.5546291692767,
+        "y": -1089.8031406655919
       },
       "fpEnabled": true
     },
@@ -294,8 +294,8 @@
       "version": "1.0.0",
       "id": "ssQy4kowR",
       "position": {
-        "x": 450.1518195165307,
-        "y": 2984.7512719833476
+        "x": 461.3596856017595,
+        "y": 3022.6855879641216
       },
       "fpEnabled": true
     },
@@ -503,8 +503,8 @@
       "version": "1.0.0",
       "id": "WSgEHqXja",
       "position": {
-        "x": 749.9457495390795,
-        "y": -972.7103035164814
+        "x": 1097.098990022413,
+        "y": -949.9908506052686
       },
       "fpEnabled": true
     },
@@ -821,8 +821,8 @@
       },
       "id": "pE6rU7gkW",
       "position": {
-        "x": 567.5112727794099,
-        "y": -971.552647491495
+        "x": 592.9570600399683,
+        "y": -1211.3840932666258
       },
       "fpEnabled": true
     },
@@ -1482,6 +1482,48 @@
         "condition": "!=",
         "value": "true"
       }
+    },
+    {
+      "name": "📼 | 🪪 Mark as 'processed'",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "N8BdQLBei",
+      "position": {
+        "x": 461.8703347632303,
+        "y": 2943.2536484891157
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "📼 | ❓ Has the file already been processed?",
+      "sourceRepo": "Community",
+      "pluginName": "processedCheck",
+      "version": "1.0.0",
+      "id": "_cAaiJ8OR",
+      "position": {
+        "x": 592.6341931639014,
+        "y": -1101.22887149491
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "📼 | 🙋‍♀️ It seems like this file has already been processed. Continue anyways? ",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "K1nJeM_NN",
+      "position": {
+        "x": 761.1525045522087,
+        "y": -1013.0088188445175
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -1990,13 +2032,6 @@
       "id": "-w6cdU717"
     },
     {
-      "source": "pE6rU7gkW",
-      "sourceHandle": "1",
-      "target": "uTsBT2bqZ",
-      "targetHandle": null,
-      "id": "vtv8wj_Kn"
-    },
-    {
       "source": "M8_tUEor7",
       "sourceHandle": "1",
       "target": "UqBE23FMd",
@@ -2030,13 +2065,6 @@
       "target": "yXgH5tH67",
       "targetHandle": null,
       "id": "yNcCEQe2o"
-    },
-    {
-      "source": "2Y5WnsoKa",
-      "sourceHandle": "2",
-      "target": "ssQy4kowR",
-      "targetHandle": null,
-      "id": "4Oj7KrMmb"
     },
     {
       "source": "2ZBz_8xH-",
@@ -2527,6 +2555,48 @@
       "target": "broG1J9Nb",
       "targetHandle": null,
       "id": "L-Thn0erN"
+    },
+    {
+      "source": "2Y5WnsoKa",
+      "sourceHandle": "2",
+      "target": "N8BdQLBei",
+      "targetHandle": null,
+      "id": "2n5yjRwrS"
+    },
+    {
+      "source": "N8BdQLBei",
+      "sourceHandle": "1",
+      "target": "ssQy4kowR",
+      "targetHandle": null,
+      "id": "_YupHQMWN"
+    },
+    {
+      "source": "pE6rU7gkW",
+      "sourceHandle": "1",
+      "target": "_cAaiJ8OR",
+      "targetHandle": null,
+      "id": "2aXIj1IL9"
+    },
+    {
+      "source": "_cAaiJ8OR",
+      "sourceHandle": "2",
+      "target": "K1nJeM_NN",
+      "targetHandle": null,
+      "id": "jjE1Wv6gX"
+    },
+    {
+      "source": "_cAaiJ8OR",
+      "sourceHandle": "1",
+      "target": "uTsBT2bqZ",
+      "targetHandle": null,
+      "id": "QKTth8Owe"
+    },
+    {
+      "source": "K1nJeM_NN",
+      "sourceHandle": "1",
+      "target": "uTsBT2bqZ",
+      "targetHandle": null,
+      "id": "4uRVpcpbZ"
     }
   ]
 }
