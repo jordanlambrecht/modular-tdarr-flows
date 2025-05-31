@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v2.1.0 - May 31, 2025
+
+### Added
+
+- `🧠 CONTROLLER FLOW` now checks to see if a file is already processed and
+  holds for review if it is
+- All flows check to see if a file is already processed and holds for review if
+  it is if the entry point is `🛬 Input File`
+- `🧠 CONTROLLER FLOW` now marks a file as processed at the end of flow run
+- All individual flows mark a file as processed at the end of a run if the main
+  entry point is `🛬 Input File`
+- All flows now run MkPropEdit towards the beginning of the flow. This adds a
+  bit of processing time, but it makes things a lot smoother/safer. And all
+  we've got is time, am I right?
+- Two new flow variables, `flowErrorThreshold` and `pluginErrorThreshold`. These
+  are used to set the maximum number of errors allowed before
+  `👋 Initialization` is failed.
+
+### Fixed
+
+- `💬 Handle Subtitle Cleaning` now properly strips away SDH + CC + eia_608
+  subtitle streams
+- `👋 Initialization` flow would enter an infinite loop if a plugin failed.
+  Switched over to JS functions for error handling instead.
+
+## Removed
+
+- `🛎️ Handle Notifications` does not need an `input file` entry point, so it was
+  removed.
+
 ## v2.0.0 - May 30, 2025
 
 There are a lot of breaking changes in this update. I highly recommend reading
