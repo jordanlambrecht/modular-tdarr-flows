@@ -8,6 +8,8 @@
   holds for review if it is
 - All flows check to see if a file is already processed and holds for review if
   it is if the entry point is `🛬 Input File`
+- Flows would fail on non-mkv videos due to MkvEditProps
+
 - `🧠 CONTROLLER FLOW` now marks a file as processed at the end of flow run
 - All individual flows mark a file as processed at the end of a run if the main
   entry point is `🛬 Input File`

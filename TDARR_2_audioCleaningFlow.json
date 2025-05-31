@@ -861,6 +861,18 @@
         "y": -755.9562304642577
       },
       "fpEnabled": true
+    },
+    {
+      "name": "🎧 | 🫥 File wasn't an MKV. Continuing.",
+      "sourceRepo": "Community",
+      "pluginName": "resetFlowError",
+      "version": "1.0.0",
+      "id": "nylkryTGj",
+      "position": {
+        "x": 1409.5980896267906,
+        "y": -742.3248718635907
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -1430,6 +1442,20 @@
       "target": "x_65k3lxU",
       "targetHandle": null,
       "id": "wD10rBzh8"
+    },
+    {
+      "source": "aMW_S2Ojy",
+      "sourceHandle": "err1",
+      "target": "nylkryTGj",
+      "targetHandle": null,
+      "id": "Vkx8z3OrV"
+    },
+    {
+      "source": "nylkryTGj",
+      "sourceHandle": "1",
+      "target": "x_65k3lxU",
+      "targetHandle": null,
+      "id": "WM_FOMcoA"
     }
   ]
 }
