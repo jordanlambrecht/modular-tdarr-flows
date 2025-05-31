@@ -5,6 +5,34 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "💬 | 🚀 Set FFMPEG Remove Stream Command",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandRemoveStreamByProperty",
+      "version": "1.0.0",
+      "id": "VpGmjoYvd",
+      "position": {
+        "x": 179.36754179514384,
+        "y": 221.33157635581827
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "propertyToCheck": "tags.title",
+        "valuesToRemove": "SDH,CC,eia_608"
+      }
+    },
+    {
+      "name": "💬 | 🚀 ✅ Neat! We were able to strip away SDH/CC (If any)",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "m7TSNY_Q5",
+      "position": {
+        "x": 179.76483669734165,
+        "y": 425.87762578328244
+      },
+      "fpEnabled": true
+    },
+    {
       "name": "💬 | 🤖 Tags: Worker Type - All Remote (CPUorGPU)",
       "sourceRepo": "Community",
       "pluginName": "tagsWorkerType",
@@ -79,8 +107,8 @@
       "version": "1.0.0",
       "id": "elH-s2ZwN",
       "position": {
-        "x": 426.035516140088,
-        "y": -101.26593343626581
+        "x": 390.58043593825744,
+        "y": -102.60386099105187
       },
       "fpEnabled": true
     },
@@ -154,8 +182,8 @@
       "version": "1.0.0",
       "id": "jS3Z4a9ss",
       "position": {
-        "x": 521.9791975204208,
-        "y": 67.26590111370683
+        "x": 380.45976675356496,
+        "y": 8.7079068303335
       },
       "fpEnabled": true
     },
@@ -208,26 +236,9 @@
       "id": "u0b4C7dHk",
       "position": {
         "x": 821.6379064527274,
-        "y": 266.9760148491145
+        "y": 269.9491808179764
       },
       "fpEnabled": true
-    },
-    {
-      "name": "💬 | 🧼 Trying to remove any \"SDH\" and \"CC\" streams using 'title' property instead",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicTranscodePlugin",
-      "version": "2.0.0",
-      "id": "C6Cc1gG4k",
-      "position": {
-        "x": 624.8512848566323,
-        "y": 252.63548631506006
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
-        "valuesToRemove": "SDH,CC,English (SDH),English CC",
-        "propertyToCheck": "title"
-      }
     },
     {
       "name": "💬 | 🚫 Couldn't/Didn't get rid of the unwanted formats",
@@ -421,23 +432,6 @@
         "y": 691.786389799675
       },
       "fpEnabled": true
-    },
-    {
-      "name": "💬 | 🧼 Remove \"SDH\" and \"CC\" streams using tags.title property",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicTranscodePlugin",
-      "version": "2.0.0",
-      "id": "PETDUVFDe",
-      "position": {
-        "x": 521.9192312344993,
-        "y": 150.5861473801774
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
-        "valuesToRemove": "SDH,CC,English (SDH),English CC,subtitle eia_608",
-        "propertyToCheck": "tags.title"
-      }
     },
     {
       "name": "💬 | 👍 We sure did.",
@@ -1015,8 +1009,8 @@
       "version": "2.0.0",
       "id": "d_SuL1jBv",
       "position": {
-        "x": 497.20484961624516,
-        "y": 385.32004622711014
+        "x": 497.93160858005285,
+        "y": 368.97176653047154
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1059,8 +1053,8 @@
       "version": "1.0.0",
       "id": "1vYnB5PRA",
       "position": {
-        "x": 521.7725115533964,
-        "y": -17.304348814790437
+        "x": 614.7584766110275,
+        "y": -18.642276369576493
       },
       "fpEnabled": true
     },
@@ -1125,6 +1119,30 @@
       "position": {
         "x": 625.2351785506402,
         "y": 1122.989298565586
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "💬 | 🚀 Begin FFMPEG Command for SDH/CC Removal",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandStart",
+      "version": "1.0.0",
+      "id": "I-KaGkKq2",
+      "position": {
+        "x": 179.49624671975056,
+        "y": 106.41468377252826
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "💬 | 🚀 Execute SDH/CC FFMPEG Command",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandExecute",
+      "version": "1.0.0",
+      "id": "jI89lZTG0",
+      "position": {
+        "x": 179.4643271786565,
+        "y": 324.2069375614511
       },
       "fpEnabled": true
     }
@@ -1474,13 +1492,6 @@
       "id": "mAKWWqp3L"
     },
     {
-      "source": "PETDUVFDe",
-      "sourceHandle": "1",
-      "target": "d_SuL1jBv",
-      "targetHandle": null,
-      "id": "LlrX8sk1X"
-    },
-    {
       "source": "d_SuL1jBv",
       "sourceHandle": "err1",
       "target": "SrnKqpyjZ",
@@ -1586,41 +1597,6 @@
       "id": "NUMqQ0Y9P"
     },
     {
-      "source": "PETDUVFDe",
-      "sourceHandle": "err1",
-      "target": "C6Cc1gG4k",
-      "targetHandle": null,
-      "id": "zS1iDJcV_"
-    },
-    {
-      "source": "PETDUVFDe",
-      "sourceHandle": "2",
-      "target": "C6Cc1gG4k",
-      "targetHandle": null,
-      "id": "CSqxE-OMt"
-    },
-    {
-      "source": "C6Cc1gG4k",
-      "sourceHandle": "1",
-      "target": "d_SuL1jBv",
-      "targetHandle": null,
-      "id": "B2jnHHNtE"
-    },
-    {
-      "source": "C6Cc1gG4k",
-      "sourceHandle": "2",
-      "target": "d_SuL1jBv",
-      "targetHandle": null,
-      "id": "ET8bnsrYn"
-    },
-    {
-      "source": "C6Cc1gG4k",
-      "sourceHandle": "err1",
-      "target": "u0b4C7dHk",
-      "targetHandle": null,
-      "id": "0--snFZ4s"
-    },
-    {
       "source": "u0b4C7dHk",
       "sourceHandle": "1",
       "target": "d_SuL1jBv",
@@ -1696,13 +1672,6 @@
       "target": "jS3Z4a9ss",
       "targetHandle": null,
       "id": "M9tK3n2yn"
-    },
-    {
-      "source": "jS3Z4a9ss",
-      "sourceHandle": "1",
-      "target": "PETDUVFDe",
-      "targetHandle": null,
-      "id": "TEahDzKs5"
     },
     {
       "source": "NAhkS_X9d",
@@ -1913,6 +1882,62 @@
       "target": "krw2Ezrcf",
       "targetHandle": null,
       "id": "8QrYgh5Gu"
+    },
+    {
+      "source": "I-KaGkKq2",
+      "sourceHandle": "1",
+      "target": "VpGmjoYvd",
+      "targetHandle": null,
+      "id": "YN2yKcklD"
+    },
+    {
+      "source": "VpGmjoYvd",
+      "sourceHandle": "1",
+      "target": "jI89lZTG0",
+      "targetHandle": null,
+      "id": "bqv4QrEDL"
+    },
+    {
+      "source": "jI89lZTG0",
+      "sourceHandle": "1",
+      "target": "m7TSNY_Q5",
+      "targetHandle": null,
+      "id": "StC0dFpIO"
+    },
+    {
+      "source": "jS3Z4a9ss",
+      "sourceHandle": "1",
+      "target": "I-KaGkKq2",
+      "targetHandle": null,
+      "id": "-K_2MoAP2"
+    },
+    {
+      "source": "m7TSNY_Q5",
+      "sourceHandle": "1",
+      "target": "d_SuL1jBv",
+      "targetHandle": null,
+      "id": "4HKgSZOx2"
+    },
+    {
+      "source": "jI89lZTG0",
+      "sourceHandle": "err1",
+      "target": "u0b4C7dHk",
+      "targetHandle": null,
+      "id": "G2tpmaoKL"
+    },
+    {
+      "source": "VpGmjoYvd",
+      "sourceHandle": "err1",
+      "target": "u0b4C7dHk",
+      "targetHandle": null,
+      "id": "1vgdoQqjr"
+    },
+    {
+      "source": "I-KaGkKq2",
+      "sourceHandle": "err1",
+      "target": "u0b4C7dHk",
+      "targetHandle": null,
+      "id": "i-iOwid1c"
     }
   ]
 }
