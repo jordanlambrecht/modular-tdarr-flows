@@ -718,22 +718,6 @@
       "fpEnabled": false
     },
     {
-      "name": "Input File",
-      "sourceRepo": "Community",
-      "pluginName": "inputFile",
-      "version": "1.0.0",
-      "inputsDB": {
-        "pauseNodeIfAccessChecksFail": "false",
-        "fileAccessChecks": "true"
-      },
-      "id": "pE6rU7gkW",
-      "position": {
-        "x": -189.9276068411119,
-        "y": 1044.7620403406784
-      },
-      "fpEnabled": true
-    },
-    {
       "name": "Plex Refresh Movies",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
@@ -846,8 +830,8 @@
       "version": "1.0.0",
       "id": "8Qq-cLrb1",
       "position": {
-        "x": 42.26178509470455,
-        "y": 1033.7563735565245
+        "x": -84.67135764392764,
+        "y": 1087.526663188862
       },
       "fpEnabled": true
     },
@@ -1176,13 +1160,6 @@
       "target": "szQrKkuqQ",
       "targetHandle": null,
       "id": "qhCYMILj8"
-    },
-    {
-      "source": "pE6rU7gkW",
-      "sourceHandle": "1",
-      "target": "5fbBY5_tU",
-      "targetHandle": null,
-      "id": "40slx_ibg"
     },
     {
       "source": "5fbBY5_tU",
