@@ -5,14 +5,221 @@
   "tags": "",
   "flowPlugins": [
     {
-      "name": "Go To Flow",
+      "name": "👋 | 🐣 Check to see if user set library variable for the max amount of times we'll allow a plugin to fail (flowErrorThreshold). Default to 2 if not.",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "9epyRMIo7",
+      "position": {
+        "x": 1315.6947476515813,
+        "y": -356.51644898718484
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  // Check for library variable and validate it\n  let thresholdValue = 2; // default value\n  \n  const libraryThreshold = args.userVariables.library['Set max amount of times we\\'ll allow a plugin to fail (pluginErrorThreshold)'];\n  \n  if (libraryThreshold) {\n    const parsedValue = parseInt(libraryThreshold);\n    // Use library value if it's a valid positive number\n    if (!isNaN(parsedValue) && parsedValue >= 0) {\n      thresholdValue = parsedValue;\n    }\n  }\n  \n  // Set the flow variable\n  args.variables.user.pluginErrorThreshold = thresholdValue.toString();\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | 💀 No we did not. Exiting and failing.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "3zlt-HVwl",
+      "position": {
+        "x": -1.987256767271333,
+        "y": 743.8829316519365
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | ❓ Did we come here from the controller flow?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "nKEzd8Rlw",
+      "position": {
+        "x": -88.44980242752581,
+        "y": 654.6848120895378
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "value": "true",
+        "variable": "{{{args.userVariables.library.enable_control_flow}}}"
+      }
+    },
+    {
+      "name": "👋 | 👍 We haven't reached our total flow error threshhold yet. Let's try running that logic again to see if it works now that we're changed some other things.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "0aSDGQoUE",
+      "position": {
+        "x": 122.841840915136,
+        "y": 534.9394306675996
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "How many Flow Errors have we had? Is it past our 'flowErrorThreshold' limit?",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "uaWfw3W22",
+      "position": {
+        "x": 137.1106522493978,
+        "y": 418.648499610362
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const errorCount = parseInt(args.variables.user.flowErrorCount) || 0;\n  const errorThreshold = parseInt(args.variables.user.flowErrorThreshold) || 0;\n  \n  if (errorCount >= errorThreshold) {\n    // Threshold exceeded - output 1 (error path)\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 1,\n      variables: args.variables,\n    };\n  } else {\n    // Under threshold - output 2 (continue path)\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2,\n      variables: args.variables,\n    };\n  }\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ failed to run Mjpeg Fix. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "r1J9mUUUW",
+      "position": {
+        "x": 1136.6421732801425,
+        "y": 1360.4044260741775
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "👋 | ☠️ failed to run MigzOrderStreams. Beginning flow error logic.",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "3iHpuNDtD",
+      "position": {
+        "x": 1143.374109208432,
+        "y": 1675.351655702426
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "gt7gZldIe",
+        "pluginId": "O3rskBCqt"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment cleanTitlesErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "mp-tRfSgl",
+      "position": {
+        "x": 1142.0098859373602,
+        "y": 2628.0936380708513
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'cleanTitlesErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment removeTitleMetaErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "7PzKh8Fq-",
+      "position": {
+        "x": 1153.1132260344484,
+        "y": 2979.034737899199
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'removeTitleMetaErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment removeDatastreamsErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "9rYQz-8XS",
+      "position": {
+        "x": 1136.6969315206775,
+        "y": 2273.8354416196594
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'removeDatastreamsErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment imageRemovalErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "ysC1xLTSg",
+      "position": {
+        "x": 1143.2011931706095,
+        "y": 1896.5036843454604
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'imageRemovalErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment migzOrderStreamsErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "xfq2q0qJa",
+      "position": {
+        "x": 1134.6051736478094,
+        "y": 1567.2345244681894
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'migzOrderStreamsErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment mjpegErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "nNa2JBjr7",
+      "position": {
+        "x": 1137.2129562833995,
+        "y": 1276.7822193774152
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'mjpegErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ Increment remuxErrorCount",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "tCFetWCiX",
+      "position": {
+        "x": 1226.6490239863165,
+        "y": 1010.6428775415558
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'remuxErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | ☠️ failed to run Remove Title Meta. Beginning flow error logic.",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "qpOA2t6un",
       "position": {
-        "x": 1228.90776798328,
-        "y": 3019.9354232993373
+        "x": 1155.7765306620354,
+        "y": 3064.077701682431
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -21,14 +228,14 @@
       }
     },
     {
-      "name": "Go To Flow",
+      "name": "👋 | ☠️ failed to run Clean Titles. Beginning flow error logic.",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "fttTP6Tnp",
       "position": {
-        "x": 1175.2143347432454,
-        "y": 2675.6919085099066
+        "x": 1150.1784156602969,
+        "y": 2712.5869471584624
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -37,14 +244,14 @@
       }
     },
     {
-      "name": "Go To Flow",
+      "name": "👋 | ☠️ failed to run Remove Datastreams. Beginning flow error logic.",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "rL-qhwkN1",
       "position": {
-        "x": 1191.69613306387,
-        "y": 2320.3680940003715
+        "x": 1136.3535750910362,
+        "y": 2375.0451029603573
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -53,67 +260,19 @@
       }
     },
     {
-      "name": "Go To Flow",
+      "name": "👋 | ☠️ failed to run Image Removal. Beginning flow error logic.",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "wc2mTPo5z",
       "position": {
-        "x": 1253.730274678256,
-        "y": 1942.8836800506276
+        "x": 1145.0928207092802,
+        "y": 1980.5617081504768
       },
       "fpEnabled": true,
       "inputsDB": {
         "flowId": "gt7gZldIe",
         "pluginId": "O3rskBCqt"
-      }
-    },
-    {
-      "name": "Go To Flow",
-      "sourceRepo": "Community",
-      "pluginName": "goToFlow",
-      "version": "2.0.0",
-      "id": "6a59YbaL8",
-      "position": {
-        "x": 1316.9955607059867,
-        "y": 1597.4090208478515
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "flowId": "gt7gZldIe",
-        "pluginId": "O3rskBCqt"
-      }
-    },
-    {
-      "name": "Go To Flow",
-      "sourceRepo": "Community",
-      "pluginName": "goToFlow",
-      "version": "2.0.0",
-      "id": "gGZ0w1NR4",
-      "position": {
-        "x": 1315.0101928264378,
-        "y": 1258.0900837118
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "flowId": "gt7gZldIe",
-        "pluginId": "O3rskBCqt"
-      }
-    },
-    {
-      "name": "Initialize removeTitleMetaErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "lns2cRMWy",
-      "position": {
-        "x": 2312.3153307518255,
-        "y": -363.69998338871045
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "removeTitleMetaErrorCount",
-        "value": "0"
       }
     },
     {
@@ -170,7 +329,7 @@
       }
     },
     {
-      "name": "👋 | 🚀🚀🚀 All systems go. Begin Initialization 🚀🚀🚀",
+      "name": "👋 | \n🚀🚀🚀 \nAll systems go.\n Begin Initialization \n🚀🚀🚀",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -265,30 +424,14 @@
       }
     },
     {
-      "name": "Increment removeDatastreamsErrorCount",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "ZTYe64FC2",
-      "position": {
-        "x": 1010.1018038407251,
-        "y": 2221.559041754691
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "removeDatastreamsErrorCount",
-        "value": "{{{args.variables.user.removeDatastreamsErrorCount}}}+1"
-      }
-    },
-    {
       "name": "👋 | ↪️ We haven't had any flow errors yet. Skipping remux.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "wLXzyUjzN",
       "position": {
-        "x": 698.3410351049546,
-        "y": 813.2264908182896
+        "x": 698.3410351049547,
+        "y": 811.2084400055068
       },
       "fpEnabled": true
     },
@@ -337,7 +480,7 @@
       }
     },
     {
-      "name": "👋 | 💬 \n✅✅✅ \nINITIALIZATION PROCESS COMPLETE \n✅✅✅",
+      "name": "👋 | \n✅✅✅ \nINITIALIZATION PROCESS COMPLETE \n✅✅✅",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -373,7 +516,7 @@
       "fpEnabled": true
     },
     {
-      "name": "👋 | 💬 \n✅✅✅ \nINITIALIZATION PROCESS COMPLETE \n✅✅✅",
+      "name": "👋 |  \n✅✅✅ \nINITIALIZATION PROCESS \nCOMPLETE \n✅✅✅",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -391,22 +534,22 @@
       "version": "1.0.0",
       "id": "ctXXLKkuT",
       "position": {
-        "x": 601.1512819806744,
-        "y": 2935.208123394492
+        "x": 602.4689619324085,
+        "y": 3059.0700388575015
       },
       "fpEnabled": true
     },
     {
-      "name": "👋 | 🫥 failed to Removing Title Meta. Beginning flow error logic.",
+      "name": "👋 | 🫥 failed to Removing Title Meta. Beginning flow error logic. ",
       "sourceRepo": "Community",
       "pluginName": "failFlow",
       "version": "1.0.0",
       "id": "I9Yn49gZ4",
       "position": {
-        "x": 1250.0133516350115,
-        "y": 2927.1651599127194
+        "x": 1326.5116017574487,
+        "y": 3066.0931328696133
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "👋 | ↪️ cleanTitlesErrorCount past threshold. Skipping.",
@@ -421,14 +564,14 @@
       "fpEnabled": true
     },
     {
-      "name": "Remove Title Meta",
+      "name": "👋 | 🚜 Remove Title Meta",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "zyUL4qUYA",
       "position": {
-        "x": 859.5501008596881,
-        "y": 2932.845861056604
+        "x": 823.9727421628662,
+        "y": 2929.5516611772687
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -454,20 +597,20 @@
       "version": "1.0.0",
       "id": "3MZdGe7Kt",
       "position": {
-        "x": 937.9777419935228,
-        "y": 1953.2944665992045
+        "x": 935.437506056435,
+        "y": 1929.585597853054
       },
       "fpEnabled": true
     },
     {
-      "name": "Image Removal",
+      "name": "👋 | 🚜 Image Removal",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "fTp-Wgoqq",
       "position": {
-        "x": 826.9858547261284,
-        "y": 1858.5558393496474
+        "x": 827.832600038491,
+        "y": 1845.8546596642097
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -481,8 +624,8 @@
       "version": "1.0.0",
       "id": "dff5d1MWw",
       "position": {
-        "x": 622.6957568417753,
-        "y": 1847.5327520105109
+        "x": 637.0904271519381,
+        "y": 1856.846950446499
       },
       "fpEnabled": true
     },
@@ -499,23 +642,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Increment migzOrderStreamsErrorCount",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "-QNyood_d",
-      "position": {
-        "x": 1142.1267106004066,
-        "y": 1504.7452088927168
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "remuxErrorCount",
-        "value": "{{{args.variables.user.migzOrderStreamsErrorCount}}}+1"
-      }
-    },
-    {
-      "name": "Migz Order Streams",
+      "name": "👋 | 🚜 Migz Order Streams",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
@@ -530,7 +657,7 @@
       }
     },
     {
-      "name": "Check mjpegErrorCount",
+      "name": "👋 | 🔍 Check mjpegErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -553,8 +680,8 @@
       "version": "1.0.0",
       "id": "kdFVje_6l",
       "position": {
-        "x": 672.4334976670011,
-        "y": 1223.9789514376337
+        "x": 633.4832132983249,
+        "y": 1231.102480839656
       },
       "fpEnabled": true
     },
@@ -566,19 +693,19 @@
       "id": "CDgcOPLOb",
       "position": {
         "x": 796.6637189783371,
-        "y": 918.7775572015793
+        "y": 922.8865137419594
       },
       "fpEnabled": true
     },
     {
-      "name": "Check remuxErrorCount",
+      "name": "👋 | 🔍 Check remuxErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "YTV4UKsz1",
       "position": {
-        "x": 913.903345858208,
-        "y": 836.8096537024599
+        "x": 888.631601108252,
+        "y": 812.8355129984943
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -588,138 +715,26 @@
       }
     },
     {
-      "name": "Initialize cleanTitlesErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "UOUgru3uq",
-      "position": {
-        "x": 2130.3153070917438,
-        "y": -370.72940830990154
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "cleanTitlesErrorCount",
-        "value": "0"
-      }
-    },
-    {
-      "name": "Initialize removeDatastreamsErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "-4CTLlbdj",
-      "position": {
-        "x": 1962.5650512449233,
-        "y": -377.5276508663158
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "removeDatastreamsErrorCount",
-        "value": "0"
-      }
-    },
-    {
-      "name": "Initialize imageRemovalErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "vEWLxpSzu",
-      "position": {
-        "x": 1794.987987787057,
-        "y": -368.71401501557574
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "imageRemovalErrorCount",
-        "value": "0"
-      }
-    },
-    {
-      "name": "Initialize migzOrderStreamsErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "7GqASCevN",
-      "position": {
-        "x": 1620.4946264787266,
-        "y": -374.62261621887563
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "migzOrderStreamsErrorCount",
-        "value": "0"
-      }
-    },
-    {
       "name": "👋 | 👌 Didn't need to remux. No processing done. Moving on.",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "-M_0PUNXE",
       "position": {
-        "x": 1021.3637192615174,
-        "y": 1045.8417970135908
+        "x": 997.9243512495486,
+        "y": 1045.2420667369406
       },
       "fpEnabled": true
     },
     {
-      "name": "Initialize remuxErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "sNpHoMOBC",
-      "position": {
-        "x": 1267.386374955209,
-        "y": -367.1564922217189
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "remuxErrorCount",
-        "value": "0"
-      }
-    },
-    {
-      "name": "Initialize mjpegErrorCount variable",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "pxSiIZiba",
-      "position": {
-        "x": 1445.9433796205376,
-        "y": -364.27429132042954
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "mjpegErrorCount",
-        "value": "0"
-      }
-    },
-    {
-      "name": "Set max amount of times we'll allow a plugin to fail (pluginErrorThreshold)",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "kM026o-bI",
-      "position": {
-        "x": 1094.6549199871506,
-        "y": -385.11359284118765
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "pluginErrorThreshold",
-        "value": "2"
-      }
-    },
-    {
-      "name": "Mjpeg Fix",
+      "name": "👋 | 🚜 Mjpeg Fix",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "uu2ov1WfM",
       "position": {
-        "x": 899.5281148446164,
-        "y": 1234.2061998259687
+        "x": 822.4742914196268,
+        "y": 1235.0529451383313
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -733,19 +748,19 @@
       "version": "1.0.0",
       "id": "ZYOtxIAaD",
       "position": {
-        "x": 988.1274623491859,
-        "y": 1323.3871203726642
+        "x": 926.2198759113573,
+        "y": 1309.5534218027667
       },
       "fpEnabled": true
     },
     {
-      "name": "Remux to MKV",
+      "name": "👋 | 🚜 Remux to MKV",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "KoEtw_mvw",
       "position": {
-        "x": 940.0599943284765,
+        "x": 914.105229450143,
         "y": 972.8092443594696
       },
       "fpEnabled": true,
@@ -755,64 +770,16 @@
       }
     },
     {
-      "name": "Increment removeTitleMetaErrorCount",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "vtCZPe3yC",
-      "position": {
-        "x": 1054.4314070167832,
-        "y": 2926.521852970707
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "remuxErrorCount",
-        "value": "{{{args.variables.user.removeTitleMetaErrorCount}}}+1"
-      }
-    },
-    {
-      "name": "Increment cleanTitlesErrorCount Error Count",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "McT6TFbUB",
-      "position": {
-        "x": 981.3401018533517,
-        "y": 2580.113825126877
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "cleanTitles",
-        "value": "{{{args.variables.user.cleanTitlesErrorCount}}}+1"
-      }
-    },
-    {
       "name": "👋 | 🫥 failed to Remove Images. Beginning flow error logic.",
       "sourceRepo": "Community",
       "pluginName": "failFlow",
       "version": "1.0.0",
       "id": "mzSLNFg6P",
       "position": {
-        "x": 1255.8008629271644,
-        "y": 1850.3089711335099
+        "x": 1319.87885437673,
+        "y": 1981.2950420131492
       },
-      "fpEnabled": true
-    },
-    {
-      "name": "Increment imageRemovalErrorCount",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "qRY6FGbFP",
-      "position": {
-        "x": 1080.7321483514627,
-        "y": 1866.1500260796988
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "remuxErrorCount",
-        "value": "{{{args.variables.user.imageRemovalErrorCount}}}+1"
-      }
+      "fpEnabled": false
     },
     {
       "name": "👋 | 🫥 failed to run MigzOrderStreams. Beginning flow error logic.",
@@ -821,10 +788,10 @@
       "version": "1.0.0",
       "id": "fLyzbfSTc",
       "position": {
-        "x": 1339.3288705287205,
-        "y": 1502.1038955266042
+        "x": 1311.6527454253696,
+        "y": 1675.0599413578582
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "👋 | 🫥 failed to Clean Titles. Beginning flow error logic.",
@@ -833,10 +800,10 @@
       "version": "1.0.0",
       "id": "Vxxj_2ASU",
       "position": {
-        "x": 1165.2012315216998,
-        "y": 2578.777516497781
+        "x": 1322.6639857539296,
+        "y": 2713.839711550531
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "👋 | 🫥 failed to Remove Datastreams. Beginning flow error logic.",
@@ -845,10 +812,10 @@
       "version": "1.0.0",
       "id": "kAsA02Hz-",
       "position": {
-        "x": 1197.6471032756265,
-        "y": 2219.8572634046577
+        "x": 1320.8185523995548,
+        "y": 2265.934227996237
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "👋 | 🫥 failed to remux. Beginning flow error logic.",
@@ -857,35 +824,19 @@
       "version": "1.0.0",
       "id": "OiJUVLCck",
       "position": {
-        "x": 1368.2063272190348,
-        "y": 963.5280611703389
+        "x": 1402.9583613353334,
+        "y": 1109.6943686430582
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
-      "name": "Increase Remux Error Count",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "vsF9ybubQ",
-      "position": {
-        "x": 1159.0847428098684,
-        "y": 959.9127093161308
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "remuxErrorCount",
-        "value": "{{{args.variables.user.remuxErrorCount}}}+1"
-      }
-    },
-    {
-      "name": "Don't run remux until we've had a Flow Error",
+      "name": "👋 | 🙅‍♀️ Don't run remux until we've had a Flow Error",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "k2ERly_0o",
       "position": {
-        "x": 828.7013147228428,
+        "x": 831.3920491398865,
         "y": 712.9726737794715
       },
       "fpEnabled": true,
@@ -896,19 +847,19 @@
       }
     },
     {
-      "name": "👋 | 👌 Flow Error Count is too high. Exiting",
+      "name": "👋 | 💀 Flow Error Count is too high. Exiting",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "oO1r9jA_y",
       "position": {
-        "x": 233.8790247802412,
-        "y": 703.3722828570784
+        "x": -88.44914632651427,
+        "y": 567.8884528754933
       },
       "fpEnabled": true
     },
     {
-      "name": "Check removeTitleMetaErrorCount",
+      "name": "👋 | 🔍 Check removeTitleMetaErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -924,7 +875,7 @@
       }
     },
     {
-      "name": "Check cleanTitlesErrorCount",
+      "name": "👋 | 🔍 Check cleanTitlesErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -940,7 +891,7 @@
       }
     },
     {
-      "name": "Check removeDatastreamsErrorCount",
+      "name": "👋 | 🔍 Check removeDatastreamsErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -956,7 +907,7 @@
       }
     },
     {
-      "name": "Check imageRemovalErrorCount",
+      "name": "👋 | 🔍 Check imageRemovalErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -972,7 +923,7 @@
       }
     },
     {
-      "name": "Check migzOrderStreamsErrorCount",
+      "name": "👋 | 🔍 Check migzOrderStreamsErrorCount",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
@@ -1007,7 +958,7 @@
       "id": "VzT5TF5Zz",
       "position": {
         "x": 896.6246454399683,
-        "y": 2683.2914557708204
+        "y": 2706.350854926168
       },
       "fpEnabled": true
     },
@@ -1018,8 +969,8 @@
       "version": "1.0.0",
       "id": "EaCuC_41T",
       "position": {
-        "x": 926.5408428191196,
-        "y": 3009.265869733358
+        "x": 932.4704026019232,
+        "y": 3045.502068406047
       },
       "fpEnabled": true
     },
@@ -1042,32 +993,32 @@
       "version": "1.0.0",
       "id": "KpDr5glWd",
       "position": {
-        "x": 455.4787065775565,
-        "y": -134.9167584382838
+        "x": 484.2566301573145,
+        "y": -74.48311892079218
       },
       "fpEnabled": true
     },
     {
-      "name": "<–––––––––––––––––––\nWe only care about movie hardlinks. otherwise the review queue will be overwhelming",
+      "name": "We only care about movie hardlinks. otherwise the review queue will be overwhelming\n<–––––––––––––––––––",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "6TaHRgAR_",
       "position": {
-        "x": 1010.719700973762,
-        "y": 20.456439893027778
+        "x": 1023.1901345249905,
+        "y": -8.897042158325291
       },
       "fpEnabled": true
     },
     {
-      "name": "🧠 | ❓ Yes, we should check for hard links. Is this something other than a movie/kids movie?",
+      "name": "👋 | ❓ Yes, we should check for hard links. Is this something other than a movie/kids movie?",
       "sourceRepo": "Community",
       "pluginName": "checkFlowVariable",
       "version": "1.0.0",
       "id": "bemWPldj4",
       "position": {
-        "x": 838.0036551770759,
-        "y": 17.048756174763568
+        "x": 855.2704093249306,
+        "y": 8.41537910083619
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1083,8 +1034,8 @@
       "version": "1.0.0",
       "id": "xqmG89krx",
       "position": {
-        "x": 674.2420469194192,
-        "y": -85.85549766281792
+        "x": 700.1421781412013,
+        "y": -78.12712705177339
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1094,14 +1045,14 @@
       }
     },
     {
-      "name": "<–––––––––––––––––––\nRemove for single-node setup",
+      "name": "–––––––––––––––––––>\nRemove for single-node setup",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "P9Lt5ALHZ",
       "position": {
-        "x": 838.8400935936586,
-        "y": -266.475248541718
+        "x": 504.030746585413,
+        "y": -261.9502162273037
       },
       "fpEnabled": true
     },
@@ -1112,8 +1063,8 @@
       "version": "1.0.0",
       "id": "dbrdZLn3w",
       "position": {
-        "x": 673.1515405269006,
-        "y": -269.4334073463962
+        "x": 674.3374550263115,
+        "y": -262.3179203499306
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1127,8 +1078,8 @@
       "version": "1.0.0",
       "id": "xjAzsOLKM",
       "position": {
-        "x": 538.3880120720429,
-        "y": 73.21989592861627
+        "x": 556.614030339223,
+        "y": 8.949199933823536
       },
       "fpEnabled": true
     },
@@ -1139,8 +1090,8 @@
       "version": "1.0.0",
       "id": "GnZlGi0i5",
       "position": {
-        "x": 1059.3966356109436,
-        "y": 296.9039152007674
+        "x": 1127.5043880830376,
+        "y": 369.80798826948745
       },
       "fpEnabled": true
     },
@@ -1151,13 +1102,13 @@
       "version": "1.0.0",
       "id": "uHbm9C4Gp",
       "position": {
-        "x": 906.2919178452613,
-        "y": 271.1020982707267
+        "x": 934.1105773056942,
+        "y": 354.5580766520247
       },
       "fpEnabled": true
     },
     {
-      "name": "Remove Datastreams",
+      "name": "👋 | 🚜 Remove Datastreams",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
@@ -1202,20 +1153,20 @@
       "version": "1.0.0",
       "id": "4tpX2W5yT",
       "position": {
-        "x": 830.6207183116779,
-        "y": 555.1554479076673
+        "x": 830.620718311678,
+        "y": 565.4007498333252
       },
       "fpEnabled": true
     },
     {
-      "name": "Clean Titles",
+      "name": "👋 | 🚜 Clean Titles",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
       "version": "2.0.0",
       "id": "dF4hNaUND",
       "position": {
-        "x": 788.8412230888207,
-        "y": 2591.0833978057763
+        "x": 810.582942292434,
+        "y": 2590.424557829909
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1225,14 +1176,14 @@
       }
     },
     {
-      "name": "🧠 | ❓Does this file have any hard links associated with it?",
+      "name": "👋 | ❓Does this file have any hard links associated with it?",
       "sourceRepo": "Community",
       "pluginName": "customFunction",
       "version": "1.0.0",
       "id": "fozsSVT79",
       "position": {
-        "x": 1017.5668024510778,
-        "y": 183.09986389090287
+        "x": 1141.3118738440369,
+        "y": 122.66622437341121
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1240,26 +1191,26 @@
       }
     },
     {
-      "name": "🧠 | ☠️ Error stating file for hard link status. Failing flow.",
+      "name": "👋 | ☠️ Error stating file for hard link status. Failing flow.",
       "sourceRepo": "Community",
       "pluginName": "failFlow",
       "version": "1.0.0",
       "id": "2_VqfuBG8",
       "position": {
-        "x": 1271.5021504082038,
-        "y": 375.81865475122186
+        "x": 1400.0435423977892,
+        "y": 173.4139255735912
       },
       "fpEnabled": true
     },
     {
-      "name": "🧠 | ‼️🔗 HARDLINKS FOUND. Not moving forward unless the boss says so. Holding for review.",
+      "name": "👋 | ‼️🔗 HARDLINKS FOUND. Not moving forward unless the boss says so. Holding for review.",
       "sourceRepo": "Community",
       "pluginName": "requireReview",
       "version": "1.0.0",
       "id": "bEqPoviQW",
       "position": {
-        "x": 995.3910354907403,
-        "y": 396.3369767999695
+        "x": 1030.883807905775,
+        "y": 225.58796356007235
       },
       "fpEnabled": true
     },
@@ -1282,8 +1233,8 @@
       "version": "1.0.0",
       "id": "6vV13YaTq",
       "position": {
-        "x": 829.2469798838822,
-        "y": 631.2403130657159
+        "x": 831.2960402690138,
+        "y": 631.9233331940931
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1303,7 +1254,7 @@
       "fpEnabled": true
     },
     {
-      "name": "🧠 | 🔍 Checking for .tdarr_ignore File",
+      "name": "👋 | 🔍 Checking for .tdarr_ignore File",
       "sourceRepo": "Community",
       "pluginName": "checkFileExists",
       "version": "1.0.0",
@@ -1319,64 +1270,16 @@
       }
     },
     {
-      "name": "On Flow Error",
+      "name": "👋 | 🚨 Something went wrong. Flow Error logic starts now.",
       "sourceRepo": "Community",
       "pluginName": "onFlowError",
       "version": "1.0.0",
       "id": "O3rskBCqt",
       "position": {
-        "x": 573.8505854011069,
-        "y": 413.3974375674081
+        "x": 181.52883421992135,
+        "y": 258.39538958433013
       },
       "fpEnabled": true
-    },
-    {
-      "name": "Increase Flow Error Count",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "Aq5IVY75G",
-      "position": {
-        "x": 489.296008592632,
-        "y": 512.5395066352515
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "flowErrorCount",
-        "value": "{{{args.variables.user.transcodeStage}}}+1"
-      }
-    },
-    {
-      "name": "How many Flow Errors have we had?",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "nlGNQKWvy",
-      "position": {
-        "x": 439.4216764501958,
-        "y": 604.8248403669397
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "value": "{{{args.variables.user.flowErrorThreshold}}} ",
-        "variable": " {{{args.variables.user.flowErrorCount}}} "
-      }
-    },
-    {
-      "name": "Increment mjpegErrorCount",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "ZgrPOmdzd",
-      "position": {
-        "x": 1163.843053272449,
-        "y": 1223.8523696312666
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "mjpegErrorCount",
-        "value": "{{{args.variables.user.mjpegErrorCount}}}+1"
-      }
     },
     {
       "name": "👋 | 🫥 failed to run Mjpeg Fix. Beginning flow error logic.",
@@ -1385,29 +1288,13 @@
       "version": "1.0.0",
       "id": "z8IWWyJnB",
       "position": {
-        "x": 1285.0412801672694,
-        "y": 1318.7718026775672
+        "x": 1313.205721291744,
+        "y": 1364.8032115911046
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
-      "name": "Set max amount of times we'll allow this flow to fail (flowErrorThreshold)",
-      "sourceRepo": "Community",
-      "pluginName": "setFlowVariable",
-      "version": "1.0.0",
-      "id": "XPC6gX4W_",
-      "position": {
-        "x": 906.8723099007623,
-        "y": -389.0275795404979
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "flowErrorThreshold",
-        "value": "4"
-      }
-    },
-    {
-      "name": "Initialize flowErrorCount",
+      "name": "👋 | 🐣 Initialize flowErrorCount",
       "sourceRepo": "Community",
       "pluginName": "setFlowVariable",
       "version": "1.0.0",
@@ -1418,7 +1305,8 @@
       },
       "fpEnabled": true,
       "inputsDB": {
-        "value": "flowErrorCount0"
+        "value": "0",
+        "variable": "flowErrorCount"
       }
     },
     {
@@ -1533,7 +1421,7 @@
       "fpEnabled": true
     },
     {
-      "name": "Copy to Working Directory",
+      "name": "👋 | 💾 Copy to Working Directory",
       "sourceRepo": "Community",
       "pluginName": "copyToWorkDirectory",
       "version": "1.0.0",
@@ -1551,7 +1439,7 @@
       "version": "1.0.0",
       "id": "v0RBmC27w",
       "position": {
-        "x": 1175.329951601721,
+        "x": 1176.2437830519505,
         "y": -741.5726812592762
       },
       "fpEnabled": true,
@@ -1601,14 +1489,14 @@
       "fpEnabled": true
     },
     {
-      "name": "Go To Flow",
+      "name": "👋 | ☠️ failed to run Remux to MKV. Beginning flow error logic.",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "RDBBhnp8A",
       "position": {
-        "x": 1373.3509012007892,
-        "y": 1043.1167323235832
+        "x": 1234.4615417515292,
+        "y": 1096.6734962613627
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1657,6 +1545,91 @@
       "inputsDB": {
         "checkType": "fileHash"
       }
+    },
+    {
+      "name": "👋 | ➕ Increase Overall Total Flow Error Count",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "nuMqEwUVJ",
+      "position": {
+        "x": 181.31574734486912,
+        "y": 335.3570437665586
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  const VARIABLE_NAME = 'flowErrorCount';\n  \n  // Initialize the variable if it doesn't exist\n  if (!args.variables.user[VARIABLE_NAME]) {\n    args.variables.user[VARIABLE_NAME] = '0';\n  }\n  \n  // Increment the count\n  const currentCount = parseInt(args.variables.user[VARIABLE_NAME]) || 0;\n  args.variables.user[VARIABLE_NAME] = (currentCount + 1).toString();\n\n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | 💀 Yes we did. Would you like to continue back to the Control flow or fail this file?",
+      "sourceRepo": "Community",
+      "pluginName": "requireReview",
+      "version": "1.0.0",
+      "id": "29w4xtdiD",
+      "position": {
+        "x": -191.0654037852865,
+        "y": 739.4368562659876
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "👋 | 🛫 User has decided to carry on. Returning to the Controller flow.",
+      "sourceRepo": "Community",
+      "pluginName": "goToFlow",
+      "version": "2.0.0",
+      "id": "UYRZE4_ke",
+      "position": {
+        "x": -191.29384016883904,
+        "y": 865.0354227792134
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "flowId": "F4KO4luxb",
+        "pluginId": "_TIbs0ACH"
+      }
+    },
+    {
+      "name": "👋 | 🐣 Check to see if user set library variable for the max amount of times we'll allow this entire flow to fail (flowErrorThreshold). Default to 5 if not. ",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "-EB9kGM2z",
+      "position": {
+        "x": 1070.7446737894008,
+        "y": -359.2266889607842
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  // Check for library variable and validate it\n  let thresholdValue = 5; // default value for flow errors (probably higher than individual plugin)\n  \n  const libraryThreshold = args.userVariables.library['Set max amount of times we\\'ll allow the flow to fail (flowErrorThreshold)'];\n  \n  if (libraryThreshold) {\n    const parsedValue = parseInt(libraryThreshold);\n    // Use library value if it's a valid positive number\n    if (!isNaN(parsedValue) && parsedValue >= 0) {\n      thresholdValue = parsedValue;\n    }\n  }\n  \n  // Set the flow variable\n  args.variables.user.flowErrorThreshold = thresholdValue.toString();\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "👋 | 🐣 Initialize all plugin error count variables to 0",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "1Haycs-Ae",
+      "position": {
+        "x": 1270.472881696667,
+        "y": -211.4508321616104
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  args.variables.user.remuxErrorCount = '0';\n  args.variables.user.mjpegErrorCount = '0';\n  args.variables.user.migzOrderStreamsErrorCount = '0';\n  args.variables.user.imageRemovalErrorCount = '0';\n  args.variables.user.removeDatastreamsErrorCount = '0';\n  args.variables.user.cleanTitlesErrorCount = '0';\n  args.variables.user.removeTitleMetaErrorCount = '0';\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+      }
+    },
+    {
+      "name": "<–––––––––––––––––––\nremuxErrorCount\nmjpegErrorCount\nmigzOrderStreamsErrorCount\nimageRemovalErrorCount\nremoveDatastreamsErrorCount\ncleanTitlesErrorCount\nremoveTitleMetaErrorCount\n",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "URD_qG15I",
+      "position": {
+        "x": 1451.9875257819501,
+        "y": -204.07075245649662
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -1794,46 +1767,11 @@
       "id": "UPhHNVkku"
     },
     {
-      "source": "O3rskBCqt",
-      "sourceHandle": "1",
-      "target": "Aq5IVY75G",
-      "targetHandle": null,
-      "id": "XmjWeNvDj"
-    },
-    {
-      "source": "Aq5IVY75G",
-      "sourceHandle": "1",
-      "target": "nlGNQKWvy",
-      "targetHandle": null,
-      "id": "PpauRZ_Gd"
-    },
-    {
-      "source": "nlGNQKWvy",
-      "sourceHandle": "1",
-      "target": "oO1r9jA_y",
-      "targetHandle": null,
-      "id": "TtlRyovim"
-    },
-    {
-      "source": "nlGNQKWvy",
-      "sourceHandle": "2",
-      "target": "k2ERly_0o",
-      "targetHandle": null,
-      "id": "3Ut4fwswQ"
-    },
-    {
       "source": "uu2ov1WfM",
       "sourceHandle": "2",
       "target": "ZYOtxIAaD",
       "targetHandle": null,
       "id": "4ClvFDmjV"
-    },
-    {
-      "source": "XPC6gX4W_",
-      "sourceHandle": "1",
-      "target": "kM026o-bI",
-      "targetHandle": null,
-      "id": "Brob0n5Nc"
     },
     {
       "source": "KoEtw_mvw",
@@ -2284,55 +2222,6 @@
       "id": "mPl8S2vk3"
     },
     {
-      "source": "QHSIdQm6t",
-      "sourceHandle": "1",
-      "target": "XPC6gX4W_",
-      "targetHandle": null,
-      "id": "zK07HKMPI"
-    },
-    {
-      "source": "kM026o-bI",
-      "sourceHandle": "1",
-      "target": "sNpHoMOBC",
-      "targetHandle": null,
-      "id": "62yUykEN-"
-    },
-    {
-      "source": "-4CTLlbdj",
-      "sourceHandle": "1",
-      "target": "UOUgru3uq",
-      "targetHandle": null,
-      "id": "zLytp3F8c"
-    },
-    {
-      "source": "vEWLxpSzu",
-      "sourceHandle": "1",
-      "target": "-4CTLlbdj",
-      "targetHandle": null,
-      "id": "PPzrT8kt7"
-    },
-    {
-      "source": "7GqASCevN",
-      "sourceHandle": "1",
-      "target": "vEWLxpSzu",
-      "targetHandle": null,
-      "id": "nbzxyofHh"
-    },
-    {
-      "source": "pxSiIZiba",
-      "sourceHandle": "1",
-      "target": "7GqASCevN",
-      "targetHandle": null,
-      "id": "OhAjog13J"
-    },
-    {
-      "source": "sNpHoMOBC",
-      "sourceHandle": "1",
-      "target": "pxSiIZiba",
-      "targetHandle": null,
-      "id": "80MKwxFZl"
-    },
-    {
       "source": "MD77c1-Ek",
       "sourceHandle": "1",
       "target": "6UW0zoWGc",
@@ -2417,118 +2306,6 @@
       "id": "HBgvpc_BH"
     },
     {
-      "source": "UOUgru3uq",
-      "sourceHandle": "1",
-      "target": "lns2cRMWy",
-      "targetHandle": null,
-      "id": "FX0RoM-yE"
-    },
-    {
-      "source": "lns2cRMWy",
-      "sourceHandle": "1",
-      "target": "dbrdZLn3w",
-      "targetHandle": null,
-      "id": "Vj1JVAcpd"
-    },
-    {
-      "source": "vsF9ybubQ",
-      "sourceHandle": "1",
-      "target": "RDBBhnp8A",
-      "targetHandle": null,
-      "id": "NoIm3LkEI"
-    },
-    {
-      "source": "ZgrPOmdzd",
-      "sourceHandle": "1",
-      "target": "gGZ0w1NR4",
-      "targetHandle": null,
-      "id": "3qJe05EFN"
-    },
-    {
-      "source": "-QNyood_d",
-      "sourceHandle": "1",
-      "target": "6a59YbaL8",
-      "targetHandle": null,
-      "id": "OP421ye0t"
-    },
-    {
-      "source": "qRY6FGbFP",
-      "sourceHandle": "1",
-      "target": "wc2mTPo5z",
-      "targetHandle": null,
-      "id": "4uB2OutpR"
-    },
-    {
-      "source": "ZTYe64FC2",
-      "sourceHandle": "1",
-      "target": "rL-qhwkN1",
-      "targetHandle": null,
-      "id": "UgwQ0Ggqv"
-    },
-    {
-      "source": "McT6TFbUB",
-      "sourceHandle": "1",
-      "target": "fttTP6Tnp",
-      "targetHandle": null,
-      "id": "Z6nCAw6vB"
-    },
-    {
-      "source": "vtCZPe3yC",
-      "sourceHandle": "1",
-      "target": "qpOA2t6un",
-      "targetHandle": null,
-      "id": "ne0oeK6P1"
-    },
-    {
-      "source": "dF4hNaUND",
-      "sourceHandle": "err1",
-      "target": "VzT5TF5Zz",
-      "targetHandle": null,
-      "id": "oNHlczd_t"
-    },
-    {
-      "source": "G95EOyewL",
-      "sourceHandle": "err1",
-      "target": "TYM_UxtFs",
-      "targetHandle": null,
-      "id": "f9eXnU6n-"
-    },
-    {
-      "source": "fTp-Wgoqq",
-      "sourceHandle": "err1",
-      "target": "3MZdGe7Kt",
-      "targetHandle": null,
-      "id": "UpTbRmn0q"
-    },
-    {
-      "source": "170tbF9Nf",
-      "sourceHandle": "err1",
-      "target": "fjulhPIH8",
-      "targetHandle": null,
-      "id": "sVuwepGie"
-    },
-    {
-      "source": "uu2ov1WfM",
-      "sourceHandle": "err1",
-      "target": "ZYOtxIAaD",
-      "targetHandle": null,
-      "id": "pE6AoGT7h"
-    },
-    {
-      "source": "KoEtw_mvw",
-      "sourceHandle": "err1",
-      "target": "-M_0PUNXE",
-      "targetHandle": null,
-      "id": "BNgWdopVD"
-    },
-    {
-      "source": "zyUL4qUYA",
-      "sourceHandle": "err1",
-      "target": "EaCuC_41T",
-      "targetHandle": null,
-      "id": "aTgluXZAK"
-    },
-    {
       "source": "yZlJH4368",
       "sourceHandle": "1",
       "target": "jMSrbNsm0",
@@ -2562,6 +2339,195 @@
       "target": "4v6nV2xAg",
       "targetHandle": null,
       "id": "0E3gUNmn9"
+    },
+    {
+      "source": "7PzKh8Fq-",
+      "sourceHandle": "1",
+      "target": "qpOA2t6un",
+      "targetHandle": null,
+      "id": "BAFzBmpUX"
+    },
+    {
+      "source": "zyUL4qUYA",
+      "sourceHandle": "err1",
+      "target": "7PzKh8Fq-",
+      "targetHandle": null,
+      "id": "lsljl5F9T"
+    },
+    {
+      "source": "O3rskBCqt",
+      "sourceHandle": "1",
+      "target": "nuMqEwUVJ",
+      "targetHandle": null,
+      "id": "nLxDrNt7f"
+    },
+    {
+      "source": "uu2ov1WfM",
+      "sourceHandle": "err1",
+      "target": "nNa2JBjr7",
+      "targetHandle": null,
+      "id": "8_l4Re6XW"
+    },
+    {
+      "source": "170tbF9Nf",
+      "sourceHandle": "err1",
+      "target": "xfq2q0qJa",
+      "targetHandle": null,
+      "id": "iJwF251Bw"
+    },
+    {
+      "source": "xfq2q0qJa",
+      "sourceHandle": "1",
+      "target": "3iHpuNDtD",
+      "targetHandle": null,
+      "id": "BIYBPawJO"
+    },
+    {
+      "source": "ysC1xLTSg",
+      "sourceHandle": "1",
+      "target": "wc2mTPo5z",
+      "targetHandle": null,
+      "id": "LxV-LQcUo"
+    },
+    {
+      "source": "fTp-Wgoqq",
+      "sourceHandle": "err1",
+      "target": "ysC1xLTSg",
+      "targetHandle": null,
+      "id": "OHZYsQHpC"
+    },
+    {
+      "source": "G95EOyewL",
+      "sourceHandle": "err1",
+      "target": "9rYQz-8XS",
+      "targetHandle": null,
+      "id": "u5TVfDmus"
+    },
+    {
+      "source": "9rYQz-8XS",
+      "sourceHandle": "1",
+      "target": "rL-qhwkN1",
+      "targetHandle": null,
+      "id": "xzI-RvtKh"
+    },
+    {
+      "source": "dF4hNaUND",
+      "sourceHandle": "err1",
+      "target": "mp-tRfSgl",
+      "targetHandle": null,
+      "id": "Wv7PcN0yx"
+    },
+    {
+      "source": "mp-tRfSgl",
+      "sourceHandle": "1",
+      "target": "fttTP6Tnp",
+      "targetHandle": null,
+      "id": "T_5b0erl_"
+    },
+    {
+      "source": "nNa2JBjr7",
+      "sourceHandle": "1",
+      "target": "r1J9mUUUW",
+      "targetHandle": null,
+      "id": "vMwGdtbgk"
+    },
+    {
+      "source": "KoEtw_mvw",
+      "sourceHandle": "err1",
+      "target": "tCFetWCiX",
+      "targetHandle": null,
+      "id": "TqGst516E"
+    },
+    {
+      "source": "tCFetWCiX",
+      "sourceHandle": "1",
+      "target": "RDBBhnp8A",
+      "targetHandle": null,
+      "id": "Y6khjGjwl"
+    },
+    {
+      "source": "nuMqEwUVJ",
+      "sourceHandle": "1",
+      "target": "uaWfw3W22",
+      "targetHandle": null,
+      "id": "hTDBWjcb1"
+    },
+    {
+      "source": "uaWfw3W22",
+      "sourceHandle": "2",
+      "target": "0aSDGQoUE",
+      "targetHandle": null,
+      "id": "vTe3annW5"
+    },
+    {
+      "source": "uaWfw3W22",
+      "sourceHandle": "1",
+      "target": "oO1r9jA_y",
+      "targetHandle": null,
+      "id": "w5Jup_Ms7"
+    },
+    {
+      "source": "0aSDGQoUE",
+      "sourceHandle": "1",
+      "target": "k2ERly_0o",
+      "targetHandle": null,
+      "id": "KJtRzeh6c"
+    },
+    {
+      "source": "oO1r9jA_y",
+      "sourceHandle": "1",
+      "target": "nKEzd8Rlw",
+      "targetHandle": null,
+      "id": "fp1Grw4YG"
+    },
+    {
+      "source": "nKEzd8Rlw",
+      "sourceHandle": "1",
+      "target": "29w4xtdiD",
+      "targetHandle": null,
+      "id": "WRjcMtmuV"
+    },
+    {
+      "source": "nKEzd8Rlw",
+      "sourceHandle": "2",
+      "target": "3zlt-HVwl",
+      "targetHandle": null,
+      "id": "ml8mxoKzd"
+    },
+    {
+      "source": "29w4xtdiD",
+      "sourceHandle": "1",
+      "target": "UYRZE4_ke",
+      "targetHandle": null,
+      "id": "WOZx5wpdp"
+    },
+    {
+      "source": "QHSIdQm6t",
+      "sourceHandle": "1",
+      "target": "-EB9kGM2z",
+      "targetHandle": null,
+      "id": "2K2AIC-hm"
+    },
+    {
+      "source": "-EB9kGM2z",
+      "sourceHandle": "1",
+      "target": "9epyRMIo7",
+      "targetHandle": null,
+      "id": "Oy9tcRowu"
+    },
+    {
+      "source": "9epyRMIo7",
+      "sourceHandle": "1",
+      "target": "1Haycs-Ae",
+      "targetHandle": null,
+      "id": "eVaZrRKBX"
+    },
+    {
+      "source": "1Haycs-Ae",
+      "sourceHandle": "1",
+      "target": "dbrdZLn3w",
+      "targetHandle": null,
+      "id": "KDH-GhI9m"
     }
   ]
 }
