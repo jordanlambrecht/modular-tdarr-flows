@@ -5,7 +5,7 @@
   "tags": "",
   "flowPlugins": [
     {
-      "name": "👋 | 🐣 Check to see if user set library variable for the max amount of times we'll allow a plugin to fail (flowErrorThreshold). Default to 2 if not.",
+      "name": "👋 | 🐣 Check to see if user set library variable for the max amount of times we'll allow a plugin to fail (pluginErrorThreshold). Default to 2 if not.",
       "sourceRepo": "Community",
       "pluginName": "customFunction",
       "version": "1.0.0",
@@ -16,7 +16,7 @@
       },
       "fpEnabled": true,
       "inputsDB": {
-        "code": "module.exports = async (args) => {\n  // Check for library variable and validate it\n  let thresholdValue = 2; // default value\n  \n  const libraryThreshold = args.userVariables.library['Set max amount of times we\\'ll allow a plugin to fail (pluginErrorThreshold)'];\n  \n  if (libraryThreshold) {\n    const parsedValue = parseInt(libraryThreshold);\n    // Use library value if it's a valid positive number\n    if (!isNaN(parsedValue) && parsedValue >= 0) {\n      thresholdValue = parsedValue;\n    }\n  }\n  \n  // Set the flow variable\n  args.variables.user.pluginErrorThreshold = thresholdValue.toString();\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+        "code": "module.exports = async (args) => {\n  // Check for library variable and validate it\n  let thresholdValue = 2; // default value\n  \n  const libraryThreshold = args.userVariables.library.pluginErrorThreshold;\n  \n  if (libraryThreshold) {\n    const parsedValue = parseInt(libraryThreshold);\n    // Use library value if it's a valid positive number\n    if (!isNaN(parsedValue) && parsedValue >= 0) {\n      thresholdValue = parsedValue;\n    }\n  }\n  \n  // Set the flow variable\n  args.variables.user.pluginErrorThreshold = thresholdValue.toString();\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
       }
     },
     {
@@ -1601,7 +1601,7 @@
       },
       "fpEnabled": true,
       "inputsDB": {
-        "code": "module.exports = async (args) => {\n  // Check for library variable and validate it\n  let thresholdValue = 5; // default value for flow errors (probably higher than individual plugin)\n  \n  const libraryThreshold = args.userVariables.library['Set max amount of times we\\'ll allow the flow to fail (flowErrorThreshold)'];\n  \n  if (libraryThreshold) {\n    const parsedValue = parseInt(libraryThreshold);\n    // Use library value if it's a valid positive number\n    if (!isNaN(parsedValue) && parsedValue >= 0) {\n      thresholdValue = parsedValue;\n    }\n  }\n  \n  // Set the flow variable\n  args.variables.user.flowErrorThreshold = thresholdValue.toString();\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
+        "code": "module.exports = async (args) => {\n  // Check for library variable and validate it\n  let thresholdValue = 5; // default value for flow errors\n  \n  const libraryThreshold = args.userVariables.library.flowErrorThreshold;\n  \n  if (libraryThreshold) {\n    const parsedValue = parseInt(libraryThreshold);\n    // Use library value if it's a valid positive number\n    if (!isNaN(parsedValue) && parsedValue >= 0) {\n      thresholdValue = parsedValue;\n    }\n  }\n  \n  // Set the flow variable\n  args.variables.user.flowErrorThreshold = thresholdValue.toString();\n  \n  return {\n    outputFileObj: args.inputFileObj,\n    outputNumber: 1,\n    variables: args.variables,\n  };\n}"
       }
     },
     {
