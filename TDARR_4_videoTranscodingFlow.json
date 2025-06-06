@@ -5,6 +5,37 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "📼 | ❓ Is it a movie or kids movie, per chance?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "5csXXwGVV",
+      "position": {
+        "x": 333.0317762324757,
+        "y": -721.9353077327489
+      },
+      "fpEnabled": false,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "MOVIES,MOVIES_KIDS"
+      }
+    },
+    {
+      "name": "📼 | ❓ Is the movie already under 4.25 GB?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFileSize",
+      "version": "1.0.0",
+      "id": "Gognx2aVa",
+      "position": {
+        "x": 205.11940268901787,
+        "y": -609.7878934540022
+      },
+      "fpEnabled": false,
+      "inputsDB": {
+        "lessThan": "4.26"
+      }
+    },
+    {
       "name": "📼 | ⚙️ Set 420p Resolution",
       "sourceRepo": "Community",
       "pluginName": "ffmpegCommandSetVdeoResolution",
@@ -342,8 +373,8 @@
       },
       "id": "CHJ-VJqQh",
       "position": {
-        "x": 948.5219566386107,
-        "y": 1717.0855712883483
+        "x": 947.6194559111483,
+        "y": 1751.3805989319208
       },
       "fpEnabled": true
     },
@@ -355,7 +386,7 @@
       "id": "WacgxDBP_",
       "position": {
         "x": 973.1978161505841,
-        "y": 1647.6408675777566
+        "y": 1658.4708763073058
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -370,8 +401,8 @@
       "version": "1.0.0",
       "id": "hxCvrSFf5",
       "position": {
-        "x": 891.992560788338,
-        "y": 1563.1983755194472
+        "x": 890.1875593334133,
+        "y": 1574.9308849764586
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -410,8 +441,8 @@
       },
       "id": "3NiSlQ4y1",
       "position": {
-        "x": 698.8027832200498,
-        "y": 1561.7888975678209
+        "x": 699.7052839475123,
+        "y": 1576.2289092072197
       },
       "fpEnabled": true
     },
@@ -429,7 +460,7 @@
       "id": "Tj2XgKyID",
       "position": {
         "x": 783.6669666555555,
-        "y": 1651.8563470788356
+        "y": 1659.9788536259975
       },
       "fpEnabled": true
     },
@@ -440,8 +471,8 @@
       "version": "1.0.0",
       "id": "UIzkZmDI_",
       "position": {
-        "x": 782.1098045920866,
-        "y": 1477.4017807620694
+        "x": 781.8837279801492,
+        "y": 1486.2007114247565
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -565,8 +596,8 @@
       "version": "1.0.0",
       "id": "P09I9yz6b",
       "position": {
-        "x": -87.28397606691257,
-        "y": 112.61950438564214
+        "x": -55.69645060572758,
+        "y": 111.7170036581797
       },
       "fpEnabled": true
     },
@@ -661,8 +692,8 @@
       },
       "id": "2RHDj5Vt_",
       "position": {
-        "x": 520.4871105652386,
-        "y": -12.901297275779058
+        "x": 522.5319676264584,
+        "y": -11.878868745169164
       },
       "fpEnabled": true
     },
@@ -677,8 +708,8 @@
       },
       "id": "WvG9JzojF",
       "position": {
-        "x": -245.05301682270454,
-        "y": 60.81969254948073
+        "x": -244.15051609524215,
+        "y": 50.89218454739402
       },
       "fpEnabled": true
     },
@@ -718,7 +749,7 @@
       "id": "hnebWi6P2",
       "position": {
         "x": 428.0273604530571,
-        "y": -105.47517401430537
+        "y": -102.75638819950346
       },
       "fpEnabled": true
     },
@@ -804,8 +835,8 @@
       },
       "id": "broG1J9Nb",
       "position": {
-        "x": 775.153059441914,
-        "y": -623.1962122785857
+        "x": 774.2467975036467,
+        "y": -656.7279039944759
       },
       "fpEnabled": true
     },
@@ -816,8 +847,8 @@
       "version": "1.0.0",
       "id": "lxznnqDwh",
       "position": {
-        "x": 641.4890307604426,
-        "y": -226.0922340600051
+        "x": 267.2028502560466,
+        "y": -278.93471385511634
       },
       "fpEnabled": true
     },
@@ -1124,7 +1155,7 @@
       "id": "LVyI_ZqR9",
       "position": {
         "x": 690.5670240088915,
-        "y": 1393.3265636333194
+        "y": 1401.443653019621
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1151,8 +1182,8 @@
       "version": "1.0.0",
       "id": "mG8Oqr5Bx",
       "position": {
-        "x": 1132.5182450125576,
-        "y": 1463.3160815553604
+        "x": 1129.8107428301703,
+        "y": 1450.6810713708865
       },
       "fpEnabled": true
     },
@@ -1277,57 +1308,26 @@
       "fpEnabled": true
     },
     {
-      "name": "📼 | ❓ Is it a movie or kids movie, per chance?",
-      "sourceRepo": "Community",
-      "pluginName": "checkFlowVariable",
-      "version": "1.0.0",
-      "id": "KjHjKbfzb",
-      "position": {
-        "x": 615.6299075765758,
-        "y": -541.7447754128541
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "variable": "{{{args.userVariables.library.name}}}",
-        "value": "MOVIES,MOVIES_KIDS"
-      }
-    },
-    {
-      "name": "📼 | ❓ Is the movie already under 4.25 GB?",
-      "sourceRepo": "Community",
-      "pluginName": "checkFileSize",
-      "version": "1.0.0",
-      "id": "lbzrgwtad",
-      "position": {
-        "x": 514.905392181137,
-        "y": -453.1280882112003
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "lessThan": "4.26"
-      }
-    },
-    {
-      "name": "📼 | ✋ The movie is already pretty tiny. We might not want to transcode. Require human review.",
+      "name": "📼 | ✋ The files are already pretty tiny. We might not want to transcode. Require human review to continue..",
       "sourceRepo": "Community",
       "pluginName": "requireReview",
       "version": "1.0.0",
       "id": "X83IhT4sk",
       "position": {
-        "x": 220.76605618586075,
-        "y": -381.72494660556987
+        "x": 427.92846947157193,
+        "y": -408.28583019092923
       },
-      "fpEnabled": false
+      "fpEnabled": true
     },
     {
-      "name": "📼 | ⏭️ File size is already tiny. Don't transcode and skip ahead to Video Duration Check",
+      "name": "📼 | ⏭️ File size is below the library's threshold. Don't transcode and skip ahead to Video Duration Check",
       "sourceRepo": "Community",
       "pluginName": "goToFlow",
       "version": "2.0.0",
       "id": "GcNrNKSul",
       "position": {
-        "x": 423.7239167215629,
-        "y": -358.55788074180293
+        "x": 649.3831393501213,
+        "y": -442.12017064613315
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1514,6 +1514,33 @@
       "position": {
         "x": 971.7272497243703,
         "y": -917.9722490479776
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "📼 | 🧮 File is HEVC. Are file size lower boundaries set?",
+      "sourceRepo": "Community",
+      "pluginName": "customFunction",
+      "version": "1.0.0",
+      "id": "3J8WBxuFy",
+      "position": {
+        "x": 311.92758084451594,
+        "y": -541.9685013072929
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "code": "module.exports = async (args) => {\n  // Check if minimum filesize boundary is enabled\n  const useMinimumFilesize = args.userVariables?.library?.use_minimum_filesize_boundary;\n\n  if (!useMinimumFilesize || useMinimumFilesize === 'false') {\n    args.jobLog('Minimum filesize boundary disabled, skipping\\n');\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 1, // Not below threshold (boundary disabled)\n      variables: args.variables,\n    };\n  }\n\n  args.jobLog('Minimum filesize boundary enabled, setting boundary\\n');\n\n  // Get library name\n  const libraryName = args.userVariables?.library?.name?.toUpperCase() || '';\n  args.jobLog(`Library name: ${libraryName}\\n`);\n\n  // Set default boundary based on library type\n  let defaultBoundary;\n  if (libraryName === 'MOVIES' || libraryName === 'MOVIES_KIDS' || libraryName === 'KIDS_MOVIES') {\n    defaultBoundary = 4.5;\n    args.jobLog('Setting default boundary for Movies: 4.5GB\\n');\n  } else if (libraryName === 'ANIME') {\n    defaultBoundary = 1.5;\n    args.jobLog('Setting default boundary for Anime: 1.5GB\\n');\n  } else if (libraryName === 'TV' || libraryName === 'TV_KIDS' || libraryName === 'KIDS_TV') {\n    defaultBoundary = 2.5;\n    args.jobLog('Setting default boundary for TV: 2.5GB\\n');\n  } else {\n    defaultBoundary = 5.5;\n    args.jobLog(`Setting default boundary for unknown library type: 5.5GB\\n`);\n  }\n\n  // Check if user has set a custom boundary\n  const customBoundary = args.userVariables?.library?.set_minimum_filesize_boundary;\n  let finalBoundary = defaultBoundary;\n\n  if (customBoundary) {\n    const input = String(customBoundary).trim();\n    let value;\n    let unit = 'GB'; // default unit\n    \n    // Check for unit suffixes (case-insensitive)\n    if (/KB$/gi.test(input)) {\n      value = parseFloat(input.replace(/KB$/gi, ''));\n      unit = 'KB';\n    } else if (/MB$/gi.test(input)) {\n      value = parseFloat(input.replace(/MB$/gi, ''));\n      unit = 'MB';\n    } else if (/GB$/gi.test(input)) {\n      value = parseFloat(input.replace(/GB$/gi, ''));\n      unit = 'GB';\n    } else {\n      // No unit specified, assume GB\n      value = parseFloat(input);\n      unit = 'GB';\n    }\n    \n    if (!isNaN(value)) {\n      // Convert to GB\n      if (unit === 'KB') {\n        finalBoundary = value / (1024 * 1024); // KB to GB\n        args.jobLog(`Custom boundary: ${value}KB converted to ${finalBoundary.toFixed(3)}GB\\n`);\n      } else if (unit === 'MB') {\n        finalBoundary = value / 1024; // MB to GB\n        args.jobLog(`Custom boundary: ${value}MB converted to ${finalBoundary.toFixed(3)}GB\\n`);\n      } else {\n        finalBoundary = value; // Already in GB\n        args.jobLog(`Custom boundary override detected: ${finalBoundary}GB\\n`);\n      }\n    } else {\n      args.jobLog(`Invalid custom boundary \"${customBoundary}\", using default: ${finalBoundary}GB\\n`);\n    }\n  } else {\n    args.jobLog(`Using default boundary: ${finalBoundary}GB\\n`);\n  }\n\n  // Set the flow variable\n  args.variables.user.minimum_filesize_boundary = finalBoundary.toString();\n  args.jobLog(`Set minimum_filesize_boundary flow variable to: ${finalBoundary}GB\\n`);\n\n  // Check current file size\n  const currentFileSize = args.inputFileObj.file_size || 0; // in GB\n  args.jobLog(`Current file size: ${currentFileSize}GB\\n`);\n\n  if (currentFileSize >= finalBoundary) {\n    args.jobLog('File size above boundary, continuing processing\\n');\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 1, // Not below threshold\n      variables: args.variables,\n    };\n  }\n\n  // File is below threshold\n  args.jobLog('File size below boundary\\n');\n  const holdForReview = args.userVariables?.library?.filesize_holdForReview;\n  \n  if (holdForReview === 'true') {\n    args.jobLog('Hold for review enabled, routing to review\\n');\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 2, // Hold for review\n      variables: args.variables,\n    };\n  } else {\n    args.jobLog('Hold for review not enabled, skipping processing\\n');\n    return {\n      outputFileObj: args.inputFileObj,\n      outputNumber: 3, // Hold for review not enabled, skip processing\n      variables: args.variables,\n    };\n  }\n}"
+      }
+    },
+    {
+      "name": "–––––––––––––––––––––>\nDeprecated, but leaving for now until more testing is done",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "5ZgNktWUs",
+      "position": {
+        "x": 165.62446993833024,
+        "y": -729.376986245428
       },
       "fpEnabled": true
     }
@@ -2234,46 +2261,11 @@
       "id": "6UNbf0m_v"
     },
     {
-      "source": "broG1J9Nb",
-      "sourceHandle": "1",
-      "target": "KjHjKbfzb",
-      "targetHandle": null,
-      "id": "OIPX3fZEL"
-    },
-    {
-      "source": "KjHjKbfzb",
-      "sourceHandle": "1",
-      "target": "lbzrgwtad",
-      "targetHandle": null,
-      "id": "rqGYt89Df"
-    },
-    {
-      "source": "KjHjKbfzb",
-      "sourceHandle": "2",
-      "target": "lxznnqDwh",
-      "targetHandle": null,
-      "id": "gORw12zT6"
-    },
-    {
-      "source": "lbzrgwtad",
-      "sourceHandle": "2",
-      "target": "lxznnqDwh",
-      "targetHandle": null,
-      "id": "h4SoTDbvI"
-    },
-    {
       "source": "X83IhT4sk",
       "sourceHandle": "1",
       "target": "lxznnqDwh",
       "targetHandle": null,
       "id": "71Rt-t36q"
-    },
-    {
-      "source": "lbzrgwtad",
-      "sourceHandle": "1",
-      "target": "GcNrNKSul",
-      "targetHandle": null,
-      "id": "EoOO_9I9t"
     },
     {
       "source": "iX9rd6nRK",
@@ -2596,6 +2588,41 @@
       "target": "AaCQkQ42N",
       "targetHandle": null,
       "id": "BGKPlDE7c"
+    },
+    {
+      "source": "3J8WBxuFy",
+      "sourceHandle": "1",
+      "target": "lxznnqDwh",
+      "targetHandle": null,
+      "id": "XKppJbeWD"
+    },
+    {
+      "source": "3J8WBxuFy",
+      "sourceHandle": "2",
+      "target": "X83IhT4sk",
+      "targetHandle": null,
+      "id": "4ayWPt20P"
+    },
+    {
+      "source": "3J8WBxuFy",
+      "sourceHandle": "3",
+      "target": "GcNrNKSul",
+      "targetHandle": null,
+      "id": "eiR5CFhez"
+    },
+    {
+      "source": "5csXXwGVV",
+      "sourceHandle": "1",
+      "target": "Gognx2aVa",
+      "targetHandle": null,
+      "id": "QGYTaKKw6"
+    },
+    {
+      "source": "broG1J9Nb",
+      "sourceHandle": "1",
+      "target": "3J8WBxuFy",
+      "targetHandle": null,
+      "id": "llThZjgXU"
     }
   ]
 }
