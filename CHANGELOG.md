@@ -1,6 +1,58 @@
 # CHANGELOG
 
-## v2.1.0 - May 31, 2025
+## v2.2.1-beta
+
+### Added
+
+- Finished added emojis to `📼 Video Transcoding` flow (lol)
+- 🎉 Three new library variables! Users can now set
+  `use_minimum_filesize_boundary` to true or false, and
+- Anime/Foreign safety check in `💬 Handle Subtitle Cleaning`.
+- `🎧 Handle Audio Cleaning` now holds files for review if file size/duration
+- Alternative method for detecting font files checks fail instead of
+  automatically failing the flow
+- `👋 Initialization` now checks for and removes `dvd_nav_packet` codecs. Closes
+  [#19](https://github.com/jordanlambrecht/modular-tdarr-flows/issues/19)
+
+### Fixed
+
+- A few variables in the `📼 Video Transcoding` flow had dangling curly
+  brackets. Closes
+  [#20](https://github.com/jordanlambrecht/modular-tdarr-flows/issues/20)
+- `💬 Handle Subtitle Cleaning` was not properly removing TTF files
+- Turns out a lot of issues were due to a community plugin error. I opened an
+  issue with Tdarr and they added `checkStreamProperty` as an official plugin.
+  Closes [#9](https://github.com/jordanlambrecht/modular-tdarr-flows/issues/9),
+  closes [#21](https://github.com/jordanlambrecht/modular-tdarr-flows/issues/21)
+- `🔊 Handle Audio Transcoding` was not correctly using `keep_8ch_logic`
+
+### Changed
+
+- Subtitles will no longer be removed if library variables `is_anime` or
+  `is_foreign` are `true`. It's better to have annoying subtitle formats than no
+  subtitles at all when it comes to foreign content. Open to feedback on this
+  ideaology though
+- ~~`Tdarr_Plugin_jordy_Remove_Audio_By_Codec_Channels` was officially merged
+  with tdarr-plugins!! Users no longer need to install it as a custom plugin.
+  Closes
+  [#22](https://github.com/jordanlambrecht/modular-tdarr-flows/issues/22)~~ Just
+  kidding, only the tests were merged
+- `Tdarr_Plugin_jordy_Filter_By_Audio_Codec_and_Channels` was officially merged
+  with tdarr-plugins!! Users no longer need to install it as a custom plugin
+
+### Removed
+
+- Mono logic and mono plugin in `🔊 Handle Audio Transcoding` until I can
+  further diagnose what's going on with it
+- Old, unused nodes in `🔊 Handle Audio Transcoding`. Closes
+  [#23](https://github.com/jordanlambrecht/modular-tdarr-flows/issues/23)
+
+### Docs
+
+- Added page for users to contribute their encoding journey to help better
+  account for fringe scenarios
+
+## v2.1.0-beta - May 31, 2025
 
 ### Added
 
@@ -32,7 +84,7 @@
 - `🛎️ Handle Notifications` does not need an `input file` entry point, so it was
   removed.
 
-## v2.0.0 - May 30, 2025
+## v2.0.0-beta - May 30, 2025
 
 There are a lot of breaking changes in this update. I highly recommend reading
 through them all and running test videos on your flows before using with actual
@@ -45,22 +97,22 @@ content.
 - `remove_commentary` library variable. Defaults to false. Setting to true will
   remove any audio tracks that are flagged as commentary. This variable is
   optional. Executed in the Audio Cleaning flow.
-- Audio Transcoding flow will now automatically upmix mono tracks to stereo and
-  remove the mono track.
+- `🔊 Handle Audio Transcoding` flow will now automatically upmix mono tracks to
+  stereo and remove the mono track.
 - Cleanup now changes file perms if `enable_unraid` is set to `true`
 - New flow!! Early logic and safety considerations have been added to a flow
   called `👋 Initialization`. It can be activated using the variable
   `enable_initialization`
-- `audio transcoding` flow now fails at the `Create 2-channel aac (jp)` and
-  `Create 2-channel aac (en)` steps because 2ch AAC is _mandatory_. **Further
-  investigation is required for 'en' vs 'eng' and 'jp' vs 'jpn' language
-  codes.**
-- Safety checks in the `audio transcoding` flow to ensure that a valid audio
-  codec is found before scrubbing unwanted ones. This was put in place due to
-  rare cases where mp2 2ch audio was not transcoding to aac 2ch and was being
+- `🔊 Handle Audio Transcoding` flow now fails at the
+  `Create 2-channel aac (jp)` and `Create 2-channel aac (en)` steps because 2ch
+  AAC is _mandatory_. **Further investigation is required for 'en' vs 'eng' and
+  'jp' vs 'jpn' language codes.**
+- Safety checks in the `🔊 Handle Audio Transcoding` flow to ensure that a valid
+  audio codec is found before scrubbing unwanted ones. This was put in place due
+  to rare cases where mp2 2ch audio was not transcoding to aac 2ch and was being
   removed instead, leaving no audio track at all.
-- `audio transcoding` now checks for dubs to transcode in addition to japanese
-  (for anime)
+- `🔊 Handle Audio Transcoding` now checks for dubs to transcode in addition to
+  japanese (for anime)
 - New logic for detecting external and/or unwanted subtitle types. This is still
   shaky since Tdarr does not have great subtitle handling logic. Please report
   any issues you find with subtitles.
@@ -71,16 +123,16 @@ content.
 
 ### Changed
 
-- Audio transcoding now removes 8ch streams by default now
-- Audio transcoding now removes any AAC codecs from 6ch streams, leaving only
-  AC3
+- `🔊 Handle Audio Transcoding` now removes 8ch streams by default now
+- `🔊 Handle Audio Transcoding` now removes any AAC codecs from 6ch streams,
+  leaving only AC3
 - Better audio codec removal logic
-- `Video Transcoding` flow now checks for small h265 movie files and does not
+- `📼 Video Transcoding` flow now checks for small h265 movie files and does not
   transcode them if they're under 4.5gb. This is to prevent unnecessary
   transcoding of small files that are already in a good format.
-- `Video Transcoding` flow now renders 480p and 576p videos as 480p instead of
-  up converting them to 720p. This is to prevent unnecessary upscaling of videos
-  that are already in a good format.
+- `📼 Video Transcoding` flow now renders 480p and 576p videos as 480p instead
+  of up converting them to 720p. This is to prevent unnecessary upscaling of
+  videos that are already in a good format.
 
 ### Fixed
 
