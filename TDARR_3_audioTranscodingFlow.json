@@ -179,23 +179,11 @@
         "x": 526.6029546463607,
         "y": 932.6396023549971
       },
-      "fpEnabled": true,
+      "fpEnabled": false,
       "inputsDB": {
         "requiredNodeTags": "all-remote-nodes",
         "requiredWorkerType": "CPUorGPU"
       }
-    },
-    {
-      "name": "Does it have aac?",
-      "sourceRepo": "Community",
-      "pluginName": "checkAudioCodec",
-      "version": "1.0.0",
-      "id": "eiZldgO89",
-      "position": {
-        "x": 1894.252538964404,
-        "y": 724.2186044709175
-      },
-      "fpEnabled": false
     },
     {
       "name": "🔊 | 🧐 Does it have 2ch AAC?",
@@ -215,21 +203,6 @@
       }
     },
     {
-      "name": "Does it have ac3?",
-      "sourceRepo": "Community",
-      "pluginName": "checkAudioCodec",
-      "version": "1.0.0",
-      "id": "Hpgq-tM6U",
-      "position": {
-        "x": 1997.6782864444674,
-        "y": 863.8813317271596
-      },
-      "fpEnabled": false,
-      "inputsDB": {
-        "codec": "ac3"
-      }
-    },
-    {
       "name": "🔊 | 🧐 Does it have 2ch AC3?",
       "sourceRepo": "Community",
       "pluginName": "runClassicFilterPlugin",
@@ -244,21 +217,6 @@
         "pluginSourceId": "Local:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
         "codecsToProcess": "ac3",
         "channelsToProcess": "2"
-      }
-    },
-    {
-      "name": "Does it have ac3?",
-      "sourceRepo": "Community",
-      "pluginName": "checkAudioCodec",
-      "version": "1.0.0",
-      "id": "myLkQoVF7",
-      "position": {
-        "x": 1445.3101383057872,
-        "y": 701.6134679390148
-      },
-      "fpEnabled": false,
-      "inputsDB": {
-        "codec": "ac3"
       }
     },
     {
@@ -413,7 +371,7 @@
         "x": 476.9221695196874,
         "y": 546.3839613835752
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "🔊 | ⭐️ Successfully upmixed mono to stereo!",
@@ -425,7 +383,7 @@
         "x": 417.1462687246186,
         "y": 847.5434853814987
       },
-      "fpEnabled": true
+      "fpEnabled": false
     },
     {
       "name": "🔊 | 🫥 Something went wrong upmixing the mono track. Reseting Flow Error and continuing on. My bad.",
@@ -440,7 +398,7 @@
       "fpEnabled": true
     },
     {
-      "name": "🔊 | ✅ Completed mono channel logic",
+      "name": "🔊 | ✅ (MONO LOGIC DISABLED FOR NOW) Completed mono channel logic",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
@@ -1802,7 +1760,7 @@
         "x": 476.11173781556954,
         "y": 675.8159359230133
       },
-      "fpEnabled": true,
+      "fpEnabled": false,
       "inputsDB": {
         "pluginSourceId": "Local:Tdarr_Plugin_jordy_Upmix_Mono_to_Stereo",
         "audio_bitrate": "Keep Original",
@@ -1892,7 +1850,7 @@
         "x": 296.14899906218926,
         "y": 636.8037788055461
       },
-      "fpEnabled": true,
+      "fpEnabled": false,
       "inputsDB": {
         "requiredNodeTags": "pc-only",
         "requiredWorkerType": "CPU"
