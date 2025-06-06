@@ -183,7 +183,7 @@
       "inputsDB": {
         "arr": "radarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_radarr}}}"
       }
     },
     {
@@ -200,7 +200,7 @@
       "inputsDB": {
         "arr": "radarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_radarr}}}"
       }
     },
     {
@@ -217,7 +217,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarrAnime}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarrAnime}}}"
       }
     },
     {
@@ -234,7 +234,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       }
     },
     {
@@ -251,7 +251,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       }
     },
     {
@@ -262,7 +262,7 @@
       "inputsDB": {
         "arr": "radarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_radarr}}}"
       },
       "id": "Cd9siscwy",
       "position": {
@@ -279,7 +279,7 @@
       "inputsDB": {
         "arr": "radarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_radarr}}}"
       },
       "id": "TfsqmkjgX",
       "position": {
@@ -296,7 +296,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarrAnime}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarrAnime}}}"
       },
       "id": "QL4ViyhiB",
       "position": {
@@ -313,7 +313,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       },
       "id": "rIgobWkjd",
       "position": {
@@ -330,7 +330,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       },
       "id": "DXeeSt7vL",
       "position": {
@@ -347,7 +347,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       },
       "id": "uAdUBeSKZ",
       "position": {
@@ -396,7 +396,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       },
       "id": "d4jY0Jtuh",
       "position": {
@@ -451,7 +451,7 @@
         "x": 1079.0049088493831,
         "y": 1787.2734338437178
       },
-      "fpEnabled": false
+      "fpEnabled": true
     },
     {
       "name": "🛎️ | ❓Is Library SPORTS?",
@@ -487,7 +487,7 @@
         "x": 886.075107549141,
         "y": 1787.924090788309
       },
-      "fpEnabled": false
+      "fpEnabled": true
     },
     {
       "name": "🛎️ | 📣 Notify Radarr",
@@ -497,12 +497,12 @@
       "inputsDB": {
         "arr": "radarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_radarr}}}"
       },
       "id": "mNrtXLcCl",
       "position": {
         "x": 887.4130557589724,
-        "y": 1403.867790553559
+        "y": 1404.6879468381724
       },
       "fpEnabled": true
     },
@@ -578,7 +578,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       },
       "id": "s25aWgPIA",
       "position": {
@@ -655,7 +655,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarrAnime}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarrAnime}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarrAnime}}}"
       },
       "id": "QfrKx2KnA",
       "position": {
@@ -688,7 +688,7 @@
       "inputsDB": {
         "arr": "radarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_radarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_radarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_radarr}}}"
       },
       "id": "rbH09YTa2",
       "position": {
@@ -718,22 +718,6 @@
       "fpEnabled": false
     },
     {
-      "name": "Input File",
-      "sourceRepo": "Community",
-      "pluginName": "inputFile",
-      "version": "1.0.0",
-      "inputsDB": {
-        "pauseNodeIfAccessChecksFail": "false",
-        "fileAccessChecks": "true"
-      },
-      "id": "pE6rU7gkW",
-      "position": {
-        "x": -189.9276068411119,
-        "y": 1044.7620403406784
-      },
-      "fpEnabled": true
-    },
-    {
       "name": "Plex Refresh Movies",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
@@ -751,7 +735,7 @@
         "x": 694.9357528115769,
         "y": 1787.9684771257178
       },
-      "fpEnabled": false
+      "fpEnabled": true
     },
     {
       "name": "🛎️ | 📣 Notify Sonarr",
@@ -761,7 +745,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "http://192.168.1.43:8989"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       },
       "id": "unh6KDXcW",
       "position": {
@@ -836,7 +820,7 @@
       "inputsDB": {
         "arr": "sonarr",
         "arr_api_key": "{{{args.userVariables.global.api_key_sonarr}}}",
-        "arr_host": "{{{args.userVariables.global.url_sonarr}}}"
+        "arr_host": "http://{{{args.userVariables.global.url_sonarr}}}"
       }
     },
     {
@@ -846,8 +830,8 @@
       "version": "1.0.0",
       "id": "8Qq-cLrb1",
       "position": {
-        "x": 42.26178509470455,
-        "y": 1033.7563735565245
+        "x": -84.67135764392764,
+        "y": 1087.526663188862
       },
       "fpEnabled": true
     },
@@ -905,6 +889,30 @@
       "inputsDB": {
         "amount": "22"
       }
+    },
+    {
+      "name": "These are disabled for now. I've found that all it does is spam plex and overload it if it's processing a ton of shows.\n–––––––––––––––––––>",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "EpKDGRLP_",
+      "position": {
+        "x": -277.2669168049041,
+        "y": 1716.636560807084
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️\nTHIS FLOW HAS \n0 WORKER TAGS THAT \nNEED TO BE MODIFIED\n⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "oEzkOpW7d",
+      "position": {
+        "x": -73.12525638886348,
+        "y": 901.2946551083287
+      },
+      "fpEnabled": true
     }
   ],
   "flowEdges": [
@@ -1152,13 +1160,6 @@
       "target": "szQrKkuqQ",
       "targetHandle": null,
       "id": "qhCYMILj8"
-    },
-    {
-      "source": "pE6rU7gkW",
-      "sourceHandle": "1",
-      "target": "5fbBY5_tU",
-      "targetHandle": null,
-      "id": "40slx_ibg"
     },
     {
       "source": "5fbBY5_tU",
