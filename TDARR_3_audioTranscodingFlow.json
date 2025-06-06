@@ -5,6 +5,57 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "🔊 | 🧐 Does it have 6ch AAC?",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicFilterPlugin",
+      "version": "1.0.0",
+      "id": "jI0bQXAun",
+      "position": {
+        "x": 1958.5870234489119,
+        "y": 829.6093535131009
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
+        "codecsToProcess": "ac3",
+        "channelsToProcess": "2"
+      }
+    },
+    {
+      "name": "🔊 | 🧐 Does it have 6ch AAC?",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicFilterPlugin",
+      "version": "1.0.0",
+      "id": "KZFFGgAtz",
+      "position": {
+        "x": 1985.7540623731375,
+        "y": 702.4423145888753
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
+        "codecsToProcess": "aac",
+        "channelsToProcess": "2"
+      }
+    },
+    {
+      "name": "🔊 | 🧐 Does it have 6ch AC3?",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicFilterPlugin",
+      "version": "1.0.0",
+      "id": "TxL72aUNO",
+      "position": {
+        "x": 1474.658286490577,
+        "y": 639.4178415979425
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
+        "codecsToProcess": "ac3",
+        "channelsToProcess": "6"
+      }
+    },
+    {
       "name": "❓ Might there be dubs? Create eng 2ch as well if so.",
       "sourceRepo": "Community",
       "pluginName": "comment",
@@ -186,57 +237,6 @@
       }
     },
     {
-      "name": "🔊 | 🧐 Does it have 2ch AAC?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "yZwgBD3eY",
-      "position": {
-        "x": 1984.8869079787044,
-        "y": 694.9712074743853
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Local:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
-        "codecsToProcess": "aac",
-        "channelsToProcess": "2"
-      }
-    },
-    {
-      "name": "🔊 | 🧐 Does it have 2ch AC3?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "o8eLYpPNX",
-      "position": {
-        "x": 1953.6764264545232,
-        "y": 829.1084885374129
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Local:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
-        "codecsToProcess": "ac3",
-        "channelsToProcess": "2"
-      }
-    },
-    {
-      "name": "🔊 | 🧐 Does it have 6ch AC3?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "krteuqcyh",
-      "position": {
-        "x": 1459.11051150482,
-        "y": 628.0629874788636
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Local:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
-        "codecsToProcess": "ac3",
-        "channelsToProcess": "6"
-      }
-    },
-    {
       "name": "Couldn't remove 2ch AC3. Reset Flow Error and moving on anyways.",
       "sourceRepo": "Community",
       "pluginName": "resetFlowError",
@@ -393,7 +393,7 @@
       "id": "nmRmWI1w-",
       "position": {
         "x": 693.8140502624072,
-        "y": 698.0115990131827
+        "y": 706.3744798148239
       },
       "fpEnabled": true
     },
@@ -450,7 +450,7 @@
       }
     },
     {
-      "name": "Does it have 1 channels?",
+      "name": "Does it have 1 channel?",
       "sourceRepo": "Community",
       "pluginName": "checkChannelCount",
       "version": "1.0.0",
@@ -757,8 +757,8 @@
       "version": "2.0.0",
       "id": "oYduHgNXj",
       "position": {
-        "x": 1601.590305523124,
-        "y": 716.3546437049378
+        "x": 1599.4995853227135,
+        "y": 728.8989649073994
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -775,8 +775,8 @@
       "version": "1.0.0",
       "id": "jUKNCi0AU",
       "position": {
-        "x": 1695.7585743171273,
-        "y": 629.6888128228462
+        "x": 1674.8513723130245,
+        "y": 631.7795330232565
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1819,25 +1819,8 @@
       },
       "fpEnabled": true,
       "inputsDB": {
-        "variable": "keep_8ch_audio",
+        "variable": "{{{args.userVariables.library.keep_8ch_audio}}}",
         "value": "true"
-      }
-    },
-    {
-      "name": "🔊 | 🧐 Does it have 6ch AAC?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "eZha19W3C",
-      "position": {
-        "x": 1527.5655956162404,
-        "y": 879.781885530251
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Local:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
-        "codecsToProcess": "aac",
-        "channelsToProcess": "6"
       }
     },
     {
@@ -1985,6 +1968,23 @@
         "y": -45.708341911526986
       },
       "fpEnabled": true
+    },
+    {
+      "name": "🔊 | 🧐 Does it have 6ch AAC?",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicFilterPlugin",
+      "version": "1.0.0",
+      "id": "77w1Y4B7M",
+      "position": {
+        "x": 1450.5831114871191,
+        "y": 875.4420344416498
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_jordy_filter_by_audio_codec_and_channels",
+        "codecsToProcess": "aac",
+        "channelsToProcess": "6"
+      }
     }
   ],
   "flowEdges": [
@@ -3025,109 +3025,11 @@
       "id": "TXrpaNEJF"
     },
     {
-      "source": "372sZQr5d",
-      "sourceHandle": "1",
-      "target": "eZha19W3C",
-      "targetHandle": null,
-      "id": "jO_2mMZKv"
-    },
-    {
-      "source": "372sZQr5d",
-      "sourceHandle": "2",
-      "target": "eZha19W3C",
-      "targetHandle": null,
-      "id": "GzY3h3Jwk"
-    },
-    {
-      "source": "eZha19W3C",
-      "sourceHandle": "1",
-      "target": "s6nUPCpBL",
-      "targetHandle": null,
-      "id": "acONY5y2t"
-    },
-    {
-      "source": "eZha19W3C",
-      "sourceHandle": "2",
-      "target": "ooafl0ihT",
-      "targetHandle": null,
-      "id": "B5Pchpk1J"
-    },
-    {
-      "source": "eZha19W3C",
-      "sourceHandle": "err1",
-      "target": "umA_4DdGP",
-      "targetHandle": null,
-      "id": "ruFPXNo-V"
-    },
-    {
-      "source": "8Jhizxz4Z",
-      "sourceHandle": "1",
-      "target": "krteuqcyh",
-      "targetHandle": null,
-      "id": "Yf3ZnR-Rj"
-    },
-    {
-      "source": "krteuqcyh",
-      "sourceHandle": "2",
-      "target": "jUKNCi0AU",
-      "targetHandle": null,
-      "id": "Oe8nqHsWI"
-    },
-    {
-      "source": "krteuqcyh",
-      "sourceHandle": "1",
-      "target": "eZha19W3C",
-      "targetHandle": null,
-      "id": "kfenHYhQV"
-    },
-    {
       "source": "mOlECzDsN",
       "sourceHandle": "1",
       "target": "umA_4DdGP",
       "targetHandle": null,
       "id": "juDFEKSZF"
-    },
-    {
-      "source": "1rLRXLAFX",
-      "sourceHandle": "1",
-      "target": "o8eLYpPNX",
-      "targetHandle": null,
-      "id": "Unm0IXteK"
-    },
-    {
-      "source": "o8eLYpPNX",
-      "sourceHandle": "1",
-      "target": "hPJ0xImrM",
-      "targetHandle": null,
-      "id": "8oHFSf04L"
-    },
-    {
-      "source": "o8eLYpPNX",
-      "sourceHandle": "2",
-      "target": "3-9GKRL_B",
-      "targetHandle": null,
-      "id": "DCrW3k7y8"
-    },
-    {
-      "source": "_kNJxds4c",
-      "sourceHandle": "1",
-      "target": "yZwgBD3eY",
-      "targetHandle": null,
-      "id": "1Oct0viPs"
-    },
-    {
-      "source": "yZwgBD3eY",
-      "sourceHandle": "1",
-      "target": "1rLRXLAFX",
-      "targetHandle": null,
-      "id": "F_3JHm8Cb"
-    },
-    {
-      "source": "yZwgBD3eY",
-      "sourceHandle": "2",
-      "target": "6rJn4Kl-6",
-      "targetHandle": null,
-      "id": "OqKCBu3UK"
     },
     {
       "source": "bwOTXPwN5",
@@ -3401,6 +3303,104 @@
       "target": "x_65k3lxU",
       "targetHandle": null,
       "id": "TgjyoAceU"
+    },
+    {
+      "source": "77w1Y4B7M",
+      "sourceHandle": "1",
+      "target": "s6nUPCpBL",
+      "targetHandle": null,
+      "id": "82PODn1jX"
+    },
+    {
+      "source": "77w1Y4B7M",
+      "sourceHandle": "err1",
+      "target": "umA_4DdGP",
+      "targetHandle": null,
+      "id": "bBtfnnrJ2"
+    },
+    {
+      "source": "77w1Y4B7M",
+      "sourceHandle": "2",
+      "target": "ooafl0ihT",
+      "targetHandle": null,
+      "id": "8T-AU5L_S"
+    },
+    {
+      "source": "372sZQr5d",
+      "sourceHandle": "1",
+      "target": "77w1Y4B7M",
+      "targetHandle": null,
+      "id": "vhFSfWUao"
+    },
+    {
+      "source": "372sZQr5d",
+      "sourceHandle": "2",
+      "target": "77w1Y4B7M",
+      "targetHandle": null,
+      "id": "ISPys1bE1"
+    },
+    {
+      "source": "TxL72aUNO",
+      "sourceHandle": "2",
+      "target": "jUKNCi0AU",
+      "targetHandle": null,
+      "id": "Ze3Cze_Ir"
+    },
+    {
+      "source": "TxL72aUNO",
+      "sourceHandle": "1",
+      "target": "77w1Y4B7M",
+      "targetHandle": null,
+      "id": "VfDtybcVS"
+    },
+    {
+      "source": "8Jhizxz4Z",
+      "sourceHandle": "1",
+      "target": "TxL72aUNO",
+      "targetHandle": null,
+      "id": "FXeHcLilW"
+    },
+    {
+      "source": "KZFFGgAtz",
+      "sourceHandle": "2",
+      "target": "6rJn4Kl-6",
+      "targetHandle": null,
+      "id": "t8D1-_5Jc"
+    },
+    {
+      "source": "KZFFGgAtz",
+      "sourceHandle": "1",
+      "target": "1rLRXLAFX",
+      "targetHandle": null,
+      "id": "Ife0MgMo0"
+    },
+    {
+      "source": "_kNJxds4c",
+      "sourceHandle": "1",
+      "target": "KZFFGgAtz",
+      "targetHandle": null,
+      "id": "Yh2X0MILB"
+    },
+    {
+      "source": "jI0bQXAun",
+      "sourceHandle": "1",
+      "target": "hPJ0xImrM",
+      "targetHandle": null,
+      "id": "n9GFJoC1Z"
+    },
+    {
+      "source": "jI0bQXAun",
+      "sourceHandle": "2",
+      "target": "3-9GKRL_B",
+      "targetHandle": null,
+      "id": "ZaNbEZYEk"
+    },
+    {
+      "source": "1rLRXLAFX",
+      "sourceHandle": "1",
+      "target": "jI0bQXAun",
+      "targetHandle": null,
+      "id": "NRrJso3sD"
     }
   ]
 }
