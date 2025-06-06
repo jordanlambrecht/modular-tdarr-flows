@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v2.2.1-beta
+## v2.2.1-beta - June 6, 2025
 
 ### Added
 
