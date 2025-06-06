@@ -5,6 +5,70 @@
   "tags": "",
   "flowPlugins": [
     {
+      "name": "💬 | 🗑️ Get rid of any font attachments - Alternative method",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "uLQlO-HTK",
+      "position": {
+        "x": 479.16851360902467,
+        "y": -585.5141248054515
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
+        "valuesToRemove": "ttf,otf,woff,woff2,eot",
+        "propertyToCheck": "codec_name"
+      }
+    },
+    {
+      "name": "💬 | ❓ Are there convertable subtitles?",
+      "sourceRepo": "Community",
+      "pluginName": "checkStreamProperty",
+      "version": "1.0.0",
+      "id": "cGdMvY_Wp",
+      "position": {
+        "x": -83.70604161604338,
+        "y": -1417.230627858216
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "valuesToMatch": "mov_text,eia_608,WebVTT,ASS,TTML,SBV,SCC,webvtt,ass,TTML,JACOsub,SSA,DVB",
+        "streamType": "subtitle"
+      }
+    },
+    {
+      "name": "💬 | 🪪 Mark as 'processed'",
+      "sourceRepo": "Community",
+      "pluginName": "processedAdd",
+      "version": "1.0.0",
+      "id": "ioRchHmHy",
+      "position": {
+        "x": 611.2562730780776,
+        "y": -1545.235658808231
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "checkType": "fileHash"
+      }
+    },
+    {
+      "name": "💬 | ❓ Is it Foreign?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "-wjyXrovh",
+      "position": {
+        "x": 79.08708051188307,
+        "y": -969.8584950240719
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.is_foreign}}}",
+        "value": "true,TRUE"
+      }
+    },
+    {
       "name": "💬 | 🚀 Set FFMPEG Remove Stream Command",
       "sourceRepo": "Community",
       "pluginName": "ffmpegCommandRemoveStreamByProperty",
@@ -68,7 +132,7 @@
       "id": "w8TOnN66l",
       "position": {
         "x": 191.82870704626293,
-        "y": -1552.2440749115676
+        "y": -1575.3291337146502
       },
       "fpEnabled": true
     },
@@ -108,7 +172,7 @@
       "id": "elH-s2ZwN",
       "position": {
         "x": 390.58043593825744,
-        "y": -102.60386099105187
+        "y": -100.96805687393635
       },
       "fpEnabled": true
     },
@@ -119,8 +183,8 @@
       "version": "1.0.0",
       "id": "pe651FWgW",
       "position": {
-        "x": 762.7995745199662,
-        "y": -302.7048945419755
+        "x": 285.5389998414786,
+        "y": -948.8738573118808
       },
       "fpEnabled": true
     },
@@ -131,8 +195,8 @@
       "version": "1.0.0",
       "id": "LT-mdO6MW",
       "position": {
-        "x": 362.59387156454665,
-        "y": -1171.704806498556
+        "x": 364.40418360036034,
+        "y": -1165.1342976225505
       },
       "fpEnabled": true
     },
@@ -143,8 +207,8 @@
       "version": "1.0.0",
       "id": "ujCa-tvrs",
       "position": {
-        "x": 708.7790066692584,
-        "y": 840.7603823951292
+        "x": 711.136024219261,
+        "y": 852.5454701451426
       },
       "fpEnabled": true
     },
@@ -182,8 +246,8 @@
       "version": "1.0.0",
       "id": "jS3Z4a9ss",
       "position": {
-        "x": 380.45976675356496,
-        "y": 8.7079068303335
+        "x": 178.43795828979745,
+        "y": 18.522731533026672
       },
       "fpEnabled": true
     },
@@ -211,8 +275,8 @@
       "version": "1.0.0",
       "id": "E2PxyR_u0",
       "position": {
-        "x": 233.86732145719236,
-        "y": -303.1521147037568
+        "x": 289.8116684920037,
+        "y": -287.81854621718753
       },
       "fpEnabled": true
     },
@@ -223,8 +287,8 @@
       "version": "1.0.0",
       "id": "mfP1OCcaG",
       "position": {
-        "x": 411.5742877472164,
-        "y": -287.2248908465448
+        "x": 497.07413887589047,
+        "y": -288.2804445641827
       },
       "fpEnabled": true
     },
@@ -247,8 +311,8 @@
       "version": "1.0.0",
       "id": "G1GX-ld4b",
       "position": {
-        "x": 590.5896250709417,
-        "y": -287.85398666358674
+        "x": 163.89870867780496,
+        "y": -655.8906317778558
       },
       "fpEnabled": true
     },
@@ -259,8 +323,8 @@
       "version": "2.0.0",
       "id": "2Wt13Uy8s",
       "position": {
-        "x": 566.0886778144074,
-        "y": -474.51132712738973
+        "x": 66.40368232810022,
+        "y": -741.5835655348534
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -275,13 +339,13 @@
       "version": "2.0.0",
       "id": "8XNARPoPb",
       "position": {
-        "x": 312.54447567239214,
-        "y": -387.86307437976944
+        "x": 285.02336105750726,
+        "y": -501.7805140464987
       },
       "fpEnabled": true,
       "inputsDB": {
         "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
-        "valuesToRemove": "font/ttf,font/otf,font/woff,font/woff2,font/eot",
+        "valuesToRemove": "font/ttf,font/otf,font/woff,font/woff2",
         "propertyToCheck": "tags.mimetype"
       }
     },
@@ -373,40 +437,6 @@
         "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
         "valuesToRemove": "1",
         "propertyToCheck": "disposition.hearing_impaired"
-      }
-    },
-    {
-      "name": "💬 | ‼️ Non-SRT subtitles found. Extracting subtitles and converting to SRT",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicTranscodePlugin",
-      "version": "2.0.0",
-      "id": "UoPfcsAg7",
-      "position": {
-        "x": 337.47987400457697,
-        "y": -787.7423255326877
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_rr01_drpeppershaker_extract_subs_to_SRT",
-        "remove_subs": "yes"
-      }
-    },
-    {
-      "name": "💬 | ❓Does CodecID tx3g exist?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "8SXqW9sLU",
-      "position": {
-        "x": 533.6829645608667,
-        "y": -985.4718792141937
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_00td_filter_by_stream_tag",
-        "tagName": "CodecID",
-        "tagValues": "tx3g",
-        "continueIfTagFound": "true"
       }
     },
     {
@@ -517,7 +547,7 @@
       "id": "EfBK8ZU7C",
       "position": {
         "x": 719.4303516347596,
-        "y": -1535.0023403899395
+        "y": -1463.558519335593
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -601,8 +631,8 @@
       "version": "1.0.0",
       "id": "VE6vaHlms",
       "position": {
-        "x": 845.3371310051665,
-        "y": -1650.7101401655511
+        "x": 858.220442998573,
+        "y": -1655.3949808904263
       },
       "fpEnabled": true
     },
@@ -701,23 +731,6 @@
         "y": -2127.516793638836
       },
       "fpEnabled": true
-    },
-    {
-      "name": "💬 | 🧼 Fallback Attempt to Remove Subs with 'CC/SDH' in their title",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicTranscodePlugin",
-      "version": "2.0.0",
-      "id": "r5l1WgyuP",
-      "position": {
-        "x": 568.0768111905475,
-        "y": 939.6011136443732
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
-        "propertyToCheck": "title",
-        "valuesToRemove": "English CC,CC,SDH"
-      }
     },
     {
       "name": "💬 | 🎛️ Re-order subtitle streams",
@@ -841,7 +854,7 @@
       "id": "HfwmBha1M",
       "position": {
         "x": 694.4756249835065,
-        "y": -1146.9588490487265
+        "y": -1132.904326874101
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -920,7 +933,7 @@
       "version": "1.0.0",
       "id": "aTgChc8XH",
       "position": {
-        "x": 780.2327354058452,
+        "x": 779.4148333472875,
         "y": 2359.196181832709
       },
       "fpEnabled": true,
@@ -969,40 +982,6 @@
       "fpEnabled": true
     },
     {
-      "name": "💬 | ❓ Are there non-srt/ass, convertable subtitles using codec_name?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "nSGjtN9e7",
-      "position": {
-        "x": 362.661562783997,
-        "y": -1087.5953887788683
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_00td_filter_by_codec",
-        "codecsToProcess": "mov_text,eia_608, mov_text, MOV_TEXT, hdmv_pgs_subtitle,dvd_subtitle,eia_608,subtitle eia_608"
-      }
-    },
-    {
-      "name": "💬 | ❓Is there a undesirable subs via codec_name (properties approach)?",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicFilterPlugin",
-      "version": "1.0.0",
-      "id": "fDUuHrQPE",
-      "position": {
-        "x": 736.9260165591019,
-        "y": -901.9382921987365
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_00td_filter_by_file_property",
-        "propertyName": "codec_name",
-        "propertyValues": "mov_text,eia_608,mov_text,MOV_TEXT,hdmv_pgs_subtitle,dvd_subtitle,eia_608,subtitle eia_608,",
-        "continueIfPropertyFound": "true"
-      }
-    },
-    {
       "name": "💬 | 🧼 Remove any eia_608 Streams",
       "sourceRepo": "Community",
       "pluginName": "runClassicTranscodePlugin",
@@ -1020,29 +999,14 @@
       }
     },
     {
-      "name": "💬 | 🛠️ Trying a different SRT conversion + extraction method",
-      "sourceRepo": "Community",
-      "pluginName": "runClassicTranscodePlugin",
-      "version": "2.0.0",
-      "id": "Hg7Akf4VJ",
-      "position": {
-        "x": 442.6473770422592,
-        "y": -687.7474089186846
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "pluginSourceId": "Community:Tdarr_Plugin_078d_Output_embedded_subs_to_SRT_and_remove"
-      }
-    },
-    {
       "name": "💬 | 🚫 Couldn't/Didn't convert and extract to SRT. Ohwell. Getting rid of them anyways",
       "sourceRepo": "Community",
       "pluginName": "comment",
       "version": "1.0.0",
       "id": "6O0G2SS1e",
       "position": {
-        "x": 565.9434841135467,
-        "y": -589.067510381554
+        "x": 182.56903523015552,
+        "y": -861.0810060066151
       },
       "fpEnabled": true
     },
@@ -1053,8 +1017,8 @@
       "version": "1.0.0",
       "id": "1vYnB5PRA",
       "position": {
-        "x": 614.7584766110275,
-        "y": -18.642276369576493
+        "x": 613.9405745524697,
+        "y": -17.00647225246098
       },
       "fpEnabled": true
     },
@@ -1077,8 +1041,8 @@
       "version": "1.0.0",
       "id": "SAbAeyVbk",
       "position": {
-        "x": 827.1902274417905,
-        "y": -1451.7346237425375
+        "x": 931.427933570263,
+        "y": -1379.1195925069724
       },
       "fpEnabled": true
     },
@@ -1090,7 +1054,7 @@
       "id": "DGdizbbma",
       "position": {
         "x": 446.5294720707418,
-        "y": 1212.3274999237956
+        "y": 1213.3001548712077
       },
       "fpEnabled": true,
       "inputsDB": {
@@ -1162,21 +1126,6 @@
       }
     },
     {
-      "name": "💬 | 🪪 Mark as 'processed'",
-      "sourceRepo": "Community",
-      "pluginName": "processedAdd",
-      "version": "1.0.0",
-      "id": "tUmbVUF5C",
-      "position": {
-        "x": 924.3314292559033,
-        "y": -1362.1648327456912
-      },
-      "fpEnabled": true,
-      "inputsDB": {
-        "checkType": "fileHash"
-      }
-    },
-    {
       "name": "💬 | ❓ Has the file already been processed?",
       "sourceRepo": "Community",
       "pluginName": "processedCheck",
@@ -1226,6 +1175,133 @@
         "y": -1898.40485012757
       },
       "fpEnabled": true
+    },
+    {
+      "name": "💬 | ❓ Is it Anime?",
+      "sourceRepo": "Community",
+      "pluginName": "checkFlowVariable",
+      "version": "1.0.0",
+      "id": "aluFqbIbn",
+      "position": {
+        "x": -85.26455098871809,
+        "y": -1044.0259176891964
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "variable": "{{{args.userVariables.library.name}}}",
+        "value": "ANIME"
+      }
+    },
+    {
+      "name": "💬 | ‼️ It's either foreign or anime. This means we want to keep subtitles regardless. It doesn't make sense to watch a movie without knowing what they're saying, you know? It's better to have shitty subs than no subs in this scenario.",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "AV2d49PAD",
+      "position": {
+        "x": -109.63807192423126,
+        "y": -861.9433225044528
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "––––––––––––––––––>\nCan't get this to work for some reason",
+      "sourceRepo": "Community",
+      "pluginName": "comment",
+      "version": "1.0.0",
+      "id": "ONJKCNG8Y",
+      "position": {
+        "x": 285.107658022197,
+        "y": 1387.9513215960278
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Run Classic Filter Plugin",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicFilterPlugin",
+      "version": "1.0.0",
+      "id": "MWbnygNsb",
+      "position": {
+        "x": 288.6972170348861,
+        "y": -2139.9748634098937
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_filter_by_codec"
+      }
+    },
+    {
+      "name": "Begin Command",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandStart",
+      "version": "1.0.0",
+      "id": "3rXZQJb4_",
+      "position": {
+        "x": -399.342564161676,
+        "y": -1330.7103332452511
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Execute",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandExecute",
+      "version": "1.0.0",
+      "id": "9Iy-Lwm7n",
+      "position": {
+        "x": -399.3152153619669,
+        "y": -1116.0576231288737
+      },
+      "fpEnabled": true
+    },
+    {
+      "name": "Custom Arguments",
+      "sourceRepo": "Community",
+      "pluginName": "ffmpegCommandCustomArguments",
+      "version": "1.0.0",
+      "id": "P8DlJN9_Y",
+      "position": {
+        "x": -400.26886329760407,
+        "y": -1223.904903820343
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "outputArguments": "-c copy -c:s srt"
+      }
+    },
+    {
+      "name": "💬 | ❓ Are there super naughty subtitles?",
+      "sourceRepo": "Community",
+      "pluginName": "checkStreamProperty",
+      "version": "1.0.0",
+      "id": "TjLlyw9So",
+      "position": {
+        "x": -58.68550999803405,
+        "y": -1239.313479426103
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "valuesToMatch": "dvd_subtitle,mov_text,eia_608,mov_text,MOV_TEXT, hdmv_pgs_subtitle,dvd_subtitle,eia_608,subtitle eia_608,WebVTT,ASS,TTML,SBV,SCC,DVBSUB,VOBSUB,PGS/SUP,SUP,PGS",
+        "streamType": "subtitle"
+      }
+    },
+    {
+      "name": "💬 | 🗑️ Just get rid of any attachments all together",
+      "sourceRepo": "Community",
+      "pluginName": "runClassicTranscodePlugin",
+      "version": "2.0.0",
+      "id": "h_-pkpCXt",
+      "position": {
+        "x": 503.5784456873372,
+        "y": -371.48936897665095
+      },
+      "fpEnabled": true,
+      "inputsDB": {
+        "pluginSourceId": "Community:Tdarr_Plugin_00td_action_remove_stream_by_specified_property",
+        "propertyToCheck": "codec_type",
+        "valuesToRemove": "attachment"
+      }
     }
   ],
   "flowEdges": [
@@ -1363,13 +1439,6 @@
       "id": "Z-Rx_M5Cs"
     },
     {
-      "source": "A3u3d9Gnp",
-      "sourceHandle": "1",
-      "target": "EfBK8ZU7C",
-      "targetHandle": null,
-      "id": "Aa5a0iaAy"
-    },
-    {
       "source": "VE6vaHlms",
       "sourceHandle": "1",
       "target": "EfBK8ZU7C",
@@ -1496,20 +1565,6 @@
       "id": "ueN-tJ5Ve"
     },
     {
-      "source": "nSGjtN9e7",
-      "sourceHandle": "2",
-      "target": "8SXqW9sLU",
-      "targetHandle": null,
-      "id": "ffVjIadBg"
-    },
-    {
-      "source": "8SXqW9sLU",
-      "sourceHandle": "2",
-      "target": "fDUuHrQPE",
-      "targetHandle": null,
-      "id": "Y4P4B4954"
-    },
-    {
       "source": "sU_A71hQU",
       "sourceHandle": "err1",
       "target": "OJkRDAb3P",
@@ -1531,39 +1586,11 @@
       "id": "vFQdgz2IE"
     },
     {
-      "source": "nSGjtN9e7",
-      "sourceHandle": "1",
-      "target": "UoPfcsAg7",
-      "targetHandle": null,
-      "id": "PFVq99pZl"
-    },
-    {
-      "source": "8SXqW9sLU",
-      "sourceHandle": "1",
-      "target": "UoPfcsAg7",
-      "targetHandle": null,
-      "id": "5PfOYaL-Y"
-    },
-    {
-      "source": "fDUuHrQPE",
-      "sourceHandle": "1",
-      "target": "UoPfcsAg7",
-      "targetHandle": null,
-      "id": "mAKWWqp3L"
-    },
-    {
       "source": "d_SuL1jBv",
       "sourceHandle": "err1",
       "target": "SrnKqpyjZ",
       "targetHandle": null,
       "id": "6pOzJBJYz"
-    },
-    {
-      "source": "UoPfcsAg7",
-      "sourceHandle": "err1",
-      "target": "Hg7Akf4VJ",
-      "targetHandle": null,
-      "id": "81fh3_nyJ"
     },
     {
       "source": "30Ws_s_77",
@@ -1592,41 +1619,6 @@
       "target": "NVLgzb0Ue",
       "targetHandle": null,
       "id": "ZW3EiZ6u_"
-    },
-    {
-      "source": "UoPfcsAg7",
-      "sourceHandle": "2",
-      "target": "Hg7Akf4VJ",
-      "targetHandle": null,
-      "id": "c5keK4ANH"
-    },
-    {
-      "source": "UoPfcsAg7",
-      "sourceHandle": "1",
-      "target": "8XNARPoPb",
-      "targetHandle": null,
-      "id": "dj9QLlX1Y"
-    },
-    {
-      "source": "Hg7Akf4VJ",
-      "sourceHandle": "1",
-      "target": "8XNARPoPb",
-      "targetHandle": null,
-      "id": "C8SH8biQB"
-    },
-    {
-      "source": "Hg7Akf4VJ",
-      "sourceHandle": "err1",
-      "target": "6O0G2SS1e",
-      "targetHandle": null,
-      "id": "7f1QBzQZ6"
-    },
-    {
-      "source": "Hg7Akf4VJ",
-      "sourceHandle": "2",
-      "target": "6O0G2SS1e",
-      "targetHandle": null,
-      "id": "ZHl5KnJ1y"
     },
     {
       "source": "6O0G2SS1e",
@@ -1679,31 +1671,10 @@
     },
     {
       "source": "8XNARPoPb",
-      "sourceHandle": "2",
-      "target": "mfP1OCcaG",
-      "targetHandle": null,
-      "id": "99DeSFdNr"
-    },
-    {
-      "source": "8XNARPoPb",
-      "sourceHandle": "err1",
-      "target": "mfP1OCcaG",
-      "targetHandle": null,
-      "id": "HUehqtSAS"
-    },
-    {
-      "source": "8XNARPoPb",
       "sourceHandle": "1",
       "target": "E2PxyR_u0",
       "targetHandle": null,
       "id": "-kpuBTg4c"
-    },
-    {
-      "source": "G1GX-ld4b",
-      "sourceHandle": "1",
-      "target": "4R6xxWqkV",
-      "targetHandle": null,
-      "id": "ltnnzIrJo"
     },
     {
       "source": "mfP1OCcaG",
@@ -1762,39 +1733,11 @@
       "id": "yGGeIESAG"
     },
     {
-      "source": "ujCa-tvrs",
-      "sourceHandle": "1",
-      "target": "r5l1WgyuP",
-      "targetHandle": null,
-      "id": "eFzhkYd6G"
-    },
-    {
-      "source": "fQ3nmtQ4S",
-      "sourceHandle": "2",
-      "target": "r5l1WgyuP",
-      "targetHandle": null,
-      "id": "vT50CfCvB"
-    },
-    {
       "source": "fQ3nmtQ4S",
       "sourceHandle": "1",
       "target": "YRfIuhnS4",
       "targetHandle": null,
       "id": "eMRLUKbAD"
-    },
-    {
-      "source": "r5l1WgyuP",
-      "sourceHandle": "1",
-      "target": "YRfIuhnS4",
-      "targetHandle": null,
-      "id": "awJmUrYk1"
-    },
-    {
-      "source": "r5l1WgyuP",
-      "sourceHandle": "2",
-      "target": "YRfIuhnS4",
-      "targetHandle": null,
-      "id": "XcVxLkEyF"
     },
     {
       "source": "EfBK8ZU7C",
@@ -1823,27 +1766,6 @@
       "target": "LT-mdO6MW",
       "targetHandle": null,
       "id": "QjqlgBQyj"
-    },
-    {
-      "source": "LT-mdO6MW",
-      "sourceHandle": "1",
-      "target": "nSGjtN9e7",
-      "targetHandle": null,
-      "id": "w8TdwkW--"
-    },
-    {
-      "source": "fDUuHrQPE",
-      "sourceHandle": "2",
-      "target": "pe651FWgW",
-      "targetHandle": null,
-      "id": "b6jzJurcZ"
-    },
-    {
-      "source": "pe651FWgW",
-      "sourceHandle": "1",
-      "target": "4R6xxWqkV",
-      "targetHandle": null,
-      "id": "IAbQd5mur"
     },
     {
       "source": "4R6xxWqkV",
@@ -2014,13 +1936,6 @@
       "id": "8SFUf9nZ6"
     },
     {
-      "source": "SAbAeyVbk",
-      "sourceHandle": "1",
-      "target": "tUmbVUF5C",
-      "targetHandle": null,
-      "id": "mS8CdsgWZ"
-    },
-    {
       "source": "PH-owVC7K",
       "sourceHandle": "1",
       "target": "B-f8lvzwL",
@@ -2075,6 +1990,202 @@
       "target": "XwSoQBMTl",
       "targetHandle": null,
       "id": "9ijUfhgs7"
+    },
+    {
+      "source": "aluFqbIbn",
+      "sourceHandle": "2",
+      "target": "-wjyXrovh",
+      "targetHandle": null,
+      "id": "LCOFDvS2X"
+    },
+    {
+      "source": "aluFqbIbn",
+      "sourceHandle": "1",
+      "target": "AV2d49PAD",
+      "targetHandle": null,
+      "id": "Xrnxj7zRH"
+    },
+    {
+      "source": "AV2d49PAD",
+      "sourceHandle": "1",
+      "target": "8XNARPoPb",
+      "targetHandle": null,
+      "id": "TBMyT-Rcy"
+    },
+    {
+      "source": "A3u3d9Gnp",
+      "sourceHandle": "1",
+      "target": "ioRchHmHy",
+      "targetHandle": null,
+      "id": "BXx-sarVo"
+    },
+    {
+      "source": "ioRchHmHy",
+      "sourceHandle": "1",
+      "target": "EfBK8ZU7C",
+      "targetHandle": null,
+      "id": "KQ-w_9-iN"
+    },
+    {
+      "source": "fQ3nmtQ4S",
+      "sourceHandle": "2",
+      "target": "YRfIuhnS4",
+      "targetHandle": null,
+      "id": "lzL1L2Qwl"
+    },
+    {
+      "source": "ujCa-tvrs",
+      "sourceHandle": "1",
+      "target": "YRfIuhnS4",
+      "targetHandle": null,
+      "id": "nSJxrhc4g"
+    },
+    {
+      "source": "P8DlJN9_Y",
+      "sourceHandle": "1",
+      "target": "9Iy-Lwm7n",
+      "targetHandle": null,
+      "id": "321j01hj4"
+    },
+    {
+      "source": "3rXZQJb4_",
+      "sourceHandle": "1",
+      "target": "P8DlJN9_Y",
+      "targetHandle": null,
+      "id": "92aSOdlNp"
+    },
+    {
+      "source": "cGdMvY_Wp",
+      "sourceHandle": "1",
+      "target": "3rXZQJb4_",
+      "targetHandle": null,
+      "id": "KVOsQ9Qah"
+    },
+    {
+      "source": "cGdMvY_Wp",
+      "sourceHandle": "2",
+      "target": "TjLlyw9So",
+      "targetHandle": null,
+      "id": "1T4hZe8nu"
+    },
+    {
+      "source": "TjLlyw9So",
+      "sourceHandle": "1",
+      "target": "aluFqbIbn",
+      "targetHandle": null,
+      "id": "y3KivGy7g"
+    },
+    {
+      "source": "9Iy-Lwm7n",
+      "sourceHandle": "err1",
+      "target": "TjLlyw9So",
+      "targetHandle": null,
+      "id": "JixNloz5W"
+    },
+    {
+      "source": "9Iy-Lwm7n",
+      "sourceHandle": "1",
+      "target": "TjLlyw9So",
+      "targetHandle": null,
+      "id": "PtYDe5zqW"
+    },
+    {
+      "source": "LT-mdO6MW",
+      "sourceHandle": "1",
+      "target": "cGdMvY_Wp",
+      "targetHandle": null,
+      "id": "qUglWxpHw"
+    },
+    {
+      "source": "-wjyXrovh",
+      "sourceHandle": "1",
+      "target": "AV2d49PAD",
+      "targetHandle": null,
+      "id": "C1QFIxWiD"
+    },
+    {
+      "source": "-wjyXrovh",
+      "sourceHandle": "2",
+      "target": "6O0G2SS1e",
+      "targetHandle": null,
+      "id": "CZckvCowP"
+    },
+    {
+      "source": "TjLlyw9So",
+      "sourceHandle": "2",
+      "target": "pe651FWgW",
+      "targetHandle": null,
+      "id": "VsXJ7crp6"
+    },
+    {
+      "source": "8XNARPoPb",
+      "sourceHandle": "2",
+      "target": "uLQlO-HTK",
+      "targetHandle": null,
+      "id": "1IYKLMuww"
+    },
+    {
+      "source": "uLQlO-HTK",
+      "sourceHandle": "1",
+      "target": "E2PxyR_u0",
+      "targetHandle": null,
+      "id": "4ze8Yy6bh"
+    },
+    {
+      "source": "G1GX-ld4b",
+      "sourceHandle": "1",
+      "target": "8XNARPoPb",
+      "targetHandle": null,
+      "id": "5fbncRP1H"
+    },
+    {
+      "source": "8XNARPoPb",
+      "sourceHandle": "err1",
+      "target": "uLQlO-HTK",
+      "targetHandle": null,
+      "id": "79GLhJV1v"
+    },
+    {
+      "source": "pe651FWgW",
+      "sourceHandle": "1",
+      "target": "8XNARPoPb",
+      "targetHandle": null,
+      "id": "YHMyf0zE_"
+    },
+    {
+      "source": "uLQlO-HTK",
+      "sourceHandle": "2",
+      "target": "h_-pkpCXt",
+      "targetHandle": null,
+      "id": "IZvrC8nqR"
+    },
+    {
+      "source": "uLQlO-HTK",
+      "sourceHandle": "err1",
+      "target": "h_-pkpCXt",
+      "targetHandle": null,
+      "id": "WWQtbEm1-"
+    },
+    {
+      "source": "h_-pkpCXt",
+      "sourceHandle": "1",
+      "target": "E2PxyR_u0",
+      "targetHandle": null,
+      "id": "tdzUYUHaY"
+    },
+    {
+      "source": "h_-pkpCXt",
+      "sourceHandle": "2",
+      "target": "mfP1OCcaG",
+      "targetHandle": null,
+      "id": "X6kjJOc-u"
+    },
+    {
+      "source": "h_-pkpCXt",
+      "sourceHandle": "err1",
+      "target": "mfP1OCcaG",
+      "targetHandle": null,
+      "id": "0iw4XSWq7"
     }
   ]
 }
